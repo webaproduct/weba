@@ -1,0 +1,8 @@
+#crnd_vsd_field_table_wrapper {
+    display: flex;
+    flex-direction: column;
+}
+#crnd_vsd_field_table_wrapper > * {
+    display: flex;
+    flex-wrap: nowrap;
+}

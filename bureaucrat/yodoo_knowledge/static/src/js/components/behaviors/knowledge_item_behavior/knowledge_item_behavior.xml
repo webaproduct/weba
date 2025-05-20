@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <!-- /knowledgeItem template -->
+    <t t-name="yodoo_knowledge.KnowledgeItemBehavior">
+        <t t-out="props.display_name"/>
+    </t>
+</templates>

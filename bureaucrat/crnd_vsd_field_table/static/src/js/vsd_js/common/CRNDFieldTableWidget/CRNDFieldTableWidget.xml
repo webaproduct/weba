@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="crnd_vsd_field_table.CRNDFieldTableWidget" owl="1">
+        <div class="field_table_wrapper">
+            <div class="field_table_subwrapper">
+                <div class="field_table">
+                    <t t-foreach="state.rows" t-as="rowObj" t-key="rowObj_index">
+                        <div class="field_table_row">
+                            <t t-foreach="props.fieldsList" t-as="field" t-key="field_index">
+                                <t t-if="field.widget == 'CRNDInputTextWidget'">
+                                    <CRNDInputTextWidget t-props="getProps(field, rowObj_index)" />
+                                </t>
+                                <t t-elif="field.widget == 'CRNDInputBooleanWidget'">
+                                    <CRNDInputBooleanWidget t-props="getProps(field, rowObj_index)" />
+                                </t>
+                                <t t-elif="field.widget == 'CRNDInputDateWidget'">
+                                    <CRNDInputDateWidget t-props="getProps(field, rowObj_index)" />
+                                </t>
+                                <t t-elif="field.widget == 'CRNDInputDatetimeWidget'">
+                                    <CRNDInputDatetimeWidget t-props="getProps(field, rowObj_index)" />
+                                </t>
+                                <t t-elif="field.widget == 'CRNDInputIntegerWidget'">
+                                    <CRNDInputIntegerWidget t-props="getProps(field, rowObj_index)" />
+                                </t>
+    
+                                <t t-elif="field.widget == 'CRNDInputSelectWidget'">
+                                    <CRNDInputSelectWidget t-props="getProps(field, rowObj_index)" />
+                                </t>
+    
+                                <t t-elif="field.widget == 'CRNDInputSelectWidget'">
+                                    <CRNDInputSelectWidget t-props="getProps(field, rowObj_index)" />
+                                </t>
+    
+                                <t t-elif="field.widget == 'CRNDInputSelectManyWidget'">
+                                    <CRNDInputSelectManyWidget t-props="getProps(field, rowObj_index)" />
+                                </t>
+                            </t>
+    
+                            <div class="delete_row" t-on-click="e => this.removeRow(rowObj_index)">
+                                <img src="/crnd_vsd/static/img/x.svg" alt="x"/>
+                            </div>
+                        </div>
+                    </t>
+    
+                </div>
+            </div>
+            <div class="field_table_add_row btn btn-primary" t-on-click="addRow">Add row</div>
+        </div>
+    </t>
+
+</templates>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_request_request_deadline_form" model="ir.ui.view">
+        <field name="model">request.request</field>
+        <field name="inherit_id" ref="generic_request.view_request_request_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='page_other']//group[@name='group_info_right']" position="inside">
+                <field name="deadline_last_change_reason_id"
+                       invisible="deadline_last_change_reason_id == False"/>
+                <field name="deadline_last_change_comment"
+                       invisible="deadline_last_change_comment == False"/>
+                <label for="deadline_overdue"/>
+                <div class="o_row" style="width: 100% !important">
+                    <field name="deadline_overdue" widget="float_time" readonly="1"/>
+                    <button name="action_calculate_deadline_overdue"
+                            type="object"
+                            icon="fa-refresh"
+                            class="btn-sm btn-link ml4"
+                            invisible="closed == True"/>
+                </div>
+            </xpath>
+            <xpath expr="//form" position="inside">
+                <field name="deadline_set" invisible="1"/>
+                <field name="strict_deadline" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='deadline_date']" position="attributes">
+                <attribute name="readonly">not can_change_deadline or (deadline_set and strict_deadline)</attribute>
+                <attribute name="invisible">deadline_format == 'datetime'</attribute>
+            </xpath>
+            <xpath expr="//field[@name='deadline_date_dt']" position="attributes">
+                <attribute name="readonly">not can_change_deadline or (deadline_set and strict_deadline)</attribute>
+                <attribute name="invisible">deadline_format == 'date'</attribute>
+            </xpath>
+            <xpath expr="//field[@name='deadline_date_dt']" position="after">
+                <field name="deadline_change_events_count" invisible="1"/>
+                <button name="action_show_deadline_change_system_events"
+                        type="object"
+                        icon="fa-info"
+                        title="Show deadline change events"
+                        class="btn-sm btn-info ml4"
+                        invisible="deadline_change_events_count  &lt; 1"/>
+
+                <button name="action_do_change_deadline"
+                        type="object"
+                        icon="fa-gear"
+                        title="Action change deadline date"
+                        class="btn-sm btn-info ml4"
+                        invisible="(not can_change_deadline) or (not strict_deadline)"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_request_request_deadline_tree" model="ir.ui.view">
+        <field name="model">request.request</field>
+        <field name="inherit_id" ref="generic_request.view_request_request_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='deadline_date_dt']" position="after">
+                <field name="deadline_overdue"
+                       widget="float_time"
+                       class="text-danger"
+                       invisible="deadline_overdue == 0"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

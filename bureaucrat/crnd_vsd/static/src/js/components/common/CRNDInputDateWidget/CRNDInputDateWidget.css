@@ -1,0 +1,44 @@
+.date_widget_input {
+    position: relative;
+    border: 1px solid #C5CAD1;
+    border-radius: 4px;
+    background: #fff;
+    cursor: text;
+    padding: 0;
+
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
+.date_widget_input.active {
+    outline: 2px solid #000;
+}
+.date_widget_input input {
+    border: none;
+    padding: clamp(10px, 2vw, 12px) clamp(14px, 2vw, 16px);
+    width: 100%;
+    background: #fff;
+    outline: 0;
+}
+
+.date_widget_input .datetime_picker_wrapper {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);  
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 10px;
+    z-index: 10000;
+}
+
+.date_widget_input .calendar_icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 15px;
+    background: #dddddd;
+    border-left: #C5CAD1;
+    cursor: pointer;
+}

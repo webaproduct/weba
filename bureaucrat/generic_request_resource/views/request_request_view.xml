@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="inherited_view_request_request_form_inherit_request_resource">
+        <field name="model">request.request</field>
+        <field name="inherit_id" ref="generic_request.view_request_request_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/field[@name='id']" position="after">
+                <field name="resource_required" invisible="1" readonly="1"/>
+                <field name="resource_invisible" invisible="1" readonly="1"/>
+                <field name="resource_res_model" />
+                <field name="resource_res_id_domain" invisible="1"/>
+                <field name="resource_type_id" invisible="1"/>
+            </xpath>
+            <xpath expr="//group[@name='group_author']" position="after">
+                <group name="group_resource" class="mb0 mt0">
+                    <group class="mb0 mt0">
+                        <field name="resource_visible_on_form" invisible="1"/>
+
+                        <field name="resource_res_id"
+                               widget="generic_m2o"
+                               model_field="resource_res_model"
+                               options="{'domain_field': 'resource_res_id_domain'}"
+                               invisible="not resource_visible_on_form"/>
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+    <record id="inherited_view_request_request_search_inherit_request_resource" model="ir.ui.view">
+        <field name="model">request.request</field>
+        <field name="inherit_id" ref="generic_request.view_request_request_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search" position="inside">
+                <field name="resource_id" filter_domain="[('resource_id', 'ilike', self)]"/>
+            </xpath>
+            <xpath expr="//group[@name='group_group_by']" position="inside">
+                <filter name="filter_group_by_resource_id"
+                        string="Generic Resource"
+                        context="{'group_by': 'resource_id'}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

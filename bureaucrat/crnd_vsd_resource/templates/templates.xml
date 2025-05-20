@@ -1,0 +1,19 @@
+<odoo noupdate="0">
+    <data>
+        <template id="crnd_vsd_resource.requests_create_template_resource" inherit_id="crnd_vsd.requests_create_global_template" name="Requests create template (Resource)">
+            <xpath expr="//div[hasclass('creation_form_inputs_block')]" position="after" >
+<!--                <div class="separator" />-->
+                <t t-if="classifier.create_show_resource or classifier.resource_required">
+                    <field
+                        name="resource_id"
+                        widget="CRNDInputResourceWidget"
+                        t-att-icon_url="'/crnd_vsd_resource/static/img/resource.svg'"
+                        t-att-required="classifier.resource_required"
+                        t-attf-resource_type_id="{{ classifier.resource_type_id.id }}"
+                    />
+                </t>
+
+            </xpath>
+        </template>
+    </data>
+</odoo>

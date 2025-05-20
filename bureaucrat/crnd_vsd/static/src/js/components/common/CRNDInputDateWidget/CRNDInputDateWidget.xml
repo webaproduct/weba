@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="crnd_vsd.CRNDInputDateWidget" owl="1">
+        <div 
+            class="form_inputs_item"
+            t-attf-class="{{ props?.required ? 'required' : '' }}"
+            t-att-id="'crnd_widget_' + props.name"
+        >
+            <div t-if="props.title" class="form_inputs_item_title">
+                <t t-esc="props.title" />
+            </div>
+
+            <div 
+                class="date_widget_input" 
+                t-attf-class="{{ state.isDatetimePickerOpen ? 'active' : '' }}"
+                t-on-click="openDatetimePicker"
+            >
+                <input 
+                    t-ref="crnd_date_widget"
+                    type="text" 
+                    class="active_datetime"
+                    t-on-keydown="enterOnDatetime"
+                    t-on-keypress="validate"
+                    t-att-value="this.state.rawDatetime"
+                    t-att-placeholder="getPlaceholder()"
+                    t-on-change="onChangeContentEditable"
+                />
+                <div class="calendar_icon">
+                    <i class="fa fa-calendar"></i>
+                </div>
+                
+                <div 
+                    t-if="state.isDatetimePickerOpen"
+                    t-on-click.stop=""
+                    class="datetime_picker_wrapper"
+                >
+                    <DateTimePickerPopover 
+                        close="() => this.closeDatetimePicker(true)"
+                        pickerProps="state.pickerProps"
+                    />
+                </div>
+            </div>
+            
+        </div>
+    </t>
+
+</templates>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="generic_request_inherit_mail_view_mail_form" model="ir.ui.view">
+        <field name="model">mail.mail</field>
+        <field name="inherit_id" ref="mail.view_mail_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='is_notification']" position="after">
+                <field name="is_request_default_notification_mail"
+                       invisible="model != 'request.request'" readonly="1"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

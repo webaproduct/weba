@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="crnd_vsd.CRNDInputCheckboxListWidget" owl="1">
+        <div t-if="state.items.length" class="form_inputs_item selection" t-att-id="'crnd_widget_' + props.name">
+            <div 
+                t-if="props.title" 
+                class="form_inputs_item_title"
+                t-attf-class="{{ props?.required ? 'required' : '' }}"    
+            >
+                <t t-esc="props.title" />
+            </div>
+
+            <t t-foreach="state.items" t-as="item" t-key="item_index">
+                <div class="crnd_vsd_tag_item" t-on-click="e => this.onClickOption(item)">
+                    <input type="checkbox" t-att-checked="isActive(item)"/>
+                    <t t-esc="item.name"/>
+                </div>
+            </t>
+        </div>
+    </t>
+
+</templates>

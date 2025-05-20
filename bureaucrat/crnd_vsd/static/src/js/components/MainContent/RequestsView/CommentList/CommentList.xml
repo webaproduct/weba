@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="crnd_vsd.CommentList" owl="1">
+        <div 
+            class="req_block_header collapsing_block_header req_block-padding navbar-light"
+            data-bs-target="#collapseExampleComments"
+            data-bs-toggle="collapse"
+            aria-expanded="true" 
+        >
+            <div class="req_name">
+                Comments
+            </div>
+            <div class="rigth_comments_header_side">
+
+                <div t-if="props.followers" class="followers_wrapper" t-on-click.prevent="e => this.toggleOpenFollowersForm()" >
+                    <img src="/crnd_vsd/static/img/user.svg" alt=""/>
+                    <t t-esc="props.followers.length" />
+                </div>
+
+                <div t-if="props.comments.length" class="current_comments_count">
+                    <img src="/crnd_vsd/static/img/message.svg" alt=""/>
+                    <t t-esc="props.comments.length" />
+                </div>
+
+                <button t-if="!state.openForm" class="add_comment" t-on-click.prevent="e => this.onOpenForm()">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.5 1H2.5C1.67157 1 1 1.67157 1 2.5V17.5C1 18.3284 1.67157 19 2.5 19H17.5C18.3284 19 19 18.3284 19 17.5V2.5C19 1.67157 18.3284 1 17.5 1Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        <path d="M10 6V14M6 10H14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Add Comment
+                </button>
+                <button t-else="" class="add_comment" t-on-click.prevent="e => this.onCloseForm()">
+                    Close
+                </button>
+            </div>
+        </div>
+
+
+
+        <div t-if="state.openForm" class="comment_creation_form req_block-padding">
+            <CRNDInputTextareaWidget 
+                default_value="state.commentFormData.messageText" 
+                name="'comment_text'"
+                required="false" 
+                _updateInputValue="_updateNewCommentValue"
+            />
+            <!-- <textarea t-model="" name="text" id="add_comment" cols="30" rows="5"></textarea> -->
+            
+            <FileLoader 
+                files="state.files"
+                updateFilesList="this.updateFilesList"
+                removeFile="this.removeFile"/>
+
+            <div class="comment_creation_form_buttons">
+                <button class="btn btn-primary" t-attf-disabled="{{ !isEnabledSave() }}" t-on-click="e => this.addComment()">
+                    Save
+                </button>
+            </div>
+        </div>
+        <div t-if="state.isFollowersOpenForm" class="followers_creation_form req_block-padding">
+            
+            <div class="current_followers_list">
+                <t t-foreach="props.followers"  t-as="follower" t-key="follower.id" >
+                    <div class="current_follower">
+                        <img src="/crnd_vsd/static/img/x.svg" t-on-click="e => this.props.removeFollower(follower.id)"/>
+                        <t t-esc="follower.display_name" />
+                    </div>
+                </t>
+            </div>
+
+            <div class="comment_creation_form_buttons">
+                <CRNDInputSelectWidget
+                    name="'follower'"
+                    placeholder="'Add follower'"
+                    _form_value="state.followerForAdd"
+                    forceUpdateValue="true"
+                    _updateInputValue="(key, value) => this.addFollower(value)"
+                    selectList="state.availableFollowers"
+                />
+            </div>
+        </div>
+
+        <div class="req_data collapse" id="collapseExampleComments">
+            <div class="comments_list">
+                <t t-foreach="props.comments" t-as="comment" t-key="comment.id">
+                    <div class="comment req_block-padding">
+                        <div class="comment_user">
+                            <img t-attf-src="{{ comment.user_image_url }}" alt="" class="user_photo"/>
+                            <t t-esc="comment.user_name"/>
+                        </div>
+                        <div class="comment_data">
+                            <div class="comment_message">
+                                <t t-out="getHtmlText(comment.text)" />
+                            </div>
+                            <div t-if="comment.attachments.length" class="comment_attachmets">
+                                <t t-foreach="comment.attachments" t-as="attachment" t-key="attachment_index">
+                                    <a t-att-href="attachment.url" target="_blank">
+                                        <t t-if="attachment.type == 'image'">
+                                            <img t-attf-src="/web/content/#{attachment.id}?download=true&amp;access_token=#{attachment.access_token}" alt="" class="attachment_image"/>
+                                        </t>
+                                        <t t-else="">
+                                            <div class="attachment_file">
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve">
+                                                    <g id="XMLID_2_">
+                                                        <path id="XMLID_9_" class="st0" d="M455.7,135.7c2.6,2.6,5.1,6,7.7,10.2h-134V11.1c4.3,2.6,7.7,5.1,10.2,7.7L455.7,135.7z    M320,182.6h155.3v302.1c0,7.7-2.6,14.5-7.7,19.6c-5.1,5.1-11.9,7.7-19.6,7.7H64c-7.7,0-14.5-2.6-19.6-7.7   c-5.1-5.1-7.7-11.9-7.7-19.6V27.3c0-7.7,2.6-14.5,7.7-19.6C49.5,2.6,56.3,0,64,0h228.7v155.3c0,7.7,2.6,14.5,7.7,19.6   C305.5,180.1,312.3,182.6,320,182.6z M366.1,393.4v-17.9c0-2.6-0.9-5.1-2.6-6.8c-1.7-1.7-4.3-2.6-6.8-2.6H155.3   c-2.6,0-5.1,0.9-6.8,2.6c-1.7,1.7-2.6,4.3-2.6,6.8v17.9c0,2.6,0.9,5.1,2.6,6.8c1.7,1.7,4.3,2.6,6.8,2.6h201.4   c2.6,0,5.1-0.9,6.8-2.6C365.2,397.7,366.1,395.9,366.1,393.4z M366.1,320v-17.9c0-2.6-0.9-5.1-2.6-6.8c-1.7-1.7-4.3-2.6-6.8-2.6   H155.3c-2.6,0-5.1,0.9-6.8,2.6c-1.7,1.7-2.6,4.3-2.6,6.8V320c0,2.6,0.9,5.1,2.6,6.8c1.7,1.7,4.3,2.6,6.8,2.6h201.4   c2.6,0,5.1-0.9,6.8-2.6S366.1,322.6,366.1,320z M366.1,246.6v-17.9c0-2.6-0.9-5.1-2.6-6.8c-1.7-1.7-4.3-2.6-6.8-2.6H155.3   c-2.6,0-5.1,0.9-6.8,2.6c-1.7,1.7-2.6,4.3-2.6,6.8v17.9c0,2.6,0.9,5.1,2.6,6.8c1.7,1.7,4.3,2.6,6.8,2.6h201.4   c2.6,0,5.1-0.9,6.8-2.6C365.2,251.7,366.1,249.2,366.1,246.6z" fill="currentColor"/>
+                                                    </g>
+                                                </svg>                                             
+                                                <t t-esc="attachment.name"/>
+                                            </div>
+                                        </t>
+                                        
+                                    </a>
+                                </t>
+                            </div>
+                        </div>
+                        <div class="comment_date">
+                            <t t-esc="comment.creation_date" />
+                        </div>
+                    </div>
+                </t>
+            </div>
+        </div>
+    </t>
+</templates>

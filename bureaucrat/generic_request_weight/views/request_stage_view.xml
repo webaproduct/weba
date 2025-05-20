@@ -1,0 +1,24 @@
+<odoo>
+    <!-- Inherit Form View to Modify it -->
+    <record id="view_request_stage_form" model="ir.ui.view">
+        <field name="name">view.request.stage.weight.form</field>
+        <field name="model">request.stage</field>
+        <field name="inherit_id" ref="generic_request.view_request_stage_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='closed']" position="after">
+                <field name="weight" groups="generic_request.group_request_manager"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_request_stage_tree" model="ir.ui.view">
+        <field name="name">view.request.tree.weight</field>
+        <field name="model">request.stage</field>
+        <field name="inherit_id" ref="generic_request.view_request_stage_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='closed']" position="after">
+                <field name="weight" groups="generic_request.group_request_manager"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

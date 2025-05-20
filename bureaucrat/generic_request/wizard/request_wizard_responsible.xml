@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="request_wizard_responsible_form_view" model="ir.ui.view">
+        <field name="model">request.wizard.responsible</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="request_ids"
+                               widget="many2many_tags"
+                               readonly="1"/>
+                        <field name="responsible_id"/>
+                        <field name="partner_id"
+                               invisible="responsible_id == False"/>
+                        <field name="show_field_unsubscribe"
+                               invisible="1"/>
+                        <!-- We do not need to show unsubscribe checkbox if all requests have no responsible persons. -->
+                        <field name="unsubscribe_prev_responsible"
+                               invisible="show_field_unsubscribe == False"/>
+                    </group>
+                    <field name="comment"
+                           nolabel="1"
+                           colspan="4"
+                           placeholder="Comment..."/>
+                </sheet>
+                <footer>
+                    <button string="Set responsible" name="do_set_responsible" class="btn-primary" type="object"/>
+                    <button string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+   </record>
+   <record id="action_request_wizard_set_responsible" model="ir.actions.act_window">
+       <field name="res_model">request.wizard.responsible</field>
+       <field name="name">Set responsible user</field>
+       <field name="view_mode">form</field>
+       <field name="target">new</field>
+   </record>
+   <record id="action_request_wizard_responsible_multi" model="ir.actions.act_window">
+       <field name="res_model">request.wizard.responsible</field>
+       <field name="binding_model_id" ref="generic_request.model_request_request"/>
+       <field name="name">Set responsible</field>
+       <field name="view_mode">form</field>
+       <field name="target">new</field>
+       <field name="context">{
+            'default_request_ids': [(6, 0, active_ids)],
+        }</field>
+       <field name="groups_id" eval="[(4, ref('group_request_user'))]"/>
+   </record>
+</odoo>

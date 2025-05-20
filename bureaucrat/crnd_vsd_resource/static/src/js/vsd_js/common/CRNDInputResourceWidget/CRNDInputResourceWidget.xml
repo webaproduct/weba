@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="crnd_vsd.CRNDInputResourceWidget" owl="1">
+        <div
+            t-if="state.resourceType.resources.length"
+            class="form_inputs_item selection crnd_resource_widget_wrapper"
+            t-attf-class="{{ props.required ? 'required' : '' }}"
+            t-att-id="'crnd_widget_' + props.name"
+        >
+            <div t-if="props.title" class="form_inputs_item_title">
+                <t t-esc="state.resourceType?.name" />
+            </div>
+
+            <!-- <CRNDInputSelectWidget _updateInputValue="setCurrentResourceType" name="resource_type" selectList="this.getResourceTypesList()"/> -->
+            <CRNDInputSelectWidget
+                _updateInputValue="setCurrentResource"
+                name="'resource'"
+                selectList="getResourceList()"
+                placeholder="'Set ' + (state.resourceType?.name ?? 'resource') "
+                icon_url="props?.icon_url"
+            />
+        </div>
+    </t>
+
+</templates>

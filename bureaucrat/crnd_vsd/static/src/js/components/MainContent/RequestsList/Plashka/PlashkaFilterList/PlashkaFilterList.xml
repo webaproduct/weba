@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+    <t t-name="crnd_vsd.PlashkaFilterList" owl="1">
+        <div class="plashka_filter_list_wrapper" t-if="isActiveFilters()">
+            <div class="plashka_filter_list">
+                <t t-foreach="state.active_filters" t-as="filter" t-key="filter[0]">
+                    <t t-if="isValidFilter(filter[1])">
+                        <div class="plashka_filter_title">
+                            <t t-if="filter[1]?.icon_url">
+                                <img t-att-src="filter[1]?.icon_url" />
+                            </t>
+                            <t t-elif="filter[1]?.name">
+                                <t t-esc="filter[1]?.name"/>:
+                            </t>
+                        </div>
+
+                        <t t-foreach="filter[1].value" t-as="value" t-key="value_index">
+                            <div class="plashka_filter_value" t-on-click="e => props.deleteFilterValue(filter[0], value.value)">
+                                <t t-out="value?.name"/>
+                                <img src="/crnd_vsd/static/img/x.svg" alt="x"/>
+                            </div>
+                        </t>
+                    </t>
+                </t>
+            </div>
+           
+            <div class="filters_clear" t-on-click="e => props.deleteAllFilters()">
+                Clear all
+            </div>
+        </div>
+    </t>
+</templates>

@@ -1,0 +1,3 @@
+.creation_form_inputs_block_tags {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="inherited_view_request_classifier_form_inherit_request_location">
+        <field name="model">request.classifier</field>
+        <field name="inherit_id" ref="generic_request.view_request_classifier_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook/page[@name='settings']" position="inside">
+                <group name="group_settings_location" string="Location">
+                    <field name="location_required" widget="boolean_toggle"/>
+                    <field name="location_invisible" widget="boolean_toggle"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

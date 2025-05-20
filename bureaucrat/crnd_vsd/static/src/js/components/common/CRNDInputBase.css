@@ -1,0 +1,31 @@
+.form_inputs_item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.form_inputs_item_title {
+    width: fit-content;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.form_inputs_item.required:after {
+    content: '*';
+    color: red;
+    position: absolute;
+    top: -22px;
+    right: 0;
+    font-size: 25px;
+}
+.form_inputs_item_title.required:after {
+    content: '*';
+    color: red;
+    position: absolute;
+    top: -7px;
+    right: -11px;
+    font-size: 25px;
+}

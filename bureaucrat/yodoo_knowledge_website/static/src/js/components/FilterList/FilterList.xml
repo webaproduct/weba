@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="yodoo_knowledge_website.FilterList" owl="1">
+        <div 
+            class="filter_list_background" 
+            t-attf-class="{{ props.isActive ? 'active' : '' }}"
+            t-on-mousedown.self="e => this.close(e)"
+        >
+            <div class="filter_list_wrapper active" id="rightMenu">
+                <div class="modal_header">
+                    <div class="filter_list_title">
+                        Filter List
+                    </div>
+                    
+                    <img 
+                        t-on-click="e => this.close(e)"
+                        src="/yodoo_knowledge_website/static/img/x.svg" 
+                        class="modal_header_x"
+                    />
+                </div>
+                
+                <div class="filter_list_buttons">
+                    <button class="btn btn-primary" t-on-click="this.save">
+                        Save
+                    </button>
+                    <button class="btn btn-secondary" t-on-click="this.reset">
+                        Reset
+                    </button>
+
+                </div>
+                
+                <div class="filter_list">
+                    <YodooInputSelectWidget 
+                        t-props="this.getPropsForInput('item_format')"
+                        selectList="state.item_formats"
+                    />
+                    <YodooInputSelectWidget 
+                        t-props="this.getPropsForInput('item_type_id')"
+                        selectList="state.item_types"
+                    />
+                    <YodooInputSelectWidget 
+                        t-props="this.getPropsForInput('tag')"
+                        selectList="state.tags"
+                    />
+
+                    <!-- <CRNDInputTextWidget t-props="this.getPropsForInput('global_search')"/> -->
+                    <!-- <CRNDInputSelectWidget t-if="use_service" t-props="this.getPropsForInput('service_id')" selectList="state.services"/>
+                    <CRNDInputSelectWidget t-props="this.getPropsForInput('category_id')" selectList="state.categories"/>
+                    <CRNDInputSelectWidget t-props="this.getPropsForInput('type_id')" selectList="state.types"/> -->
+<!--                    <CRNDInputDateWidget t-props="this.getPropsForInput('create_date_from')"/>-->
+<!--                    <CRNDInputDateWidget t-props="this.getPropsForInput('create_date_to')"/>-->
+                    
+                </div>
+
+                
+            </div>
+        </div>
+    </t>
+
+</templates>

@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_agreement_user,User access on agreement,model_agreement,base.group_user,1,0,0,0
+access_agreement_admin,Full access on agreement,model_agreement,base.group_system,1,1,1,1
+
+access_project_month_read,Read access on project_month to user,model_project_month,base.group_user,1,0,0,0
+access_project_month_full,Full access on project_month to admin,model_project_month,base.group_system,1,1,1,1

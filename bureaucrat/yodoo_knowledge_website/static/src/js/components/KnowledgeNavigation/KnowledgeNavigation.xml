@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="yodoo_knowledge_website.KnowledgeNavigation" owl="1">
+        <ul class="categories_hierarchy">
+            <t t-foreach="props.categories" t-as="category" t-key="category.id">
+                <KnowledgeNavigationCategory 
+                    category="category"
+                    setKnowledgeItem="props.setKnowledgeItem"
+                    knowledgeItem="props.knowledgeItem"    
+                />
+            </t>
+        </ul>
+    </t>
+</templates>

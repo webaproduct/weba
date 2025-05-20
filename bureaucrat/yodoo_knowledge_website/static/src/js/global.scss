@@ -1,0 +1,57 @@
+body:has(#yodoo_knowledge_website_anchor_owl) #wrapwrap {
+    scroll-behavior: smooth;
+
+}
+main:has(#yodoo_knowledge_website_anchor_owl) {
+    width: 100% !important;
+    /* padding-top: 0 !important; */
+}
+
+/* #top {
+    transition: none !important;
+    position: static;
+} */
+body:has(#yodoo_knowledge_website_anchor_owl) #footer {
+    display: none;
+}
+
+#yodoo_knowledge_website_anchor_owl {
+    width: 100%;
+    /* padding-top: 26px; */
+    padding-bottom: 65px;
+
+    & * {
+        scroll-margin-top: 70px;
+        scroll-behavior: smooth;
+        box-sizing: border-box;
+    }
+    & ul,
+    & li {
+        list-style-type: none;
+    
+    }
+    .mobile {}
+    .desktop {}
+    
+    
+    
+    & *::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    
+    & *::-webkit-scrollbar-track {
+        background: #eeeeee;
+        border-radius: 20px;
+    }
+    
+    & *::-webkit-scrollbar-thumb {
+        background: #999999;
+        border-radius: 20px;
+        transition: 0.3s ease;
+    }
+    & *::-webkit-scrollbar-thumb:hover,
+    & *::-webkit-scrollbar-thumb:active {
+        background: #000;
+    }
+}

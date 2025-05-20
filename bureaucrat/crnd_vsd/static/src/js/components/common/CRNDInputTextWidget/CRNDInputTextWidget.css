@@ -1,0 +1,10 @@
+input.text_widget_input {
+    border: 1px solid #C5CAD1;
+    padding: clamp(10px, 2vw, 12px) clamp(14px, 2vw, 16px);
+    border-radius: 4px;
+    background: #fff;
+    cursor: text;
+}
+.form_inputs_item.showError {
+    border-color: #a09824;
+}

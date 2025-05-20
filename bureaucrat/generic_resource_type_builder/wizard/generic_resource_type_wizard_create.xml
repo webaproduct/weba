@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="resource_wizard_create_type_form_view" model="ir.ui.view">
+        <field name="model">generic.resource.type.wizard.create</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="model"/>
+                        <field name="enable_chatter"/>
+                        <field name="enable_mail_activity"/>
+                    </group>
+                </sheet>
+                <footer>
+                    <button string="Create" name="action_do_create_resource_type" class="btn-primary" type="object"/>
+                    <button string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+   </record>
+   <record id="action_resource_wizard_create_type" model="ir.actions.act_window">
+       <field name="res_model">generic.resource.type.wizard.create</field>
+       <field name="name">Create Resource Type</field>
+       <field name="view_mode">form</field>
+       <field name="target">new</field>
+   </record>
+</odoo>

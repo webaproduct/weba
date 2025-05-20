@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="view_request_request_location_form">
+        <field name="model">request.request</field>
+        <field name="inherit_id"
+               ref="generic_request.view_request_request_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='header_deadline']" position="after">
+                <div colspan="2" name="header_location"
+                     class="request-head-info-item">
+                    <span class="field-with-icon">
+                        <span class="field-icon fa fa-map-marker oe_inline"
+                              title="Location"/>
+                        <field name="generic_location_id"
+                               class="o_field_widget" style="max-width: 98%"/>
+                    </span>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_request_request_location_tree">
+        <field name="model">request.request</field>
+        <field name="inherit_id"
+               ref="generic_request.view_request_request_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='author_id']"
+                   position="after">
+                <field name="generic_location_id"
+                       optional="show"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_request_request_location_kanban">
+        <field name="model">request.request</field>
+        <field name="inherit_id"
+               ref="generic_request.view_request_request_kanban"/>
+        <field name="arch" type="xml">
+            <xpath expr="/kanban" position="inside">
+                <field name="generic_location_id"/>
+            </xpath>
+            <xpath expr="/kanban/templates//div[@name='request_kanban_info_right']/div[@name='kanban_deadline_date']"
+                   position="after">
+                <div t-if="record.generic_location_id.raw_value" name="kanban_generic_location">
+                    <span class="" title="Location">
+                        <span class="fa fa-map-marker"/>
+                        <field name="generic_location_id"/>
+                    </span>
+                </div>
+
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_request_request_location_search">
+        <field name="model">request.request</field>
+        <field name="inherit_id"
+               ref="generic_request.view_request_request_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='group_group_by']" position="inside">
+                <filter name="filter_group_by_location"
+                        string="Location"
+                        context="{'group_by': 'generic_location_id'}"/>
+            </xpath>
+            <xpath expr="//field[@name='author_id']" position="after">
+                <field name="generic_location_id"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

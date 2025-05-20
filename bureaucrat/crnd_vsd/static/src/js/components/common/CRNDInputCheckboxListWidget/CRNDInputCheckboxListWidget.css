@@ -1,0 +1,5 @@
+.crnd_vsd_tag_item {
+    display: flex;
+    column-gap: 5px;
+    cursor: pointer;
+}

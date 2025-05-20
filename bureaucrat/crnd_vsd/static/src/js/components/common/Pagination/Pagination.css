@@ -1,0 +1,16 @@
+.pagination {
+    margin-top: 42px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 5px;
+}
+.pagination > * {
+    padding: 9px 14px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.pagination_start {
+    transform: rotateZ(180deg);
+}

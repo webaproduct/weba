@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Link request types to default service -->
+    <!--Add request.classifier-->
+    <record id="classifier_request_type_incident_service_default" model="request.classifier">
+        <field name="service_id" ref="generic_service.generic_service_default"/>
+        <field name="type_id" ref="crnd_vsd.request_type_incident"/>
+    </record>
+
+    <!--Classifiers for "test_tour_request_new_service"-->
+    <record id="classifier_request_type_incident_demo_website_support_default" model="request.classifier">
+        <field name="service_id" ref="generic_service.generic_service_default"/>
+        <field name="category_id" ref="crnd_vsd.request_category_demo_website_support"/>
+        <field name="type_id" ref="crnd_vsd.request_type_incident"/>
+        <field name="website_published" eval="True"/>
+    </record>
+    <record id="classifier_request_type_incident_demo_website_support_rent_notebook" model="request.classifier">
+        <field name="service_id" ref="generic_service.generic_service_rent_notebook"/>
+        <field name="category_id" ref="crnd_vsd.request_category_demo_website_support"/>
+        <field name="type_id" ref="crnd_vsd.request_type_incident"/>
+        <field name="website_published" eval="True"/>
+    </record>
+</odoo>

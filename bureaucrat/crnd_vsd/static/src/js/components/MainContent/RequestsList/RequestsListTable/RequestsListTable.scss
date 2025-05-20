@@ -1,0 +1,133 @@
+.req_list_table_wrapper {
+    width: 100%;
+    overflow: auto;
+}
+.req_list_table {
+    width: 100%;
+    border-radius: 4px;
+    border-spacing: 0;
+    box-shadow: 0px 0px 15px 0px #00000026;
+
+}
+.req_list_table th,
+.req_list_table td {
+    padding: clamp(10px, 2vw, 20px) clamp(5px, 1vw, 10px);
+    text-align: center;
+    // color: #738189;
+    // filter: brightness(0) invert(1);
+}
+.req_list_table th {
+    // background: #434C51;
+    border-bottom: 1px solid #a2a4a7;
+}
+.req_list_table tr {
+    max-width: 100%;
+}
+.req_list_table td {
+    border-bottom: 1px solid #C5CAD1;
+}
+.req_list_table tr:nth-child(odd) td {
+    background: #FCFCFC;
+}
+.req_list_table tr:last-of-type td {
+    border-bottom: none;
+}
+.req_list_table td.title_cell {
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+
+.req_link {
+    color: o-color('primary') !important;
+    cursor: pointer;
+    text-wrap: nowrap;
+}
+.file_cell img {
+    margin-right: 5px;
+}
+.client_cell > div {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+.reporter_cell > div {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+.status_cell > div {
+    text-align: start !important;
+}
+.action_cell > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 3px;
+}
+.action_cell > div > div {
+    width: 5px;
+    height: 5px;
+    background: #323232;
+    border-radius: 9999px;
+}
+td.status_cell > div {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+
+}
+td.status_cell > div > div {
+    width: 15px;
+    height: 15px;
+    background: #000;
+    border-radius: 9999px;
+}
+
+.user_rounded {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.left_sided {
+    text-align: left !important;
+}
+
+.nowrap_text {
+    white-space: nowrap;
+}
+
+// ADAPTIVE
+.mobile.create_request {
+    display: none;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.clickable_table_th {
+    cursor: pointer;
+}
+
+.sorting_table_active {
+    opacity: 1;
+}
+.sorting_table_active_desc {
+    opacity: 1;
+    transform: rotateZ(180deg);
+}
+.sorting_table_non_active {
+    opacity: 0.3;
+}
+
+@media (max-width: 768px) {
+    .desktop.create_request {
+        display: none;
+    }
+    .mobile.create_request {
+        display: block;
+    }
+
+    
+}

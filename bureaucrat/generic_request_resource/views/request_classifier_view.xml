@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="inherited_view_request_classifier_form_inherit_request_resource">
+        <field name="model">request.classifier</field>
+        <field name="inherit_id" ref="generic_request.view_request_classifier_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook/page[@name='settings']" position="inside">
+                <group name="group_settings_resource" string="Resource">
+                    <field name="resource_type_id"/>
+                    <field name="resource_required" widget="boolean_toggle"/>
+                    <field name="resource_invisible" widget="boolean_toggle"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="inherited_view_request_classifier_tree_inherit_request_resource" model="ir.ui.view">
+        <field name="model">request.classifier</field>
+        <field name="inherit_id" ref="generic_request.view_request_classifier_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='type_id']" position="after">
+                <field name="resource_type_id"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_generic_service_form_weight" model="ir.ui.view">
+        <field name="model">generic.service</field>
+        <field name="inherit_id" ref="generic_service.generic_service_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='sequence']" position="after">
+                <field name="weight" widget="float" groups="generic_request.group_request_manager"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_generic_service_tree_weight" model="ir.ui.view">
+        <field name="model">generic.service</field>
+        <field name="inherit_id" ref="generic_service.generic_service_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="inside">
+                <field name="weight" groups="generic_request.group_request_manager"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

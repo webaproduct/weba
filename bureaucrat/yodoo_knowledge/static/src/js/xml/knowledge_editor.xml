@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-name="yodoo_knowledge.YodooAbstractBehaviorBlueprint">
+        <div t-attf-class="o_yodoo_knowledge_behavior_anchor #{behaviorType}" data-oe-protected="true"/>
+    </t>
+    <t t-name="yodoo_knowledge.KnowledgeItemBehaviorBlueprint">
+        <a 
+            t-att-href="href" 
+            t-att-data-behavior-props="data" 
+            target="_blank"
+            class="btn btn-sm o_yodoo_knowledge_behavior_anchor o_yodoo_knowledge_behavior_type_knowledge_item" 
+            data-oe-protected="true"
+        />
+    </t>
+</templates>

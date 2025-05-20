@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="yodoo_knowledge_website.Reader" owl="1">
+        <t t-if="!state.categories.length and !state.knowledgeItem">
+            <div class="knowledge_global_error">
+                No item of knowledge is available to you.
+            </div>
+        </t>
+        <t t-else="">
+            <FilterList 
+                isActive="state.isOpenFilterList"
+                filterData="state.filters"
+                toggleFilterList="this.toggleFilterList"
+                saveFilterList="this.saveFilterList"
+            />
+            <div class="main_search">
+                <div class="main_search_side">
+                    
+                </div>
+                <div class="main_search_side">
+                    <SearchField 
+                        setKnowledgeItem="getKnowledgeItem"    
+                    />
+                    <button class="filter_button" t-on-click="e => this.toggleFilterList()">
+                        <svg class="main_search_icon" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1.5C0 1.10218 0.158035 0.720644 0.43934 0.43934C0.720644 0.158035 1.10218 0 1.5 0H16.5C16.8978 0 17.2794 0.158035 17.5607 0.43934C17.842 0.720644 18 1.10218 18 1.5V3.586C17.9999 4.11639 17.7891 4.62501 17.414 5L12 10.414V17.838C12 18.0255 11.9521 18.2099 11.8608 18.3737C11.7695 18.5375 11.6379 18.6753 11.4783 18.7739C11.3188 18.8724 11.1368 18.9286 10.9494 18.9371C10.7621 18.9455 10.5757 18.9059 10.408 18.822L6.691 16.964C6.48337 16.8602 6.30875 16.7006 6.1867 16.5031C6.06466 16.3057 6.00001 16.0781 6 15.846V10.414L0.586 5C0.210901 4.62501 0.000113275 4.11639 0 3.586V1.5ZM2 2V3.586L7.56 9.146C7.69945 9.28527 7.81008 9.45066 7.88558 9.63272C7.96108 9.81477 7.99996 10.0099 8 10.207V15.382L10 16.382V10.207C10 9.809 10.158 9.427 10.44 9.147L16 3.585V2H2Z" fill="currentColor"/>
+                        </svg>
+                        <span t-if="getFilterDataCount()" class="filter_button_filter_items_count btn-primary">
+                            <t t-esc="getFilterDataCount()"/>
+                        </span>
+                    </button>
+                    <t t-if="state.knowledgeItem?.internal_url">
+                        <a t-att-href="state.knowledgeItem?.internal_url" class="internal_link" target="_">
+                            <svg class="main_search_icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 3V5H5V19H19V14H21V20C21 20.2652 20.8946 20.5196 20.7071 20.7071C20.5196 20.8946 20.2652 21 20 21H4C3.73478 21 3.48043 20.8946 3.29289 20.7071C3.10536 20.5196 3 20.2652 3 20V4C3 3.73478 3.10536 3.48043 3.29289 3.29289C3.48043 3.10536 3.73478 3 4 3H10ZM17.707 7.707L12 13.414L10.586 12L16.293 6.293L13 3H21V11L17.707 7.707Z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                    </t>
+                </div>
+            </div>
+
+
+
+            <div class="content_wrapper">
+                <div 
+                    class="sidepanel_wrapper"
+                    t-attf-class="{{ state.isSidepanelOpen ? 'opened_sidepanel' : '' }}"
+                    t-on-mouseleave="closeSidepanel"
+                    t-on-mouseover="openSidepanel"
+                >
+                    <div class="sidepanel">
+
+                        <div class="sidepanel_header">
+                            <span>
+                                Menu
+                            </span>
+
+                            <img 
+                                t-on-click="closeSidepanel"
+                                src="/yodoo_knowledge_website/static/img/x.svg" 
+                                class="icon"
+                            />
+                        </div>
+                        
+                        <div class="sidepanel_body">
+                            <t t-if="state.categories.length">
+                                <KnowledgeNavigation
+                                    categories="state.categories"
+                                    setKnowledgeItem="getKnowledgeItem"
+                                    knowledgeItem="state.knowledgeItem" />
+                            </t>
+                        </div>
+                
+                        <div 
+                            class="sidepanel_anchor"
+                            t-on-click="openSidepanel"
+                        >
+                            <i class="oi oi-chevron-right" role="img"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="knowledge_navigation" t-attf-class="{{ !state.isLoadingCategories ? 'loaded' : '' }}">
+                    
+                    <t t-if="state.categories.length">
+                        <KnowledgeNavigation
+                            categories="state.categories"
+                            setKnowledgeItem="getKnowledgeItem"
+                            knowledgeItem="state.knowledgeItem" />
+                    </t>
+                </div>
+                <div id="knowledge_item_content" class="main-container-document content" t-attf-class="{{ !state.isLoadingItem ? 'loaded' : '' }}">
+                    <t t-if="state.knowledgeItem">
+                        <KnowledgeItem item="state.knowledgeItem"/>
+                    </t>
+                    <t t-else="">
+                        <div class="knowledge_item_error">
+                            Knowledge item was not found
+                        </div>
+                    </t>
+                </div>
+                <div 
+                    class="main-container-scrollspy content_navigation"  
+                    t-attf-class="{{ !state.isLoadingItem ? 'loaded' : '' }} {{ !state.scrollspyItems.length ? 'hidden' : '' }}">
+                    <Scrollspy scrollspyItems="state.scrollspyItems"/>
+                </div>
+            </div>
+        </t>
+            
+    </t>
+</templates>

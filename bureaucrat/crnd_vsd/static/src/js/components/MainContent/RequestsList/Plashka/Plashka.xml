@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+    <t t-name="crnd_vsd.Plashka" owl="1">
+       <div class="plashka">
+            <div class="plashka_title">
+                <t t-esc="props.catalog_items_count"/> <t t-esc="props.catalogName"/>
+
+                <div class="plashka_title_buttons">
+                    <div class="plashka_filter_button o_cc5 btn-secondary" t-on-click.stop="props.onClickFilterMobileButtonOpen">
+                        Filters
+                    </div>
+                </div>
+            </div>
+
+            <PlashkaFilterList 
+                updatePlaska="state.updatePlaska"
+                filterData="props.filterData" 
+
+                deleteFilter="props.deleteFilter" 
+                deleteAllFilters="props.deleteAllFilters" />
+        </div>
+    </t>
+
+</templates>

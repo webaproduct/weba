@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="view_request_request_form">
+        <field name="model">request.request</field>
+        <field name="inherit_id" ref="generic_request.view_request_request_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='page_internal_note']" position="after">
+                <page name="page_address" string="Address">
+                    <div class="o_address_format" colspan="4">
+                        <field name="address_street"
+                            class="o_address_street"
+                            placeholder="Street..."/>
+                        <field name="address_street2"
+                            class="o_address_street"
+                            placeholder="Street 2..."/>
+                        <field name="address_city"
+                            class="o_address_city"
+                            placeholder="City"/>
+                        <field name="address_state_id"
+                            class="o_address_state"
+                            placeholder="State"
+                            domain="[('country_id', '=', address_country_id)]"
+                            options='{"no_open": True}'/>
+                        <field name="address_zip"
+                            class="o_address_zip"
+                            placeholder="ZIP"/>
+                        <field name="address_country_id"
+                            class="o_address_country"
+                            placeholder="Country"
+                            options='{"no_open": True, "no_create": True}'/>
+                    </div>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

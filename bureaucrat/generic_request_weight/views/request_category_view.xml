@@ -1,0 +1,24 @@
+<odoo>
+    <!-- Inherit Form View to Modify it -->
+    <record id="view_request_category_form" model="ir.ui.view">
+        <field name="name">view.request.category.weight.form</field>
+        <field name="model">request.category</field>
+        <field name="inherit_id" ref="generic_request.view_request_category_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='sequence']" position="after">
+                <field name="weight" groups="generic_request.group_request_manager"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_request_category_tree" model="ir.ui.view">
+        <field name="name">view.request.category.tree.weight</field>
+        <field name="model">request.category</field>
+        <field name="inherit_id" ref="generic_request.view_request_category_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='request_count']" position="after">
+                <field name="weight" groups="generic_request.group_request_manager"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

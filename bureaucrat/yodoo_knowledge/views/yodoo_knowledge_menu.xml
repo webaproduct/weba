@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem id="yodoo_knowledge_menu"
+              name="Knowledge"
+              groups="yodoo_knowledge.group_yodooic_knowledge_user"
+              web_icon="yodoo_knowledge,static/description/icon.png"
+              sequence="14"/>
+
+    <menuitem id="yodoo_knowledge_category_menu"
+              parent="yodoo_knowledge_menu" sequence="30"
+              action="action_yodoo_knowledge_category"/>
+
+    <menuitem id="yodoo_knowledge_item_item_menu"
+              parent="yodoo_knowledge_menu" sequence="10"
+              action="action_yodoo_knowledge_item"/>
+
+        <menuitem id="yodoo_knowledge_item_types_menu"
+              parent="yodoo_knowledge_menu" sequence="80"
+              action="action_yodoo_knowledge_item_type"/>
+
+
+</odoo>

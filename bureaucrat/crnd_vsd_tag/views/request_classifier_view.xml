@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="inherited_view_request_classifier_form_inherit_request_location">
+        <field name="model">request.classifier</field>
+        <field name="inherit_id" ref="generic_request.view_request_classifier_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='create_settings_website']" position="inside">
+                <field name="create_show_tags" widget="boolean_toggle" string="Tags" />
+            </xpath>
+
+            <xpath expr="//group[@name='read_settings_website']" position="inside">
+                <field name="read_show_tags" widget="boolean_toggle" string="Tags" />
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

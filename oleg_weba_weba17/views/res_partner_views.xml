@@ -1,0 +1,49 @@
+<odoo>
+
+    <menuitem
+        id="menu_res_partner_additional_model"
+        name="Additional models"
+        parent="contacts.res_partner_menu_config"
+        sequence="100"
+    />
+
+    <record id="view_partner_form_inherit2" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit2</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='vat']" position="after">
+                <field name="agreement_id"/>
+                <field name="name_initials"/>
+            </xpath>
+            <xpath expr="//field[@name='ref']" position="attributes">
+                <attribute name="string"></attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='website']" position="before">
+                <field name="telegram"/>
+            </xpath>
+
+            <xpath expr="//field[@name='category_id']" position="after">
+                <field name="source_id"/>
+                <field name="partner_id_source_id" invisible="source_id != 31"
+                       required="source_id == 31"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="res_partner_view_form_inherit_sms_inherit" model="ir.ui.view">
+        <field name="name">res.partner.view.form.inherit.sms.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="sms.res_partner_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//label[@for='mobile']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//div[hasclass('o_row_readonly')][2]" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

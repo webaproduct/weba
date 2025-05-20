@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="crnd_vsd.FilterList" owl="1">
+        <div 
+            class="filter_list_background"
+            t-attf-class="{{ props.isActive ? 'active' : '' }}"
+            t-on-mousedown.self="e => this.close(e)"
+        >
+            <div 
+                class="filter_list_wrapper" 
+                id="rightMenu"
+            >
+                <div class="modal_header">
+                    <div class="filter_list_title">
+                        Filter List
+                    </div>
+                    
+                    <img 
+                        t-on-click="e => this.close(e)"
+                        src="/crnd_vsd/static/img/x.svg" 
+                        class="modal_header_x"
+                    />
+                </div>
+                
+                <div class="filter_list_buttons">
+                    <button class="btn btn-primary" t-on-click="this.save">
+                        Save
+                    </button>
+                    <button class="btn btn-secondary" t-on-click="this.reset">
+                        Reset
+                    </button>
+
+                </div>
+                
+                <div class="filter_list">
+                    <div t-if="props.use_quick_filters" class="mobile filter_req_status">
+                        <CRNDInputSelectWidget
+                            name="req_status"
+                            title="'Request status'"
+                            _form_value="state.reqStatus"
+                            _updateInputValue="(key, value) => state.reqStatus = value"
+                            selectList="props.reqStatusList"
+                        />
+                    </div>
+
+                    <!-- <CRNDInputTextWidget t-props="this.getPropsForInput('global_search')"/> -->
+                    <CRNDInputSelectManyWidget t-if="use_service" t-props="this.getPropsForInput('service_id', true)" selectList="state.services"/>
+                    <CRNDInputSelectManyWidget t-props="this.getPropsForInput('category_id', true)" selectList="state.categories"/>
+                    <CRNDInputSelectManyWidget t-props="this.getPropsForInput('type_id', true)" selectList="state.types"/>
+<!--                    <CRNDInputDateWidget t-props="this.getPropsForInput('create_date_from')"/>-->
+<!--                    <CRNDInputDateWidget t-props="this.getPropsForInput('create_date_to')"/>-->
+                    
+                </div>
+
+                
+            </div>
+        </div>
+    </t>
+
+</templates>

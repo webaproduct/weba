@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-inherit="crnd_vsd.RequestsView" t-inherit-mode="extension" owl="1">
+<!--        <xpath expr="//div[hasclass('req_content')]" position="before">-->
+<!--            <div t-if="state.requestData.resource and isAllowed('resource')" class="req_resource_block">-->
+<!--                <span>-->
+<!--                    Resource:-->
+<!--                </span>-->
+
+<!--                <div class="req_resource">-->
+<!--                    <t t-esc="state.requestData.resource.name" />-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </xpath>-->
+
+
+        <xpath expr="//div[hasclass('information_table')]/div[@id='req_type']" position="after">
+            <div t-if="state.requestData.resource and isAllowed('resource')" class="information_table_row">
+                <div>
+                    <div class="req_data_maintenance_icon">
+                        <img src="/crnd_vsd_resource/static/img/resource.svg" alt="" class=""/>
+                    </div>
+                    Resource
+                </div>
+                <div>
+                    <t t-esc="state.requestData.resource.name" />
+                </div>
+            </div>
+        </xpath>
+    </t>
+</templates>

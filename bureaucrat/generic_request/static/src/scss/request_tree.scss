@@ -1,0 +1,10 @@
+.o_list_view {
+    .o_list_renderer table.o_list_table tr.o_data_row td.o_data_cell.request-tree-line-clamp {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 4px;
+    }
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="view_request_stage_route_tree">
+        <field name="model">request.stage.route</field>
+        <field name="inherit_id" ref="generic_request.view_request_stage_route_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree/field[@name='allowed_group_ids']"
+                   position="after">
+                <field name="is_available_in_email"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_request_stage_route_form">
+        <field name="model">request.stage.route</field>
+        <field name="inherit_id" ref="generic_request.view_request_stage_route_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form//field[@name='allowed_group_ids']"
+                   position="after">
+                <field name="is_available_in_email"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

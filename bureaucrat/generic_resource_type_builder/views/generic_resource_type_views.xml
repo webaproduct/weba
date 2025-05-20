@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="generic_resource_type_view_form" model="ir.ui.view">
+        <field name="model">generic.resource.type</field>
+        <field name="inherit_id" ref="generic_resource.generic_resource_type_view_from"/>
+        <field name="arch" type="xml">
+            <xpath expr="/form" position="attributes">
+                <attribute name="create">true</attribute>
+                <attribute name="class"
+                           add="on-create-action-name-generic_resource_type_builder.action_resource_wizard_create_type on-create-action-type-action"
+                           separator=" "/>
+            </xpath>
+            <xpath expr="/form/sheet/notebook" position="inside">
+                <page name="page_fields" string="Fields" groups="base.group_system">
+                    <field name="custom_field_ids" context="{'default_resource_type_id': active_id}" groups="base.group_system">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="field_description"/>
+                                    <field name="ttype"/>
+                                    <field name="required"/>
+                                    <field name="readonly"/>
+                                    <field name="index" groups="base.group_no_one"/>
+                                    <field name="state" groups="base.group_no_one"/>
+                                </tree>
+                                <form string="Fields Description">
+                                    <group>
+                                        <group>
+                                            <field name="name"/>
+                                            <field name="field_description"/>
+                                            <field name="show_on_tree" widget="boolean"/>
+                                            <field name="show_on_form" widget="boolean"/>
+                                        </group>
+                                        <group>
+                                            <field name="ttype"/>
+                                            <field name="help"/>
+                                        </group>
+                                    </group>
+                                    <notebook>
+                                        <page name="base" string="Properties">
+                                            <group string="Base Properties">
+                                                <group>
+                                                    <field name="required"/>
+                                                    <field name="readonly"/>
+                                                    <field name="store" groups="base.group_no_one"/>
+                                                    <field name="index" groups="base.group_no_one"/>
+                                                    <field name="copied" groups="base.group_no_one"/>
+                                                </group>
+                                                <group>
+                                                    <field name="translate"
+                                                           readonly="ttype not in ['char', 'text', 'html']"
+                                                           invisible="ttype not in ['char', 'text', 'html']"/>
+                                                    <field name="size" groups="base.group_no_one"
+                                                           readonly="ttype not in ['char', 'reference']"
+                                                           invisible="ttype not in ['char', 'reference']"/>
+                                                    <field name="relation"
+                                                           required="ttype in ['many2one', 'one2many', 'many2many']"
+                                                           readonly="ttype not in ['many2one', 'one2many', 'many2many']"
+                                                           invisible="ttype not in ['many2one', 'one2many', 'many2many']"/>
+                                                    <field name="on_delete" groups="base.group_no_one"
+                                                           readonly="ttype != 'many2one'"
+                                                           invisible="ttype != 'many2one'"/>
+                                                    <field name="relation_field"
+                                                           required="ttype == 'one2many'"
+                                                           readonly="ttype != 'one2many'"
+                                                           invisible="ttype != 'one2many'"/>
+                                                    <field name="relation_table" groups="base.group_no_one"
+                                                           readonly="ttype != 'many2many' or state != 'manual'"
+                                                           invisible="ttype != 'many2many' or state != 'manual'"/>
+                                                    <field name="column1" groups="base.group_no_one"
+                                                           readonly="ttype != 'many2many' or state != 'manual'"
+                                                           invisible="ttype != 'many2many' or state != 'manual'"/>
+                                                    <field name="column2" groups="base.group_no_one"
+                                                           readonly="ttype != 'many2many' or state != 'manual'"
+                                                           invisible="ttype != 'many2many' or state != 'manual'"/>
+                                                    <field name="domain" groups="base.group_no_one"
+                                                           readonly="ttype not in ['many2one', 'one2many', 'many2many']"
+                                                           invisible="ttype not in ['many2one', 'one2many', 'many2many']"/>
+                                                </group>
+                                            </group>
+                                            <group readonly="ttype not in ['selection', 'reference']"
+                                                   invisible="ttype not in ['selection', 'reference']">
+                                                <field name="selection_ids">
+                                                    <tree editable="bottom">
+                                                        <field name="sequence" widget="handle"/>
+                                                        <field name="value"/>
+                                                        <field name="name"/>
+                                                    </tree>
+                                                </field>
+                                            </group>
+                                            <group string="Advanced Properties" groups="base.group_no_one">
+                                                <field name="related"/>
+                                                <field name="depends" required="compute not in [False, '']"/>
+                                                <field name="compute" widget="ace" options="{'mode': 'python'}"/>
+                                            </group>
+                                            <div groups="base.group_no_one">
+                                                <h3>How to define a computed field</h3>
+                                                <p>Computed fields are defined with the fields
+                                                <strong>Dependencies</strong> and <strong>Compute</strong>.</p>
+                                                <p>The field <strong>Dependencies</strong> lists the fields that
+                                                the current field depends on. It is a comma-separated list of
+                                                field names, like <code>name, size</code>. You can also refer to
+                                                fields accessible through other relational fields, for instance
+                                                <code>partner_id.company_id.name</code>.</p>
+                                                <p>The field <strong>Compute</strong> is the Python code to
+                                                compute the value of the field on a set of records. The value of
+                                                the field must be assigned to each record with a dictionary-like
+                                                assignment.</p>
+                                                <pre>
+    for record in self:
+        record['size'] = len(record.name)
+</pre>
+                                                <p>The only predefined variables are</p>
+                                                <ul>
+                                                    <li><code>self</code> (the set of records to compute)</li>
+                                                    <li><code>datetime</code> (Python module)</li>
+                                                    <li><code>dateutil</code> (Python module)</li>
+                                                    <li><code>time</code> (Python module)</li>
+                                                </ul>
+                                                <p>Other features are accessible through <code>self</code>, like
+                                                <code>self.env</code>, etc.</p>
+                                            </div>
+                                        </page>
+                                        <page name="groups" string="Access Rights">
+                                            <field name="groups"/>
+                                        </page>
+                                        <page name="misc" string="Miscellaneous" groups="base.group_no_one">
+                                            <group>
+                                                <field name="state"/>
+                                                <field name="modules"/>
+                                            </group>
+                                        </page>
+                                    </notebook>
+                                </form>
+                            </field>
+                </page>
+                <page name="page_field_tree_position" string="Tree View" groups="base.group_system">
+                    <div class="alert alert-info" role="alert">
+                        <i class="fa fa-info-circle" title="Info"/>
+                        You can drag and drop fields in edit mode to change the sequence.
+                        <i class="fa fa-sort" title="Sort"/>
+                        <br/>
+                        <i class="fa fa-info-circle" title="Info"/>
+                        <b> Note: reload page after saving for the changes to take effect!</b>
+                    </div>
+                    <field name="field_tree_position_ids" context="{'default_resource_type_id': active_id}" groups="base.group_system">
+                        <tree>
+                            <field name="sequence" string="Sequence" widget="handle"/>
+                            <field name="custom_field_name"/>
+                            <field name="custom_field_ttype"/>
+                        </tree>
+                        <form>
+                            <sheet>
+                                <group name="group_position_tree_root">
+                                    <group name="group_position_tree_left">
+                                        <field name="custom_field_id"
+                                               domain="[('resource_type_id', '=', parent.id)]"
+                                               options="{'no_create': True, 'no_open': True}"/>
+                                    </group>
+                                    <group name="group_position_tree_right">
+                                        <field name="sequence"/>
+                                    </group>
+                                </group>
+                            </sheet>
+                        </form>
+                    </field>
+                </page>
+                <page name="page_field_form_position" string="Form View" groups="base.group_system">
+                    <div class="alert alert-info" role="alert">
+                        <i class="fa fa-info-circle" title="Info"/>
+                        You can drag and drop fields in edit mode to change the sequence.
+                        <i class="fa fa-sort" title="Sort"/>
+                        <br/>
+                        <i class="fa fa-info-circle" title="Info"/>
+                        <b> Note: reload page after saving for the changes to take effect!</b>
+                    </div>
+                    <field name="field_form_position_ids" context="{'default_resource_type_id': active_id}" groups="base.group_system">
+                        <tree>
+                            <field name="sequence" string="Sequence" widget="handle"/>
+                            <field name="custom_field_name"/>
+                            <field name="custom_field_ttype"/>
+                            <field name="place_on_form" string="Position on Form"/>
+                        </tree>
+                        <form>
+                            <sheet>
+                                <group name="group_position_form_root">
+                                    <group name="group_position_form_left">
+                                        <field name="custom_field_id"
+                                               domain="[('resource_type_id', '=', parent.id)]"
+                                               options="{'no_create': True, 'no_open': True}"/>
+                                    </group>
+                                    <group name="group_position_form_right">
+                                        <field name="place_on_form"/>
+                                        <field name="sequence"/>
+                                    </group>
+                                </group>
+                            </sheet>
+                        </form>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="generic_resource_type_view_tree" model="ir.ui.view">
+        <field name="model">generic.resource.type</field>
+        <field name="inherit_id" ref="generic_resource.generic_resource_type_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="/tree" position="attributes">
+                <attribute name="create">true</attribute>
+                <attribute name="class"
+                           add="on-create-action-name-generic_resource_type_builder.action_resource_wizard_create_type on-create-action-type-action"
+                           separator=" "/>
+            </xpath>
+        </field>
+    </record>
+    <record id="generic_resource_type_view_kanban" model="ir.ui.view">
+        <field name="model">generic.resource.type</field>
+        <field name="inherit_id" ref="generic_resource.view_generic_resource_type_kanban"/>
+        <field name="arch" type="xml">
+            <xpath expr="/kanban" position="attributes">
+                <attribute name="create">true</attribute>
+                <attribute name="import">false</attribute>
+                <attribute name="on_create">generic_resource_type_builder.action_resource_wizard_create_type</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

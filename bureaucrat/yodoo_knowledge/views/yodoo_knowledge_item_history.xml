@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="yodoo_knowledge_item_history_view_tree" model="ir.ui.view">
+        <field name="model">yodoo.knowledge.item.history</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="item_name"/>
+                <field name="item_format"/>
+                <field name="commit_summary"/>
+                <field name="user_id"/>
+                <field name="date_create"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="yodoo_knowledge_item_history_view_form" model="ir.ui.view">
+        <field name="model">yodoo.knowledge.item.history</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="item_id"/>
+                        </group>
+                        <group>
+                            <field name="item_format" invisible="True"/>
+                            <field name="commit_summary"/>
+                        </group>
+                    </group>
+
+                    <field name="item_body_html"
+                           invisible="item_format != 'html'"/>
+                    <field name="item_body_pdf"
+                           invisible="item_format != 'pdf'"
+                           widget="pdf_viewer"/>
+
+                    <group string="References">
+                        <group>
+                            <field name="user_id" string="Created by"/>
+                        </group>
+                        <group>
+                            <field name="date_create" string="Created at"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="yodoo_knowledge_item_history_view_search" model="ir.ui.view">
+        <field name="model">yodoo.knowledge.item.history</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="item_name"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_yodoo_knowledge_item_history" model="ir.actions.act_window">
+        <field name="name">Item History</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">yodoo.knowledge.item.history</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

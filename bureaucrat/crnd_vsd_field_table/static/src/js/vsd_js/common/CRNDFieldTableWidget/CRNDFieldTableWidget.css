@@ -1,0 +1,48 @@
+.field_table_wrapper {
+    width: 100%;
+}
+.field_table_subwrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+}
+.field_table {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    max-width: 100%;
+    overflow-x: auto;
+    /* overflow-y: ; */
+}
+.field_table_row {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 5px;
+}
+.field_table_row > * {
+    flex-shrink: 0;
+    width: 200px;
+}
+
+.field_table_row .datetime_picker_wrapper,
+.field_table_row .selection_list {
+    position: fixed !important;
+    top: 50px;
+    left: 0;
+
+    width: inherit;
+    
+    transform: translate(var(--left), var(--top));
+}
+.field_table_add_row {
+    margin-top: 10px;
+}
+.delete_row {
+    max-width: 35px;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

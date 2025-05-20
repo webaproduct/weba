@@ -1,0 +1,135 @@
+<odoo>
+
+    <record id="edit_project_form_inherit" model="ir.ui.view">
+        <field name="name">edit.project.form.inherit</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('oe_button_box')]" position="inside">
+                <button class="oe_stat_button" name="action_total_timesheet" type="object" icon="fa-pencil-square-o">
+                    <div class="o_field_widget o_stat_info">
+                        <span class="o_stat_text">
+                            Tracking
+                        </span>
+                        <span class="o_stat_value">
+                            <field name="total_timesheet" widget="float_time"/>
+                        </span>
+                    </div>
+                </button>
+            </xpath>
+
+            <xpath expr="//field[@name='label_tasks']" position="before">
+                <field name="sales_manager_id" widget="many2one_avatar"/>
+                <field name="crm_lead_id"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="project_invoice_form_inherit" model="ir.ui.view">
+        <field name="name">project.invoice.form.inherit</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="hr_timesheet.project_invoice_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='allocated_hours']" position="after">
+                <field name="project_month_id"/>
+                <field name="development_perspective"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="project_task_view_tree_main_base_inherit" model="ir.ui.view">
+        <field name="name">project.task.view.tree.main.base.inherit</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.project_task_view_tree_main_base"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="attributes">
+                <attribute name="expand">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_project_kanban_inherit" model="ir.ui.view">
+        <field name="name">view.project.kanban.inherit</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project_kanban"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='tag_ids']" position="after">
+                <field name="sales_manager_id"/>
+                <field name="crm_lead_id"/>
+                <field name="project_month_id"/>
+                <field name="development_perspective"/>
+            </xpath>
+
+            <xpath expr="//div[hasclass('o_primary')]" position="replace">
+                <div class="o_primary me-5" style="font-size: 16px;">
+                    <span t-att-title="record.display_name.value"><t t-esc="record.display_name.value"/></span>
+
+                    <!--Custom-->
+                    <div class="text-muted o_text_overflow fa fa-user me-2" t-if="record.sales_manager_id and record.sales_manager_id.raw_value">
+                        <span>Manager: </span>
+                        <field name="sales_manager_id"/>
+                    </div>
+
+                    <div class="text-muted o_text_overflow fa fa-user me-2" t-if="record.user_id and record.user_id.raw_value">
+                        <span>Project: </span>
+                        <field name="user_id"/>
+                    </div>
+
+                    <div class="text-muted o_text_overflow fa fa-user me-2" t-if="record.partner_id and record.partner_id.raw_value">
+                        <span>Client: </span>
+                        <field name="partner_id"/>
+                    </div>
+                    <!--Custom-->
+
+                    <div t-if="record.date.raw_value or record.date_start.raw_value" class="text-muted o_row">
+                        <span class="fa fa-clock-o me-2" title="Dates"/><field name="date_start"/>
+                        <i t-if="record.date.raw_value and record.date_start.raw_value" class="fa fa-long-arrow-right mx-2 oe_read_only" aria-label="Arrow icon" title="Arrow"/>
+                        <field name="date"/>
+                    </div>
+                    <div t-if="record.alias_email.value" class="text-muted text-truncate" t-att-title="record.alias_email.value">
+                        <span class="fa fa-envelope-o me-2" aria-label="Domain Alias" title="Domain Alias"/><t t-esc="record.alias_email.value"/>
+                    </div>
+                    <div t-if="record.rating_active.raw_value and record.rating_count.raw_value &gt; 0" class="text-muted" groups="project.group_project_rating">
+                        <b class="me-1">
+                            <span style="font-weight:bold;" class="fa mt4 fa-smile-o text-success" t-if="record.rating_avg.raw_value &gt;= 3.66" title="Average Rating: Satisfied" role="img" aria-label="Happy face"/>
+                            <span style="font-weight:bold;" class="fa mt4 fa-meh-o text-warning" t-elif="record.rating_avg.raw_value &gt;= 2.33" title="Average Rating: Okay" role="img" aria-label="Neutral face"/>
+                            <span style="font-weight:bold;" class="fa mt4 fa-frown-o text-danger" t-else="" title="Average Rating: Dissatisfied" role="img" aria-label="Sad face"/>
+                        </b>
+                        <t t-if="record.rating_avg.raw_value % 1 == 0">
+                            <field name="rating_avg" nolabel="1" widget="float" digits="[1, 0]"/>
+                        </t>
+                        <t t-else="">
+                            <field name="rating_avg" nolabel="1" widget="float" digits="[1, 1]"/>
+                        </t> / 5
+                    </div>
+                    <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+
+                    <!--Custom-->
+                    <div class="text-muted o_text_overflow" t-if="record.crm_lead_id and record.crm_lead_id.raw_value">
+                        <span>Opportunity: </span>
+                        <field name="crm_lead_id"/>
+                    </div>
+                    <div class="text-muted o_text_overflow" t-if="record.project_month_id and record.project_month_id.raw_value">
+<!--                        <field name="project_month_id" class="fa fa-clock-o"/>-->
+                        <span style="margin-right: 5px;" class="fa fa-clock-o"/><t t-esc="record.project_month_id.value"/>
+                    </div>
+                    <!--Custom-->
+
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_project_project_filter_inherit" model="ir.ui.view">
+        <field name="name">view.project.project.filter.inherit</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project_project_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="before">
+                <field name="project_month_id" string="Month/Year"
+                       filter_domain="[('project_month_id.display_name_store', 'ilike', self)]"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="crnd_vsd.RequestsList" owl="1">
+        <FilterList 
+            isActive="state.isOpenFilterList"
+            
+            use_quick_filters="use_quick_filters"
+            reqStatus="state.reqStatus"
+            reqStatusList="reqStatusList"
+            changeRequestStatus="changeRequestStatus"
+            
+            filterData="state.filterData"
+            toggleFilterList="toggleFilterList"
+            deleteAllFilters="deleteAllFilters"
+            saveFilterList="saveFilterList" />
+
+        <button class="mobile btn create_request btn btn-primary btn-cta" t-on-click="onClickCreate">
+            <!-- <img src="crnd_vsd/static/img/create_req.svg" alt=""/> -->
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.5 1H2.5C1.67157 1 1 1.67157 1 2.5V17.5C1 18.3284 1.67157 19 2.5 19H17.5C18.3284 19 19 18.3284 19 17.5V2.5C19 1.67157 18.3284 1 17.5 1Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M10 6V14M6 10H14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+                
+            New request
+        </button>
+
+        <div class="request_list_header">
+            
+            <div class="desktop request_list_header_left_side">
+                <span>
+                    Requests 
+                </span>
+                <div class="request_list_view_mode">
+                    <button t-attf-class="{{ state.viewMode == 'list' ? 'btn-primary' : 'non-active' }}" t-on-click="e => this.changeViewMode('list')">
+                        <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect y="4" width="16" height="2" rx="1" fill="currentColor"/>
+                            <rect width="16" height="2" rx="1" fill="currentColor"/>
+                            <rect y="8" width="16" height="2" rx="1" fill="currentColor"/>
+                            <rect y="12" width="16" height="2" rx="1" fill="currentColor"/>
+                        </svg>
+                    </button>
+                    <button t-attf-class="{{ state.viewMode == 'kanban' ? 'btn-primary' : 'non-active' }}" t-on-click="e => this.changeViewMode('kanban')">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14 1H9C8.44772 1 8 1.44772 8 2V7C8 7.55228 8.44772 8 9 8H14C14.5523 8 15 7.55228 15 7V2C15 1.44772 14.5523 1 14 1Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 15V2C8 1.73478 7.89464 1.48043 7.70711 1.29289C7.51957 1.10536 7.26522 1 7 1H2C1.73478 1 1.48043 1.10536 1.29289 1.29289C1.10536 1.48043 1 1.73478 1 2V14C1 14.2652 1.10536 14.5196 1.29289 14.7071C1.48043 14.8946 1.73478 15 2 15H14C14.2652 15 14.5196 14.8946 14.7071 14.7071C14.8946 14.5196 15 14.2652 15 14V9C15 8.73478 14.8946 8.48043 14.7071 8.29289C14.5196 8.10536 14.2652 8 14 8H1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <!-- <Plashka 
+                filterData="state.filterData" 
+
+                deleteFilter="deleteFilter" 
+                deleteAllFilters="deleteAllFilters" /> -->
+
+            <div class="request_list_header_right_side">
+                <div class="search_wrapper">
+                    <div class="search_subwrapper">
+                        <label for="text">
+                            <img src="/crnd_vsd/static/img/search.svg" alt="" class="search_icon" />
+                        </label>
+                        <input 
+                            type="text" 
+                            t-model="state.filterData.global_search.value"
+                            t-on-input="searchQueryInputEvent"
+                            required="true"
+                            autocomplete="false"
+                        />
+                    </div>
+                </div>
+                
+                <button class="filter_button" t-on-click="e => this.toggleFilterList()">
+                    <img src="/crnd_vsd/static/img/filter.svg" alt="" />
+                    <span t-if="getFilterDataCount()" class="filter_button_filter_items_count btn-primary">
+                        <t t-esc="getFilterDataCount()"/>
+                    </span>
+                </button>
+
+                
+                <!-- <button>
+                    <img src="crnd_vsd/static/img/search.svg" alt=""/>
+                </button> -->
+
+                <button class="desktop btn create_request btn btn-primary btn-cta" t-on-click="onClickCreate">
+                    <!-- <img src="crnd_vsd/static/img/create_req.svg" alt=""/> -->
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.5 1H2.5C1.67157 1 1 1.67157 1 2.5V17.5C1 18.3284 1.67157 19 2.5 19H17.5C18.3284 19 19 18.3284 19 17.5V2.5C19 1.67157 18.3284 1 17.5 1Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        <path d="M10 6V14M6 10H14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                        
+                    New request
+                </button>
+            </div>
+        </div>
+
+        <PlashkaFilterList 
+            updatePlashka="state.updatePlashka"
+            filterData="state.filterData" 
+
+            deleteFilter="deleteFilter"
+            deleteFilterValue="deleteFilterValue" 
+            deleteAllFilters="deleteAllFilters" />
+
+        <div class="req_list_global_wrapper">
+            <div t-if="use_quick_filters" class="status_list desktop">
+                <t t-foreach="reqStatusList" t-as="reqStatusObj" t-key="reqStatusObj.value">
+                    <div t-attf-class="status_item {{ state.reqStatus == reqStatusObj.value ? 'active' : '' }}" t-on-click="e => this.changeRequestStatus(reqStatusObj.value)">
+                        <div class="status_color" style="background: blue;"></div>
+                        <t t-esc="reqStatusObj.name" />
+                    </div>
+                </t>
+            </div>
+
+            
+            <!-- <div class="sorting_block">
+                Sort by
+            </div> -->
+
+            <t t-if="state.viewMode == 'list'">
+                <RequestsListTable 
+                    reqs="state.requests.reqs"
+                    
+                    sortingItem="state.sortingItem"
+                    setSortingItem="setSortingItem"/>
+            </t>
+            <t t-elif="state.viewMode == 'kanban'">
+                <Sorting 
+                    activeObj="state.sortingItem"
+                    setSortingItem="setSortingItem"/>
+                <RequestsListKanban 
+                    reqs="state.requests.reqs"/>
+            </t>
+
+            <t t-if="state.pages_count != 1">
+                <Pagination 
+                    pages_count="state.requests.pages_count" 
+                    page="state.page" 
+                    changePage="changePage"/>
+            </t>
+        </div>
+    </t>
+
+</templates>

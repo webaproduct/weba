@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="generic_todo_template_demo_1" model="generic.todo.template">
+        <field name="name">Todo Template demo 1 </field>
+    </record>
+
+    <record id="generic_todo_template_demo_2" model="generic.todo.template">
+        <field name="name">Todo Template demo 2 </field>
+    </record>
+
+    <record id="generic_todo_template_server_action" model="generic.todo.template">
+        <field name="name">Todo Template Server Action</field>
+    </record>
+
+    <record id="generic_todo_template_todo_list" model="generic.todo.template">
+        <field name="name">Todo Template Todo List</field>
+    </record>
+
+    <record id="generic_todo_template_server_action_line_1" model="generic.todo.template.line">
+        <field name="name">Server Action Todo Template Line 1</field>
+        <field name="todo_template_id" ref="generic_todo_template_server_action"/>
+        <field name="todo_type_id" ref="generic_todo_type_server_action"/>
+        <field name="action_id" ref="generic_todo.server_action__add_request_response_text"/>
+    </record>
+
+    <record id="generic_todo_template_todo_list_line_1" model="generic.todo.template.line">
+        <field name="name">Todo List Todo Template Line 1</field>
+        <field name="todo_template_id" ref="generic_todo_template_todo_list"/>
+        <field name="todo_type_id" ref="generic_todo_type_list_todo"/>
+        <field name="todo_list_template_id" ref="generic_todo.generic_todo_template_demo_1"/>
+    </record>
+
+    <record id="generic_todo_template_line_demo_1" model="generic.todo.template.line">
+        <field name="name">Todo Template Line demo 1</field>
+        <field name="todo_template_id" ref="generic_todo_template_demo_1"/>
+        <field name="todo_type_id" ref="generic_todo_type_simple"/>
+    </record>
+
+    <record id="generic_todo_template_line_demo_2" model="generic.todo.template.line">
+        <field name="name">Todo Template Line demo 2</field>
+        <field name="todo_template_id" ref="generic_todo_template_demo_1"/>
+        <field name="todo_type_id" ref="generic_todo_type_simple"/>
+    </record>
+
+    <record id="generic_todo_template_line_demo_3" model="generic.todo.template.line">
+        <field name="name">Todo Template Line demo 3</field>
+        <field name="todo_template_id" ref="generic_todo_template_demo_1"/>
+        <field name="todo_type_id" ref="generic_todo_type_simple"/>
+    </record>
+
+    <record id="generic_todo_template_line_demo_4" model="generic.todo.template.line">
+        <field name="name">Todo Template Line demo 4</field>
+        <field name="todo_template_id" ref="generic_todo_template_demo_1"/>
+        <field name="todo_type_id" ref="generic_todo_type_simple"/>
+    </record>
+
+    <record id="generic_todo_template_line_demo_5" model="generic.todo.template.line">
+        <field name="name">Todo Template 2 Line demo 1</field>
+        <field name="todo_template_id" ref="generic_todo_template_demo_2"/>
+        <field name="todo_type_id" ref="generic_todo_type_simple"/>
+    </record>
+
+    <record id="generic_todo_template_line_demo_6" model="generic.todo.template.line">
+        <field name="name">Todo Template 2 Line demo 2</field>
+        <field name="todo_template_id" ref="generic_todo_template_demo_2"/>
+        <field name="todo_type_id" ref="generic_todo_type_simple"/>
+    </record>
+
+    <record id="generic_todo_template_line_demo_7" model="generic.todo.template.line">
+        <field name="name">Todo Template 2 Line demo 3</field>
+        <field name="todo_template_id" ref="generic_todo_template_demo_2"/>
+        <field name="todo_type_id" ref="generic_todo_type_simple"/>
+    </record>
+
+</odoo>

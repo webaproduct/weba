@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="view_request_field_set_values">
+        <field name="model">request.request</field>
+        <field name="inherit_id" ref="generic_request.view_request_request_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('oe_button_box')]" position="inside">
+                <field name="show_fields_set_button" invisible="1"/>
+                <button class="oe_stat_button"
+                        type="object"
+                        name="action_view_related_field_values"
+                        invisible="show_fields_set_button == False"
+                        icon="fa-list-ul">
+                    <div class="o_stat_info">
+                        <span class="o_stat_text"> Fields</span>
+                    </div>
+                </button>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

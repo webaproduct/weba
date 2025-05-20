@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="field_set_type_test_incident" model="field.set.type">
+        <field name="name">Example Field Set Type</field>
+        <field name="field_set_model_id" ref="model_test_incident_field_set_value"/>
+    </record>
+</odoo>

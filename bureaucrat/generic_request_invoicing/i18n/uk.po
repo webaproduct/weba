@@ -1,0 +1,388 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* generic_request_invoicing
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-27 15:49+0000\n"
+"PO-Revision-Date: 2025-04-18 14:05+0000\n"
+"Last-Translator: Galina Prokopenko <am@crnd.pro>\n"
+"Language-Team: Ukrainian <http://weblate.crnd.pro/projects/"
+"bureaucrat-generics-17-0/generic_request_invoicing/uk/>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.3.2\n"
+
+#. module: generic_request_invoicing
+#: model:res.groups,comment:generic_request_invoicing.group_request_user_invoicing
+msgid ""
+"\n"
+"            Request user (Invoicing) can read and write request invoice "
+"lines.\n"
+"            If you need at allow for such user to see generated invoices, "
+"then\n"
+"            you have to add also accounting groups for such user.\n"
+"        "
+msgstr ""
+"\n"
+"            Користувач запиту (Invoicing) може читати і записувати рядки "
+"запиту.\n"
+"            Якщо ви хочете дозволити цьому користувачеві бачити згенеровані "
+"інвойси, то\n"
+"            ви повинні додати також облікові групи для цього користувача.\n"
+"        "
+
+#. module: generic_request_invoicing
+#: model_terms:ir.ui.view,arch_db:generic_request_invoicing.view_request_request_form
+msgid ""
+"<span class=\"field-icon fa fa-money oe_inline\" title=\"Total Amount\"/>"
+msgstr ""
+"<span class=\"field-icon fa fa-money oe_inline\" title=\"Total Amount\"/>"
+
+#. module: generic_request_invoicing
+#: model_terms:ir.ui.view,arch_db:generic_request_invoicing.view_request_timesheet_activity_search
+msgid "Billable"
+msgstr "Підлягає інвойсуванню"
+
+#. module: generic_request_invoicing
+#. odoo-python
+#: code:addons/generic_request_invoicing/models/request_request.py:0
+#, python-format
+msgid "Cannot generate invoice unless partner selected!"
+msgstr "Неможливо згенерувати інвойс, якщо не вибрано партнера!"
+
+#. module: generic_request_invoicing
+#. odoo-python
+#: code:addons/generic_request_invoicing/models/request_timesheet_line.py:0
+#, python-format
+msgid ""
+"Cannot make line unbillable if it is already included in invoice "
+"%(invoice)s[%(invoice_id)d]"
+msgstr ""
+"Неможливо зробити рядок не підлягаючим оплаті, якщо він вже включений в "
+"інвойс %(invoice)s%(invoice_id)d]"
+
+#. module: generic_request_invoicing
+#: model:ir.model,name:generic_request_invoicing.model_res_company
+msgid "Companies"
+msgstr "Компанії"
+
+#. module: generic_request_invoicing
+#: model:ir.model,name:generic_request_invoicing.model_res_config_settings
+msgid "Config Settings"
+msgstr "Налаштування"
+
+#. module: generic_request_invoicing
+#: model:ir.model.fields,help:generic_request_invoicing.field_request_request__request_to_invoice_line_ids
+msgid ""
+"Contains list of request invoice lines that are not present in any active "
+"invoice"
+msgstr ""
+"Містить список рядків інвойсу запиту, яких немає в жодному активному інвойсі"
+
+#. module: generic_request_invoicing
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_request_invoice_line__create_uid
+msgid "Created by"
+msgstr "Створив"
+
+#. module: generic_request_invoicing
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_request_invoice_line__create_date
+msgid "Created on"
+msgstr "Створено"
+
+#. module: generic_request_invoicing
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_request_invoice_line__currency_id
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_request_request__currency_id
+msgid "Currency"
+msgstr "Валюта"
+
+#. module: generic_request_invoicing
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_request_type__default_timetracking_product_id
+msgid "Default Timetracking Product"
+msgstr "Продукт для відстеження часу за замовчуванням"
+
+#. module: generic_request_invoicing
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_request_invoice_line__description
+msgid "Description"
+msgstr "Опис"
+
+#. module: generic_request_invoicing
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_request_invoice_line__display_name
+msgid "Display Name"
+msgstr "Відобажати ім'я"
+
+#. module: generic_request_invoicing
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_request_request__enable_invoicing
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_request_timesheet_line__enable_invoicing
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_request_type__enable_invoicing
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_request_wizard_stop_work__enable_invoicing
+msgid "Enable Invoicing"
+msgstr "Увімкнути інвойсування"
+
+#. module: generic_request_invoicing
+#: model_terms:ir.ui.view,arch_db:generic_request_invoicing.view_request_request_form
+msgid "Generate invoice"
+msgstr "Створити інвойс"
+
+#. module: generic_request_invoicing
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_request_invoice_line__id
+msgid "ID"
+msgstr "ID"
+
+#. module: generic_request_invoicing
+#: model:ir.model.fields,help:generic_request_invoicing.field_request_timesheet_line__is_billable
+msgid ""
+"If set to True, then system will generate new invoice line for this "
+"timesheet line for this request."
+msgstr ""
+"Якщо встановлено значення True, то система згенерує новий рядок інвойсу для "
+"цього рядка табеля обліку робочого часу для цього запиту."
+
+#. module: generic_request_invoicing
+#: model:ir.model.fields,help:generic_request_invoicing.field_request_timesheet_activity__is_billable
+msgid ""
+"If set, then all timesheet lines of this activity will be billable by "
+"default."
+msgstr ""
+"Якщо встановлено, то за замовчуванням всі рядки табеля обліку робочого часу "
+"цієї активності будуть виставлені до оплати."
+
+#. module: generic_request_invoicing
+#: model:ir.model.fields,help:generic_request_invoicing.field_request_invoice_line__is_invoiced
+msgid "Indicates whether this line is present in active invoice."
+msgstr "Показує, чи присутній цей рядок в активному інвойсі."
+
+#. module: generic_request_invoicing
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_request_request__invoice_ids
+msgid "Invoice"
+msgstr "Рахунок"
+
+#. module: generic_request_invoicing
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_request_request__invoice_count
+msgid "Invoice Count"
+msgstr "Кількість інвойсів"
+
+#. module: generic_request_invoicing
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_request_invoice_line__invoice_line_id
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_request_invoice_line__invoice_line_ids
+msgid "Invoice Line"
+msgstr "Рядок інвойсу"
+
+#. module: generic_request_invoicing
+#: model_terms:ir.ui.view,arch_db:generic_request_invoicing.view_request_request_form
+msgid "Invoices"
+msgstr "Рахунки"
+
+#. module: generic_request_invoicing
+#: model_terms:ir.ui.view,arch_db:generic_request_invoicing.view_request_request_form
+msgid "Invoicing"
+msgstr "Виставлення рахунків"
+
+#. module: generic_request_invoicing
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_request_timesheet_activity__is_billable
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_request_timesheet_line__is_billable
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_request_wizard_stop_work__is_billable
+msgid "Is Billable"
+msgstr "Підлягає виставлянню рахунків"
+
+#. module: generic_request_invoicing
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_request_invoice_line__is_invoiced
+msgid "Is Invoiced"
+msgstr "Інвойсовано"
+
+#. module: generic_request_invoicing
+#: model:ir.model,name:generic_request_invoicing.model_account_move
+msgid "Journal Entry"
+msgstr "Запис в журналі"
+
+#. module: generic_request_invoicing
+#: model:ir.model,name:generic_request_invoicing.model_account_move_line
+msgid "Journal Item"
+msgstr "Елемент журналу"
+
+#. module: generic_request_invoicing
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_request_invoice_line__write_uid
+msgid "Last Updated by"
+msgstr "Востаннє оновив"
+
+#. module: generic_request_invoicing
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_request_invoice_line__write_date
+msgid "Last Updated on"
+msgstr "Востаннє оновлено"
+
+#. module: generic_request_invoicing
+#: model_terms:ir.ui.view,arch_db:generic_request_invoicing.view_request_request_form
+msgid "Make all billable"
+msgstr "Зробити все таким, що підлягає оплаті"
+
+#. module: generic_request_invoicing
+#: model_terms:ir.ui.view,arch_db:generic_request_invoicing.view_request_request_form
+msgid "Make all not billable"
+msgstr "Зробити все таким, що не підлягає оплаті"
+
+#. module: generic_request_invoicing
+#: model_terms:ir.ui.view,arch_db:generic_request_invoicing.view_request_timesheet_activity_search
+msgid "Not Billable"
+msgstr "Не підлягає оплаті"
+
+#. module: generic_request_invoicing
+#. odoo-python
+#: code:addons/generic_request_invoicing/models/request_request.py:0
+#, python-format
+msgid "Nothing to invoice"
+msgstr "Нічого інвойсувати"
+
+#. module: generic_request_invoicing
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_request_invoice_line__price_subtotal
+msgid "Price Subtotal"
+msgstr "Ціна Підсумок"
+
+#. module: generic_request_invoicing
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_request_request__price_total
+msgid "Price Total"
+msgstr "Ціна Разом"
+
+#. module: generic_request_invoicing
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_request_invoice_line__price_unit
+msgid "Price Unit"
+msgstr "Ціна за одиницю"
+
+#. module: generic_request_invoicing
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_request_request__pricelist_id
+msgid "Pricelist"
+msgstr "Прайс-лист"
+
+#. module: generic_request_invoicing
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_request_invoice_line__product_id
+msgid "Product"
+msgstr "Продукт"
+
+#. module: generic_request_invoicing
+#: model:product.pricelist,name:generic_request_invoicing.list0
+msgid "Public Pricelist"
+msgstr "Публічний прайс"
+
+#. module: generic_request_invoicing
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_request_invoice_line__quantity
+msgid "Quantity"
+msgstr "Кількість"
+
+#. module: generic_request_invoicing
+#: model:ir.model,name:generic_request_invoicing.model_request_request
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_account_bank_statement_line__request_id
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_account_move__request_id
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_account_payment__request_id
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_request_invoice_line__request_id
+msgid "Request"
+msgstr "Запит"
+
+#. module: generic_request_invoicing
+#: model:ir.model,name:generic_request_invoicing.model_request_invoice_line
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_account_move_line__request_invoice_line_id
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_request_request__request_invoice_line_ids
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_request_timesheet_line__request_invoice_line_id
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_request_timesheet_line__request_invoice_line_ids
+msgid "Request Invoice Line"
+msgstr "Рядок інвойсу запиту"
+
+#. module: generic_request_invoicing
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_res_config_settings__request_invoice_line_description_tmpl
+msgid "Request Invoice Line Description Template"
+msgstr "Рядок інвойсу запиту Опис шаблону"
+
+#. module: generic_request_invoicing
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_res_company__request_invoice_line_description_tmpl
+msgid "Request Invoice Line Description Tmpl"
+msgstr "Рядок інвойсу запиту Опис Tmpl"
+
+#. module: generic_request_invoicing
+#: model:ir.model,name:generic_request_invoicing.model_request_timesheet_activity
+msgid "Request Timesheet Activity"
+msgstr "Запит табелю обліку робочого часу"
+
+#. module: generic_request_invoicing
+#: model:ir.model,name:generic_request_invoicing.model_request_timesheet_line
+msgid "Request Timesheet Line"
+msgstr "Запис табелю запита"
+
+#. module: generic_request_invoicing
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_request_request__request_to_invoice_line_ids
+msgid "Request To Invoice Line"
+msgstr "Запит на виставлення рахунку"
+
+#. module: generic_request_invoicing
+#: model:ir.model,name:generic_request_invoicing.model_request_type
+msgid "Request Type"
+msgstr "Тип запиту"
+
+#. module: generic_request_invoicing
+#: model:ir.model,name:generic_request_invoicing.model_request_wizard_stop_work
+msgid "Request Wizard: Stop Work"
+msgstr "Майстер для запитів: Зупиніть роботу"
+
+#. module: generic_request_invoicing
+#: model:res.groups,name:generic_request_invoicing.group_request_user_invoicing
+msgid "Request user (Invoicing)"
+msgstr "Користувач запиту (Інвойсинг)"
+
+#. module: generic_request_invoicing
+#: model:ir.model.fields,help:generic_request_invoicing.field_request_timesheet_line__request_invoice_line_ids
+msgid "Technical field to keep reference to related request invoice line"
+msgstr ""
+"Технічне поле для зберігання посилання на відповідний рядок рахунку за "
+"запитом"
+
+#. module: generic_request_invoicing
+#: model:product.template,name:generic_request_invoicing.product_timetracking_product_template
+msgid "Time Tracking"
+msgstr "Облік часу"
+
+#. module: generic_request_invoicing
+#: model:product.template,description_sale:generic_request_invoicing.product_timetracking_product_template
+msgid "Time tracked on requests"
+msgstr "Відстеження часу на виконання запитів"
+
+#. module: generic_request_invoicing
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_request_invoice_line__timesheet_line_id
+msgid "Timesheet Line"
+msgstr "Лінія табелю"
+
+#. module: generic_request_invoicing
+#: model_terms:ir.ui.view,arch_db:generic_request_invoicing.view_request_invoice_line_tree
+#: model_terms:ir.ui.view,arch_db:generic_request_invoicing.view_request_request_form
+msgid "Total"
+msgstr "Всього"
+
+#. module: generic_request_invoicing
+#: model_terms:ir.ui.view,arch_db:generic_request_invoicing.view_request_request_form
+msgid "Total Amount"
+msgstr "Загальна кількість"
+
+#. module: generic_request_invoicing
+#: model:ir.model.fields,field_description:generic_request_invoicing.field_request_invoice_line__uom_id
+msgid "Unit of Measure"
+msgstr "Одиниця виміру"
+
+#. module: generic_request_invoicing
+#: model_terms:ir.ui.view,arch_db:generic_request_invoicing.view_request_request_form
+msgid "UoM"
+msgstr "UoM"
+
+#. module: generic_request_invoicing
+#: model:ir.model.fields,help:generic_request_invoicing.field_res_config_settings__request_invoice_line_description_tmpl
+msgid "You can use jinja2 placeholders in this field"
+msgstr "Ви можете використовувати плейсхолдери jinja2 в цьому полі"
+
+#. module: generic_request_invoicing
+#: model_terms:ir.ui.view,arch_db:generic_request_invoicing.view_request_invoice_line_form
+msgid "description"
+msgstr "опис"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Остання модифікація"

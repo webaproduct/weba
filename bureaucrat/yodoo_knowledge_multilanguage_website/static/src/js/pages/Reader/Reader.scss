@@ -1,0 +1,15 @@
+#yodoo_knowledge_website_anchor_owl {
+    & .language_selector {
+        margin-left: auto;
+    }
+    & .language_selector > .selection {
+        width: 200px;
+        
+    }
+    & .language_selector .active_selection {
+        justify-content: flex-end;
+        padding: clamp(4px, 2vw, 8px) clamp(6px, 2vw, 12px);
+        background: transparent;
+        border: none;
+    }
+}

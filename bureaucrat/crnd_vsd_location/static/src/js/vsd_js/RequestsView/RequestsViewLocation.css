@@ -1,0 +1,13 @@
+.req_location_block {
+    display: flex;
+    align-items: center;
+    column-gap: clamp(24px, 2vw, 30px);
+
+    padding-block: clamp(12px, 2vw, 18px);
+    border-bottom: 1px dashed #C5CAD1;
+}
+
+.req_location {
+    font-size: 14px;
+    padding: 1px 5px;
+}

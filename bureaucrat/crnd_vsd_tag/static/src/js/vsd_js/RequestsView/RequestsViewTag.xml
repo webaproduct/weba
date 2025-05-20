@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-inherit="crnd_vsd.RequestsView" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('req_content')]" position="after">
+            <div t-if="state.requestData.tags and state.requestData.tags.length and isAllowed('tags')" class="req_tags_block">
+                <span>
+                    <img src="/crnd_vsd_tag/static/img/tag.svg" />
+                </span>
+
+                <div class="req_tags_list">
+                    <t t-foreach="state.requestData.tags" t-as="tag" t-key="tag.id">
+                        <div t-attf-class="rounded-pill o_tag req_tag o_tag_color_{{tag.color}}">
+                            <t t-esc="tag.name"/>
+                        </div>
+                    </t>
+                </div>
+            </div>
+        </xpath>
+    </t>
+</templates>

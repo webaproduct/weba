@@ -1,0 +1,21 @@
+.req_tags_block {
+    display: flex;
+    align-items: center;
+    column-gap: clamp(16px, 2vw, 24px);
+
+    padding-block: clamp(12px, 2vw, 18px);
+    border-top: 1px dashed #C5CAD1;
+}
+.req_tags_block img {
+    width: 22px;
+    height: 22px;
+}
+.req_tags_list {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 10px 5px;
+}
+.req_tag {
+    font-size: 14px;
+    padding: 1px 5px;
+}

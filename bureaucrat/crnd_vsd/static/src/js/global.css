@@ -1,0 +1,13 @@
+#crnd_vsd_anchor_owl {
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 65px;
+}
+main {
+    width: 100% !important;
+}
+body * {
+    /* outline: 1px solid red; */
+}
+.mobile {}
+.desktop {}

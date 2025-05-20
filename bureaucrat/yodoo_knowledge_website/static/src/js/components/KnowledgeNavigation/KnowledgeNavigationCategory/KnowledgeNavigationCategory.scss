@@ -1,0 +1,75 @@
+#yodoo_knowledge_website_anchor_owl {
+    & .category {
+        width: 100%;
+    }
+    & .knowledge_category {
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        column-gap: 10px;
+    
+        cursor: pointer;
+        border-radius: 4px;
+        transition: 0.3s ease;
+    }
+    & .knowledge_category:hover, 
+    & .knowledge_category:focus {
+        background: #00000013;
+    }
+    & .category_arrow {
+        width: 16px;
+        transform: rotateZ(-90deg);
+        transition: 0.3s ease;
+    
+    }
+    
+    & .knowledge_category.expanded .category_arrow {
+        transform: rotateZ(0deg);
+    }
+    
+    & .knowledge_category span.selected {
+        color: $primary !important;
+        font-weight: 600;
+    }
+    
+    & .knowledge_element > span {
+        line-height: 18px;
+    }
+    & .category_list {
+        padding-left: 12px !important;
+        /* display: flex;
+        flex-direction: column;
+        row-gap: 5px; */
+    }
+    & .collapse {
+    }
+    
+    & .knowledge_element {
+        cursor: pointer;
+        padding: 5px;
+        margin-bottom: 5px;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: 0.3s ease;
+    
+    }
+    & .knowledge_element:hover, 
+    & .knowledge_element:focus {
+        background: #00000013;
+    }
+    & .knowledge_element.selected {
+        background-color: $primary;
+        color: #fff;
+        font-weight: 600;
+    }
+    
+    & .book_icon {
+        width: 12px;
+        padding-bottom: 2px;
+        margin-left: 3px;
+        margin-right: 6px;
+        vertical-align: middle;
+    }
+
+}

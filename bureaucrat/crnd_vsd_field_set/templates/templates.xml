@@ -1,0 +1,84 @@
+<odoo noupdate="0">
+    <data>
+        <template id="crnd_vsd_field_set.requests_create_template_field_set" inherit_id="crnd_vsd.requests_create_global_template" name="Requests create template (Field Set)">
+            <xpath expr="//div[hasclass('creation_form_inputs_list')]" position="inside" >
+                <t t-if="classifier.create_show_field_set and field_set">
+<!--                    <div class="separator"></div>-->
+
+<!--                    <div>FieldSet</div>-->
+                    <div class="creation_form_inputs_block" id="crnd_vsd_field_set_wrapper">
+
+                        <t t-foreach="field_set" t-as="field">
+                            <t t-if="field.get('field_type') == 'char'">
+                                <field t-att-name="'fieldset_' + field.get('name')"
+                                       widget="CRNDInputTextWidget"
+                                       t-att-required="field.get('required')"
+                                       t-att-placeholder="field.get('display_name')" />
+                            </t>
+                            <t t-elif="field.get('field_type') == 'bool'">
+                                <field t-att-name="'fieldset_' + field.get('name')"
+                                       widget="CRNDInputBooleanWidget"
+                                       t-att-required="field.get('required')"
+                                       t-att-placeholder="field.get('display_name')" />
+                            </t>
+                            <t t-elif="field.get('field_type') == 'date'">
+                                <field t-att-name="'fieldset_' + field.get('name')"
+                                       widget="CRNDInputDateWidget"
+                                       t-att-required="field.get('required')"
+                                       t-att-placeholder="field.get('display_name')" />
+                            </t>
+                            <t t-elif="field.get('field_type') == 'datetime'">
+                                <field t-att-name="'fieldset_' + field.get('name')"
+                                       widget="CRNDInputDatetimeWidget"
+                                       t-att-required="field.get('required')"
+                                       t-att-placeholder="field.get('display_name')" />
+                            </t>
+                            <t t-elif="field.get('field_type') == 'integer'">
+                                <field t-att-name="'fieldset_' + field.get('name')"
+                                       widget="CRNDInputIntegerWidget"
+                                       t-att-required="field.get('required')"
+                                       t-att-placeholder="field.get('display_name')" />
+                            </t>
+
+                            <t t-elif="field.get('field_type') == 'selection'">
+                                <field t-att-name="'fieldset_' + field.get('name')"
+                                       widget="CRNDInputSelectWidget"
+                                       is_find="true"
+                                       t-att-required="field.get('required')"
+                                       t-att-placeholder="field.get('display_name')">
+                                    <t t-foreach="field.get('values')" t-as="value">
+                                        <option t-att-value="value.get('value')" t-att-name="value.get('name')" />
+                                    </t>
+                                </field>
+                            </t>
+
+                            <t t-elif="field.get('field_type') == 'many2one'">
+                                <field t-att-name="'fieldset_' + field.get('name')"
+                                       widget="CRNDInputSelectWidget"
+                                       is_find="true"
+                                       t-att-required="field.get('required')"
+                                       t-att-placeholder="field.get('display_name')">
+                                    <t t-foreach="field.get('values')" t-as="value">
+                                        <option t-att-value="value.get('value')" t-att-name="value.get('name')" />
+                                    </t>
+                                </field>
+                            </t>
+
+                            <t t-elif="field.get('field_type') == 'many2many'">
+                                <field t-att-name="'fieldset_' + field.get('name')"
+                                       widget="CRNDInputSelectManyWidget"
+                                       is_find="true"
+                                       t-att-required="field.get('required')"
+                                       t-att-placeholder="field.get('display_name')">
+                                    <t t-foreach="field.get('values')" t-as="value">
+                                        <option t-att-value="value.get('value')" t-att-name="value.get('name')" />
+                                    </t>
+                                </field>
+                            </t>
+                        </t>
+                    </div>
+                </t>
+            </xpath>
+        </template>
+    </data>
+</odoo>

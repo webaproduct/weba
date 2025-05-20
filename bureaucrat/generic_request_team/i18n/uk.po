@@ -1,0 +1,708 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* generic_request_team
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-16 21:51+0000\n"
+"PO-Revision-Date: 2025-03-15 07:46+0000\n"
+"Last-Translator: Galina Prokopenko <am@crnd.pro>\n"
+"Language-Team: Ukrainian <http://weblate.crnd.pro/projects/"
+"bureaucrat-generics-17-0/generic_request_team/uk/>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.3.2\n"
+
+#. module: generic_request_team
+#: model:mail.template,body_html:generic_request_team.mail_template_default_request_team_assigned
+msgid ""
+"<div style=\"width: 600px\">\n"
+"\n"
+"            <div id=\"request-mail-header\">\n"
+"                <div itemscope=\"itemscope\" itemtype=\"http://schema.org/"
+"EmailMessage\">\n"
+"                    <div itemprop=\"potentialAction\" "
+"itemscope=\"itemscope\" itemtype=\"http://schema.org/ViewAction\">\n"
+"                        <link itemprop=\"target\" target=\"_blank\" t-att-"
+"href=\"object.get_mail_url(pid=object.author_id.id)\">\n"
+"                        <link itemprop=\"url\" target=\"_blank\" t-att-"
+"href=\"object.get_mail_url(pid=object.author_id.id)\">\n"
+"                        <meta itemprop=\"name\" content=\"View Request\">\n"
+"                    </div>\n"
+"                </div>\n"
+"                <table id=\"request-mail-header-table\" cellspacing=\"0\" "
+"cellpadding=\"0\" border=\"0\" style=\"margin:5px 0 0 0;box-sizing:border-"
+"box;border-collapse:collapse;caption-side:bottom;width: 100%; margin-top: "
+"5px;\" width=\"100%\">\n"
+"                    <tbody style=\"border-style:solid;box-sizing:border-box;"
+"border-left-width:0px;border-bottom-width:0px;border-right-width:0px;border-"
+"top-width:0px;\">\n"
+"                        <tr style=\"border-style:solid;box-sizing:border-box;"
+"border-left-width:0px;border-bottom-width:0px;border-right-width:0px;border-"
+"top-width:0px;\">\n"
+"                            <td id=\"td-view-request\" valign=\"center\" "
+"style=\"border-style:solid;box-sizing:border-box;border-left-width:0px;"
+"border-bottom-width:0px;border-right-width:0px;border-top-width:0px;\">\n"
+"                                <a target=\"_blank\" t-att-href=\"object."
+"get_mail_url(pid=object.author_id.id)\" style=\"border-style:solid;box-"
+"sizing:border-box;border-left-color:#875a7b;border-bottom-color:#875a7b;"
+"border-right-color:#875a7b;border-top-color:#875a7b;border-left-width:0px;"
+"border-bottom-width:0px;border-right-width:0px;border-top-width:0px;display: "
+"table-cell; padding: 8px 12px; font-size: 12px; color: #FFFFFF; text-"
+"decoration: none ; font-weight: 400; background-color: #875A7B; border: 0px "
+"solid #875A7B; border-radius:3px\">\n"
+"                                    View Request\n"
+"                                </a>\n"
+"                            </td>\n"
+"                            <td id=\"td-company\" valign=\"center\" "
+"align=\"right\" style=\"border-style:solid;box-sizing:border-box;border-left-"
+"width:0px;border-bottom-width:0px;border-right-width:0px;border-top-"
+"width:0px;\">\n"
+"                                <img t-attf-src=\"/logo.png{{ '?company=%s' "
+"% company.id if company else '' }}\" style=\"box-sizing:border-box;vertical-"
+"align:middle;padding: 0px; margin: 0px; height: auto; max-width: 80px; max-"
+"height: 40px;\" t-att-alt=\"company.name if company else ''\">\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                    </tbody>\n"
+"                </table>\n"
+"            </div>\n"
+"            <hr style=\"border-left-width:0px;border-bottom-width:0px;border-"
+"right-width:0px;border-top-width:0px;margin: 12px 0px; box-sizing: border-"
+"box; height: 1px; opacity: 0.25; border-width: 0px; background-color: "
+"currentcolor; color: #495057;\">\n"
+"\n"
+"\n"
+"            <div id=\"request-mail-template-body\">\n"
+"                <p>Your team has received a new request <strong><a t-att-"
+"href=\"object.get_mail_url(object.author_id.id)\" target=\"_blank\" t-"
+"esc=\"object.display_name\"></a></strong>.</p>\n"
+"            <p>You can assign it to yourself</p>\n"
+"            </div>\n"
+"            <hr style=\"border-left-width:0px;border-bottom-width:0px;border-"
+"right-width:0px;border-top-width:0px;margin: 12px 0px; box-sizing: border-"
+"box; height: 1px; opacity: 0.25; border-width: 0px; background-color: "
+"currentcolor; color: #495057;\">\n"
+"\n"
+"\n"
+"            <div id=\"request-mail-request-info\">\n"
+"                <table cellspacing=\"0\" border=\"0\" style=\"margin:5px 0 0 "
+"0;box-sizing:border-box;border-collapse:collapse;caption-side:bottom;width: "
+"100%; margin-top: 5px; max-width: 600px\" width=\"100%\">\n"
+"                    <tbody style=\"border-style:solid;box-sizing:border-box;"
+"border-left-width:0px;border-bottom-width:0px;border-right-width:0px;border-"
+"top-width:0px;\">\n"
+"                        <tr t-if=\"object.parent_id\" style=\"border-style:"
+"solid;box-sizing:border-box;border-left-width:0px;border-bottom-width:0px;"
+"border-right-width:0px;border-top-width:0px;vertical-align: top\">\n"
+"                            <th style=\"border-style:solid;box-sizing:border-"
+"box;border-bottom-color:#cccccc;border-left-width:0px;border-bottom-"
+"width:1px;border-right-width:0px;border-top-width:0px;font-weight:500;border-"
+"bottom: 1px solid #ccc; text-align: left;\">\n"
+"                                Parent Request\n"
+"                            </th>\n"
+"                            <td style=\"border-style:solid;box-sizing:border-"
+"box;border-bottom-color:#cccccc;border-left-width:0px;border-bottom-"
+"width:1px;border-right-width:0px;border-top-width:0px;border-bottom: 1px "
+"solid #ccc;\">\n"
+"                                <a t-att-href=\"object.parent_id."
+"get_mail_url(object.author_id.id)\" target=\"_blank\" t-esc=\"object."
+"parent_id.name\" style=\"text-decoration: none; box-sizing: border-box; "
+"color: #495057;\"></a>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                        <tr style=\"border-style:solid;box-sizing:border-box;"
+"border-left-width:0px;border-bottom-width:0px;border-right-width:0px;border-"
+"top-width:0px;vertical-align: top\">\n"
+"                            <th style=\"border-style:solid;box-sizing:border-"
+"box;border-bottom-color:#cccccc;border-left-width:0px;border-bottom-"
+"width:1px;border-right-width:0px;border-top-width:0px;font-weight:500;border-"
+"bottom: 1px solid #ccc; text-align: left;\">Stage</th>\n"
+"                            <td style=\"border-style:solid;box-sizing:border-"
+"box;border-bottom-color:#cccccc;border-left-width:0px;border-bottom-"
+"width:1px;border-right-width:0px;border-top-width:0px;border-bottom: 1px "
+"solid #ccc;\">\n"
+"                                <span t-esc=\"object.stage_id."
+"display_name\"></span>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                        <tr t-if=\"object.category_id\" style=\"border-style:"
+"solid;box-sizing:border-box;border-left-width:0px;border-bottom-width:0px;"
+"border-right-width:0px;border-top-width:0px;vertical-align: top\" "
+"class=\"request-info-category\">\n"
+"                            <th style=\"border-style:solid;box-sizing:border-"
+"box;border-bottom-color:#cccccc;border-left-width:0px;border-bottom-"
+"width:1px;border-right-width:0px;border-top-width:0px;font-weight:500;border-"
+"bottom: 1px solid #ccc; text-align: left;\">Category</th>\n"
+"                            <td style=\"border-style:solid;box-sizing:border-"
+"box;border-bottom-color:#cccccc;border-left-width:0px;border-bottom-"
+"width:1px;border-right-width:0px;border-top-width:0px;border-bottom: 1px "
+"solid #ccc;\">\n"
+"                                <span t-esc=\"object.sudo().category_id."
+"display_name\"></span>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                        <tr style=\"border-style:solid;box-sizing:border-box;"
+"border-left-width:0px;border-bottom-width:0px;border-right-width:0px;border-"
+"top-width:0px;vertical-align: top\" class=\"request-info-type\">\n"
+"                            <th style=\"border-style:solid;box-sizing:border-"
+"box;border-bottom-color:#cccccc;border-left-width:0px;border-bottom-"
+"width:1px;border-right-width:0px;border-top-width:0px;font-weight:500;border-"
+"bottom: 1px solid #ccc; text-align: left;\">Type</th>\n"
+"                            <td style=\"border-style:solid;box-sizing:border-"
+"box;border-bottom-color:#cccccc;border-left-width:0px;border-bottom-"
+"width:1px;border-right-width:0px;border-top-width:0px;border-bottom: 1px "
+"solid #ccc;\">\n"
+"                                <span t-esc=\"object.sudo().type_id."
+"display_name\"></span>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                        <tr style=\"border-style:solid;box-sizing:border-box;"
+"border-left-width:0px;border-bottom-width:0px;border-right-width:0px;border-"
+"top-width:0px;vertical-align: top\">\n"
+"                            <th style=\"border-style:solid;box-sizing:border-"
+"box;border-bottom-color:#cccccc;border-left-width:0px;border-bottom-"
+"width:1px;border-right-width:0px;border-top-width:0px;font-weight:500;border-"
+"bottom: 1px solid #ccc; text-align: left;\">Author</th>\n"
+"                            <td style=\"border-style:solid;box-sizing:border-"
+"box;border-bottom-color:#cccccc;border-left-width:0px;border-bottom-"
+"width:1px;border-right-width:0px;border-top-width:0px;border-bottom: 1px "
+"solid #ccc;\">\n"
+"                                <span t-esc=\"object.sudo().author_id."
+"name\"></span>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                        <tr t-if=\"object.sudo().created_by_id.partner_id != "
+"object.sudo().author_id\" style=\"border-style:solid;box-sizing:border-box;"
+"border-left-width:0px;border-bottom-width:0px;border-right-width:0px;border-"
+"top-width:0px;vertical-align: top\">\n"
+"                            <th style=\"border-style:solid;box-sizing:border-"
+"box;border-bottom-color:#cccccc;border-left-width:0px;border-bottom-"
+"width:1px;border-right-width:0px;border-top-width:0px;font-weight:500;border-"
+"bottom: 1px solid #ccc; text-align: left;\">Created by</th>\n"
+"                            <td style=\"border-style:solid;box-sizing:border-"
+"box;border-bottom-color:#cccccc;border-left-width:0px;border-bottom-"
+"width:1px;border-right-width:0px;border-top-width:0px;border-bottom: 1px "
+"solid #ccc;\">\n"
+"                                <span t-esc=\"object.sudo().created_by_id."
+"name\"></span>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                        <tr t-if=\"object.sudo().user_id and not "
+"hide_assignee\" style=\"border-style:solid;box-sizing:border-box;border-left-"
+"width:0px;border-bottom-width:0px;border-right-width:0px;border-top-"
+"width:0px;vertical-align: top\">\n"
+"                            <th style=\"border-style:solid;box-sizing:border-"
+"box;border-bottom-color:#cccccc;border-left-width:0px;border-bottom-"
+"width:1px;border-right-width:0px;border-top-width:0px;font-weight:500;border-"
+"bottom: 1px solid #ccc; text-align: left;\">Assignee</th>\n"
+"                            <td style=\"border-style:solid;box-sizing:border-"
+"box;border-bottom-color:#cccccc;border-left-width:0px;border-bottom-"
+"width:1px;border-right-width:0px;border-top-width:0px;border-bottom: 1px "
+"solid #ccc;\">\n"
+"                                <span t-esc=\"object.sudo().user_id.name\"></"
+"span>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                        </tbody>\n"
+"                </table>\n"
+"            </div>\n"
+"            <hr style=\"border-left-width:0px;border-bottom-width:0px;border-"
+"right-width:0px;border-top-width:0px;margin: 12px 0px; box-sizing: border-"
+"box; height: 1px; opacity: 0.25; border-width: 0px; background-color: "
+"currentcolor; color: #495057;\">\n"
+"\n"
+"\n"
+"            <div id=\"request-request-response-box\" style=\"padding: 0px; "
+"width:600px;\">\n"
+"                    <div>\n"
+"                        <p style=\"margin:0px 0 12px 0;box-sizing:border-box;"
+"\"><strong style=\"box-sizing:border-box;font-weight:bolder;\">Request text:"
+"</strong></p>\n"
+"                        <t t-out=\"object.sudo().request_text_sample\"></t>\n"
+"                        <t t-if=\"object.sudo().is_large_request_text\">\n"
+"                            <a t-att-href=\"object.get_mail_url(pid=object."
+"author_id.id)\" target=\"_blank\" style=\"text-decoration: none; box-sizing: "
+"border-box; color: #495057;\">...</a>\n"
+"                        </t>\n"
+"                    </div>\n"
+"                <hr style=\"border-left-width:0px;border-bottom-width:0px;"
+"border-right-width:0px;border-top-width:0px;margin: 12px 0px; box-sizing: "
+"border-box; height: 1px; opacity: 0.25; border-width: 0px; background-color: "
+"currentcolor; color: #495057;\">\n"
+"                    <div>\n"
+"                        <p style=\"margin:0px 0 12px 0;box-sizing:border-box;"
+"\"><strong style=\"box-sizing:border-box;font-weight:bolder;\">Response text:"
+"</strong></p>\n"
+"                        <t t-out=\"object.sudo().response_text\"></t>\n"
+"                    </div>\n"
+"                <hr style=\"border-left-width:0px;border-bottom-width:0px;"
+"border-right-width:0px;border-top-width:0px;margin: 12px 0px; box-sizing: "
+"border-box; height: 1px; opacity: 0.25; border-width: 0px; background-color: "
+"currentcolor; color: #495057;\">\n"
+"            </div>\n"
+"        </div>\n"
+"        "
+msgstr ""
+"<div style=\"width: 600px\">\n"
+"\n"
+"            <div id=\"request-mail-header\">\n"
+"                <div itemscope=\"itemscope\" itemtype=\"http://schema.org/"
+"EmailMessage\">\n"
+"                    <div itemprop=\"potentialAction\" "
+"itemscope=\"itemscope\" itemtype=\"http://schema.org/ViewAction\">\n"
+"                        <link itemprop=\"target\" target=\"_blank\" t-att-"
+"href=\"object.get_mail_url(pid=object.author_id.id)\">\n"
+"                        <link itemprop=\"url\" target=\"_blank\" t-att-"
+"href=\"object.get_mail_url(pid=object.author_id.id)\">\n"
+"                        <meta itemprop=\"name\" content=\"View Request\">\n"
+"                    </div>\n"
+"                </div>\n"
+"                <table id=\"request-mail-header-table\" cellspacing=\"0\" "
+"cellpadding=\"0\" border=\"0\" style=\"margin:5px 0 0 0;box-sizing:border-"
+"box;border-collapse:collapse;caption-side:bottom;width: 100%; margin-top: "
+"5px;\" width=\"100%\">\n"
+"                    <tbody style=\"border-style:solid;box-sizing:border-box;"
+"border-left-width:0px;border-bottom-width:0px;border-right-width:0px;border-"
+"top-width:0px;\">\n"
+"                        <tr style=\"border-style:solid;box-sizing:border-box;"
+"border-left-width:0px;border-bottom-width:0px;border-right-width:0px;border-"
+"top-width:0px;\">\n"
+"                            <td id=\"td-view-request\" valign=\"center\" "
+"style=\"border-style:solid;box-sizing:border-box;border-left-width:0px;"
+"border-bottom-width:0px;border-right-width:0px;border-top-width:0px;\">\n"
+"                                <a target=\"_blank\" t-att-href=\"object."
+"get_mail_url(pid=object.author_id.id)\" style=\"border-style:solid;box-"
+"sizing:border-box;border-left-color:#875a7b;border-bottom-color:#875a7b;"
+"border-right-color:#875a7b;border-top-color:#875a7b;border-left-width:0px;"
+"border-bottom-width:0px;border-right-width:0px;border-top-width:0px;display: "
+"table-cell; padding: 8px 12px; font-size: 12px; color: #FFFFFF; text-"
+"decoration: none ; font-weight: 400; background-color: #875A7B; border: 0px "
+"solid #875A7B; border-radius:3px\">\n"
+"                                    Переглянути запит\n"
+"                                </a>\n"
+"                            </td>\n"
+"                            <td id=\"td-company\" valign=\"center\" "
+"align=\"right\" style=\"border-style:solid;box-sizing:border-box;border-left-"
+"width:0px;border-bottom-width:0px;border-right-width:0px;border-top-"
+"width:0px;\">\n"
+"                                <img t-attf-src=\"/logo.png{{ '?company=%s' "
+"% company.id if company else '' }}\" style=\"box-sizing:border-box;vertical-"
+"align:middle;padding: 0px; margin: 0px; height: auto; max-width: 80px; max-"
+"height: 40px;\" t-att-alt=\"company.name if company else ''\">\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                    </tbody>\n"
+"                </table>\n"
+"            </div>\n"
+"            <hr style=\"border-left-width:0px;border-bottom-width:0px;border-"
+"right-width:0px;border-top-width:0px;margin: 12px 0px; box-sizing: border-"
+"box; height: 1px; opacity: 0.25; border-width: 0px; background-color: "
+"currentcolor; color: #495057;\">\n"
+"\n"
+"\n"
+"            <div id=\"request-mail-template-body\">\n"
+"                <p>Ваша команда отримала запит<strong><a t-att-href=\"object."
+"get_mail_url(object.author_id.id)\" target=\"_blank\" t-esc=\"object."
+"display_name\"></a></strong>.</p>\n"
+"            <p>Ви можете призначити його на себе</p>\n"
+"            </div>\n"
+"            <hr style=\"border-left-width:0px;border-bottom-width:0px;border-"
+"right-width:0px;border-top-width:0px;margin: 12px 0px; box-sizing: border-"
+"box; height: 1px; opacity: 0.25; border-width: 0px; background-color: "
+"currentcolor; color: #495057;\">\n"
+"\n"
+"\n"
+"            <div id=\"request-mail-request-info\">\n"
+"                <table cellspacing=\"0\" border=\"0\" style=\"margin:5px 0 0 "
+"0;box-sizing:border-box;border-collapse:collapse;caption-side:bottom;width: "
+"100%; margin-top: 5px; max-width: 600px\" width=\"100%\">\n"
+"                    <tbody style=\"border-style:solid;box-sizing:border-box;"
+"border-left-width:0px;border-bottom-width:0px;border-right-width:0px;border-"
+"top-width:0px;\">\n"
+"                        <tr t-if=\"object.parent_id\" style=\"border-style:"
+"solid;box-sizing:border-box;border-left-width:0px;border-bottom-width:0px;"
+"border-right-width:0px;border-top-width:0px;vertical-align: top\">\n"
+"                            <th style=\"border-style:solid;box-sizing:border-"
+"box;border-bottom-color:#cccccc;border-left-width:0px;border-bottom-"
+"width:1px;border-right-width:0px;border-top-width:0px;font-weight:500;border-"
+"bottom: 1px solid #ccc; text-align: left;\">\n"
+"                               Родительський запит\n"
+"                            </th>\n"
+"                            <td style=\"border-style:solid;box-sizing:border-"
+"box;border-bottom-color:#cccccc;border-left-width:0px;border-bottom-"
+"width:1px;border-right-width:0px;border-top-width:0px;border-bottom: 1px "
+"solid #ccc;\">\n"
+"                                <a t-att-href=\"object.parent_id."
+"get_mail_url(object.author_id.id)\" target=\"_blank\" t-esc=\"object."
+"parent_id.name\" style=\"text-decoration: none; box-sizing: border-box; "
+"color: #495057;\"></a>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                        <tr style=\"border-style:solid;box-sizing:border-box;"
+"border-left-width:0px;border-bottom-width:0px;border-right-width:0px;border-"
+"top-width:0px;vertical-align: top\">\n"
+"                            <th style=\"border-style:solid;box-sizing:border-"
+"box;border-bottom-color:#cccccc;border-left-width:0px;border-bottom-"
+"width:1px;border-right-width:0px;border-top-width:0px;font-weight:500;border-"
+"bottom: 1px solid #ccc; text-align: left;\">Стадія</th>\n"
+"                            <td style=\"border-style:solid;box-sizing:border-"
+"box;border-bottom-color:#cccccc;border-left-width:0px;border-bottom-"
+"width:1px;border-right-width:0px;border-top-width:0px;border-bottom: 1px "
+"solid #ccc;\">\n"
+"                                <span t-esc=\"object.stage_id."
+"display_name\"></span>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                        <tr t-if=\"object.category_id\" style=\"border-style:"
+"solid;box-sizing:border-box;border-left-width:0px;border-bottom-width:0px;"
+"border-right-width:0px;border-top-width:0px;vertical-align: top\" "
+"class=\"request-info-category\">\n"
+"                            <th style=\"border-style:solid;box-sizing:border-"
+"box;border-bottom-color:#cccccc;border-left-width:0px;border-bottom-"
+"width:1px;border-right-width:0px;border-top-width:0px;font-weight:500;border-"
+"bottom: 1px solid #ccc; text-align: left;\">Категорія</th>\n"
+"                            <td style=\"border-style:solid;box-sizing:border-"
+"box;border-bottom-color:#cccccc;border-left-width:0px;border-bottom-"
+"width:1px;border-right-width:0px;border-top-width:0px;border-bottom: 1px "
+"solid #ccc;\">\n"
+"                                <span t-esc=\"object.sudo().category_id."
+"display_name\"></span>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                        <tr style=\"border-style:solid;box-sizing:border-box;"
+"border-left-width:0px;border-bottom-width:0px;border-right-width:0px;border-"
+"top-width:0px;vertical-align: top\" class=\"request-info-type\">\n"
+"                            <th style=\"border-style:solid;box-sizing:border-"
+"box;border-bottom-color:#cccccc;border-left-width:0px;border-bottom-"
+"width:1px;border-right-width:0px;border-top-width:0px;font-weight:500;border-"
+"bottom: 1px solid #ccc; text-align: left;\">Тип</th>\n"
+"                            <td style=\"border-style:solid;box-sizing:border-"
+"box;border-bottom-color:#cccccc;border-left-width:0px;border-bottom-"
+"width:1px;border-right-width:0px;border-top-width:0px;border-bottom: 1px "
+"solid #ccc;\">\n"
+"                                <span t-esc=\"object.sudo().type_id."
+"display_name\"></span>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                        <tr style=\"border-style:solid;box-sizing:border-box;"
+"border-left-width:0px;border-bottom-width:0px;border-right-width:0px;border-"
+"top-width:0px;vertical-align: top\">\n"
+"                            <th style=\"border-style:solid;box-sizing:border-"
+"box;border-bottom-color:#cccccc;border-left-width:0px;border-bottom-"
+"width:1px;border-right-width:0px;border-top-width:0px;font-weight:500;border-"
+"bottom: 1px solid #ccc; text-align: left;\">Автор</th>\n"
+"                            <td style=\"border-style:solid;box-sizing:border-"
+"box;border-bottom-color:#cccccc;border-left-width:0px;border-bottom-"
+"width:1px;border-right-width:0px;border-top-width:0px;border-bottom: 1px "
+"solid #ccc;\">\n"
+"                                <span t-esc=\"object.sudo().author_id."
+"name\"></span>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                        <tr t-if=\"object.sudo().created_by_id.partner_id != "
+"object.sudo().author_id\" style=\"border-style:solid;box-sizing:border-box;"
+"border-left-width:0px;border-bottom-width:0px;border-right-width:0px;border-"
+"top-width:0px;vertical-align: top\">\n"
+"                            <th style=\"border-style:solid;box-sizing:border-"
+"box;border-bottom-color:#cccccc;border-left-width:0px;border-bottom-"
+"width:1px;border-right-width:0px;border-top-width:0px;font-weight:500;border-"
+"bottom: 1px solid #ccc; text-align: left;\">Створив</th>\n"
+"                            <td style=\"border-style:solid;box-sizing:border-"
+"box;border-bottom-color:#cccccc;border-left-width:0px;border-bottom-"
+"width:1px;border-right-width:0px;border-top-width:0px;border-bottom: 1px "
+"solid #ccc;\">\n"
+"                                <span t-esc=\"object.sudo().created_by_id."
+"name\"></span>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                        <tr t-if=\"object.sudo().user_id and not "
+"hide_assignee\" style=\"border-style:solid;box-sizing:border-box;border-left-"
+"width:0px;border-bottom-width:0px;border-right-width:0px;border-top-"
+"width:0px;vertical-align: top\">\n"
+"                            <th style=\"border-style:solid;box-sizing:border-"
+"box;border-bottom-color:#cccccc;border-left-width:0px;border-bottom-"
+"width:1px;border-right-width:0px;border-top-width:0px;font-weight:500;border-"
+"bottom: 1px solid #ccc; text-align: left;\">Призначений</th>\n"
+"                            <td style=\"border-style:solid;box-sizing:border-"
+"box;border-bottom-color:#cccccc;border-left-width:0px;border-bottom-"
+"width:1px;border-right-width:0px;border-top-width:0px;border-bottom: 1px "
+"solid #ccc;\">\n"
+"                                <span t-esc=\"object.sudo().user_id.name\"></"
+"span>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                        </tbody>\n"
+"                </table>\n"
+"            </div>\n"
+"            <hr style=\"border-left-width:0px;border-bottom-width:0px;border-"
+"right-width:0px;border-top-width:0px;margin: 12px 0px; box-sizing: border-"
+"box; height: 1px; opacity: 0.25; border-width: 0px; background-color: "
+"currentcolor; color: #495057;\">\n"
+"\n"
+"\n"
+"            <div id=\"request-request-response-box\" style=\"padding: 0px; "
+"width:600px;\">\n"
+"                    <div>\n"
+"                        <p style=\"margin:0px 0 12px 0;box-sizing:border-box;"
+"\"><strong style=\"box-sizing:border-box;font-weight:bolder;\">Текст запиту:"
+"</strong></p>\n"
+"                        <t t-out=\"object.sudo().request_text_sample\"></t>\n"
+"                        <t t-if=\"object.sudo().is_large_request_text\">\n"
+"                            <a t-att-href=\"object.get_mail_url(pid=object."
+"author_id.id)\" target=\"_blank\" style=\"text-decoration: none; box-sizing: "
+"border-box; color: #495057;\">...</a>\n"
+"                        </t>\n"
+"                    </div>\n"
+"                <hr style=\"border-left-width:0px;border-bottom-width:0px;"
+"border-right-width:0px;border-top-width:0px;margin: 12px 0px; box-sizing: "
+"border-box; height: 1px; opacity: 0.25; border-width: 0px; background-color: "
+"currentcolor; color: #495057;\">\n"
+"                    <div>\n"
+"                        <p style=\"margin:0px 0 12px 0;box-sizing:border-box;"
+"\"><strong style=\"box-sizing:border-box;font-weight:bolder;\">Текст "
+"відповіді:</strong></p>\n"
+"                        <t t-out=\"object.sudo().response_text\"></t>\n"
+"                    </div>\n"
+"                <hr style=\"border-left-width:0px;border-bottom-width:0px;"
+"border-right-width:0px;border-top-width:0px;margin: 12px 0px; box-sizing: "
+"border-box; height: 1px; opacity: 0.25; border-width: 0px; background-color: "
+"currentcolor; color: #495057;\">\n"
+"            </div>\n"
+"        </div>\n"
+"        "
+
+#. module: generic_request_team
+#: model_terms:ir.ui.view,arch_db:generic_request_team.view_request_request_form
+msgid "<i class=\"fa fa-users mr4\" title=\"Team\"/>"
+msgstr "<i class=\"fa fa-users mr4\" title=\"Team\"/>"
+
+#. module: generic_request_team
+#: model_terms:ir.ui.view,arch_db:generic_request_team.view_request_request_kanban
+msgid "<span class=\"fa fa-users\" title=\"Team\"/>"
+msgstr "<span class=\"fa fa-users\" title=\"Team\"/>"
+
+#. module: generic_request_team
+#: model:ir.actions.act_window,name:generic_request_team.action_request_team_wizard_assign
+msgid "Assign team or user"
+msgstr "Призначити команду або користувача"
+
+#. module: generic_request_team
+#: model:ir.model.fields,field_description:generic_request_team.field_generic_team_member__assigned_request_closed_count
+msgid "Assigned Closed Requests"
+msgstr "Призначені закриті запити"
+
+#. module: generic_request_team
+#: model:ir.model.fields,field_description:generic_request_team.field_generic_team_member__assigned_request_open_count
+msgid "Assigned Open Requests To User"
+msgstr "Призначені на користувача відкриті запити"
+
+#. module: generic_request_team
+#: model:ir.model.fields,field_description:generic_request_team.field_generic_team_member__assigned_request_count
+msgid "Assigned Requests Count"
+msgstr "Кількість призначених запитів"
+
+#. module: generic_request_team
+#: model_terms:ir.ui.view,arch_db:generic_request_team.view_request_team_request_request_search
+msgid "Assigned to my team"
+msgstr "Призначено моїй команді"
+
+#. module: generic_request_team
+#: model:ir.model,name:generic_request_team.model_mail_template
+msgid "Email Templates"
+msgstr "Шаблони електронних листів"
+
+#. module: generic_request_team
+#: model:ir.model,name:generic_request_team.model_generic_team
+msgid "Generic Team"
+msgstr "Команда"
+
+#. module: generic_request_team
+#: model:ir.model,name:generic_request_team.model_generic_team_member
+msgid "Generic team member"
+msgstr "Учасник команди"
+
+#. module: generic_request_team
+#: model:ir.model.fields,field_description:generic_request_team.field_mail_template__is_default_notification_on
+msgid "Is Default Notification On"
+msgstr "Увімкнено сповіщення за замовчуванням"
+
+#. module: generic_request_team
+#: model:ir.model.fields,field_description:generic_request_team.field_generic_team_member__last_assign_time
+msgid "Last Assign Time"
+msgstr "Останній призначений час"
+
+#. module: generic_request_team
+#: model:ir.model.fields,field_description:generic_request_team.field_request_event__new_team_id
+msgid "New Team"
+msgstr "Нова команда"
+
+#. module: generic_request_team
+#: model_terms:ir.ui.view,arch_db:generic_request_team.view_request_request_kanban
+#: model_terms:ir.ui.view,arch_db:generic_request_team.view_request_team_request_request_search
+msgid "No team assigned"
+msgstr "Команда не призначена"
+
+#. module: generic_request_team
+#: model_terms:ir.ui.view,arch_db:generic_request_team.view_request_team_request_request_search
+msgid "No user assigned"
+msgstr "Не призначено користувача"
+
+#. module: generic_request_team
+#: model:ir.model.fields,field_description:generic_request_team.field_request_event__old_team_id
+msgid "Old Team"
+msgstr "Стара команда"
+
+#. module: generic_request_team
+#: model:ir.model,name:generic_request_team.model_request_request
+msgid "Request"
+msgstr "Запит"
+
+#. module: generic_request_team
+#: model:ir.model,name:generic_request_team.model_request_classifier
+msgid "Request Classifier"
+msgstr "Класифікатор запитів"
+
+#. module: generic_request_team
+#: model:ir.model.fields,field_description:generic_request_team.field_generic_team__request_count
+msgid "Request Count"
+msgstr "Кількість запитів"
+
+#. module: generic_request_team
+#: model:ir.model,name:generic_request_team.model_request_event
+msgid "Request Event"
+msgstr "Подія запиту"
+
+#. module: generic_request_team
+#: model:ir.model,name:generic_request_team.model_request_report
+msgid "Request Report"
+msgstr "Звіт по запитах"
+
+#. module: generic_request_team
+#: model_terms:ir.ui.view,arch_db:generic_request_team.view_request_report_search
+msgid "Request Resource Type"
+msgstr "Тип ресурсу у запиті"
+
+#. module: generic_request_team
+#: model:ir.model.fields,field_description:generic_request_team.field_request_timesheet_report__request_team_id
+#: model_terms:ir.ui.view,arch_db:generic_request_team.view_request_timesheet_report_search
+msgid "Request Team"
+msgstr "Команда запиту"
+
+#. module: generic_request_team
+#: model:ir.model.fields,field_description:generic_request_team.field_request_classifier__request_team_assigned_mail_template_id
+msgid "Request Team Assigned Mail Template"
+msgstr "Шаблон листа з призначенням команди на запит"
+
+#. module: generic_request_team
+#: model:ir.model,name:generic_request_team.model_request_timesheet_report
+msgid "Request Timesheet Report"
+msgstr "Запит звіту по табелю робочого часу"
+
+#. module: generic_request_team
+#: model:ir.model,name:generic_request_team.model_request_wizard_assign
+msgid "Request Wizard: Assign"
+msgstr "Майстер запитів: Призначення"
+
+#. module: generic_request_team
+#: model:mail.template,name:generic_request_team.mail_template_default_request_team_assigned
+msgid "Request team assigned mail template"
+msgstr "Шаблон листа з призначенням команди на запит"
+
+#. module: generic_request_team
+#: model:ir.model.fields,field_description:generic_request_team.field_generic_team__request_ids
+#: model_terms:ir.ui.view,arch_db:generic_request_team.generic_team_form_inherited
+msgid "Requests"
+msgstr "Запити"
+
+#. module: generic_request_team
+#: model:ir.model.fields,field_description:generic_request_team.field_request_classifier__send_mail_on_request_team_assigned_event
+msgid "Send Mail On Request Team Assigned Event"
+msgstr "Відправити лист за подією Призначено команду на запит"
+
+#. module: generic_request_team
+#: model:ir.model.fields,field_description:generic_request_team.field_request_report__request_team_id
+#: model:ir.model.fields,field_description:generic_request_team.field_request_request__team_id
+#: model:ir.model.fields,field_description:generic_request_team.field_request_wizard_assign__team_id
+#: model_terms:ir.ui.view,arch_db:generic_request_team.view_request_request_kanban
+#: model_terms:ir.ui.view,arch_db:generic_request_team.view_request_request_searchpanel
+#: model_terms:ir.ui.view,arch_db:generic_request_team.view_request_team_request_request_search
+msgid "Team"
+msgstr "Команда"
+
+#. module: generic_request_team
+#: model:generic.system.event.type,name:generic_request_team.request_event_type_team_assigned
+msgid "Team Assigned"
+msgstr "Призначена команда"
+
+#. module: generic_request_team
+#: model:generic.system.event.type,name:generic_request_team.request_event_type_team_changed
+msgid "Team Reassigned"
+msgstr "Команду перепризначено"
+
+#. module: generic_request_team
+#: model:generic.system.event.type,name:generic_request_team.request_event_type_team_unassigned
+msgid "Team Unassigned"
+msgstr "Команду знято з запиту"
+
+#. module: generic_request_team
+#: model:ir.model.fields.selection,name:generic_request_team.selection__mail_template__is_default_notification_on__team_assigned
+#: model_terms:ir.ui.view,arch_db:generic_request_team.request_classifier_request_team_inherit_form_view
+msgid "Team assigned"
+msgstr "Команду призначено"
+
+#. module: generic_request_team
+#: model:ir.model.fields,help:generic_request_team.field_request_request__team_id
+msgid "Team responsible for next action on this request."
+msgstr "Команда, відповідальна за подальші дії щодо цього запиту."
+
+#. module: generic_request_team
+#: model:mail.template,description:generic_request_team.mail_template_default_request_team_assigned
+msgid "The email template used to send mail to the assigned Request Team"
+msgstr ""
+"Шаблон листа, який використовується для надсилання листа призначеній команді "
+"по запиту"
+
+#. module: generic_request_team
+#: model:ir.model.fields,help:generic_request_team.field_mail_template__is_default_notification_on
+msgid ""
+"This template will be used as default notification message for selected event"
+msgstr ""
+"Цей шаблон буде використовуватися як повідомлення за замовчуванням для "
+"вибраної події"
+
+#. module: generic_request_team
+#: model:ir.model.fields,help:generic_request_team.field_request_classifier__request_team_assigned_mail_template_id
+msgid ""
+"This template will be used to send an email to the assigned team on request "
+"team assigned event."
+msgstr ""
+"Цей шаблон буде використано для надсилання електронного листа призначеній "
+"команді за подією Призначено команду на запит."
+
+#. module: generic_request_team
+#: model:ir.model.fields,field_description:generic_request_team.field_request_wizard_assign__user_id
+msgid "User"
+msgstr "Користувач"
+
+#. module: generic_request_team
+#. odoo-python
+#: code:addons/generic_request_team/models/request_request.py:0
+#: code:addons/generic_request_team/wizard/request_wizard_assign.py:0
+#, python-format
+msgid "User '%(user)s' is not a member of team '%(team)s'."
+msgstr "Користувач '%(user)s' не є членом команди '%(team)s'."
+
+#. module: generic_request_team
+#: model:mail.template,subject:generic_request_team.mail_template_default_request_team_assigned
+msgid "Your team has received a new request {{ object.name }}!"
+msgstr "Ваша команда отримала новий запит {{ object.name }}!"
+
+#~ msgid "Request Type"
+#~ msgstr "Тип Запиту"

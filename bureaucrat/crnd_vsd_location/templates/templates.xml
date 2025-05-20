@@ -1,0 +1,22 @@
+<odoo noupdate="0">
+    <data>
+        <template id="crnd_vsd_location.requests_create_template_location" inherit_id="crnd_vsd.requests_create_global_template" name="Requests create template (Location)">
+            <xpath expr="//div[hasclass('creation_form_inputs_list')]" position="inside" >
+                <t t-if="classifier.location_required or classifier.create_show_location">
+                    <field
+                        name="generic_location_id"
+                        widget="CRNDInputSelectWidget"
+                        t-att-required="classifier.location_required"
+                        placeholder="Set location"
+                        is_find="true"
+                        t-att-icon_url="'/crnd_vsd_location/static/img/location.svg'"
+                    >
+                        <t t-foreach="locations" t-as="location">
+                            <option t-att-value="location.id" t-att-name="location.display_name"/>
+                        </t>
+                    </field>
+                </t>
+            </xpath>
+        </template>
+    </data>
+</odoo>

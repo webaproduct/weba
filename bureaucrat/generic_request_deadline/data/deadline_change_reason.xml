@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+    <record id="deadline_change_reason_additional_info" model="request.deadline.change.reason" forcecreate="False">
+        <field name="name">New information</field>
+        <field name="code">new-information</field>
+        <field name="reason">New information has come to light that requires additional time to review and analyze.</field>
+    </record>
+
+    <record id="deadline_change_reason_technical" model="request.deadline.change.reason" forcecreate="False">
+        <field name="name">Technical difficulties</field>
+        <field name="code">technical-difficulties</field>
+        <field name="reason">There are technical difficulties or problems that need to be resolved before the request can be completed.</field>
+    </record>
+
+    <record id="deadline_change_reason_resource" model="request.deadline.change.reason" forcecreate="False">
+        <field name="name">Resource reallocation</field>
+        <field name="code">resource-reallocation</field>
+        <field name="reason">Change of priority due to limited resources.</field>
+    </record>
+</odoo>

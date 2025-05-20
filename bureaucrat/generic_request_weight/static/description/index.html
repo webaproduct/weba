@@ -1,0 +1,345 @@
+<section style="max-width: 896px; margin: 0 auto;">
+    <div align="center">
+        <h1 style="color:#875A7B;">Generic Request Weight</h1>
+    </div>
+    <div align="center">
+        <p>
+            <a href="https://www.odoo.com/documentation/user/12.0/legal/licenses/licenses.html#odoo-apps">
+                <img alt="License: OPL-1" src="https://img.shields.io/badge/license-OPL--1-blue.png"/>
+            </a>
+            <a href="https://crnd.pro/">
+                <img alt="CR&amp;D" src="https://img.shields.io/badge/maintainer-CR&amp;D-purple.png"/>
+            </a>
+        </p>
+        <p>
+            <br>
+        </p>
+    </div>
+</section>
+
+<section style="margin: 0 auto; max-width: 896px;">
+    <div>
+        <p>Generic Request Weight is a module of the Generic Request application.</p>
+        <p>The module allows you to automatically sort requests by predefined rules depending on SLA, Priority, Kanban
+            State, Request Type, etc.
+        </p>
+        <p>
+            In order to have access to these fields, user must belong to group "Request Manager".
+        </p>
+        <div align="center">
+            <img src="request_weight.png" alt="req_weight" style="max-width: 100%">
+            <p>
+                <br>
+            </p>
+        </div>
+        <div align="center">
+            <img src="request_weight_tree.png" alt="req_tree_weight" style="max-width: 100%">
+            <p>
+                <br>
+            </p>
+        </div>
+    </div>
+    <div>
+        <p>You can specify the weight of request service</p>
+    </div>
+    <div>
+        <div align="center">
+            <img src="service_weight.png" alt="serv_weight" style="max-width: 100%">
+            <p>
+                <br>
+            </p>
+        </div>
+    </div>
+    <div>
+        <p>Additionally you can specify the weight of service level</p>
+    </div>
+    <div>
+        <div align="center">
+            <img src="service_level_weight.png" alt="serv_level_weight" style="max-width: 100%">
+            <p>
+                <br>
+            </p>
+        </div>
+    </div>
+    <div>
+        <p>You can specify the weight of request category</p>
+    </div>
+    <div>
+        <div align="center">
+            <img src="category_weight.png" alt="cat_weight" style="max-width: 100%">
+            <p>
+                <br>
+            </p>
+        </div>
+    </div>
+    <div>
+        <p>You can specify the weight of request type</p>
+    </div>
+    <div>
+        <div align="center">
+            <img src="type_weight.png" alt="type_weight" style="max-width: 100%">
+            <p>
+                <br>
+            </p>
+        </div>
+    </div>
+    <div>
+        <p>You can specify the weight of request stage</p>
+    </div>
+    <div>
+        <div align="center">
+            <img src="stage_weight.png" alt="stag_weight" style="max-width: 100%">
+            <p>
+                <br>
+            </p>
+        </div>
+    </div>
+    <div>
+        <p>As result, the weight of the request is determined by multiplying mentioned weights on following predefined
+            weights:
+        <ul>
+            <li>
+                Sla state weight
+            </li>
+            <li>
+                Activity state weight
+            </li>
+            <li>
+                Priority state weight
+            </li>
+            <li>
+                Kanban state weight
+            </li>
+        </ul>
+        </p>
+    </div>
+    <div>
+        <i>Sla state weights</i>
+        <table class="styled-table"
+               style="border-collapse: collapse;
+                        margin: 25px 0;
+                        font-size: 0.9em;
+                        font-family: sans-serif;
+                        min-width: 400px;
+                        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);">
+            <thead style="background-color: #009879;
+                            color: #ffffff;
+                            text-align: left;">
+                <tr style="background-color: #009879;
+                        color: #ffffff;
+                        text-align: left;">
+                    <th style="padding: 12px 15px;">SLA State</th>
+                    <th style="padding: 12px 15px;">State weight</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-bottom: 1px solid #dddddd;">
+                    <td style="padding: 12px 15px;">Ok</td>
+                    <td style="padding: 12px 15px;">1.0</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #dddddd; background-color: #f3f3f3;">
+                    <td style="padding: 12px 15px;">Warning</td>
+                    <td style="padding: 12px 15px;">0.5</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #dddddd;">
+                    <td style="padding: 12px 15px;">Failed</td>
+                    <td style="padding: 12px 15px;">0.1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #dddddd; background-color: #f3f3f3;border-bottom: 2px solid #009879;">
+                    <td style="padding: 12px 15px;">Other</td>
+                    <td style="padding: 12px 15px;">10.0</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+    <br/>
+    <div>
+        <i>Activity state weights</i>
+        <table style="border-collapse: collapse;
+                        margin: 25px 0;
+                        font-size: 0.9em;
+                        font-family: sans-serif;
+                        min-width: 400px;
+                        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);">
+            <thead style="background-color: #009879;
+                            color: #ffffff;
+                            text-align: left;">
+                <tr style="background-color: #009879;
+                            color: #ffffff;
+                            text-align: left;">
+                    <th style="padding: 12px 15px;">Activity State</th>
+                    <th style="padding: 12px 15px;">Activity State weight</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-bottom: 1px solid #dddddd;">
+                    <td style="padding: 12px 15px;">Overdue</td>
+                    <td style="padding: 12px 15px;">0.1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #dddddd; background-color: #f3f3f3;">
+                    <td style="padding: 12px 15px;">Today</td>
+                    <td style="padding: 12px 15px;">0.5</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #dddddd;border-bottom: 2px solid #009879;">
+                    <td style="padding: 12px 15px;">Other</td>
+                    <td style="padding: 12px 15px;">1.0</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+    <br/>
+    <div>
+        <i>Priority state weights</i>
+        <table style="border-collapse: collapse;
+                        margin: 25px 0;
+                        font-size: 0.9em;
+                        font-family: sans-serif;
+                        min-width: 400px;
+                        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);">
+            <thead style="background-color: #009879;
+                            color: #ffffff;
+                            text-align: left;">
+                <tr style="background-color: #009879;
+                            color: #ffffff;
+                            text-align: left;">
+                    <th style="padding: 12px 15px;">Request Priority</th>
+                    <th style="padding: 12px 15px;">Request Priority weight</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-bottom: 1px solid #dddddd;">
+                    <td style="padding: 12px 15px;">Critical</td>
+                    <td style="padding: 12px 15px;">0.0</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #dddddd;background-color: #f3f3f3;">
+                    <td style="padding: 12px 15px;">High</td>
+                    <td style="padding: 12px 15px;">0.5</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #dddddd;">
+                    <td style="padding: 12px 15px;">Medium</td>
+                    <td style="padding: 12px 15px;">1.0</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #dddddd; background-color: #f3f3f3;">
+                    <td style="padding: 12px 15px;">Low</td>
+                    <td style="padding: 12px 15px;">5.0</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #dddddd;">
+                    <td style="padding: 12px 15px;">For information</td>
+                    <td style="padding: 12px 15px;">10.0</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #dddddd; background-color: #f3f3f3;border-bottom: 2px solid #009879;">
+                    <td style="padding: 12px 15px;">Not set</td>
+                    <td style="padding: 12px 15px;">1.0</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+    <br/>
+    <div>
+        <i>Kanban state weights</i>
+        <table>
+            <thead style="background-color: #009879;
+                            color: #ffffff;
+                            text-align: left;">
+                <tr style="background-color: #009879;
+                            color: #ffffff;
+                            text-align: left;">
+                    <th style="padding: 12px 15px;">Kanban State</th>
+                    <th style="padding: 12px 15px;">Kanban State weight</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-bottom: 1px solid #dddddd;">
+                    <td style="padding: 12px 15px;">Normal</td>
+                    <td style="padding: 12px 15px;">1.0</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #dddddd;background-color: #f3f3f3;">
+                    <td style="padding: 12px 15px;">Done</td>
+                    <td style="padding: 12px 15px;">0.01</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #dddddd;">
+                    <td style="padding: 12px 15px;">Blocked</td>
+                    <td style="padding: 12px 15px;">10.0</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #dddddd;background-color: #f3f3f3;border-bottom: 2px solid #009879;">
+                    <td style="padding: 12px 15px;">Other</td>
+                    <td style="padding: 12px 15px;">1.0</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</section>
+
+<section style="max-width: 896px; margin: 0 auto;">
+    <p>This module is part of the Bureaucrat ITSM project. You can try it by the links below.</p>
+    <p>
+        <br>
+    </p>
+</section>
+
+<section align="center" style="max-width: 896px; margin: 0 auto;">
+    <div>
+        <h2 style="color:#875A7B;">Launch your own ITSM system in 60 seconds:</h2>
+        <p>Create your own
+            <a href="https://yodoo.systems/saas/template/">Bureaucrat ITSM</a>
+            database
+            <a href="https://yodoo.systems">
+                <img alt="yodoo.systems" src="https://img.shields.io/badge/powered%20by-yodoo.systems-00a09d.png"/>
+            </a>
+        </p>
+    </div>
+</section>
+
+<section align="center" style="max-width: 896px; margin: 0 auto;">
+    <div>
+        <h2 style="color: #138c33">Maintainer</h2>
+        <a href="https://crnd.pro/">
+            <img alt="CR&amp;D" src="https://crnd.pro/web/image/3699/300x140/crnd.png"/>
+        </a>
+        <div align="center">
+            <a class="btn btn-primary mb16" title="Website" href="https://crnd.pro">
+                <i class="fa fa-globe"></i>
+                Website
+            </a>
+            <a class="btn btn-primary mb16" title="Contact us" href="mailto:info@crnd.pro">
+                <i class="fa fa-envelope"></i>
+                Contact us
+            </a>
+            <a class="btn btn-primary mb16" title="Bug" href="https://crnd.pro/requests">
+                <i class="fa fa-bug"></i>
+                Bug
+            </a>
+            <a class="btn btn-primary mb16" title="Requests" href="https://crnd.pro/requests">
+                <i class="fa fa-bullhorn"></i>
+                Requests
+            </a>
+        </div>
+        <div align="center">
+            <a class="btn btn-primary mb16" title="Blog" href="https://crnd.pro/blog">
+                <i class="fa fa-quote-right"></i>
+                Blog
+            </a>
+            <a class="btn btn-primary mb16" title="Youtube Channel"
+               href="https://www.youtube.com/channel/UCRSGFeR0NgqflPmzpDjL2tw">
+                <i class="fa fa-youtube-play"></i>
+                Youtube Channel
+            </a>
+            <p>
+                <br>
+            </p>
+        </div>
+
+        <p>This module is maintained by the
+            <a href="https://crnd.pro/">Center of Research &amp; Development</a>
+            company.
+        </p>
+        <p>
+            We can provide you further Odoo Support, Odoo implementation, Odoo customization, Odoo 3rd Party development
+            and integration software, consulting services. Our main goal is to provide the best quality product for you.
+        </p>
+    </div>
+</section>

@@ -1,0 +1,406 @@
+req:
+
++id
++name
++status
++status_color
++priority
+?chat_button_url
++back_button_url
++service
++category
++type
++text
++created_date
++client_image
++client_name
++reporter_image
++reporter_name
++files_count
++files_names
+
+
+comments:
+
+user_image
+user_name
+comment_text
+comment_date
+
+
+
+related_req n subrequest:
+
+name
+status_color
+date
+service
+category
+type
+text
+
+
+
+
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="crnd_vsd.RequestsView" owl="1">
+        <t t-esc="props.request_id" />
+
+        <div class="breadcrumbs">
+            <div class="breadcrumbs_item">
+                Home
+            </div>
+            <img src="../crnd_vsd/static/img/arrow_left.svg" alt="" />
+            <div class="breadcrumbs_item">
+                New Request
+            </div>
+            <img src="../crnd_vsd/static/img/arrow_left.svg" alt="" />
+            <div class="breadcrumbs_item">
+                <t t-esc="state.requestData.name" />
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="req_right_side">
+                <div class="req_block">
+                    <div class="req_block_header req_block-padding">
+                        <div class="req_status" t-attf-style="background: {{ state.requestData.stage.bg_color }}"></div>
+                        <div class="req_name">
+                            <t t-esc="state.requestData.name" />
+                        </div>
+                        <div class="req_priority">
+                            <t t-for="[1, 2, 3, 4, 5]" t-as="priority_index" t-key="index">
+                                <img t-if="getPriorityStatus(priority_index)" src="../crnd_vsd/static/img/star_fill.svg" alt=""/>
+                                <img t-else="" src="../crnd_vsd/static/img/star.svg" alt=""/>
+                            </t>
+                        </div>
+                        <!-- <a class="req_button">
+                            <img src="../crnd_vsd/static/img/chat.svg" alt=""/>
+                        </a>
+                        <a class="req_button">
+                            <img src="../crnd_vsd/static/img/chain.svg" alt=""/>
+                        </a> -->
+
+                        <a t-att-href="state.requestData.internal_url" class="req_link">
+                            <img src="../crnd_vsd/static/img/link.svg" alt=""/>
+                        </a>
+                    </div>
+
+                    <div class="req_data req_block-padding">
+                        <div class="req_classification_items">
+                            <div t-if="state.requestData.service" class="req_classification_item">
+                                <img src="../crnd_vsd/static/img/service.svg" alt=""/>
+                                <div class="text">
+                                    <div class="title">
+                                        Service
+                                    </div>
+                                    <div class="desc">
+                                        <t t-esc="state.requestData.service.name" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div t-if="state.requestData.category" class="req_classification_item">
+                                <img src="../crnd_vsd/static/img/category.svg" alt=""/>
+                                <div class="text">
+                                    <div class="title">
+                                        Category
+                                    </div>
+                                    <div class="desc">
+                                        <t t-esc="state.requestData.category.name" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div t-if="state.requestData.type" class="req_classification_item">
+                                <img src="../crnd_vsd/static/img/type.svg" alt=""/>
+                                <div class="text">
+                                    <div class="title">
+                                        Type
+                                    </div>
+                                    <div class="desc">
+                                        <t t-esc="state.requestData.type.name" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="req_content">
+                            <!-- <div class="req_content_title">
+                                <div class="req_title">
+                                    Access Error on sale order creation
+                                </div>
+
+                                <div class="edit">
+                                    <img src="../crnd_vsd/static/img/edit.svg" alt=""/>
+                                </div>
+                            </div> -->
+                            <div class="req_text">
+                                <t t-out="state.requestData.request_text_sample" />
+                            </div>
+                        </div>
+
+                        <!-- <div t-if="state.requestData.attachments.count" class="req_additionals">
+                            <t t-for="state.requestData.attachments.ids" t-as="attachment" t-key="attachment.id">
+                                <a t-att-href="attachment.url" class="req_additional_item doc">
+                                    <img src="../crnd_vsd/static/img/doc.svg" alt=""/>
+                                    <t t-esc="attachment.name"/>
+                                </a>
+                            </t>
+                        </div> -->
+                    </div>
+                </div>
+
+
+                <div class="request_subblocks_list">
+                    <!-- <div t-if="state.requestData.parent_request" class="additional_req_block">
+                        <div class="request_subblocks_title">
+                            Parent request
+                        </div>
+
+                        <div class="req_block">
+                            <div class="req_block_header req_block-padding">
+                                <div class="req_status" t-attf-style="background: {{ state.requestData.parent_request.stage.bg_color }}"></div>
+                                <div class="req_name">
+                                    <t t-esc="state.requestData.parent_request.name" />
+                                </div>
+
+                                <div class="req_date">
+                                    <t t-esc="state.requestData.parent_request.creation_date" />
+                                </div>
+                            </div>
+
+                            <div class="req_data req_block-padding">
+                                <div class="req_classification_items">
+                                    <div t-if="state.requestData.parent_request.service" class="req_classification_item">
+                                        <img src="../crnd_vsd/static/img/service.svg" alt=""/>
+                                        <div class="text">
+                                            <div class="title">
+                                                Service
+                                            </div>
+                                            <div class="desc">
+                                                <t t-esc="state.requestData.parent_request.service.name" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div t-if="state.requestData.parent_request.category" class="req_classification_item">
+                                        <img src="../crnd_vsd/static/img/category.svg" alt=""/>
+                                        <div class="text">
+                                            <div class="title">
+                                                Category
+                                            </div>
+                                            <div class="desc">
+                                                <t t-esc="state.requestData.parent_request.service.name" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div t-if="state.requestData.parent_request.type" class="req_classification_item">
+                                        <img src="../crnd_vsd/static/img/type.svg" alt=""/>
+                                        <div class="text">
+                                            <div class="title">
+                                                Type
+                                            </div>
+                                            <div class="desc">
+                                                <t t-esc="state.requestData.parent_request.service.name" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="req_content">
+                                    <div class="req_text">
+                                        <t t-esc="state.requestData.parent_request.request_text_sample" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+<!--
+                    <div v-if="state.requestData.subrequests.length" class="additional_req_block">
+                        <div class="request_subblocks_title">
+                            Subrequests
+                        </div>
+
+                        <t t-for="state.requestData.subrequests" t-as="subrequest" t-key="subrequest.id">
+                            <div class="req_block">
+                                <div class="req_block_header req_block-padding">
+                                    <div class="req_status" t-attf-style="background: {{ subrequest.stage.bg_color }}"></div>
+                                    <div class="req_name">
+                                        <t t-esc="subrequest.name" />
+                                    </div>
+
+                                    <div class="req_date">
+                                        <t t-esc="subrequest.creation_date" />
+                                    </div>
+                                </div>
+
+                                <div class="req_data req_block-padding">
+                                    <div class="req_classification_items">
+                                        <div t-if="subrequest.service" class="req_classification_item">
+                                            <img src="../crnd_vsd/static/img/service.svg" alt=""/>
+                                            <div class="text">
+                                                <div class="title">
+                                                    Service
+                                                </div>
+                                                <div class="desc">
+                                                    <t t-esc="subrequest.service.name" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div t-if="subrequest.category" class="req_classification_item">
+                                            <img src="../crnd_vsd/static/img/category.svg" alt=""/>
+                                            <div class="text">
+                                                <div class="title">
+                                                    Category
+                                                </div>
+                                                <div class="desc">
+                                                    <t t-esc="subrequest.service.name" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div t-if="subrequest.type" class="req_classification_item">
+                                            <img src="../crnd_vsd/static/img/type.svg" alt=""/>
+                                            <div class="text">
+                                                <div class="title">
+                                                    Type
+                                                </div>
+                                                <div class="desc">
+                                                    <t t-esc="subrequest.service.name" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="req_content">
+                                        <div class="req_text">
+                                            <t t-esc="subrequest.request_text_sample" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </div> -->
+
+
+                </div>
+
+            </div>
+
+
+            <div class="req_left_side">
+                <div class="req_block">
+                    <div class="req_block_header req_block-padding">
+                        <div class="req_name">
+                            Information
+                        </div>
+                    </div>
+
+                    <div class="req_data req_block-padding">
+                        <div class="information_table">
+                            <div class="information_table_row">
+                                <div>
+                                    Create date
+                                </div>
+                                <div>
+                                    <t t-esc="state.requestData.creation_date" />
+                                </div>
+                            </div>
+
+                            <div class="information_table_row">
+                                <div>
+                                    Client
+                                </div>
+                                <div>
+                                    <img t-attf-src="{{ state.requestData.created_by.image_url }}" alt="" class="user_photo"/>
+                                    <t t-esc="state.requestData.created_by.name" />
+                                </div>
+                            </div>
+                            <div class="information_table_row">
+                                <div>
+                                    Reporter
+                                </div>
+                                <div>
+                                    <img t-attf-src="{{ state.requestData.assigned_to.image_url }}" alt="" class="user_photo"/>
+                                    <t t-esc="state.requestData.assigned_to.name" />
+                                </div>
+                            </div>
+                            <div class="information_table_row">
+                                <div>
+                                    Files
+                                </div>
+                                <div>
+                                    <img src="../crnd_vsd/static/img/clip.svg" alt="" class="info_icon"/>
+                                    <t t-esc="state.requestData.attachments_count" />
+                                </div>
+                            </div>
+                            <div class="information_table_row">
+                                <div>
+                                    Messages
+                                </div>
+                                <div>
+                                    <img src="../crnd_vsd/static/img/message.svg" alt=""/>
+                                    <t t-esc="state.requestData.comments.length" />
+                                </div>
+                            </div>
+                            <div class="information_table_row">
+                                <div>
+                                    Status
+                                </div>
+                                <div>
+                                    <t t-esc="state.requestData.stage.name" />
+                                    <div class="req_status" t-attf-style="background: {{ state.requestData.stage.bg_color }}"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- <div t-if="state.requestData.comments.length" class="req_block">
+                    <div class="req_block_header req_block-padding">
+                        <div class="req_name">
+                            Comments
+                        </div>
+                    </div>
+
+                    <div class="req_data">
+                        <div class="comments_list">
+                            <t t-for="state.requestData.comments" t-as="comment" t-key="comment.id">
+                                <div class="comment req_block-padding">
+                                    <div class="comment_user">
+                                        <img t-attf-src="{{ comment.user_image_url }}" alt="" class="user_photo"/>
+                                        <t t-esc="comment.name"/>
+                                    </div>
+                                    <div class="comment_data">
+                                        <div class="comment_message">
+                                            <t t-out="comment.text" />
+                                        </div>
+                                    </div>
+                                    <div class="comment_date">
+                                        <t t-esc="comment.creation_date" />
+                                    </div>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </t>
+</templates>
+
+
+

@@ -1,0 +1,57 @@
+#yodoo_knowledge_website_anchor_owl {
+    & *,
+    & *::before,
+    & *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    & *:disabled {
+        pointer-events: none;
+    }
+
+    & h1,
+    & h2,
+    & h3 {
+        margin: 0;
+        padding: 0;
+    }
+
+    & ul, & li {
+        list-style-type: none;
+    }
+
+    & a {
+        display: inline-block;
+        color: currentColor;
+        cursor: pointer;
+        text-decoration: none;
+        
+        &:focus-visible {
+            outline: 0;
+        }
+    }
+
+    & input {
+        outline: none;
+        border-color: transparent;
+        background-color: transparent;
+    }
+
+    /* Chrome, Safari, Edge, Opera */
+    & input::-webkit-outer-spin-button,
+    & input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    & input[type='number'] {
+        -moz-appearance: textfield;
+    }
+
+    & .zero-line-h {
+        line-height: 0;
+    }
+}

@@ -1,0 +1,1 @@
+- Tag categories are now configured on the request classifier instead of on request type, category, or service.

@@ -1,0 +1,42 @@
+#yodoo_knowledge_website_anchor_owl {
+    & .knowledge_item {
+        padding: 10px;
+        padding-inline: 40px;
+        scroll-behavior: smooth;
+    
+    }
+    & .knowledge_item img {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+    
+    & .knowledge_item_pdf {
+        padding: 20px;
+        width: 100%;
+        height: 80vh;
+    }
+    & .knowledge_item_pdf iframe {
+        width: 100%;
+        height: 100%;
+    }
+    
+    & .o_yodoo_knowledge_behavior_type_knowledge_item {
+        color: blue !important;
+        position: relative;
+    }
+    & .o_yodoo_knowledge_behavior_type_knowledge_item:after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 2px;
+        left: 0;
+        bottom: -2px;
+        background: blue;
+    
+        opacity: 0;
+        transition: 0.4s ease;
+    }
+    & .o_yodoo_knowledge_behavior_type_knowledge_item:hover:after {
+        opacity: 1;
+    }
+}

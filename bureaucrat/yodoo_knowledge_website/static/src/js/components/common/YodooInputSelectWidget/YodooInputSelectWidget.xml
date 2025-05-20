@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="yodoo_knowledge_multilanguage_website.YodooInputSelectWidget" owl="1">
+        <div t-if="state.items.length" class="form_inputs_item selection" t-att-id="'yodoo_widget_' + props.name">
+            <div t-if="props.title" class="form_inputs_item_title">
+                <!-- Select  -->
+                <t t-esc="props.title" />
+            </div>
+            
+            <div t-attf-class="active_selection {{ state.isOpen and 'seletion_active_block' }}" t-on-click.stop="onClickSelect">
+                <span>
+                    <div t-if="props.icon_url" class="selection_icon">
+                        <img t-att-src="props.icon_url" />
+                    </div>
+
+                    <t t-if="state.active">
+                        <t t-esc="state.active.name"/>
+                    </t>
+                    <t t-else="">
+                        <span class="yodoo_placeholder">
+                            <t t-esc="props.placeholder or '-'" />
+                        </span>
+                    </t>
+                </span>
+
+                <img src="/yodoo_knowledge_website/static/img/arrow_down.svg" t-attf-class="{{ state.isOpen ? 'arrow_top' : '' }}"/>
+            </div>
+
+            <div t-if="state.isOpen" class="selection_list">
+                <t t-if="props.is_find">
+                    <div class="find_field">
+                        <input type="text" t-model="state.find_text"/>
+                        <img src="/yodoo_knowledge_website/static/img/lens.svg" class="find_lens" />
+                    </div>
+                </t>
+                <t t-foreach="state.items" t-as="item" t-key="item_index">
+                    <t t-if="isSorted(item)">
+                        <div t-attf-class="selection_item {{ isActive(item) ? 'btn-primary' : '' }}" t-on-click="e => this.onClickOption(item)">
+                            <t t-esc="item.name"/>
+                        </div>
+                    </t>
+                </t>
+
+            </div>
+        </div>
+    </t>
+
+</templates>

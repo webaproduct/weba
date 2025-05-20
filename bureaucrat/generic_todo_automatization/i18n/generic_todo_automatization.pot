@@ -1,0 +1,165 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* generic_todo_automatization
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: generic_todo_automatization
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_generic_todo__autostart_todo
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_generic_todo_check__autostart_todo
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_generic_todo_list_todo__autostart_todo
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_generic_todo_server_action__autostart_todo
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_generic_todo_simple__autostart_todo
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_generic_todo_template_line__autostart_todo
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_todo_wizard_add_template_line__autostart_todo
+msgid "Autostart Todo"
+msgstr ""
+
+#. module: generic_todo_automatization
+#: model:ir.model.fields,help:generic_todo_automatization.field_generic_todo__on_done_auto_start_next_todo
+#: model:ir.model.fields,help:generic_todo_automatization.field_generic_todo_check__on_done_auto_start_next_todo
+#: model:ir.model.fields,help:generic_todo_automatization.field_generic_todo_list_todo__on_done_auto_start_next_todo
+#: model:ir.model.fields,help:generic_todo_automatization.field_generic_todo_server_action__on_done_auto_start_next_todo
+#: model:ir.model.fields,help:generic_todo_automatization.field_generic_todo_simple__on_done_auto_start_next_todo
+#: model:ir.model.fields,help:generic_todo_automatization.field_generic_todo_template_line__on_done_auto_start_next_todo
+#: model:ir.model.fields,help:generic_todo_automatization.field_todo_wizard_add_template_line__on_done_auto_start_next_todo
+msgid "Autostart next by sequence todo in object."
+msgstr ""
+
+#. module: generic_todo_automatization
+#: model:ir.model.fields,help:generic_todo_automatization.field_generic_todo__autostart_todo
+#: model:ir.model.fields,help:generic_todo_automatization.field_generic_todo_check__autostart_todo
+#: model:ir.model.fields,help:generic_todo_automatization.field_generic_todo_list_todo__autostart_todo
+#: model:ir.model.fields,help:generic_todo_automatization.field_generic_todo_server_action__autostart_todo
+#: model:ir.model.fields,help:generic_todo_automatization.field_generic_todo_simple__autostart_todo
+msgid "Autostart todo just after create."
+msgstr ""
+
+#. module: generic_todo_automatization
+#: model:ir.model.fields,help:generic_todo_automatization.field_generic_todo_template_line__autostart_todo
+#: model:ir.model.fields,help:generic_todo_automatization.field_todo_wizard_add_template_line__autostart_todo
+msgid "Autostart todo just after creation"
+msgstr ""
+
+#. module: generic_todo_automatization
+#: model:ir.model.fields,help:generic_todo_automatization.field_generic_todo__post_create_server_action
+#: model:ir.model.fields,help:generic_todo_automatization.field_generic_todo_check__post_create_server_action
+#: model:ir.model.fields,help:generic_todo_automatization.field_generic_todo_list_todo__post_create_server_action
+#: model:ir.model.fields,help:generic_todo_automatization.field_generic_todo_server_action__post_create_server_action
+#: model:ir.model.fields,help:generic_todo_automatization.field_generic_todo_simple__post_create_server_action
+#: model:ir.model.fields,help:generic_todo_automatization.field_generic_todo_template_line__post_create_server_action
+#: model:ir.model.fields,help:generic_todo_automatization.field_todo_wizard_add_template_line__post_create_server_action
+msgid "Execute a server action just after create."
+msgstr ""
+
+#. module: generic_todo_automatization
+#: model:ir.model.fields,help:generic_todo_automatization.field_generic_todo__on_cancel_server_action
+#: model:ir.model.fields,help:generic_todo_automatization.field_generic_todo_check__on_cancel_server_action
+#: model:ir.model.fields,help:generic_todo_automatization.field_generic_todo_list_todo__on_cancel_server_action
+#: model:ir.model.fields,help:generic_todo_automatization.field_generic_todo_server_action__on_cancel_server_action
+#: model:ir.model.fields,help:generic_todo_automatization.field_generic_todo_simple__on_cancel_server_action
+#: model:ir.model.fields,help:generic_todo_automatization.field_generic_todo_template_line__on_cancel_server_action
+#: model:ir.model.fields,help:generic_todo_automatization.field_todo_wizard_add_template_line__on_cancel_server_action
+msgid "Execute a server action when todo in state 'Cancel'."
+msgstr ""
+
+#. module: generic_todo_automatization
+#: model:ir.model.fields,help:generic_todo_automatization.field_generic_todo__on_done_server_action
+#: model:ir.model.fields,help:generic_todo_automatization.field_generic_todo_check__on_done_server_action
+#: model:ir.model.fields,help:generic_todo_automatization.field_generic_todo_list_todo__on_done_server_action
+#: model:ir.model.fields,help:generic_todo_automatization.field_generic_todo_server_action__on_done_server_action
+#: model:ir.model.fields,help:generic_todo_automatization.field_generic_todo_simple__on_done_server_action
+#: model:ir.model.fields,help:generic_todo_automatization.field_generic_todo_template_line__on_done_server_action
+#: model:ir.model.fields,help:generic_todo_automatization.field_todo_wizard_add_template_line__on_done_server_action
+msgid "Execute a server action when todo in state 'Done'."
+msgstr ""
+
+#. module: generic_todo_automatization
+#: model:ir.model.fields,help:generic_todo_automatization.field_generic_todo__pre_start_server_action
+#: model:ir.model.fields,help:generic_todo_automatization.field_generic_todo_check__pre_start_server_action
+#: model:ir.model.fields,help:generic_todo_automatization.field_generic_todo_list_todo__pre_start_server_action
+#: model:ir.model.fields,help:generic_todo_automatization.field_generic_todo_server_action__pre_start_server_action
+#: model:ir.model.fields,help:generic_todo_automatization.field_generic_todo_simple__pre_start_server_action
+#: model:ir.model.fields,help:generic_todo_automatization.field_generic_todo_template_line__pre_start_server_action
+#: model:ir.model.fields,help:generic_todo_automatization.field_todo_wizard_add_template_line__pre_start_server_action
+msgid "Execute a server action when todo in state 'In progress'."
+msgstr ""
+
+#. module: generic_todo_automatization
+#: model:ir.model,name:generic_todo_automatization.model_generic_todo
+msgid "Generic Todo"
+msgstr ""
+
+#. module: generic_todo_automatization
+#: model:ir.model,name:generic_todo_automatization.model_generic_todo_template_line
+msgid "Generic Todo Template Line"
+msgstr ""
+
+#. module: generic_todo_automatization
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_generic_todo__on_done_auto_start_next_todo
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_generic_todo_check__on_done_auto_start_next_todo
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_generic_todo_list_todo__on_done_auto_start_next_todo
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_generic_todo_server_action__on_done_auto_start_next_todo
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_generic_todo_simple__on_done_auto_start_next_todo
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_generic_todo_template_line__on_done_auto_start_next_todo
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_todo_wizard_add_template_line__on_done_auto_start_next_todo
+msgid "On Done Auto Start Next Todo"
+msgstr ""
+
+#. module: generic_todo_automatization
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_generic_todo__on_cancel_server_action
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_generic_todo_check__on_cancel_server_action
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_generic_todo_list_todo__on_cancel_server_action
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_generic_todo_server_action__on_cancel_server_action
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_generic_todo_simple__on_cancel_server_action
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_generic_todo_template_line__on_cancel_server_action
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_todo_wizard_add_template_line__on_cancel_server_action
+msgid "On cancel server Action"
+msgstr ""
+
+#. module: generic_todo_automatization
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_generic_todo__on_done_server_action
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_generic_todo_check__on_done_server_action
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_generic_todo_list_todo__on_done_server_action
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_generic_todo_server_action__on_done_server_action
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_generic_todo_simple__on_done_server_action
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_generic_todo_template_line__on_done_server_action
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_todo_wizard_add_template_line__on_done_server_action
+msgid "On done server Action"
+msgstr ""
+
+#. module: generic_todo_automatization
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_generic_todo__post_create_server_action
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_generic_todo_check__post_create_server_action
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_generic_todo_list_todo__post_create_server_action
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_generic_todo_server_action__post_create_server_action
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_generic_todo_simple__post_create_server_action
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_generic_todo_template_line__post_create_server_action
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_todo_wizard_add_template_line__post_create_server_action
+msgid "Post create server Action"
+msgstr ""
+
+#. module: generic_todo_automatization
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_generic_todo__pre_start_server_action
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_generic_todo_check__pre_start_server_action
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_generic_todo_list_todo__pre_start_server_action
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_generic_todo_server_action__pre_start_server_action
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_generic_todo_simple__pre_start_server_action
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_generic_todo_template_line__pre_start_server_action
+#: model:ir.model.fields,field_description:generic_todo_automatization.field_todo_wizard_add_template_line__pre_start_server_action
+msgid "Pre start server Action"
+msgstr ""
+
+#. module: generic_todo_automatization
+#: model:ir.model,name:generic_todo_automatization.model_todo_wizard_add_template_line
+msgid "Todo Wizard Add Template Line"
+msgstr ""

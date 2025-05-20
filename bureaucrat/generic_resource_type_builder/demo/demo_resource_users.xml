@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="demo_resource_user_implicit" model="res.users"
+            context="{'no_reset_password': True}">
+        <field name="name">Grace R. Decker</field>
+        <field name="email">resource-user-implicit@demo.demo</field>
+        <field name="login">resource-user-implicit</field>
+        <field name="password">resource-user-implicit</field>
+        <field name="company_id" ref="base.main_company"/>
+        <field name="groups_id" eval="[(4,ref('generic_resource.group_generic_resource_user_implicit')), (4,ref('base.group_user'))]"/>
+    </record>
+
+    <record id="demo_resource_user" model="res.users"
+            context="{'no_reset_password': True}">
+        <field name="name">Elena D. Thomas</field>
+        <field name="email">resource-user@demo.demo</field>
+        <field name="login">resource-user</field>
+        <field name="password">resource-user</field>
+        <field name="company_id" ref="base.main_company"/>
+        <field name="groups_id" eval="[(4,ref('generic_resource.group_generic_resource_user')), (4,ref('base.group_user'))]"/>
+    </record>
+
+    <record id="demo_resource_manager" model="res.users"
+            context="{'no_reset_password': True}">
+        <field name="name">Ben J. Tuel</field>
+        <field name="email">resource-manager@demo.demo</field>
+        <field name="login">resource-manager</field>
+        <field name="password">resource-manager</field>
+        <field name="company_id" ref="base.main_company"/>
+        <field name="groups_id" eval="[(4,ref('generic_resource.group_generic_resource_manager')), (4,ref('base.group_user'))]"/>
+    </record>
+</odoo>

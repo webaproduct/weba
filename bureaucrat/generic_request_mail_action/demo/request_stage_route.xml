@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Simple request type routes -->
+    <record id="generic_request.request_stage_route_type_simple_draft_to_sent"
+            model="request.stage.route">
+        <field name="is_available_in_email" eval="True"/>
+    </record>
+    <record id="generic_request.request_stage_route_type_simple_sent_confirmed"
+            model="request.stage.route">
+        <field name="is_available_in_email" eval="True"/>
+    </record>
+    <record id="generic_request.request_stage_route_type_simple_sent_rejected"
+            model="request.stage.route">
+        <field name="is_available_in_email" eval="True"/>
+    </record>
+</odoo>

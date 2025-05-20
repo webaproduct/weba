@@ -1,0 +1,19 @@
+.field_table__table_wrapper {
+    display: block;
+    overflow-x: auto;
+}
+
+.field_table_block table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    display: table;
+}
+
+.field_table_block table th, 
+.field_table_block table td {
+    padding: 8px 8px;
+    display: table-cell;
+    text-align: left;
+    vertical-align: top;
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="yodoo_knowledge_website.scrollspy" owl="1">
+        <div id="scrollspy-nav" class="list-group scrollspy_wrapper">
+            <t t-foreach="props.scrollspyItems" t-as="item" t-key="item.headerId">
+                <a class="list-group-item list-group-item-action scrollspy_link" t-attf-href="{{ '#' }}{{item.headerId}}">
+                    <t t-out="item.text"/>
+                </a>
+            </t>
+        </div>
+    </t>
+</templates>

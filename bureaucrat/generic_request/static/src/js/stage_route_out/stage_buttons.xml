@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates>
+    <t t-name="generic_request.stage_buttons" owl="1">
+        <t t-foreach="value_json.routes" t-as="route" t-key="route.id">
+            <button
+                    t-attf-class="btn btn-{{ route.btn_style == 'default' ? 'primary' : route.btn_style }}"
+                    t-on-click.prevent="() => this._onButtonClick(route.id)">
+                <t t-esc="route.name"/>
+            </button>
+        </t>
+    </t>
+</templates>

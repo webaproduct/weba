@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="view_test_incident_field_set_value_form">
+        <field name="name">test.incident.field.set.value.form</field>
+        <field name="model">test.incident.field.set.value</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="request_id"/>
+                        <field name="char_1"/>
+                        <field name="integer_1"/>
+                        <field name="float_1"/>
+                        <field name="date_1"/>
+                        <field name="datetime_1"/>
+                        <field name="many2one_1_id"/>
+                        <field name="many2many_1_ids" widget="many2many_tags"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_test_incident_field_set_value_tree">
+        <field name="name">test.incident.field.set.value.tree</field>
+        <field name="model">test.incident.field.set.value</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="request_id"/>
+                <field name="char_1"/>
+                <field name="integer_1"/>
+                <field name="float_1"/>
+                <field name="date_1"/>
+                <field name="datetime_1"/>
+                <field name="many2one_1_id"/>
+                <field name="many2many_1_ids" widget="many2many_tags"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="test_incident_field_set_value_act_window" model="ir.actions.act_window">
+        <field name="name">Test: Incident Field Set Values</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">test.incident.field.set.value</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p attribute.value="oe_view_nocontent_create">
+                There is no examples click here to add new one.
+            </p>
+        </field>
+    </record>
+
+    <!--<menuitem name="Test Incident field set values"-->
+    <!--          id="test_incident_field_set_value_menu"-->
+    <!--          action="test_incident_field_set_value_act_window"-->
+    <!--          parent="generic_request.menu_configuration"-->
+    <!--          sequence="100"/>-->
+
+</odoo>

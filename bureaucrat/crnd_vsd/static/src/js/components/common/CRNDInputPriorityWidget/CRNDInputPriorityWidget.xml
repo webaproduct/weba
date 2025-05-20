@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="crnd_vsd.CRNDInputPriorityWidget" owl="1">
+        <div t-if="props.title" class="form_inputs_item_title">
+            <t t-esc="props.title" />
+        </div>
+
+        <div class="form_input_starts">
+            <t t-foreach="[1, 2, 3, 4, 5]" t-as="i" t-key="index">
+                <t t-if="getStarStatus(i)" >
+                    <img src="/crnd_vsd/static/img/star_fill.svg" t-on-click="e => this.starClick(i)"/>
+                </t>
+                <t t-else="">
+                    <img src="/crnd_vsd/static/img/star.svg" t-on-click="e => this.starClick(i)"/>
+                </t>
+            </t>
+        </div>
+        <!-- <div class="form_inputs_item">
+            <input type="number" t-attf-value="{{ state.priority }}" t-on-input="updateInputValue" min="1" max="5"/>
+        </div> -->
+    </t>
+
+</templates>

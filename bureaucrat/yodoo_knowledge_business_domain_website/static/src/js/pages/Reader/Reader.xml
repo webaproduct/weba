@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-inherit="yodoo_knowledge_website.Reader" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('main_search')]" position="before">
+            <div t-if="state.business_domains.length" class="business_domain_selector">
+                <t t-foreach="state.business_domains" t-as="business_domain" t-key="business_domain.id">
+                    <div 
+                        class="business_domain"
+                        t-attf-class="{{ business_domain.id == state.selected_business_domain ? 'business_domain_active' : '' }}"
+                        t-on-click="e => this.setBusinessDomainId(business_domain.id)">
+                        <t t-esc="business_domain.name"/>
+                    </div>
+                </t>
+            </div>
+        </xpath>
+    </t>
+</templates>

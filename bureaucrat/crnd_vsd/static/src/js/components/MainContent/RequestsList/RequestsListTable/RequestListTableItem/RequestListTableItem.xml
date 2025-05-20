@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="crnd_vsd.RequestListTableItem" owl="1">
+        <tr>
+            <td class="req_link" t-on-click="e => clickOnReqName(props.req.id)">
+                <t t-esc="props.req.name"/>
+            </td>
+            <td t-if="true || props.isAllowed('creation_date')">
+                <t t-esc="props.req.creation_date" />
+            </td>
+            <td t-if="true || props.isAllowed('title')" class="left_sided title_cell">
+                <t t-esc="props.req.title ? props.req.title?.substring(0, 150) : '-'" />
+            </td>
+            <td t-if="props.isAllowed('created_by')" class="client_cell left_sided">
+                <div>
+                    <img t-attf-src="{{ props.req.created_by.image_url }}" class="user_rounded"/>
+                    <t t-esc="props.req.created_by.name"/>
+                </div>
+            </td>
+            <td t-if="props.isAllowed('assignee')" class="reporter_cell left_sided">
+                <t t-if="props.req.assigned_to.name">
+                    <div>
+                        <img t-attf-src="{{ props.req.assigned_to.image_url }}" class="user_rounded"/>
+                        <t t-esc="props.req.assigned_to.name" />
+                    </div>
+                </t>
+                <t t-else="">
+                    -
+                </t>
+            </td>
+            <td t-if="props.isAllowed('files')" class="file_cell">
+                <img src="crnd_vsd/static/img/clip.svg" alt=""/>
+                <t t-esc="props.req.message_attachment_count" />
+            </td>
+            <td t-if="true || props.isAllowed('stage')" class="status_cell">
+                <div>
+                    <div class="stage_color" t-attf-style="background: {{ props.req.stage.bg_color }}"></div>
+                    <t t-esc="props.req.stage.name"/>
+                </div>
+            </td>
+            <!-- <td class="action_cell">
+                <div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </td> -->
+        </tr>
+    </t>
+
+</templates>

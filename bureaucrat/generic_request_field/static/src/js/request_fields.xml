@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates>
+    <t t-name="generic_request_field.request_fields" owl="1">
+        <div class="row">
+            <t t-foreach="state.value_json.fields_order" t-as="field_id"
+               t-key="state.value_json.fields_info[field_id].sequence">
+                <t t-set="field_info" t-value="state.value_json.fields_info[field_id]"/>
+                <t t-if="field_info['mandatory']">
+                    <t t-set="field_required_class" t-value="'o_required_modifier'"/>
+                </t>
+                <t t-else="">
+                    <t t-set="field_required_class" t-value="''"/>
+                </t>
+                <div t-attf-class="request_field_container {{ field_info['grid_classes'] }} {{ field_required_class }}">
+                    <label class="request_field_label"
+                           t-attf-title="{{ state.value_json.fields_info[field_id]['help'] or '' }}">
+                        <t t-esc="state.value_json.fields_info[field_id]['name']"/>:
+                    </label>
+                    <input t-attf-id="request_field_{{field_id}}"
+                           t-attf-name="request_field_{{field_id}}"
+                           t-on-input="_updateInputValue"
+                           t-attf-class="request_field_value o_input"
+                           t-attf-data-field_id="{{field_id}}"
+                           t-att-value="state.value_json.fields_info[field_id]['value']"
+                           t-attf-placeholder="{{state.value_json.fields_info[field_id]['placeholder'] or ''}}"/>
+                </div>
+            </t>
+        </div>
+    </t>
+</templates>

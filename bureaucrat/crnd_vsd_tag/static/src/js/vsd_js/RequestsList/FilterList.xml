@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-inherit="crnd_vsd.FilterList" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('filter_list')]" position="inside">
+            <t t-foreach="state.tags" t-as="tag_category" t-key="tag_category.id">
+                <CRNDInputSelectManyWidget
+                    t-props="this.getPropsForInput(`tag_${tag_category.code}`, tag_category.name)"
+                    selectList="this.getTagsSelectList(tag_category.tags)"
+                    updateOnStart="false"
+                    icon_url="tagIconUrl"
+                />
+            </t>
+        </xpath>
+    </t>
+</templates>

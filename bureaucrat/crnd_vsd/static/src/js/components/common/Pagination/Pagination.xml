@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+    <t t-name="crnd_vsd.Pagination" owl="1">
+        <div class="pagination">
+            <t t-if="props.page > 1">
+                <div class="pagination_start" t-on-click="e => props.changePage(props.page-1)">
+                    <img src="/crnd_vsd/static/img/arrow_left.svg" />
+                </div>
+            </t>
+            
+
+            <t t-foreach="generatePaginationList(props.pages_count, props.page)" t-as="page" t-key="page">
+                <div t-attf-class="pagination_button {{ props.page == page and 'btn-primary' }}"  t-on-click="e => props.changePage(page)">
+                    <t t-esc="page" t-set="cta_btn_href"/>
+                </div>
+            </t>
+            
+            <t t-if="props.pages_count != props.page and props.pages_count">
+                <div t-on-click="e => props.changePage(props.page+1)">
+                    <img src="/crnd_vsd/static/img/arrow_left.svg" />
+                </div>
+            </t>
+        </div>
+    </t>
+
+</templates>

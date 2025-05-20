@@ -1,0 +1,82 @@
+<odoo>
+
+    <record id="crm_lead_view_form_inherit" model="ir.ui.view">
+        <field name="name">crm.lead.view.form.inherit</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='source_id']" position="attributes">
+                <attribute name="required">1</attribute>
+            </xpath>
+
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="action_view_projects" type="object" icon="fa-folder-open"
+                        class="oe_stat_button">
+                    <div class="o_field_widget o_stat_info">
+                        <div class="oe_inline">
+                            <span>Projects: </span>
+                            <span>
+                                <field name="count_projects"/>
+                            </span>
+                        </div>
+                    </div>
+                </button>
+            </xpath>
+
+            <xpath expr='//group[@name="categorization"]/field[@name="source_id"]' position="after">
+                <field name="partner_id_source_id" invisible="source_id != 31"
+                       required="source_id == 31"/>
+            </xpath>
+            <xpath expr='//page[@name="lead"]/group/group/field[@name="source_id"]' position="after">
+                <field name="partner_id_source_id" invisible="source_id != 31"
+                       required="source_id == 31"/>
+            </xpath>
+
+            <xpath expr="//field[@name='tag_ids']" position="after">
+                <field name="hours" widget="float_time"/>
+                <field name="payment_percentage"/>
+                <field name="subscription"/>
+                <field name="postpaid"/>
+                <field name="bonus"/>
+            </xpath>
+
+            <xpath expr="//field[@name='lost_reason_id']" position="before">
+                <field name="team_id"/>
+            </xpath>
+
+            <xpath expr="//group[@name='Misc']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//group[@name='lead_info']/label[@for='mobile']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//group[@name='lead_info']/div[hasclass('o_row_readonly')][3]" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//group[@name='lead_info']/div[hasclass('o_row_readonly')][3]" position="after">
+                <field name="telegram"/>
+            </xpath>
+
+            <xpath expr="//group[hasclass('mt48')]/label[@for='mobile_page_lead']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//group[hasclass('mt48')]/div[hasclass('o_row_readonly')]" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//label[@for='date_deadline']" position="replace">
+                <label for="project_month_id" class="oe_inline"/>
+            </xpath>
+            <xpath expr="//field[@name='date_deadline']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='date_deadline']" position="after">
+                <field name="project_month_id" class="oe_inline"/>
+            </xpath>
+
+        </field>
+    </record>
+
+
+</odoo>

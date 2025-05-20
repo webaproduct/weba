@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates xml:space="preserve">
+    <t t-name="yodoo_knowledge_website.KnowledgeItem" owl="1">
+        <div t-if="props.item.item_format == 'pdf'" class="knowledge_item_pdf">
+            <iframe t-attf-src="{{props.item.pdf_url}}"></iframe>
+        </div>
+        <div t-else="" id="knowledge_item" class="knowledge_item">
+            <t t-out="props.item.body"/>
+        </div>
+    </t>
+</templates>

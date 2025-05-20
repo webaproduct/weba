@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="yodoo_documentation"
+            model="yodoo.knowledge.category">
+        <field name="name">Yodoo Documentation</field>
+        <field name="code">BD</field>
+    </record>
+
+    
+    <record id="yodoo_documentation_admin_guides"
+            model="yodoo.knowledge.category">
+        <field name="name">Admin Guides</field>
+        <field name="parent_id"
+               ref="yodoo_documentation"/>
+        <field name="code">BDA</field>
+    </record>
+
+    <record id="yodoo_documentation_user_guides"
+            model="yodoo.knowledge.category">
+        <field name="name">User Guides</field>
+        <field name="code">BDU</field>
+        <field name="parent_id"
+               ref="yodoo_documentation"/>
+    </record>
+
+    <record id="yodoo_documentation_reference"
+            model="yodoo.knowledge.category">
+        <field name="name">Reference</field>
+        <field name="code">BDR</field>
+        <field name="parent_id"
+               ref="yodoo_documentation"/>
+    </record>
+
+    <record id="yodoo_documentation_reference_generic_request_modules"
+            model="yodoo.knowledge.category">
+        <field name="name">Generic Request Modules</field>
+        <field name="code">BDRM</field>
+        <field name="parent_id"
+               ref="yodoo_documentation_reference"/>
+    </record>
+
+    <record id="yodoo_documentation_reference_website_service_desk_modules"
+            model="yodoo.knowledge.category">
+        <field name="name">Website Service Desk Modules</field>
+        <field name="code">BDRWSD</field>
+        <field name="parent_id"
+               ref="yodoo_documentation_reference"/>
+    </record>
+
+    <record id="yodoo_documentation_reference_generic_condition_modules"
+            model="yodoo.knowledge.category">
+        <field name="name">Generic Condition Modules</field>
+        <field name="code">BDRGCO</field>
+        <field name="parent_id"
+               ref="yodoo_documentation_reference"/>
+    </record>
+
+    <record id="yodoo_documentation_reference_generic_resource_modules"
+            model="yodoo.knowledge.category">
+        <field name="name">Generic Resource Modules</field>
+        <field name="code">BDRGR</field>
+        <field name="parent_id"
+               ref="yodoo_documentation_reference"/>
+    </record>
+
+    <record id="yodoo_documentation_reference_generic_service_modules"
+            model="yodoo.knowledge.category">
+        <field name="name">Generic Service Modules</field>
+        <field name="code">BDRGS</field>
+        <field name="parent_id"
+               ref="yodoo_documentation_reference"/>
+    </record>
+
+    <record id="yodoo_documentation_reference_generic_tag_modules"
+            model="yodoo.knowledge.category">
+        <field name="name">Generic Tag Modules</field>
+        <field name="code">BDRGTT</field>
+        <field name="parent_id"
+               ref="yodoo_documentation_reference"/>
+    </record>
+
+    <record id="yodoo_documentation_reference_generic_assignment_modules"
+            model="yodoo.knowledge.category">
+        <field name="name">Generic Assignment modules</field>
+        <field name="code">BDRGAS</field>
+        <field name="parent_id"
+               ref="yodoo_documentation_reference"/>
+    </record>
+
+    <record id="yodoo_documentation_reference_generic_team_modules"
+            model="yodoo.knowledge.category">
+        <field name="name">Generic Team modules</field>
+        <field name="code">BDRGT</field>
+        <field name="parent_id"
+               ref="yodoo_documentation_reference"/>
+    </record>
+
+    <record id="yodoo_documentation_faq"
+            model="yodoo.knowledge.category">
+        <field name="name">FAQ</field>
+        <field name="code">BDFAQ</field>
+        <field name="parent_id"
+               ref="yodoo_documentation"/>
+    </record>
+
+    <record id="yodoo_documentation_faq_troubleshooting"
+            model="yodoo.knowledge.category">
+        <field name="name">Troubleshooting</field>
+        <field name="code">BDFAQT</field>
+        <field name="parent_id"
+               ref="yodoo_documentation_faq"/>
+    </record>
+
+
+</odoo>

@@ -1,0 +1,7 @@
+#yodoo_knowledge_website_anchor_owl .categories_hierarchy {
+    position: sticky;
+    height: fit-content;
+    max-height: 100%;
+    overflow-y: auto;
+    padding: 10px;
+}

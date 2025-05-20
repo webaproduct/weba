@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="crnd_vsd.CRNDInputBooleanWidget" owl="1">
+        <div 
+            class="form_inputs_item boolean_input"
+            t-attf-class="{{ props?.required ? 'required' : '' }}"    
+        >
+            <input type="checkbox" t-model="state.boolean" t-on-input="updateInputValue"/>
+            <t t-esc="props.title" />
+        </div>
+    </t>
+
+</templates>

@@ -1,0 +1,58 @@
+<odoo>
+
+    <menuitem
+        id="menu_project_project_аdditional_groups"
+        name="Additional models"
+        parent="project.menu_project_config"
+        sequence="20"
+    />
+
+    <record id="project_month_view_tree" model="ir.ui.view">
+        <field name="name">project.month.view.tree</field>
+        <field name="model">project.month</field>
+        <field name="arch" type="xml">
+            <tree string="Project month" editable="bottom">
+                <field name="month"/>
+                <field name="year"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="project_month_view_form" model="ir.ui.view">
+        <field name="name">project.month.view.form</field>
+        <field name="model">project.month</field>
+        <field name="arch" type="xml">
+            <form string="Project month">
+                <sheet>
+                    <group>
+                        <group>
+                            <group>
+                                <field name="month"/>
+                                <field name="year"/>
+                            </group>
+                            <group>
+                            </group>
+                        </group>
+                        <group>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_project_month" model="ir.actions.act_window">
+        <field name="name">Project month</field>
+        <field name="res_model">project.month</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem
+        id="menu_project_month"
+        name="Project month"
+        action="action_project_month"
+        parent="menu_project_project_аdditional_groups"
+        sequence="1"
+    />
+
+</odoo>

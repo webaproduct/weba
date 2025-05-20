@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="crnd_vsd.RequestsListTable" owl="1">
+        <div class="req_list_table_wrapper">
+            <table class="req_list_table">
+                <tr class="navbar-light">
+                    <th t-on-click="e => this.clickOnSortingItem('id')" class="clickable_table_th nowrap_text">
+                        #Request
+                        <svg t-attf-class="{{ this.getClassStatusSorting('id') }}" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.5 5.09128L1.44422 0L0 1.45436L6.5 8L13 1.45436L11.5548 0L6.49898 5.09128H6.5Z" fill="currentColor"/>
+                        </svg>
+                        <!-- <img src="/crnd_vsd/static/img/arrow_down.svg" t-attf-class="{{ this.getClassStatusSorting('id') }}"/> -->
+                    </th>
+                    <th t-if="true || isAllowed('creation_date')" t-on-click="e => this.clickOnSortingItem('create_date')" class="clickable_table_th nowrap_text">
+                        Creation Date
+                        <svg t-attf-class="{{ this.getClassStatusSorting('create_date') }}" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.5 5.09128L1.44422 0L0 1.45436L6.5 8L13 1.45436L11.5548 0L6.49898 5.09128H6.5Z" fill="currentColor"/>
+                        </svg>
+                        <!-- <img src="/crnd_vsd/static/img/arrow_down.svg" t-attf-class="{{ this.getClassStatusSorting('created_date') }}"/> -->
+                    </th>
+                    <th t-if="true || isAllowed('text')" class="left_sided clickable_table_th" t-on-click="e => this.clickOnSortingItem('title')" >
+                        Title
+                        <svg t-attf-class="{{ this.getClassStatusSorting('title') }}" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.5 5.09128L1.44422 0L0 1.45436L6.5 8L13 1.45436L11.5548 0L6.49898 5.09128H6.5Z" fill="currentColor"/>
+                        </svg>
+                        <!-- <img src="/crnd_vsd/static/img/arrow_down.svg" t-attf-class="{{ this.getClassStatusSorting('name') }}"/> -->
+                    </th>
+                    <th t-if="isAllowed('created_by')" class="left_sided">Author</th>
+                    <th t-if="isAllowed('assignee')" class="left_sided">Assignee</th>
+                    <th t-if="isAllowed('files')">Files</th>
+                    <th t-if="true || isAllowed('stage')" class="left_sided clickable_table_th" t-on-click="e => this.clickOnSortingItem('stage_name')">
+                        Status
+                        <svg t-attf-class="{{ this.getClassStatusSorting('stage_name') }}" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.5 5.09128L1.44422 0L0 1.45436L6.5 8L13 1.45436L11.5548 0L6.49898 5.09128H6.5Z" fill="currentColor"/>
+                        </svg>
+                        <!-- <img src="/crnd_vsd/static/img/arrow_down.svg" t-attf-class="{{ this.getClassStatusSorting('stage')  }}"/> -->
+                    </th>
+                    <!-- <th>Action</th> -->
+                </tr>
+                <t t-foreach="props.reqs" t-as="item" t-key="item.id">
+                    <RequestListTableItem 
+                        isAllowed="isAllowed" 
+                        req="item"/>
+                  </t>
+            </table>
+
+        </div>
+
+    </t>
+
+</templates>

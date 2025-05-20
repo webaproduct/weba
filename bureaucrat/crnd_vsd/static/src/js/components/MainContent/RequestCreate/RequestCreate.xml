@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="crnd_vsd.RequestCreate" owl="1">
+        <MainComponentsContainer/>
+
+        <div class="breadcrumbs">
+            <div class="breadcrumbs_item" t-on-click="onClickHome">
+                Requests
+            </div>
+            <img src="/crnd_vsd/static/img/arrow_left.svg" alt="" />
+            <div class="breadcrumbs_item">
+                New Request
+            </div>
+        </div>
+    
+        <div class="mobile sidepanel">
+            <t t-if="use_service_groups">
+                <div t-attf-class="sidepanel_item {{ getClassForTab('service_group') }}"></div>
+                <div t-if="getItemStatusForMobile('service_group')" class="sidepanel_stage">Service Group</div>
+                <div t-else="" class="sidepanel_separator"></div>
+            </t>
+
+            <t t-if="use_service">
+                <div t-attf-class="sidepanel_item {{ getClassForTab('service') }}"></div>
+                <div t-if="getItemStatusForMobile('service')" class="sidepanel_stage">Service</div>
+                <div t-else="" class="sidepanel_separator"></div>
+            </t>
+
+            <div t-attf-class="sidepanel_item  {{ getClassForTab('category') }}"></div>
+            <div t-if="getItemStatusForMobile('category')" class="sidepanel_stage">Category</div>
+            <div t-else="" class="sidepanel_separator"></div>
+
+            <div t-attf-class="sidepanel_item  {{ getClassForTab('type') }}"></div>
+            <div t-if="getItemStatusForMobile('type')" class="sidepanel_stage">Type</div>
+            <div t-else="" class="sidepanel_separator"></div>
+
+            <div t-attf-class="sidepanel_item  {{ getClassForTab('request') }}"></div>
+            <div t-if="getItemStatusForMobile('request')" class="sidepanel_stage">Request</div>
+            <div t-else="" class="sidepanel_separator"></div>
+        </div>
+        
+        <div class="creation">
+            <div class="desktop creation_sidepanel">
+                <div t-if="use_service_groups" t-attf-class="sidepanel_step {{ getClassForTab('service_group') }}">
+                    <div class="sidepanel_step_title">
+                        Service Group
+                    </div>
+                    <div class="sidepanel_step_desc">
+                        <t t-if="getValueForSidePanel('service_group')">
+                            <img class="sidepanel_icon" src="/crnd_vsd/static/img/service_group.svg" alt=""/>
+                            <t t-esc="getValueForSidePanel('service_group')"/>
+                        </t>
+                    </div>
+                </div>
+                <div t-if="use_service" t-attf-class="sidepanel_step {{ getClassForTab('service') }}">
+                    <div class="sidepanel_step_title">
+                        Service
+                    </div>
+                    <div class="sidepanel_step_desc">
+                        <t t-if="getValueForSidePanel('service')" >
+                            <img class="sidepanel_icon" src="/crnd_vsd/static/img/service.svg" alt=""/>
+                            <t t-esc="getValueForSidePanel('service')"/>
+                        </t>
+                    </div>
+                </div>
+                <div t-attf-class="sidepanel_step {{ getClassForTab('category') }}">
+                    <div class="sidepanel_step_title">
+                        Category
+                    </div>
+                    <div class="sidepanel_step_desc">
+                        <t t-if="getValueForSidePanel('category')">
+                            <img class="sidepanel_icon" src="/crnd_vsd/static/img/category.svg" alt=""/>
+                            <t t-esc="getValueForSidePanel('category')"/>
+                        </t>
+                    </div>
+                </div>
+                <div t-attf-class="sidepanel_step {{ getClassForTab('type') }}">
+                    <div class="sidepanel_step_title">
+                        Type
+                    </div>
+                    <div class="sidepanel_step_desc">
+                        <t t-if="getValueForSidePanel('type')">
+                            <img class="sidepanel_icon" src="/crnd_vsd/static/img/type.svg" alt=""/>
+                            <t t-esc="getValueForSidePanel('type')"/>
+                        </t>
+                    </div>
+                </div>
+                <div t-attf-class="sidepanel_step {{ getClassForTab('request') }}">
+                    <div class="sidepanel_step_title">
+                        Request
+                    </div>
+                    <!-- <div class="sidepanel_step_desc">
+                        Gitlab
+                    </div> -->
+                </div>
+            </div>
+
+
+
+            <div class="creation_form">
+                <t t-if="state.activeTab == 'service_group'" >
+                    <div class="creation_form_tab_title">
+                        Select service group
+                    </div>
+
+                    <div class="creation_form_tabs">
+                        <t t-foreach="state.service_groups" t-as="service_group" t-key="service_group.id">
+                            <button t-attf-class="btn creation_form_tabs_item {{ getStatusForActiveItem('service_group', service_group) }}" t-on-click="e => this.changeData('service_group', service_group)">
+                                <div t-if="service_group.image" class="creation_form_tabs_item_image">
+                                    <img t-att-src="service_group.image" loading="lazy" />
+                                </div>
+                                <span>
+                                    <t t-esc="service_group.name" />
+                                </span>
+                            </button>
+                        </t>
+                    </div>
+                </t>
+                
+                
+                
+                
+                <t t-if="state.activeTab == 'service'" >
+                    <div class="creation_form_tab_title">
+                        Select service
+                    </div>
+
+                    <div class="creation_form_tabs">
+                        <t t-foreach="state.services" t-as="service" t-key="service.id">
+                            <button t-attf-class="btn creation_form_tabs_item {{ getStatusForActiveItem('service', service) }}" t-on-click="e => this.changeData('service', service)">
+                                <div t-if="service.image" class="creation_form_tabs_item_image">
+                                    <img t-att-src="service.image" loading="lazy" />
+                                </div>
+                                <span>
+                                    <t t-esc="service.name" />
+                                </span>
+                            </button>
+                        </t>
+<!--                         
+                        <button t-foreach="[1, 2, 3]" t-as="i" class="creation_form_tabs_item">
+                            GitLab / Add access to repository for user
+                        </button>
+                        <button class="creation_form_tabs_item">
+                            GitLab / Add access to repository for user
+                        </button>
+                        <button class="creation_form_tabs_item">
+                            GitLab / Cannot login or push to gitlab
+                        </button>
+                        <button class="creation_form_tabs_item active">
+                            GitLab / Issue with CI pipeline
+                        </button>
+                        <button class="creation_form_tabs_item">
+                            GitLab / Question
+                        </button>
+                        <button class="creation_form_tabs_item">
+                            Other
+                        </button> -->
+                    </div>
+                </t>
+
+
+
+
+
+
+
+
+                <t t-if="state.activeTab == 'category'" >
+                    <div class="creation_form_tab_title">
+                        Select category
+                    </div>
+
+                    <div class="creation_form_tabs">
+                        <t t-foreach="state.categories" t-as="category" t-key="category.id">
+                            <button t-attf-class="btn creation_form_tabs_item {{ getStatusForActiveItem('category', category) }}" t-on-click="e => this.changeData('category', category)">
+                                <span>
+                                    <t t-esc="category.name" />
+                                </span>
+                            </button>
+                        </t>
+                    </div>
+                </t>
+
+
+
+
+
+
+
+
+
+
+                <t t-if="state.activeTab == 'type'" >
+                    <div class="creation_form_tab_title">
+                        Select type
+                    </div>
+
+                    <div class="creation_form_tabs">
+                        <t t-foreach="state.types" t-as="type" t-key="type.id">
+                            <button t-attf-class="btn creation_form_tabs_item {{ getStatusForActiveItem('type', type) }}" t-on-click="e => this.changeData('type', type)">
+                                <span>
+                                    <t t-esc="type.name" />
+                                </span>
+                            </button>
+                        </t>
+                    </div>
+                    
+                </t>
+
+
+
+
+
+
+
+
+
+                <t t-if="state.activeTab == 'request'" >
+                    <!-- <div class="creation_form_tab_title">
+                        Create Request
+                    </div> -->
+
+                    <t t-out="state.requestTemplate" />
+
+                    <div t-if="state.visibleFields?.includes('files')" class="form_inputs_item">
+                        <div class="form_inputs_item_title">
+                            Files
+                        </div>
+                    
+                        <FileLoader 
+                            files="state.files"
+                            updateFilesList="this.updateFilesList"
+                            removeFile="this.removeFile"/>
+                    
+                    </div>
+
+                    <div class="error" t-if="state.errors_required">
+                        <p>Required fields</p>
+                        
+                        <ul class="error_list">
+                            <t t-foreach="state.errors_required" t-as="error" t-key="error_index">
+                                <li>
+                                    <t t-esc="error"/>
+                                </li>
+                            </t>
+                        
+                        </ul>
+                    </div>
+                </t>
+
+
+
+                <!-- <div class="creation_form_tabs">
+                    <button class="creation_form_tabs_item">
+                        GitLab / Add access to repository for user
+                    </button>
+                    <button class="creation_form_tabs_item">
+                        GitLab / Cannot login or push to gitlab
+                    </button>
+                    <button class="creation_form_tabs_item active">
+                        GitLab / Issue with CI pipeline
+                    </button>
+                    <button class="creation_form_tabs_item">
+                        GitLab / Question
+                    </button>
+                    <button class="creation_form_tabs_item">
+                        Other
+                    </button>
+                </div> -->
+
+                <!-- <div class="creation_form_inputs_list">
+                    <div class="creation_form_inputs_block">
+                        <div class="creation_form_inputs_item">
+                            <div class="creation_form_inputs_item_title">
+                                Resource
+                            </div>
+                            <input type="text" />
+                        </div>
+                        <div class="creation_form_inputs_item">
+                            <div class="creation_form_inputs_item_title">
+                            </div>
+                            <input type="text" />
+                        </div>
+                        <div class="creation_form_inputs_item">
+                            <div class="creation_form_inputs_item_title">
+                                Resource
+                            </div>
+                            <input type="text" />
+                        </div>
+                        <div class="creation_form_inputs_item">
+                            <div class="creation_form_inputs_item_title">
+                                Resource
+                            </div>
+                            <input type="text" />
+                        </div>
+                    </div>
+
+                    <div class="separator"></div>
+
+                    <div class="creation_form_inputs_block">
+                        <div class="creation_form_inputs_item">
+                            <div class="creation_form_inputs_item_title">
+                                Resource
+                            </div>
+                            <input type="text" />
+                        </div>
+                    </div>
+
+                    <div class="separator"></div>
+
+                    <textarea name="vgr" id="brt" cols="30" rows="10"></textarea>
+
+                </div> -->
+
+
+                <div class="creation_form_buttons_navigation">
+                    <button t-if="backBtnStatus()" t-on-click="e => this.changePage(-1)" class="btn btn-secondary">Back</button>
+                    <button t-if="nextBtnStatus()" t-on-click="e => this.changePage(1)" t-att-disabled="true or !getNextBtnStatus()" class="btn btn-primary" style="opacity: 0;">Next</button>
+                    <button t-if="createBtnStatus()" t-on-click="e => this.createRequest()" class="btn btn-primary" t-att-disabled="!state.canSave">Save</button>
+                </div>
+
+            </div>
+        </div>
+    </t>
+
+</templates>

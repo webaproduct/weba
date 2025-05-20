@@ -1,0 +1,7 @@
+.field_set_block .information_table {
+    column-gap: 20px;
+}
+
+.field_set_block .information_table .information_table_row > div:first-of-type {
+    text-wrap: nowrap !important;
+}

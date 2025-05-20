@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-inherit="yodoo_knowledge_website.Reader" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('main_search')]/div[hasclass('main_search_side')][2]" position="inside">
+            <div class="language_selector">
+                <YodooInputSelectWidget 
+                    _form_value="state.selected_language_id" 
+                    name="'language'" 
+                    selectList="state.languages"
+                    _updateInputValue="setLanguageId"    
+                />        
+            </div>
+        </xpath>
+    </t>
+</templates>

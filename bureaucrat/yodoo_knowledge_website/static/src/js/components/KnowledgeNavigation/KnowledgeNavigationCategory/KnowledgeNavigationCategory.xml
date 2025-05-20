@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="yodoo_knowledge_website.KnowledgeNavigationCategory" owl="1">
+        <li class="category">
+            <div 
+                t-attf-class="{{props.knowledgeItem.parent_path?.includes(props.category.id.toString()) ? 'expanded' : ''}} knowledge_category"
+                t-ref="itemRef"
+                t-on-click="this.toggleExpand"
+                t-attf-data-bs-target="#collapseExample{{props.category.id}}"
+                data-bs-toggle="collapse"
+                aria-expanded="false" 
+            >
+                <img src="/yodoo_knowledge_website/static/img/arrow_down.svg" class="category_arrow"/>
+
+                <span t-attf-class="{{props.knowledgeItem.parent_path?.includes(props.category.id.toString()) ? 'selected' : ''}}">
+                    <t t-esc="props.category.name"/>
+                </span>
+            </div>
+
+            <ul
+                t-attf-class="category_list collapse {{props.knowledgeItem.parent_path?.includes(props.category.id.toString()) ? 'show' : ''}}"
+                t-if="props.category.child.categories.length || props.category.child.items.length"
+                t-attf-id="collapseExample{{props.category.id}}"
+            >
+                <t t-if="props.category.child.categories.length">
+                    <t t-foreach="props.category.child.categories" t-as="category" t-key="category.id">
+                        <KnowledgeNavigationCategory 
+                            category="category"
+                            setKnowledgeItem="props.setKnowledgeItem"
+                            knowledgeItem="props.knowledgeItem"    
+                        />
+                    </t>
+                </t>
+                <li 
+                    t-foreach="props.category.child.items" t-as="item" t-key="item.id"
+                    t-attf-class="knowledge_element {{props.knowledgeItem.id === item.id ? 'selected' : ''}}"
+                    t-on-click="() => this.onItemClick(item.id)"
+                >
+                    <img src="/yodoo_knowledge_website/static/img/book.svg" class="book_icon"/>
+                    <span 
+                        t-esc="item.name"
+                    />
+                </li>
+            </ul> 
+        </li>
+
+    </t>
+</templates>

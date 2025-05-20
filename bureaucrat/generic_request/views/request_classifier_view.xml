@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="view_request_classifier_tree">
+        <field name="model">request.classifier</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="service_id_group"
+                       groups="generic_request.group_request_use_service_groups"/>
+                <field name="service_id"
+                       groups="generic_request.group_request_use_services"/>
+                <field name="category_id"/>
+                <field name="type_id"/>
+                <field name="kind_id"
+                       groups="generic_request.group_request_use_kind"/>
+                <field name="tag_category_ids"
+                       widget="many2many_tags"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_request_classifier_form">
+        <field name="model">request.classifier</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="toggle_active" type="object" groups="base.group_user"
+                                class="oe_stat_button" icon="fa-archive">
+                            <field name="active" widget="boolean_button"
+                                   options='{"terminology": "archive"}'/>
+                        </button>
+                        <button name="action_show_related_requests"
+                                type="object"
+                                class="oe_stat_button" icon="fa-comments-o">
+                            <field string="Requests" name="request_ids_count"
+                                   widget="statinfo"/>
+                        </button>
+                    </div>
+                    <notebook>
+                        <page string="Info" name="page_info">
+                            <group name="group_info_root">
+                                <group name="group_info_left">
+                                    <field name="service_id"
+                                           groups="generic_request.group_request_use_services"/>
+                                    <field name="category_id"/>
+                                    <field name="type_id"/>
+                                    <field name="kind_id"
+                                           groups="generic_request.group_request_use_kind"/>
+                                </group>
+                                <group name="group_info_right">
+                                    <field name="tag_category_ids"
+                                           widget="many2many_tags"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Defaults" name="page_defaults">
+                            <separator colspan="4" string="Default priority request's title"/>
+                            <field name="default_priority_request_title" class="w-100"/>
+                            <separator colspan="4" string="Default priority request's text"/>
+                            <field colspan="4" name="default_priority_request_text"/>
+                        </page>
+                        <page string="Notification rules" name="page_request_notification_rules">
+                            <h3>Send email on event:</h3>
+                            <table style="width: 100%" name="table_request_notification_rules">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <label for="send_mail_on_request_created_event"/>
+                                        </td>
+                                        <td>
+                                            <field name="send_mail_on_request_created_event" string="Created"/>
+                                        </td>
+                                        <td>
+                                            <field name="request_created_mail_template_id"
+                                                   domain="[('is_default_notification_on', '=', 'created')]"
+                                                   invisible="send_mail_on_request_created_event == False"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="send_mail_on_request_assigned_event"/>
+                                        </td>
+                                        <td>
+                                            <field name="send_mail_on_request_assigned_event" string="Assigned"/>
+                                        </td>
+                                        <td>
+                                            <field name="request_assigned_mail_template_id"
+                                                   domain="[('is_default_notification_on', '=', 'assign')]"
+                                                   invisible="send_mail_on_request_assigned_event == False"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="send_mail_on_request_closed_event"/>
+                                        </td>
+                                        <td>
+                                            <field name="send_mail_on_request_closed_event" string="Closed"/>
+                                        </td>
+                                        <td>
+                                            <field name="request_closed_mail_template_id"
+                                                   domain="[('is_default_notification_on', '=', 'closed')]"
+                                                   invisible="send_mail_on_request_closed_event == False"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="send_mail_on_request_reopened_event"/>
+                                        </td>
+                                        <td>
+                                            <field name="send_mail_on_request_reopened_event" string="Reopened"/>
+                                        </td>
+                                        <td>
+                                            <field name="request_reopened_mail_template_id"
+                                                   domain="[('is_default_notification_on', '=', 'reopened')]"
+                                                   invisible="send_mail_on_request_reopened_event == False"/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </page>
+                        <page string="Settings" name="settings">
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_request_classifier_search">
+        <field name="model">request.classifier</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="service_id"
+                       groups="generic_request.group_request_use_services"/>
+                <field name="service_id_group"
+                       groups="generic_request.group_request_use_service_groups"/>
+                <field name="category_id"/>
+                <field name="type_id"/>
+                <field name="kind_id"
+                       groups="generic_request.group_request_use_kind"/>
+
+                <separator/>
+                <filter name="filter_archived"
+                        string="Archived"
+                        domain="[('active', '=', False)]"/>
+                <separator/>
+                <filter string="Has Service Group"
+                        name="has_service_group"
+                        domain="[('service_id_group', '!=', False)]"
+                        groups="generic_request.group_request_use_service_groups"/>
+                <filter string="Not Service Group"
+                        name="not_service_group"
+                        domain="[('service_id_group', '=', False)]"
+                        groups="generic_request.group_request_use_service_groups"/>
+
+                <group name="group_group_by">
+                    <filter name="filter_group_by_service"
+                            string="Service"
+                            groups="generic_request.group_request_use_services"
+                            context="{'group_by': 'service_id'}"/>
+                    <filter name="filter_group_by_category"
+                            string="Category"
+                            context="{'group_by': 'category_id'}"/>
+                    <filter name="filter_group_by_type"
+                            string="Type"
+                            context="{'group_by': 'type_id'}"/>
+                    <filter name="filter_group_by_kind_id"
+                            string="Kind"
+                            context="{'group_by': 'kind_id'}"
+                            groups="generic_request.group_request_use_kind"/>
+                    <filter name="filter_group_by_service_group"
+                            string="Service Group"
+                            context="{'group_by': 'service_id_group'}"
+                            groups="generic_request.group_request_use_service_groups"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_classifier_window">
+        <field name="name">Classifier</field>
+        <field name="res_model">request.classifier</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_classifier_view"
+              parent="menu_configuration_requests"
+              action="action_classifier_window"/>
+</odoo>

@@ -1,0 +1,19 @@
+<odoo noupdate="0">
+    <template id="yodoo_knowledge_website.knowledge_global_template" name="Yodoo Knowledge global template">
+        <t t-call="website.layout">
+            <script type="text/javascript">
+                odoo.props = <t t-out="json.dumps(props)"/>
+            </script>
+
+            <div id="wrap" class="pt-3">
+                <div class="oe_structure"/>
+
+                <div id="yodoo_knowledge_website_anchor_owl"/>
+<!--                <t t-call-assets="yodoo_knowledge_website.assets_knowledge_website"/>-->
+            </div>
+
+        </t>
+    </template>
+
+
+</odoo>

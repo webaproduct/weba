@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-inherit="crnd_vsd.RequestsView" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('req_left_side')]/div[hasclass('req_block')]" position="after">
+            <div t-if="state.requestData.field_table and state.requestData.field_table.length and isAllowed('field_table')" class="req_block field_table_block">
+                <div
+                    class="req_block_header collapsing_block_header req_block-padding navbar-light"
+                    data-bs-target="#collapseExampleFieldsTable"
+                    data-bs-toggle="collapse"
+                    aria-expanded="true"
+                >
+                    <div class="req_name">
+                        <t t-esc="state.requestData.field_table_model_name" />
+                    </div>
+                </div>
+
+                <div class="req_data req_block-padding collapse show field_table__table_wrapper" id="collapseExampleFieldsTable">
+                    <table>
+                        
+                        <tr>
+                            <t t-foreach="state.requestData.field_table[0]" t-as="field" t-key="field_index">
+                                <th>
+                                    <t t-esc="field.display_name" />
+                                </th>
+                            </t>
+                        </tr>
+
+
+                        <t t-foreach="state.requestData.field_table" t-as="row" t-key="row_index">
+                            <tr>
+                                <t t-foreach="row" t-as="field" t-key="field_index">
+                                    <td>
+                                        <t t-if="field.values.length">
+                                            <t t-foreach="field.values" t-as="value" t-key="value_index">
+                                                <t t-if="value">
+                                                    <t t-esc="value" />
+                                                </t>
+                                                <t t-else="">
+                                                    -
+                                                </t>
+                                                <br />
+                                            </t>
+                                        </t>
+                                        <t t-else="">
+                                            -
+                                        </t>
+                                    </td>
+                                </t>
+                            </tr>
+                        </t>
+                    </table>
+                </div>
+            </div>
+        </xpath>
+    </t>
+</templates>

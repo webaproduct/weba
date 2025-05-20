@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="crnd_vsd.RequestsListKanban" owl="1">
+        <div class="req_list_kanban">
+            <t t-foreach="props.reqs" t-as="item" t-key="item.id">
+                <RequestsListKanbanItem 
+                    req="item"/>
+            </t>
+        </div>
+    </t>
+
+</templates>

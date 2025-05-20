@@ -1,0 +1,106 @@
+<odoo noupdate="0">
+    <template id="crnd_vsd.requests_global_template" name="Requests global template">
+        <t t-call="website.layout">
+            <script type="text/javascript">
+                odoo.props = <t t-out="json.dumps(props)"/>
+                odoo.__session_info__ = <t t-out="json.dumps(session_info)" />
+            </script>
+
+            <div id="wrap" class="pt-3">
+                <div class="oe_structure"/>
+
+                <t t-if="contained">
+                    <div class="container">
+                        <div id="crnd_vsd_anchor_owl"/>
+                        <t t-call-assets="crnd_vsd.assets_request_widgets"/>
+                    </div>
+                </t>
+                <t t-else="">
+                    <div id="crnd_vsd_anchor_owl" style="padding-inline: 10px;"/>
+                    <t t-call-assets="crnd_vsd.assets_request_widgets"/>
+                </t>
+
+            </div>
+
+        </t>
+    </template>
+
+
+    <template id="crnd_vsd.requests_create_global_template" name="Requests create template">
+        <div class="creation_form_inputs_list">
+            <div t-if="classifier.create_show_priority" class="creation_form_inputs_block">
+                <field name="request_priority" widget="CRNDInputPriorityWidget" required="true" default_value="3" />
+            </div>
+
+            <div
+                class="creation_form_inputs_block"
+                t-att-style="'display: none;' if not classifier.create_show_title and request_default_title else ''"
+            >
+                <field name="title" widget="CRNDInputTextWidget" required="true" placeholder="Title" t-att-default_value="request_default_title"/>
+            </div>
+
+            <div
+                class="creation_form_inputs_block"
+                t-att-style="'display: none;' if not classifier.create_show_text and request_default_text else ''"
+            >
+                <field name="request_text" widget="CRNDInputTextareaWidget" placeholder="Request text..." required="true" t-att-default_value="request_default_text"/>
+            </div>
+        </div>
+    </template>
+
+    <data noupdate="1">
+        <record id="crnd_vsd.requests_create_global_custom_template" model="ir.ui.view">
+            <field name="name">Requests create template (Custom)</field>
+            <field name="type">qweb</field>
+            <field name="arch" type="xml">
+                <t t-name="crnd_vsd.requests_create_global_custom_template">
+                    <div class="creation_form_inputs_list">
+
+
+<!--                <div class="separator"></div>-->
+
+
+<!--                <field name="boolean_sample" widget="CRNDInputBooleanWidget" required="true" title="Boolean Sample"/>-->
+<!--                <field name="number_sample" widget="CRNDInputIntegerWidget" required="true" default_value="3" title="Integer Sample"/>-->
+<!--                <field name="date_sample" widget="CRNDInputDateWidget" required="true" default_value="2018-06-12" title="Date Sample"/>-->
+<!--                <field name="datetime_sample" widget="CRNDInputDatetimeWidget" required="true" default_value="2018-06-12T19:30" title="Datetime Sample"/>-->
+<!--                <field name="select_sample" widget="CRNDInputSelectWidget" required="true" default_value="top" title="Select Sample" is_find="true">-->
+<!--                    <option value="medium" name="First option"/>-->
+<!--                    <option value="top" name="Second option"/>-->
+<!--                    <option value="bottom" name="Third option"/>-->
+<!--                </field>-->
+<!--                <field name="select_many_sample" widget="CRNDInputSelectManyWidget" required="true" default_value="['top']" title="SelectMany Sample" is_find="true">-->
+<!--                    <option value="medium" name="First option"/>-->
+<!--                    <option value="top" name="Second option"/>-->
+<!--                    <option value="bottom" name="Third option"/>-->
+<!--                </field>-->
+
+
+<!--                <div class="separator"></div>-->
+
+
+                        <div
+                            class="creation_form_inputs_block"
+
+                        >
+                            <field name="request_text" widget="CRNDInputTextareaWidget" placeholder="Request text..." required="true" t-att-default_value="request_default_text"/>
+                        </div>
+                        <div t-if="classifier.create_show_priority" class="creation_form_inputs_block">
+                            <field name="request_priority" widget="CRNDInputPriorityWidget" required="true" default_value="3" />
+                        </div>
+                    </div>
+                </t>
+            </field>
+        </record>
+    </data>
+
+    <template id="vsd_request_portal_my_home" name="Portal My Home: request entries" inherit_id="portal.portal_my_home" priority="40">
+        <xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
+            <t t-call="portal.portal_docs_entry">
+                <t t-set="title">Requests</t>
+                <t t-set="url" t-value="'/requests'"/>
+                <t t-set="config_card" t-value="True"/>
+            </t>
+        </xpath>
+    </template>
+</odoo>

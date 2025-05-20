@@ -1,0 +1,1 @@
+- The context for mail actions is now properly derived from the sender of the incoming email.

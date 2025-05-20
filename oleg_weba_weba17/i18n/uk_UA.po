@@ -1,0 +1,484 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* oleg_weba_weba17
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-10 13:51+0000\n"
+"PO-Revision-Date: 2025-01-10 13:51+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: oleg_weba_weba17
+#. odoo-python
+#: code:addons/oleg_weba_weba17/models/project_project.py:0
+#: code:addons/user_addons/weba17/oleg_weba_weba17/models/project_project.py:0
+#: model:ir.model.fields.selection,name:oleg_weba_weba17.selection__project_project__development_perspective__20_50
+#, python-format
+msgid "20-50 hours"
+msgstr "20-50 годин"
+
+#. module: oleg_weba_weba17
+#. odoo-python
+#: code:addons/oleg_weba_weba17/models/project_project.py:0
+#: code:addons/user_addons/weba17/oleg_weba_weba17/models/project_project.py:0
+#: model:ir.model.fields.selection,name:oleg_weba_weba17.selection__project_project__development_perspective__50_100
+#, python-format
+msgid "50-100 hours"
+msgstr "50-100 годин"
+
+#. module: oleg_weba_weba17
+#: model_terms:ir.ui.view,arch_db:oleg_weba_weba17.view_project_kanban_inherit
+msgid "<span class=\"fa fa-clock-o me-2\" title=\"Dates\"/>"
+msgstr ""
+
+#. module: oleg_weba_weba17
+#: model_terms:ir.ui.view,arch_db:oleg_weba_weba17.view_project_kanban_inherit
+msgid ""
+"<span class=\"fa fa-envelope-o me-2\" aria-label=\"Domain Alias\" "
+"title=\"Domain Alias\"/>"
+msgstr ""
+
+#. module: oleg_weba_weba17
+#: model_terms:ir.ui.view,arch_db:oleg_weba_weba17.edit_project_form_inherit
+msgid ""
+"<span class=\"o_stat_text\">\n"
+"                            Tracking\n"
+"                        </span>"
+msgstr ""
+"<span class=\"o_stat_text\">\n"
+"                            Затабельовано\n"
+"                        </span>"
+
+#. module: oleg_weba_weba17
+#: model_terms:ir.ui.view,arch_db:oleg_weba_weba17.view_project_kanban_inherit
+msgid "<span>Client: </span>"
+msgstr "Клієнт:"
+
+#. module: oleg_weba_weba17
+#: model_terms:ir.ui.view,arch_db:oleg_weba_weba17.view_project_kanban_inherit
+msgid "<span>Manager: </span>"
+msgstr "Менеджер:"
+
+#. module: oleg_weba_weba17
+#: model_terms:ir.ui.view,arch_db:oleg_weba_weba17.view_project_kanban_inherit
+msgid "<span>Opportunity: </span>"
+msgstr "Нагода:"
+
+#. module: oleg_weba_weba17
+#: model_terms:ir.ui.view,arch_db:oleg_weba_weba17.view_project_kanban_inherit
+msgid "<span>Project: </span>"
+msgstr "<span>Керівник: </span>"
+
+#. module: oleg_weba_weba17
+#: model_terms:ir.ui.view,arch_db:oleg_weba_weba17.crm_lead_view_form_inherit
+msgid "<span>Projects: </span>"
+msgstr "<span>Проекти: </span>"
+
+#. module: oleg_weba_weba17
+#: model:ir.ui.menu,name:oleg_weba_weba17.menu_project_project_аdditional_groups
+#: model:ir.ui.menu,name:oleg_weba_weba17.menu_res_partner_additional_model
+msgid "Additional models"
+msgstr "Додаткові моделі"
+
+#. module: oleg_weba_weba17
+#: model:ir.actions.act_window,name:oleg_weba_weba17.action_agreement_tree
+#: model:ir.model,name:oleg_weba_weba17.model_agreement
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_res_partner__agreement_id
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_res_users__agreement_id
+#: model:ir.ui.menu,name:oleg_weba_weba17.menu_agreement
+#: model_terms:ir.ui.view,arch_db:oleg_weba_weba17.agreement_tree
+msgid "Agreement"
+msgstr "Договори"
+
+#. module: oleg_weba_weba17
+#. odoo-python
+#: code:addons/oleg_weba_weba17/models/project_month.py:0
+#: code:addons/user_addons/weba17/oleg_weba_weba17/models/project_month.py:0
+#: model:ir.model.fields.selection,name:oleg_weba_weba17.selection__project_month__month__april
+#, python-format
+msgid "April"
+msgstr "Квітень"
+
+#. module: oleg_weba_weba17
+#: model_terms:ir.ui.view,arch_db:oleg_weba_weba17.view_project_kanban_inherit
+msgid "Arrow"
+msgstr ""
+
+#. module: oleg_weba_weba17
+#: model_terms:ir.ui.view,arch_db:oleg_weba_weba17.view_project_kanban_inherit
+msgid "Arrow icon"
+msgstr ""
+
+#. module: oleg_weba_weba17
+#. odoo-python
+#: code:addons/oleg_weba_weba17/models/project_month.py:0
+#: code:addons/user_addons/weba17/oleg_weba_weba17/models/project_month.py:0
+#: model:ir.model.fields.selection,name:oleg_weba_weba17.selection__project_month__month__august
+#, python-format
+msgid "August"
+msgstr "Серпень"
+
+#. module: oleg_weba_weba17
+#: model_terms:ir.ui.view,arch_db:oleg_weba_weba17.view_project_kanban_inherit
+msgid "Average Rating: Dissatisfied"
+msgstr ""
+
+#. module: oleg_weba_weba17
+#: model_terms:ir.ui.view,arch_db:oleg_weba_weba17.view_project_kanban_inherit
+msgid "Average Rating: Okay"
+msgstr ""
+
+#. module: oleg_weba_weba17
+#: model_terms:ir.ui.view,arch_db:oleg_weba_weba17.view_project_kanban_inherit
+msgid "Average Rating: Satisfied"
+msgstr ""
+
+#. module: oleg_weba_weba17
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_crm_lead__bonus
+msgid "Bonus"
+msgstr "Партнерський бонус"
+
+#. module: oleg_weba_weba17
+#: model:ir.model,name:oleg_weba_weba17.model_res_partner
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_agreement__partner_id
+msgid "Contact"
+msgstr "Контакт"
+
+#. module: oleg_weba_weba17
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_crm_lead__count_projects
+msgid "Count Projects"
+msgstr ""
+
+#. module: oleg_weba_weba17
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_agreement__create_uid
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_project_month__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: oleg_weba_weba17
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_agreement__create_date
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_project_month__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: oleg_weba_weba17
+#. odoo-python
+#: code:addons/oleg_weba_weba17/models/project_month.py:0
+#: code:addons/user_addons/weba17/oleg_weba_weba17/models/project_month.py:0
+#: model:ir.model.fields.selection,name:oleg_weba_weba17.selection__project_month__month__december
+#, python-format
+msgid "December"
+msgstr "Грудень"
+
+#. module: oleg_weba_weba17
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_project_project__development_perspective
+msgid "Development perspective"
+msgstr "Перспектива розвитку"
+
+#. module: oleg_weba_weba17
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_agreement__display_name
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_project_month__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: oleg_weba_weba17
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_project_month__display_name_store
+msgid "Display Name Store"
+msgstr ""
+
+#. module: oleg_weba_weba17
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_crm_lead__project_month_id
+msgid "Expected closing"
+msgstr "Очікуване закриття"
+
+#. module: oleg_weba_weba17
+#. odoo-python
+#: code:addons/oleg_weba_weba17/models/project_month.py:0
+#: code:addons/user_addons/weba17/oleg_weba_weba17/models/project_month.py:0
+#: model:ir.model.fields.selection,name:oleg_weba_weba17.selection__project_month__month__february
+#, python-format
+msgid "February"
+msgstr "Лютий"
+
+#. module: oleg_weba_weba17
+#: model_terms:ir.ui.view,arch_db:oleg_weba_weba17.view_project_kanban_inherit
+msgid "Happy face"
+msgstr ""
+
+#. module: oleg_weba_weba17
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_crm_lead__hours
+msgid "Hours"
+msgstr "Години"
+
+#. module: oleg_weba_weba17
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_agreement__id
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_project_month__id
+msgid "ID"
+msgstr ""
+
+#. module: oleg_weba_weba17
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_res_partner__ref
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_res_users__ref
+msgid "Is a tax payer"
+msgstr "Статус платника податків"
+
+#. module: oleg_weba_weba17
+#. odoo-python
+#: code:addons/oleg_weba_weba17/models/project_month.py:0
+#: code:addons/user_addons/weba17/oleg_weba_weba17/models/project_month.py:0
+#: model:ir.model.fields.selection,name:oleg_weba_weba17.selection__project_month__month__january
+#, python-format
+msgid "January"
+msgstr "Січень"
+
+#. module: oleg_weba_weba17
+#: model:ir.model,name:oleg_weba_weba17.model_account_move
+msgid "Journal Entry"
+msgstr "Запис у журналі"
+
+#. module: oleg_weba_weba17
+#. odoo-python
+#: code:addons/oleg_weba_weba17/models/project_month.py:0
+#: code:addons/user_addons/weba17/oleg_weba_weba17/models/project_month.py:0
+#: model:ir.model.fields.selection,name:oleg_weba_weba17.selection__project_month__month__july
+#, python-format
+msgid "July"
+msgstr "Липень"
+
+#. module: oleg_weba_weba17
+#. odoo-python
+#: code:addons/oleg_weba_weba17/models/project_month.py:0
+#: code:addons/user_addons/weba17/oleg_weba_weba17/models/project_month.py:0
+#: model:ir.model.fields.selection,name:oleg_weba_weba17.selection__project_month__month__june
+#, python-format
+msgid "June"
+msgstr "Червень"
+
+#. module: oleg_weba_weba17
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_agreement__write_uid
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_project_month__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: oleg_weba_weba17
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_agreement__write_date
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_project_month__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: oleg_weba_weba17
+#: model:ir.model,name:oleg_weba_weba17.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Лід/Нагода"
+
+#. module: oleg_weba_weba17
+#. odoo-python
+#: code:addons/oleg_weba_weba17/models/project_month.py:0
+#: code:addons/user_addons/weba17/oleg_weba_weba17/models/project_month.py:0
+#: model:ir.model.fields.selection,name:oleg_weba_weba17.selection__project_month__month__march
+#, python-format
+msgid "March"
+msgstr "Березень"
+
+#. module: oleg_weba_weba17
+#. odoo-python
+#: code:addons/oleg_weba_weba17/models/project_month.py:0
+#: code:addons/user_addons/weba17/oleg_weba_weba17/models/project_month.py:0
+#: model:ir.model.fields.selection,name:oleg_weba_weba17.selection__project_month__month__may
+#, python-format
+msgid "May"
+msgstr "Травень"
+
+#. module: oleg_weba_weba17
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_project_month__month
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_project_project__project_month_id
+msgid "Month"
+msgstr "Місяць"
+
+#. module: oleg_weba_weba17
+#: model_terms:ir.ui.view,arch_db:oleg_weba_weba17.view_project_project_filter_inherit
+msgid "Month/Year"
+msgstr "Місяць/Рік"
+
+#. module: oleg_weba_weba17
+#. odoo-python
+#: code:addons/oleg_weba_weba17/models/project_project.py:0
+#: code:addons/user_addons/weba17/oleg_weba_weba17/models/project_project.py:0
+#: model:ir.model.fields.selection,name:oleg_weba_weba17.selection__project_project__development_perspective__more_100
+#, python-format
+msgid "More than 100 hours"
+msgstr "Більше 100 годин"
+
+#. module: oleg_weba_weba17
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_agreement__name
+msgid "Name"
+msgstr "Назва"
+
+#. module: oleg_weba_weba17
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_res_partner__name_initials
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_res_users__name_initials
+msgid "Name initials"
+msgstr "Ініціали"
+
+#. module: oleg_weba_weba17
+#: model_terms:ir.ui.view,arch_db:oleg_weba_weba17.view_project_kanban_inherit
+msgid "Neutral face"
+msgstr ""
+
+#. module: oleg_weba_weba17
+#. odoo-python
+#: code:addons/oleg_weba_weba17/models/project_project.py:0
+#: code:addons/user_addons/weba17/oleg_weba_weba17/models/project_project.py:0
+#: model:ir.model.fields.selection,name:oleg_weba_weba17.selection__project_project__development_perspective__no
+#, python-format
+msgid "No"
+msgstr "Немає"
+
+#. module: oleg_weba_weba17
+#. odoo-python
+#: code:addons/oleg_weba_weba17/models/project_project.py:0
+#: code:addons/user_addons/weba17/oleg_weba_weba17/models/project_project.py:0
+#: model:ir.model.fields.selection,name:oleg_weba_weba17.selection__project_project__development_perspective__not_defined
+#, python-format
+msgid "Not defined"
+msgstr "Не визначено"
+
+#. module: oleg_weba_weba17
+#. odoo-python
+#: code:addons/oleg_weba_weba17/models/project_month.py:0
+#: code:addons/user_addons/weba17/oleg_weba_weba17/models/project_month.py:0
+#: model:ir.model.fields.selection,name:oleg_weba_weba17.selection__project_month__month__november
+#, python-format
+msgid "November"
+msgstr "Листопад"
+
+#. module: oleg_weba_weba17
+#. odoo-python
+#: code:addons/oleg_weba_weba17/models/project_month.py:0
+#: code:addons/user_addons/weba17/oleg_weba_weba17/models/project_month.py:0
+#: model:ir.model.fields.selection,name:oleg_weba_weba17.selection__project_month__month__october
+#, python-format
+msgid "October"
+msgstr "Жовтень"
+
+#. module: oleg_weba_weba17
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_project_project__crm_lead_id
+msgid "Opportunity"
+msgstr "Нагода"
+
+#. module: oleg_weba_weba17
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_account_bank_statement_line__organization_id
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_account_move__organization_id
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_account_payment__organization_id
+msgid "Organization"
+msgstr "Організація"
+
+#. module: oleg_weba_weba17
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_crm_lead__partner_id_source_id
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_res_partner__partner_id_source_id
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_res_users__partner_id_source_id
+msgid "Partner"
+msgstr "Партнер"
+
+#. module: oleg_weba_weba17
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_crm_lead__payment_percentage
+msgid "Payment percentage"
+msgstr "Процент оплати"
+
+#. module: oleg_weba_weba17
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_crm_lead__postpaid
+msgid "Postpaid"
+msgstr "Постоплата"
+
+#. module: oleg_weba_weba17
+#. odoo-python
+#: code:addons/oleg_weba_weba17/models/crm_lead.py:0
+#: code:addons/user_addons/weba17/oleg_weba_weba17/models/crm_lead.py:0
+#: model:ir.model,name:oleg_weba_weba17.model_project_project
+#, python-format
+msgid "Project"
+msgstr "Проект"
+
+#. module: oleg_weba_weba17
+#: model:ir.model,name:oleg_weba_weba17.model_project_month
+msgid "Project Month"
+msgstr "Місяці до проектів"
+
+#. module: oleg_weba_weba17
+#: model:ir.actions.act_window,name:oleg_weba_weba17.action_project_month
+#: model:ir.ui.menu,name:oleg_weba_weba17.menu_project_month
+#: model_terms:ir.ui.view,arch_db:oleg_weba_weba17.project_month_view_form
+#: model_terms:ir.ui.view,arch_db:oleg_weba_weba17.project_month_view_tree
+msgid "Project month"
+msgstr "Місяці до проектів"
+
+#. module: oleg_weba_weba17
+#: model_terms:ir.ui.view,arch_db:oleg_weba_weba17.view_project_kanban_inherit
+msgid "Sad face"
+msgstr ""
+
+#. module: oleg_weba_weba17
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_project_project__sales_manager_id
+msgid "Sales Manager"
+msgstr "Менеджер з продажу"
+
+#. module: oleg_weba_weba17
+#. odoo-python
+#: code:addons/oleg_weba_weba17/models/project_month.py:0
+#: code:addons/user_addons/weba17/oleg_weba_weba17/models/project_month.py:0
+#: model:ir.model.fields.selection,name:oleg_weba_weba17.selection__project_month__month__september
+#, python-format
+msgid "September"
+msgstr "Вересень"
+
+#. module: oleg_weba_weba17
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_res_partner__source_id
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_res_users__source_id
+msgid "Source"
+msgstr "Джерело"
+
+#. module: oleg_weba_weba17
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_crm_lead__subscription
+msgid "Subscription"
+msgstr "Передплата"
+
+#. module: oleg_weba_weba17
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_crm_lead__telegram
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_res_partner__telegram
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_res_users__telegram
+msgid "Telegram"
+msgstr ""
+
+#. module: oleg_weba_weba17
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_project_project__total_timesheet
+msgid "Total Timesheet"
+msgstr "Загальний час"
+
+#. module: oleg_weba_weba17
+#. odoo-python
+#: code:addons/oleg_weba_weba17/models/project_project.py:0
+#: code:addons/user_addons/weba17/oleg_weba_weba17/models/project_project.py:0
+#, python-format
+msgid "Total timesheet"
+msgstr ""
+
+#. module: oleg_weba_weba17
+#. odoo-python
+#: code:addons/oleg_weba_weba17/models/project_project.py:0
+#: code:addons/user_addons/weba17/oleg_weba_weba17/models/project_project.py:0
+#: model:ir.model.fields.selection,name:oleg_weba_weba17.selection__project_project__development_perspective__until_20
+#, python-format
+msgid "Until 20 hours"
+msgstr "До 20 години"
+
+#. module: oleg_weba_weba17
+#: model:ir.model.fields,field_description:oleg_weba_weba17.field_project_month__year
+msgid "Year"
+msgstr "Рік"

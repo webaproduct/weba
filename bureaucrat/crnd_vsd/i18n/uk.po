@@ -1,0 +1,1688 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crnd_vsd
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-10 10:40+0000\n"
+"PO-Revision-Date: 2025-04-18 14:05+0000\n"
+"Last-Translator: Galina Prokopenko <am@crnd.pro>\n"
+"Language-Team: Ukrainian <http://weblate.crnd.pro/projects/"
+"bureaucrat-generics-17-0/crnd_vsd/uk/>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.3.2\n"
+
+#. module: crnd_vsd
+#: model:request.category,description:crnd_vsd.request_category_demo_website
+msgid ""
+"\n"
+"            SaAS related requests\n"
+"        "
+msgstr ""
+"\n"
+"            SaaS пов'язані запити\n"
+"        "
+
+#. module: crnd_vsd
+#: model:request.category,description:crnd_vsd.request_category_demo_website_tech
+msgid ""
+"\n"
+"            Technical requests\n"
+"        "
+msgstr ""
+"\n"
+"            Технічні запити\n"
+"        "
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsList/RequestsListTable/RequestsListTable.xml:0
+#, python-format
+msgid "#Request"
+msgstr "#Запит"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid ""
+".\n"
+"\n"
+"                                    Following popular Mime Types could be "
+"used:"
+msgstr ""
+".\n"
+"\n"
+"                                    Можна використовувати наступні популярні "
+"Mime Типи:"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid ""
+"<b>\n"
+"                                                <i>Allow to create request</"
+"i>\n"
+"                                            </b>\n"
+"                                            - unauthorized users will be "
+"able\n"
+"                                            to create requests in system\n"
+"                                            without need to login or "
+"register."
+msgstr ""
+"<b>\n"
+"                                                <i>Дозвіл створення запитів</"
+"i>\n"
+"                                            </b>\n"
+"                                          - неавторизовані користувачі "
+"зможуть \n"
+"                                          створювати запити в системі\n"
+"                                          без необхідності входу або "
+"реєстрації."
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid ""
+"<b>\n"
+"                                                <i>Redirect to "
+"congratulation\n"
+"                                                    page\n"
+"                                                </i>\n"
+"                                            </b>"
+msgstr ""
+"<b>\n"
+"                                                <i>Перенаправлення на "
+"сторінку привітання\n"
+"                                                </i>\n"
+"</b>"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid ""
+"<b>\n"
+"                                                <i>Redirect to login</i>\n"
+"                                            </b>\n"
+"                                            - unauthorized users will be\n"
+"                                            automatically redirected to "
+"login\n"
+"                                            page."
+msgstr ""
+"<b>\n"
+"                                                <i>Переправити на сторінку "
+"входу</i>\n"
+"                                            </b>\n"
+"                                            - неавторизовані користувачі "
+"будуть\n"
+"                                            автоматично перенаправляється до "
+"сторінки входу."
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid ""
+"<b>\n"
+"                                                <i>Redirect to request page</"
+"i>\n"
+"                                            </b>"
+msgstr ""
+"<b>\n"
+"                                                <i>Перенаправлення на "
+"сторінку Запиту</i>\n"
+"</b>"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid ""
+"<b>\n"
+"                                                <i>Require login</i>\n"
+"                                            </b>\n"
+"                                            - if user is not authenticated,\n"
+"                                            then redirect to login page "
+"first,\n"
+"                                            and after user logged in,\n"
+"                                            redirect back to request page\n"
+"                                            (website for portal users, and "
+"web\n"
+"                                            for internal users)"
+msgstr ""
+"<b>\n"
+"                                                <i>Вимагати авторизації</i>\n"
+" </b>\n"
+"                                              - якщо користувач не "
+"автентифікований,\n"
+" його спочатку перенаправить на сторінку входу,\n"
+" і після входу користувача,  перенаправить назад на сторінку Запиту\n"
+" (веб-сайт для користувачів порталу та веб  для внутрішніх користувачів)"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid ""
+"<b>\n"
+"                                                <i>Restricted UI</i>\n"
+"                                            </b>\n"
+"                                            - unauthorized users will be "
+"able\n"
+"                                            to pass all steps of creating a\n"
+"                                            request but unable to submit\n"
+"                                            request until logged in. Also, "
+"on\n"
+"                                            all screens they will see small\n"
+"                                            block that asks them to login "
+"or\n"
+"                                            register (with links to both\n"
+"                                            actions)."
+msgstr ""
+"<b>\n"
+"                                                <i>Обмежений інтерфейс "
+"користувача</i>\n"
+" </b>\n"
+"                                            - неавторизовані користувачі "
+"зможуть\n"
+"пройти всі етапи створення  запит, але не вдалося надіслати запит до входу в "
+"систему.\n"
+"Крім того, на  усі екрани вони бачитимуть маленькими  блок, який просить їх "
+"увійти або\n"
+"зареєструватися (з посиланнями на обидва дії)."
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid ""
+"<b>\n"
+"                                                <i>Shared link</i>\n"
+"                                            </b>\n"
+"                                            - in this case, the mail link "
+"will\n"
+"                                            contain <i>access_token</i>, "
+"thus\n"
+"                                            if user is not logged in, the\n"
+"                                            website page of request\n"
+"                                            will be displayed for this user\n"
+"                                            with limited functionality\n"
+"                                            (no ability to edit request "
+"text,\n"
+"                                            no ability to move request to "
+"next\n"
+"                                            stage, etc).\n"
+"                                            In case if it is default\n"
+"                                            notification email, or if email\n"
+"                                            contains id of partner,\n"
+"                                            only chatter could work."
+msgstr ""
+"<b>\n"
+"                                                <i>Поділитись посиланням</"
+"i>\n"
+" </b>\n"
+"                                            - в цьому випадку посилання на "
+"лист міститиме  <i>access_token</i>,\n"
+"                                            тому якщо користувач не ввійшов "
+"у систему,\n"
+"                                            веб-сторінка запиту  буде "
+"відображено для цього користувача\n"
+"                                            з обмеженою функціональністю\n"
+"                                            (немає можливості редагувати "
+"текст запиту,  немає можливості перемістити запит до наступного  етапу "
+"тощо).\n"
+"                                            У випадку, якщо це за "
+"замовчуванням  електронною поштою для сповіщень або електронною поштою\n"
+"                                            містить ідентифікатор партнера,  "
+"тільки чат може працювати."
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid ""
+"<code>\n"
+"                                        object.get_mail_url()\n"
+"                                    </code>"
+msgstr ""
+"<code>\n"
+"                                        object.get_mail_url()\n"
+"                                    </code>"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid ""
+"<code>\n"
+"                                        object.get_mail_url(pid)\n"
+"                                    </code>"
+msgstr ""
+"</code><code>\n"
+"                                        object.get_mail_url(pid)\n"
+"                                    </code>"
+
+#. module: crnd_vsd
+#: model:request.stage,name:crnd_vsd.request_stage_type_upgrade_accepted
+msgid "Accepted"
+msgstr "Прийнято"
+
+#. module: crnd_vsd
+#. odoo-python
+#: code:addons/crnd_vsd/controllers/api.py:0
+#, python-format
+msgid "Access denied"
+msgstr "У доступі відмовленно"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_request_request__access_warning
+msgid "Access warning"
+msgstr "Попередження про доступ"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsView/CommentList/CommentList.xml:0
+#, python-format
+msgid "Add Comment"
+msgstr "Додати коментар"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsList/RequestsList.js:0
+#, python-format
+msgid "All"
+msgstr "Всі"
+
+#. module: crnd_vsd
+#: model:ir.model.fields.selection,name:crnd_vsd.selection__res_company__request_wsd_public_ui_visibility__create-request
+msgid "Allow to create request"
+msgstr "Дозволено створювати Запит"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid ""
+"Allow to use Service Groups for Services on\n"
+"                                    Website."
+msgstr "Дозволити використовувати групи Сервісів для Сервісів на веб-сайті."
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_request_classifier__website_comments_closed
+msgid "Are comments not available?"
+msgstr "Коментарі недоступні?"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsList/RequestsListTable/RequestsListTable.xml:0
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsView/RequestsView.xml:0
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.view_request_classifier_form
+#, python-format
+msgid "Assignee"
+msgstr "Призначена особа"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_request_request__assignee_avatar
+msgid "Assignee (Avatar)"
+msgstr "Призначений (аватар)"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsList/RequestsListTable/RequestsListTable.xml:0
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsView/RequestsView.xml:0
+#, python-format
+msgid "Author"
+msgstr "Автор"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_request_request__author_avatar
+msgid "Author (Avatar)"
+msgstr "Автор (Аватар)"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestCreate/RequestCreate.xml:0
+#, python-format
+msgid "Back"
+msgstr "Назад"
+
+#. module: crnd_vsd
+#: model:request.type,name:crnd_vsd.request_type_bug_report
+msgid "Bug Report"
+msgstr "Звіт про помилки"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestCreate/RequestCreate.xml:0
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsView/RequestsView.xml:0
+#, python-format
+msgid "Category"
+msgstr "Категорія"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid ""
+"Choose if you need to use the author's\n"
+"                                    phone on the creation page of the "
+"request."
+msgstr ""
+"Виберіть, чи потрібно використовувати телефон автора на сторінці створення "
+"Запиту."
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid ""
+"Choose the kind of access for link provided\n"
+"                                    in emails."
+msgstr "Виберіть тип доступу для наданого посилання в електронних листах."
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid ""
+"Choose the way to redirect after request\n"
+"                                    created."
+msgstr "Виберіть спосіб перенаправлення після запиту створений."
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_res_config_settings__request_mail_link_access
+msgid "Choose what kind of link to request will be used in emails."
+msgstr ""
+"Виберіть, яке посилання для запиту використовуватиметься в електронних "
+"листах."
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid ""
+"Choose what public (unregistered) users can\n"
+"                                    see or can do."
+msgstr ""
+"Виберіть, що можуть побачити чи зробити публічні (незареєстровані) "
+"користувачі."
+
+#. module: crnd_vsd
+#: model:request.stage,name:crnd_vsd.request_stage_type_incident_classification
+#: model:request.stage.route,name:crnd_vsd.request_stage_route_type_incident_new_to_classification
+msgid "Classification"
+msgstr "Класифікація"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsList/Plashka/PlashkaFilterList/PlashkaFilterList.xml:0
+#, python-format
+msgid "Clear all"
+msgstr "Очистити все"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsView/CommentList/CommentList.xml:0
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsView/RequestsView.xml:0
+#: model:request.stage.route,name:crnd_vsd.request_stage_route_type_bug_report_sent_to_closed
+#: model:request.stage.route,name:crnd_vsd.request_stage_route_type_generic_sent_to_closed
+#: model:request.stage.route,name:crnd_vsd.request_stage_route_type_without_service_sent_to_closed
+#, python-format
+msgid "Close"
+msgstr "Закрито"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsList/RequestsList.js:0
+#: model:request.stage,name:crnd_vsd.request_stage_type_bug_report_closed
+#: model:request.stage,name:crnd_vsd.request_stage_type_generic_closed
+#: model:request.stage,name:crnd_vsd.request_stage_type_without_service_closed
+#, python-format
+msgid "Closed"
+msgstr "Закрито"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_request_request__closed_by_avatar
+msgid "Closed By (Avatar)"
+msgstr "Закрит (Користувачем)"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsView/CommentList/CommentList.xml:0
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.view_request_classifier_form
+#, python-format
+msgid "Comments"
+msgstr "Коментарі"
+
+#. module: crnd_vsd
+#: model:ir.model,name:crnd_vsd.model_res_company
+msgid "Companies"
+msgstr "Компанії"
+
+#. module: crnd_vsd
+#: model:ir.model,name:crnd_vsd.model_res_config_settings
+msgid "Config Settings"
+msgstr "Налаштування"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_website_view_form
+msgid "Contained content for VSD Request"
+msgstr "Містить контент для Запиту VSD"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_request_classifier__create_show_files
+msgid "Create Show Files"
+msgstr "Створити Показати файли"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_request_classifier__create_show_priority
+msgid "Create Show Priority"
+msgstr "Створити Показати пріоритет"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsView/RequestsView.xml:0
+#, python-format
+msgid "Created at"
+msgstr "Створено"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsList/RequestsListTable/RequestsListTable.xml:0
+#, python-format
+msgid "Creation Date"
+msgstr "Дата створення"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_request_request__created_by_avatar
+msgid "Creator (Avatar)"
+msgstr "Створив (користувач)"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.view_request_classifier_form
+msgid "Custom Congratulation Note"
+msgstr "Спеціальний вітальний запис"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.view_request_classifier_form
+msgid "Custom Label Editor"
+msgstr "Спеціальний редактор етикеток"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,help:crnd_vsd.field_request_request__access_url
+msgid "Customer Portal URL"
+msgstr "Посилання на клієнтський портал"
+
+#. module: crnd_vsd
+#: model:request.kind,name:crnd_vsd.request_kind_demo_vsd
+msgid "Demo vsd"
+msgstr "Demo vsd"
+
+#. module: crnd_vsd
+#: model:request.kind,description:crnd_vsd.request_kind_demo_vsd
+msgid "Demo website service desk requests"
+msgstr "Дема вебсайт Запит на Сервіс Деск"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,help:crnd_vsd.field_request_classifier__website_comments_closed
+msgid "Disable website comments on closed requests"
+msgstr "Вимкнути коментарі веб-сайту щодо закритих запитів"
+
+#. module: crnd_vsd
+#: model:request.stage,name:crnd_vsd.request_stage_type_incident_done
+#: model:request.stage.route,name:crnd_vsd.request_stage_route_type_incident_progress_to_done
+msgid "Done"
+msgstr "Готово"
+
+#. module: crnd_vsd
+#: model:request.stage,name:crnd_vsd.request_stage_type_bug_report_draft
+#: model:request.stage,name:crnd_vsd.request_stage_type_generic_draft
+#: model:request.stage,name:crnd_vsd.request_stage_type_incident_draft
+#: model:request.stage,name:crnd_vsd.request_stage_type_upgrade_draft
+#: model:request.stage,name:crnd_vsd.request_stage_type_without_service_draft
+msgid "Draft"
+msgstr "Чернетка"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid ""
+"Ensure, that your proxy server (nginx,\n"
+"                                    apache, etc) allows to upload files of\n"
+"                                    selected size,\n"
+"                                    because it is frequent case, when "
+"uploading\n"
+"                                    of large files is blocked on nginx level."
+msgstr ""
+"Переконайтеся, що ваш проксі-сервер (nginx, apache тощо) дозволяє "
+"завантажувати файли\n"
+" обраний розмір,  тому що це частий випадок, під час завантаження  великих "
+"файлів заблоковано на рівні nginx."
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.view_request_stage_route_form
+msgid "Extra Action"
+msgstr "Додаткова дія"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid "File Types Allowed to Upload"
+msgstr "Типи файлів, дозволені для завантаження"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestCreate/RequestCreate.xml:0
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsList/RequestsListTable/RequestsListTable.xml:0
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsView/RequestsView.xml:0
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.view_request_classifier_form
+#, python-format
+msgid "Files"
+msgstr "Файли"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsList/FilterList/FilterList.xml:0
+#, python-format
+msgid "Filter List"
+msgstr "Список файлів"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsList/Plashka/Plashka.xml:0
+#, python-format
+msgid "Filters"
+msgstr "Фільтри"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsList/RequestsList.js:0
+#, python-format
+msgid "For me"
+msgstr "На Мені"
+
+#. module: crnd_vsd
+#: model:ir.model.fields.selection,name:crnd_vsd.selection__res_company__request_limit_max_upload_file_size_uom__gbytes
+msgid "GB"
+msgstr "GB"
+
+#. module: crnd_vsd
+#: model:request.category,name:crnd_vsd.request_category_demo_website_general
+msgid "General"
+msgstr "Загальний"
+
+#. module: crnd_vsd
+#: model:request.category,description:crnd_vsd.request_category_demo_website_general
+msgid "General website requests"
+msgstr "Запит на вебсайті"
+
+#. module: crnd_vsd
+#: model:request.type,name:crnd_vsd.request_type_generic
+msgid "Generic Question"
+msgstr "Запитання"
+
+#. module: crnd_vsd
+#: model:request.type,description:crnd_vsd.request_type_generic
+msgid "Generic questions about anything"
+msgstr "Загальні запитання про будь-що"
+
+#. module: crnd_vsd
+#: model:ir.model,name:crnd_vsd.model_ir_http
+msgid "HTTP Routing"
+msgstr "HTTP Маршрутизація"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid ""
+"If you want to provide link to request\n"
+"                                        in your custom email template,\n"
+"                                        use following method to get the link:"
+msgstr ""
+"Якщо ви хочете надати посилання до запиту\n"
+" у вашому спеціальному шаблоні електронної пошти,\n"
+" скористайтеся таким методом, щоб отримати посилання:"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid ""
+"In example above <i>pid</i> is ID for\n"
+"                                        the partner to generate link for."
+msgstr ""
+"У прикладі вище <i>pid</i> є ідентифікатором для\n"
+" партнер для створення посилання."
+
+#. module: crnd_vsd
+#: model:request.type,name:crnd_vsd.request_type_incident
+msgid "Incident"
+msgstr "Інцидент"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsView/RequestsView.xml:0
+#, python-format
+msgid "Information"
+msgstr "Інформація"
+
+#. module: crnd_vsd
+#: model:ir.model.fields.selection,name:crnd_vsd.selection__res_company__request_limit_max_upload_file_size_uom__kbytes
+msgid "KB"
+msgstr "KB"
+
+#. module: crnd_vsd
+#: model:ir.model.fields.selection,name:crnd_vsd.selection__res_company__request_limit_max_upload_file_size_uom__mbytes
+msgid "MB"
+msgstr "MB"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid "MIME-Types"
+msgstr "MIME-Types"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/common/CRNDInputTextWidget/CRNDInputTextWidget.xml:0
+#, python-format
+msgid "Max length:"
+msgstr "Максимальна довжина:"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid "Maximum File Size Allowed to Upload"
+msgstr "Максимальний дозволений розмір файла для завантаження"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsList/RequestsList.js:0
+#, python-format
+msgid "My request"
+msgstr "Мої Запити"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsList/Sorting/Sorting.js:0
+#, python-format
+msgid "Name (A->Z)"
+msgstr "Назва (А->Я)"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsList/Sorting/Sorting.js:0
+#, python-format
+msgid "Name (Z->A)"
+msgstr "Назва (Я->А)"
+
+#. module: crnd_vsd
+#: model:request.stage,name:crnd_vsd.request_stage_type_incident_new
+#: model:request.stage.route,name:crnd_vsd.request_stage_route_type_incident_draft_to_new
+msgid "New"
+msgstr "Новий"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestCreate/RequestCreate.xml:0
+#, python-format
+msgid "New Request"
+msgstr "Новий Запит"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsList/RequestsList.xml:0
+#, python-format
+msgid "New request"
+msgstr "Новий запит"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsList/Sorting/Sorting.js:0
+#, python-format
+msgid "Newest"
+msgstr "Найновіші"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestCreate/RequestCreate.xml:0
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsView/RequestsView.xml:0
+#, python-format
+msgid "Next"
+msgstr "Далі"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_request_request__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Кінцевий термін наступної діяльності"
+
+#. module: crnd_vsd
+#: model:ir.model.fields.selection,name:crnd_vsd.selection__res_company__request_wsd_public_use_author_phone__no-phone
+msgid "No Phone"
+msgstr "Немає телефону"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/common/FileLoader/FileLoader.xml:0
+#, python-format
+msgid "No files choosen"
+msgstr "Не вибран файл"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsList/Sorting/Sorting.js:0
+#, python-format
+msgid "Oldest"
+msgstr "Найстаріші"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.view_request_classifier_form
+msgid "On Create Show"
+msgstr "Показ за створенням"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.view_request_classifier_form
+msgid "On Read Show"
+msgstr "Показ за читанням"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsList/RequestsList.js:0
+#, python-format
+msgid "Open"
+msgstr "Відкриті"
+
+#. module: crnd_vsd
+#: model:ir.model.fields.selection,name:crnd_vsd.selection__res_company__request_wsd_public_use_author_phone__optional-phone
+msgid "Optional Phone"
+msgstr "Додатковий телефон"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid ""
+"Or, if you have partner in context,\n"
+"                                        then you can call this method "
+"providing\n"
+"                                        ID\n"
+"                                        of partner, to generate link "
+"specific\n"
+"                                        for this partner."
+msgstr ""
+"Або, якщо у вас є партнер у контексті,\n"
+"тоді ви можете викликати цей метод отримання  ID партнера,\n"
+"щоб створити специфічне посилання  для цього партнера."
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_website_view_form
+msgid "Pagination Items for Request"
+msgstr "Елементи розбиття сторінок для Запитів"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_request_request__access_url
+msgid "Portal Access URL"
+msgstr "Посилання портального доступу"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsView/RequestsView.xml:0
+#, python-format
+msgid "Previous"
+msgstr "Попередній"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsView/RequestsView.xml:0
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.view_request_classifier_form
+#, python-format
+msgid "Priority"
+msgstr "Пріоритет"
+
+#. module: crnd_vsd
+#: model:request.stage,name:crnd_vsd.request_stage_type_incident_progress
+#: model:request.stage.route,name:crnd_vsd.request_stage_route_type_incident_classification_to_progress
+msgid "Progress"
+msgstr "Виконання"
+
+#. module: crnd_vsd
+#: model:request.type,name:crnd_vsd.request_type_without_service
+msgid "Question without service"
+msgstr "Питання без Сервісу"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_request_classifier__read_show_assignee
+msgid "Read Show Assignee"
+msgstr "Читати показати призначеного"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_request_classifier__read_show_comments
+msgid "Read Show Comments"
+msgstr "Читати показати коментарі"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_request_classifier__read_show_files
+msgid "Read Show Files"
+msgstr "Читати показати файли"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_request_classifier__read_show_priority
+msgid "Read Show Priority"
+msgstr "Читати показати пріоритет"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_request_classifier__read_show_subrequests
+msgid "Read Show Subrequests"
+msgstr "Читати показати підзапити"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_res_config_settings__request_on_request_creating_redirect_to
+msgid "Redirect after request created on Website"
+msgstr "Перенаправлення після запиту, створеного на веб-сайті"
+
+#. module: crnd_vsd
+#: model:ir.model.fields.selection,name:crnd_vsd.selection__request_stage_route__website_extra_action__redirect_to_my
+msgid "Redirect to My Requests"
+msgstr "Перенаправлення до моїх Запитів"
+
+#. module: crnd_vsd
+#: model:ir.model.fields.selection,name:crnd_vsd.selection__website__request_redirect_after_created_on_website__congrats_page
+msgid "Redirect to congratulation page"
+msgstr "Перенаправлення на сторінку вітаня"
+
+#. module: crnd_vsd
+#: model:ir.model.fields.selection,name:crnd_vsd.selection__res_company__request_wsd_public_ui_visibility__redirect
+msgid "Redirect to login"
+msgstr "Перенаправлення на сторінку входу"
+
+#. module: crnd_vsd
+#: model:ir.model.fields.selection,name:crnd_vsd.selection__website__request_redirect_after_created_on_website__req_page
+msgid "Redirect to request page"
+msgstr "Перенаправлення на сторінку Запиту"
+
+#. module: crnd_vsd
+#: model:request.stage.route,name:crnd_vsd.request_stage_route_type_incident_classification_to_rejected
+msgid "Reject"
+msgstr "Відмова"
+
+#. module: crnd_vsd
+#: model:request.stage,name:crnd_vsd.request_stage_type_incident_rejected
+#: model:request.stage,name:crnd_vsd.request_stage_type_upgrade_rejected
+msgid "Rejected"
+msgstr "Відхилено"
+
+#. module: crnd_vsd
+#: model:request.type,description:crnd_vsd.request_type_bug_report
+msgid "Report a bug"
+msgstr "Звіт про помилку"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestCreate/RequestCreate.xml:0
+#: model:ir.model,name:crnd_vsd.model_request_request
+#, python-format
+msgid "Request"
+msgstr "Запит"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_res_company__request_allowed_upload_file_types
+#: model:ir.model.fields,field_description:crnd_vsd.field_res_config_settings__request_allowed_upload_file_types
+msgid "Request Allowed Upload File Types"
+msgstr "Запитувати дозволені типи файлів для завантаження"
+
+#. module: crnd_vsd
+#: model:ir.model,name:crnd_vsd.model_request_classifier
+msgid "Request Classifier"
+msgstr "Класифікатор запитів"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_res_config_settings__request_contained_on_website
+#: model:ir.model.fields,field_description:crnd_vsd.field_website__request_contained_on_website
+msgid "Request Contained On Website"
+msgstr "Запит, розміщений на веб-сайті"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_res_company__request_limit_max_text_size
+#: model:ir.model.fields,field_description:crnd_vsd.field_res_config_settings__request_limit_max_text_size
+msgid "Request Limit Max Text Size"
+msgstr "Максимальний розмір тексту Запиту"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_res_company__request_limit_max_upload_file_size
+#: model:ir.model.fields,field_description:crnd_vsd.field_res_config_settings__request_limit_max_upload_file_size
+msgid "Request Limit Max Upload File Size"
+msgstr "Запити: Обмеження Максимальний розмір файлу для завантаження"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_res_company__request_limit_max_upload_file_size_uom
+#: model:ir.model.fields,field_description:crnd_vsd.field_res_config_settings__request_limit_max_upload_file_size_uom
+msgid "Request Limit Max Upload File Size Uom"
+msgstr "Запити: Одиниці виміру розмір файлу для завантаження"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_res_config_settings__request_list_column_assignee
+#: model:ir.model.fields,field_description:crnd_vsd.field_website__request_list_column_assignee
+msgid "Request List Column Assignee"
+msgstr "Стовпець  Признацено списку Запитів"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_res_config_settings__request_list_column_created_by
+#: model:ir.model.fields,field_description:crnd_vsd.field_website__request_list_column_created_by
+msgid "Request List Column Created By"
+msgstr "Стовпець  Створено списку Запитів"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_res_company__request_mail_link_access
+msgid "Request Mail Link Access"
+msgstr "Дозвіл на надсилання посилання на Запит"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_res_config_settings__request_pagination_on_website
+#: model:ir.model.fields,field_description:crnd_vsd.field_website__request_pagination_on_website
+msgid "Request Pagination On Website"
+msgstr "Розбиття сторінок на веб-сайті Запитів"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_res_config_settings__request_quick_filters_on_website
+#: model:ir.model.fields,field_description:crnd_vsd.field_website__request_quick_filters_on_website
+msgid "Request Quick Filters On Website"
+msgstr "Швидкі фільтри на веб-сайті Запитів"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_res_config_settings__request_read_block_comments
+#: model:ir.model.fields,field_description:crnd_vsd.field_website__request_read_block_comments
+msgid "Request Read Block Comments"
+msgstr "Читання блоку коментарів у Запитах"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_res_config_settings__request_read_block_subrequests
+#: model:ir.model.fields,field_description:crnd_vsd.field_website__request_read_block_subrequests
+msgid "Request Read Block Subrequests"
+msgstr "Читання блоку Підписаних у Запитах"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_website__request_redirect_after_created_on_website
+msgid "Request Redirect After Created On Website"
+msgstr "Перенаправлення після створення на веб-сайті Запиту"
+
+#. module: crnd_vsd
+#: model:ir.model,name:crnd_vsd.model_request_stage_route
+msgid "Request Stage Route"
+msgstr "Путь стадії запиту"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.view_request_classifier_form
+msgid "Request Text Help"
+msgstr "Допоміжний текст запиту"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.view_request_classifier_form
+msgid "Request Title"
+msgstr "Тема запиту"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_res_config_settings__request_use_custom_template
+#: model:ir.model.fields,field_description:crnd_vsd.field_website__request_use_custom_template
+msgid "Request Use Custom Template"
+msgstr "Використовувати спеціальний шаблон запиту"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_res_company__request_wsd_public_ui_visibility
+msgid "Request Wsd Public Ui Visibility"
+msgstr "Видимість загальнодоступного інтерфейсу Запитів"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_res_company__request_wsd_public_use_author_phone
+msgid "Request Wsd Public Use Author Phone"
+msgstr "Запити: Публікувати телефон автора"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsList/FilterList/FilterList.js:0
+#, python-format
+msgid "Request category"
+msgstr "Категорія Запитів"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsList/FilterList/FilterList.js:0
+#, python-format
+msgid "Request create date from"
+msgstr "Дата створення запиту з"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsList/FilterList/FilterList.js:0
+#, python-format
+msgid "Request create date to"
+msgstr "Дата створення запиту З"
+
+#. module: crnd_vsd
+#: model:request.stage,description:crnd_vsd.request_stage_type_bug_report_closed
+#: model:request.stage,description:crnd_vsd.request_stage_type_generic_closed
+#: model:request.stage,description:crnd_vsd.request_stage_type_without_service_closed
+msgid "Request is closed"
+msgstr "Запит закрито"
+
+#. module: crnd_vsd
+#: model:request.stage,description:crnd_vsd.request_stage_type_bug_report_draft
+#: model:request.stage,description:crnd_vsd.request_stage_type_generic_draft
+#: model:request.stage,description:crnd_vsd.request_stage_type_without_service_draft
+msgid "Request is in stage Draft"
+msgstr "Запит на етапі Чернетка"
+
+#. module: crnd_vsd
+#: model:request.stage,description:crnd_vsd.request_stage_type_bug_report_sent
+#: model:request.stage,description:crnd_vsd.request_stage_type_generic_sent
+#: model:request.stage,description:crnd_vsd.request_stage_type_without_service_sent
+msgid "Request is in stage Sent"
+msgstr "Запит на етапі Відправлено"
+
+#. module: crnd_vsd
+#: model:ir.model,name:crnd_vsd.model_request_kind
+msgid "Request kind"
+msgstr "Вид Запиту"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsList/FilterList/FilterList.js:0
+#, python-format
+msgid "Request search"
+msgstr "Пошук по Запитах"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsList/FilterList/FilterList.js:0
+#, python-format
+msgid "Request service"
+msgstr "Сервіс"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.requests_create_global_custom_template
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.requests_create_global_template
+msgid "Request text..."
+msgstr "Текст запиту..."
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsList/FilterList/FilterList.js:0
+#, python-format
+msgid "Request type"
+msgstr "Тип Запитів"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestCreate/RequestCreate.xml:0
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsList/RequestsList.xml:0
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.vsd_request_portal_my_home
+#, python-format
+msgid "Requests"
+msgstr "Запити"
+
+#. module: crnd_vsd
+#: model:ir.model.fields.selection,name:crnd_vsd.selection__res_company__request_mail_link_access__require-login
+msgid "Require login"
+msgstr "Вимагати авторизації"
+
+#. module: crnd_vsd
+#: model:ir.model.fields.selection,name:crnd_vsd.selection__res_company__request_wsd_public_use_author_phone__required-phone
+msgid "Required Phone"
+msgstr "Вимагати Телефон"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestCreate/RequestCreate.xml:0
+#, python-format
+msgid "Required fields"
+msgstr "Обов'язкові поля"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsList/FilterList/FilterList.xml:0
+#, python-format
+msgid "Reset"
+msgstr "Скинути"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_request_request__responsible_avatar
+msgid "Responsible (Avatar)"
+msgstr "Відповідальний (Аватар)"
+
+#. module: crnd_vsd
+#: model:ir.model.fields.selection,name:crnd_vsd.selection__res_company__request_wsd_public_ui_visibility__restrict
+msgid "Restricted UI"
+msgstr "Обмежений інтерфейс користувача"
+
+#. module: crnd_vsd
+#: model:request.category,name:crnd_vsd.request_category_demo_website
+msgid "SaAS"
+msgstr "SaAS"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestCreate/RequestCreate.xml:0
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsList/FilterList/FilterList.xml:0
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsView/CommentList/CommentList.xml:0
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsView/RequestsView.xml:0
+#, python-format
+msgid "Save"
+msgstr "Записати"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_request_request__access_token
+msgid "Security Token"
+msgstr "Токет безпеки"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestCreate/RequestCreate.xml:0
+#, python-format
+msgid "Select category"
+msgstr "Вибір Категорії"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestCreate/RequestCreate.xml:0
+#, python-format
+msgid "Select service"
+msgstr "Вибір Сервісу"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestCreate/RequestCreate.xml:0
+#, python-format
+msgid "Select service group"
+msgstr "Вібір групи Сервісу"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestCreate/RequestCreate.xml:0
+#, python-format
+msgid "Select type"
+msgstr "Вибір Типу Запиту"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/common/CRNDInputSelectManyWidget/CRNDInputSelectManyWidget.xml:0
+#, python-format
+msgid "Selected:"
+msgstr "Вибрано:"
+
+#. module: crnd_vsd
+#: model:request.stage.route,name:crnd_vsd.request_stage_route_type_bug_report_draft_to_sent
+#: model:request.stage.route,name:crnd_vsd.request_stage_route_type_generic_draft_to_sent
+#: model:request.stage.route,name:crnd_vsd.request_stage_route_type_without_service_draft_to_sent
+msgid "Send"
+msgstr "Відправити"
+
+#. module: crnd_vsd
+#: model:request.stage,name:crnd_vsd.request_stage_type_bug_report_sent
+#: model:request.stage,name:crnd_vsd.request_stage_type_generic_sent
+#: model:request.stage,name:crnd_vsd.request_stage_type_without_service_sent
+msgid "Sent"
+msgstr "Відправлено"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestCreate/RequestCreate.xml:0
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsView/RequestsView.xml:0
+#, python-format
+msgid "Service"
+msgstr "Сервіс"
+
+#. module: crnd_vsd
+#: model:website.menu,name:crnd_vsd.menu_service_desk
+msgid "Service Desk"
+msgstr "Сервіс Деск"
+
+#. module: crnd_vsd
+#: model:res.groups,name:crnd_vsd.group_service_desk_website_user
+msgid "Service Desk Website user"
+msgstr "Сервіс Деск: Користувач Веб-сайту"
+
+#. module: crnd_vsd
+#: model:res.groups,name:crnd_vsd.group_service_desk_website_user_advanced
+msgid "Service Desk Website user (Advanced)"
+msgstr "Сервіс Деск: Користувач Веб-сайту (Розширені)"
+
+#. module: crnd_vsd
+#: model:res.groups,name:crnd_vsd.group_service_desk_website_user_all_requests
+msgid "Service Desk Website user (All requests)"
+msgstr "Сервіс Деск: Користувач Веб-сайту (Віс запити)"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestCreate/RequestCreate.xml:0
+#, python-format
+msgid "Service Group"
+msgstr "Групи Сервісів"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid ""
+"Set the maximum size of request text.\n"
+"                                    When user tries to enter more symbols "
+"than\n"
+"                                    allowed by this option,\n"
+"                                    system will not allow him to do this."
+msgstr ""
+"Встановіть максимальний розмір тексту запиту.\n"
+" Коли користувач намагається ввести більше символів, ніж  дозволено цією "
+"опцією,\n"
+" система не дозволить йому цього зробити."
+
+#. module: crnd_vsd
+#: model:ir.model.fields.selection,name:crnd_vsd.selection__res_company__request_mail_link_access__shared-link
+msgid "Shared link"
+msgstr "Спільне посилання"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_request_kind__show_as_website_filter
+msgid "Show As Website Filter"
+msgstr "Показати як фільтр веб-сайту"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsList/Sorting/Sorting.xml:0
+#, python-format
+msgid "Sort by ..."
+msgstr "Сортувати по ..."
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid ""
+"Specify here maximum size of files allowed\n"
+"                                    to upload.\n"
+"                                    If user will try to upload larger file, "
+"he\n"
+"                                    will get message that file is too large."
+msgstr ""
+"Тут вкажіть максимальний дозволений розмір файлів для завантаження.\n"
+" Якщо користувач спробує завантажити більший файл, він  отримає повідомлення "
+"про те, що файл завеликий."
+
+#. module: crnd_vsd
+#: model_terms:request.type,help_html:crnd_vsd.request_type_upgrade
+msgid "Specify what you want to upgrade"
+msgstr "Укажіть, що ви хочете оновити"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_request_request__stage_name
+msgid "Stage Name"
+msgstr "Назва Етапу"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsList/RequestsListTable/RequestsListTable.xml:0
+#, python-format
+msgid "Status"
+msgstr "Статус"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsView/RequestsView.xml:0
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.view_request_classifier_form
+#, python-format
+msgid "Subrequests"
+msgstr "Підзапити"
+
+#. module: crnd_vsd
+#: model:request.category,name:crnd_vsd.request_category_demo_website_support
+msgid "Support"
+msgstr "Підтримка"
+
+#. module: crnd_vsd
+#: model:request.category,name:crnd_vsd.request_category_demo_website_tech
+msgid "Technical"
+msgstr "Технічні"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid ""
+"The list of allowed file types allowed to\n"
+"                                    upload in request.\n"
+"                                    This field must contain coma-separated "
+"list\n"
+"                                    of"
+msgstr ""
+"Список дозволених типів файлів для завантаження в запит.\n"
+" Це поле має містити список, розділений комами"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid ""
+"The type of uploaded file, now also\n"
+"                                        validated on backend side.\n"
+"                                        In order to make file upload\n"
+"                                        restriction work properly on "
+"backend\n"
+"                                        side,\n"
+"                                        now it is recommended to install"
+msgstr ""
+"Тип завантаженого файлу, тепер також перевірено на серверній стороні.\n"
+"Щоб зробити завантаження файлу обмеження належним чином працюють на стороні "
+"сервера,\n"
+"тепер рекомендується встановити"
+
+#. module: crnd_vsd
+#: model_terms:request.type,note_html:crnd_vsd.request_type_generic
+msgid "There you should ask a questions related to our SaaS service."
+msgstr "Тут ви повинні поставити запитання, пов’язані з нашою послугою SaaS."
+
+#. module: crnd_vsd
+#: model_terms:request.type,help_html:crnd_vsd.request_type_generic
+msgid ""
+"This is request type for generic questions related to our SaaS service\n"
+"            Use this request type if you cannot find exact request type for "
+"your question"
+msgstr ""
+"Це тип Запиту для загальних запитань, пов’язаних із нашою службою SaaS\n"
+"Використовуйте цей тип запиту, якщо ви не можете знайти точний тип запиту "
+"для свого запитання"
+
+#. module: crnd_vsd
+#: model:request.type,description:crnd_vsd.request_type_without_service
+msgid "This is request type that does not have related service"
+msgstr "Це тип запиту, який не має пов’язаного Сервісу"
+
+#. module: crnd_vsd
+#: model_terms:request.type,help_html:crnd_vsd.request_type_incident
+msgid "This is the type of incident request."
+msgstr "Це тип запиту на інцидент."
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsList/RequestsListTable/RequestsListTable.xml:0
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.requests_create_global_template
+#, python-format
+msgid "Title"
+msgstr "Тема"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestCreate/RequestCreate.xml:0
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsView/RequestsView.xml:0
+#, python-format
+msgid "Type"
+msgstr "Тип"
+
+#. module: crnd_vsd
+#: model:request.type,name:crnd_vsd.request_type_upgrade
+msgid "Upgrade request"
+msgstr "Оновлення Запиту"
+
+#. module: crnd_vsd
+#: model:request.stage,name:crnd_vsd.request_stage_type_upgrade_upgraded
+msgid "Upgraded"
+msgstr "Оновлення"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_res_config_settings__use_service_groups
+#: model:ir.model.fields,field_description:crnd_vsd.field_website__use_service_groups
+msgid "Use Service Groups"
+msgstr "Використовувати групи Сервісів"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_website_view_form
+msgid "Use custom template in Website Form"
+msgstr "Використовувати власний шаблон у формі веб-сайту"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_website_view_form
+msgid "Use quick filters for VSD Request list view"
+msgstr "Використовуйте швидкі фільтри для перегляду списку Запитів VSD"
+
+#. module: crnd_vsd
+#: model:res.groups,comment:crnd_vsd.group_service_desk_website_user_all_requests
+msgid ""
+"Users in this groups can see all requests in system, but still not have "
+"access to internal UI."
+msgstr ""
+"Користувачі в цих групах можуть бачити всі Запити в системі, але не мають "
+"доступу до внутрішнього інтерфейсу користувача."
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.view_request_classifier_form
+msgid "VISIBILITY RULES"
+msgstr "ПРАВИЛА ВИДИМОСТІ"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.view_request_request_form
+msgid "View on Website"
+msgstr "Перегляд на Веб-Сайті"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_request_classifier__website_published
+#: model:ir.model.fields,field_description:crnd_vsd.field_request_stage_route__website_published
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.view_request_classifier_search
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.view_request_stage_route_search
+msgid "Visible in Website"
+msgstr "Видимість на Веб-Сайті"
+
+#. module: crnd_vsd
+#: model:ir.model,name:crnd_vsd.model_website
+#: model:ir.model.fields,field_description:crnd_vsd.field_request_classifier__website_ids
+#: model:ir.model.fields,field_description:crnd_vsd.field_request_request__website_id
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.view_request_classifier_form
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.view_request_stage_route_form
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.view_request_website_request_request_search
+msgid "Website"
+msgstr "Веб-Сайт"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_request_classifier__website_custom_congratulation_note
+msgid "Website Custom Congratulation Note"
+msgstr "Веб-Сайт: Спеціальне вітання"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_request_classifier__website_custom_label_editor
+msgid "Website Custom Label Editor"
+msgstr "Веб-Сайт: Редактор власних міток"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_request_stage_route__website_extra_action
+msgid "Website Extra Action"
+msgstr "Веб-Сайт: Додаткові дії"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_request_kind__website_filter_name
+msgid "Website Filter Name"
+msgstr "Веб-Сайт: Фільтр назв"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_website_view_form
+msgid "Website Request Settings"
+msgstr "Веб-Сайт: Налаштування Запитів"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_request_classifier__website_request_text_help
+msgid "Website Request Text Help"
+msgstr "Веб-Сайт: Текст допомоги Запитів"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_request_classifier__website_request_title
+msgid "Website Request Title"
+msgstr "Веб-Сайт: Назва Запиту"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_res_config_settings__request_wsd_public_ui_visibility
+msgid "Website Service Desk (Public Visibility)"
+msgstr "Веб-Сайт: Сервіс Деск (Загальнодоступна видимість)"
+
+#. module: crnd_vsd
+#: model:ir.model.fields,field_description:crnd_vsd.field_res_config_settings__request_wsd_public_use_author_phone
+msgid "Website Service Desk (Use Author Phone)"
+msgstr "Веб-Сайт: Сервіс Деск (Використовувати телефон автора)"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.view_request_classifier_form
+msgid "Website Settings"
+msgstr "Налаштування веб-сайту"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_website_view_form
+msgid "Website Table Columns Settings"
+msgstr "Веб-Сайт: Таблиця індивідуальних налаштувань"
+
+#. module: crnd_vsd
+#: model:res.groups,comment:crnd_vsd.group_service_desk_website_user_advanced
+msgid ""
+"Website advanced users of service desk. Users in this group can create "
+"requests with request types and categories they are subscribed for, even if "
+"these types and categories not website published."
+msgstr ""
+"Веб-сайт: Досвідчений користувач Сервіс Деск. Користувачі в цій групі можуть "
+"створювати запити з типами запитів і категоріями, на які вони підписані, "
+"навіть якщо ці типи і категорії не опубліковані на веб-сайті."
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid "Website settings"
+msgstr "Веб-Сайт: Налаштування"
+
+#. module: crnd_vsd
+#: model:request.category,description:crnd_vsd.request_category_demo_website_support
+msgid "Website support related requests"
+msgstr "Веб-Сайт: Підписувати пов'язані Запити"
+
+#. module: crnd_vsd
+#: model:res.groups,comment:crnd_vsd.group_service_desk_website_user
+msgid "Website users of service desk"
+msgstr "Веб-Сайт: Користувач Сервіс Деск"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/MainContent/RequestsList/Sorting/Sorting.js:0
+#, python-format
+msgid "Without sorting"
+msgstr "Без сортування"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid "application/msword"
+msgstr "Додаток  / MS Word"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid "application/pdf"
+msgstr "Додаток  / PDF"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid "application/vnd.oasis.opendocument.text"
+msgstr "Додаток  / vnd.oasis.opendocument.text"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid "audio/*"
+msgstr "Аудіо/*"
+
+#. module: crnd_vsd
+#. odoo-javascript
+#: code:addons/crnd_vsd/static/src/js/components/common/FileLoader/FileLoader.xml:0
+#, python-format
+msgid "files"
+msgstr "файли"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid "image/*"
+msgstr "Зображення/*"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid ""
+"image/*, application/pdf,\n"
+"                                        application/msword"
+msgstr ""
+"Зображення/*, Додаток / PDF,\n"
+"…………………………  Додаток /MS Word"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid "image/jpeg"
+msgstr "Зображення/jpeg"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid ""
+"of files\n"
+"                                    allowed to upload.;\n"
+"                                    In order to allow to upload all images, "
+"pdf\n"
+"                                    and msword documents, you can use "
+"following\n"
+"                                    value:"
+msgstr ""
+"файлів що дозволено завантажувати.;\n"
+" Щоб дозволити завантажити всі зображення, pdf\n"
+" і документи msword, ви можете використовувати наступні\n"
+" значення:"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid ""
+"python package, that is used to detect\n"
+"                                        mimetype of uploaded file on "
+"backend.\n"
+"                                        To make it work properly, it is "
+"also\n"
+"                                        required to install system "
+"dependency\n"
+"                                        libmagic\n"
+"                                        (to do it on Debian/Ubuntu run"
+msgstr ""
+"пакет python, який використовується для виявлення\n"
+" mimetype завантаженого файлу на сервері.\n"
+" Щоб він працював належним чином, це також\n"
+" необхідні для встановлення системних залежностей\n"
+" libmagic  (щоб зробити це під час запуску Debian/Ubuntu)"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid "python-magic"
+msgstr "python-magic"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid "sudo apt-get install libmagic1"
+msgstr "sudo apt-get install libmagic1"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid "text/*"
+msgstr "text/*"
+
+#. module: crnd_vsd
+#: model_terms:ir.ui.view,arch_db:crnd_vsd.generic_request_res_config_settings_view_form
+msgid "video/*"
+msgstr "video/*"
+
+#. module: crnd_vsd
+#: model:request.kind,website_filter_name:crnd_vsd.request_kind_demo_vsd
+msgid "vsd"
+msgstr "vsd"
+
+#, python-format
+#~ msgid "Change stage:"
+#~ msgstr "Зміна Етапу:"
+
+#, python-format
+#~ msgid "Client"
+#~ msgstr "Клієнт"
+
+#, python-format
+#~ msgid "Create new request"
+#~ msgstr "Створити новий Запит"
+
+#, python-format
+#~ msgid "Messages"
+#~ msgstr "Повідомлення"
+
+#, python-format
+#~ msgid "Name"
+#~ msgstr "Назва"
+
+#, python-format
+#~ msgid "Reporter"
+#~ msgstr "Звіт"
+
+#~ msgid "Request Type"
+#~ msgstr "Тип запиту"
+
+#~ msgid "Request text"
+#~ msgstr "Текст Запиту"
+
+#~ msgid "Selection"
+#~ msgstr "Вибір"
+
+#~ msgid "Selection Priority View"
+#~ msgstr "Перегляд  вибору пріоритету"
+
+#~ msgid "Star bar"
+#~ msgstr "Панель піктограм"
+
+#~ msgid "Web Settings"
+#~ msgstr "Веб-налаштування"
+
+#~ msgid "Website Read Block Settings"
+#~ msgstr "Веб-Сайт: Читати блок налаштувань"
+
+#, python-format
+#~ msgid "Create Request"
+#~ msgstr "Створити Запит"
+
+#, python-format
+#~ msgid "Select"
+#~ msgstr "Вибір"

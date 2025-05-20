@@ -1,0 +1,1 @@
+from . import generic_resource_type_wizard_create

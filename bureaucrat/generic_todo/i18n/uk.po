@@ -1,0 +1,1071 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* generic_todo
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-15 12:29+0000\n"
+"PO-Revision-Date: 2025-04-18 14:05+0000\n"
+"Last-Translator: Galina Prokopenko <am@crnd.pro>\n"
+"Language-Team: Ukrainian <http://weblate.crnd.pro/projects/"
+"bureaucrat-generics-17-0/generic_todo/uk/>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.3.2\n"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_type__access_ids
+msgid "Access"
+msgstr "Доступ"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo__active
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_check__active
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_list_todo__active
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_server_action__active
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_simple__active
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_type__active
+msgid "Active"
+msgstr "Активно"
+
+#. module: generic_todo
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_wizard_add_template_view_form
+msgid "Add Lines"
+msgstr "Додати строки"
+
+#. module: generic_todo
+#: model:ir.actions.act_window,name:generic_todo.action_todo_wizard_add_template
+msgid "Add Todo Lines"
+msgstr "Додати строки завдань"
+
+#. module: generic_todo
+#: model:ir.actions.server,name:generic_todo.server_action__add_request_response_text
+msgid "Add some text to description"
+msgstr "Додати текст до опису"
+
+#. module: generic_todo
+#: model:ir.model.fields,help:generic_todo.field_todo_wizard_add_template_line__to_add
+msgid "Apply this line to model"
+msgstr "Додати цю строку до моделі"
+
+#. module: generic_todo
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_type_view_from
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_view_form
+msgid "Archived"
+msgstr "Заархівовано"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_type__assignment_model_ids
+msgid "Assignment Model"
+msgstr "Модель призначення"
+
+#. module: generic_todo
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_view_form
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_view_tree_editable
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_view_tree_general
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_wizard_add_template_view_form
+msgid "Cancel"
+msgstr "Скасувати"
+
+#. module: generic_todo
+#: model:ir.model.fields.selection,name:generic_todo.selection__generic_todo__state__canceled
+msgid "Canceled"
+msgstr "Скасовано"
+
+#. module: generic_todo
+#: model:ir.actions.server,name:generic_todo.server_action__change_description_text
+msgid "Change description text"
+msgstr "Змінити текст опису"
+
+#. module: generic_todo
+#: model:generic.todo.type,name:generic_todo.generic_todo_type_check
+msgid "Check"
+msgstr "Перевірка"
+
+#. module: generic_todo
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_view_form
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_view_tree_editable
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_view_tree_general
+msgid "Check Done"
+msgstr "Перевірку виконано"
+
+#. module: generic_todo
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_view_form
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_view_tree_editable
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_view_tree_general
+msgid "Check New"
+msgstr "Нова перевірка"
+
+#. module: generic_todo
+#: model:ir.actions.act_window,name:generic_todo.generic_todo_check_action
+#: model:ir.ui.menu,name:generic_todo.menu_check_todo_root
+msgid "Check Todos"
+msgstr "Перевірити завдання"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_event_data__event_code
+msgid "Code"
+msgstr "Код"
+
+#. module: generic_todo
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_view_form
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_view_tree_editable
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_view_tree_general
+msgid "Complete"
+msgstr "Завершено"
+
+#. module: generic_todo
+#: model:ir.ui.menu,name:generic_todo.menu_generic_todo_config_root
+msgid "Configuration"
+msgstr "Конфігурація"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_event_data__mail_body
+msgid "Contents"
+msgstr "Зміст"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_type__count
+msgid "Count (Incl. Archived)"
+msgstr "Кількість (вкл. архівовані)"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo__date_created
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_check__date_created
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_list_todo__date_created
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_server_action__date_created
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_simple__date_created
+msgid "Created"
+msgstr "Створено"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_check__create_uid
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_event_data__create_uid
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_list_todo__create_uid
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_server_action__create_uid
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_simple__create_uid
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_template__create_uid
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_template_line__create_uid
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_type__create_uid
+#: model:ir.model.fields,field_description:generic_todo.field_todo_wizard_add_template__create_uid
+#: model:ir.model.fields,field_description:generic_todo.field_todo_wizard_add_template_line__create_uid
+msgid "Created by"
+msgstr "Створив"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_check__create_date
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_event_data__create_date
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_list_todo__create_date
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_server_action__create_date
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_simple__create_date
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_template__create_date
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_template_line__create_date
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_type__create_date
+#: model:ir.model.fields,field_description:generic_todo.field_todo_wizard_add_template__create_date
+#: model:ir.model.fields,field_description:generic_todo.field_todo_wizard_add_template_line__create_date
+msgid "Created on"
+msgstr "Створено"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo__date_completed
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_check__date_completed
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_list_todo__date_completed
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_server_action__date_completed
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_simple__date_completed
+msgid "Date Completed"
+msgstr "Дата завершення"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo__date_last_action
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_check__date_last_action
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_list_todo__date_last_action
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_server_action__date_last_action
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_simple__date_last_action
+msgid "Date Last Action"
+msgstr "Дата останньої дії"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo__date_started
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_check__date_started
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_list_todo__date_started
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_server_action__date_started
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_simple__date_started
+msgid "Date Started"
+msgstr "Дата початку"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_check__description
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_list_todo__description
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_server_action__description
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_simple__description
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_check_view_form
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_list_todo_view_form
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_server_action_view_form
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_simple_view_form
+msgid "Description"
+msgstr "Опис"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo__display_name
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_check__display_name
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_event_data__display_name
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_list_todo__display_name
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_server_action__display_name
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_simple__display_name
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_template__display_name
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_template_line__display_name
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_type__display_name
+#: model:ir.model.fields,field_description:generic_todo.field_todo_wizard_add_template__display_name
+#: model:ir.model.fields,field_description:generic_todo.field_todo_wizard_add_template_line__display_name
+msgid "Display Name"
+msgstr "Відобажати ім'я"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo__domain_for_todo_type
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_check__domain_for_todo_type
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_list_todo__domain_for_todo_type
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_server_action__domain_for_todo_type
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_simple__domain_for_todo_type
+msgid "Domain For Todo Type"
+msgstr "Домен для типу завдань"
+
+#. module: generic_todo
+#: model:ir.model.fields.selection,name:generic_todo.selection__generic_todo__state__done
+msgid "Done"
+msgstr "Готово"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_type__enable_state_canceled
+msgid "Enable State Canceled"
+msgstr "Увімкнення стану скасовано"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_type__enable_state_pause
+msgid "Enable State Pause"
+msgstr "Увімкнення стану пауза"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_event_data__event_id
+msgid "Event"
+msgstr "Подія"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_event_data__event_data_id
+msgid "Event Data"
+msgstr "Дані події"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_event_data__event_date
+msgid "Event Date"
+msgstr "Дата події"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_event_data__event_source_id
+msgid "Event Source"
+msgstr "Джерело події"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_event_data__event_source_model_id
+msgid "Event Source Model"
+msgstr "Модель джерела події"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_event_data__event_source_model_name
+msgid "Event Source Model (Name)"
+msgstr "Модель джерела події (Назва)"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_event_data__event_source_record_id
+msgid "Event Source Record"
+msgstr "Запис про джерело події"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_event_data__event_type_id
+msgid "Event Type"
+msgstr "Тип події"
+
+#. module: generic_todo
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_view_form
+msgid "Events"
+msgstr "Події"
+
+#. module: generic_todo
+#: model:ir.model.fields,help:generic_todo.field_generic_todo_server_action__action_id
+#: model:ir.model.fields,help:generic_todo.field_generic_todo_template_line__action_id
+#: model:ir.model.fields,help:generic_todo.field_todo_wizard_add_template_line__action_id
+msgid "Execute a server action when this todo is executed."
+msgstr "Виконати дію на сервері, коли це завдання буде виконано."
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_type__field_id
+msgid "Fields"
+msgstr "Поля"
+
+#. module: generic_todo
+#: model:ir.model.constraint,message:generic_todo.constraint_generic_todo_type_model_id_uniq
+msgid "For each Odoo model only one Todo Type can be created!"
+msgstr "Для кожної моделі Odoo можна створити лише один тип завдань!"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_type__generic_resource_code
+msgid "Generic Resource Code"
+msgstr "Код ресурсу"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_type__resource_type_id
+msgid "Generic Resource Type"
+msgstr "Тип ресурсу"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_type__resource_type_ids
+msgid "Generic Resource Types"
+msgstr "Типи ресурсів"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_type__system_event_source_id
+msgid "Generic System Event Source"
+msgstr "Джерело подій системи"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_type__system_event_source_ids
+msgid "Generic System Event Sources"
+msgstr "Джерела подій системи"
+
+#. module: generic_todo
+#: model:res.groups,name:generic_todo.group_generic_todo_manager
+msgid "Generic TODO manager"
+msgstr "Завдання: Менеджер"
+
+#. module: generic_todo
+#: model:res.groups,name:generic_todo.group_generic_todo_user
+msgid "Generic TODO user"
+msgstr "Завдання: Користувач"
+
+#. module: generic_todo
+#: model:res.groups,name:generic_todo.group_generic_todo_user_implicit
+msgid "Generic TODO user (implicit)"
+msgstr "Завдання: Користувач (неявний)"
+
+#. module: generic_todo
+#: model:ir.model,name:generic_todo.model_generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_check__generic_todo_id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_list_todo__generic_todo_id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_mixin_implementation__generic_todo_id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_server_action__generic_todo_id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_simple__generic_todo_id
+msgid "Generic Todo"
+msgstr "Завдання на виконання"
+
+#. module: generic_todo
+#: model:generic.system.event.type,name:generic_todo.todo_cancel_event_type_generic_todo
+msgid "Generic Todo Canceled"
+msgstr "Завдання: Скасовано"
+
+#. module: generic_todo
+#: model:ir.model,name:generic_todo.model_generic_todo_check
+msgid "Generic Todo Check"
+msgstr "Завдання: Перевірка"
+
+#. module: generic_todo
+#: model:generic.system.event.type,name:generic_todo.todo_done_event_type_generic_todo
+msgid "Generic Todo Completed"
+msgstr "Завдання: Завершено"
+
+#. module: generic_todo
+#: model:generic.system.event.category,name:generic_todo.system_event_category_generic_todo
+msgid "Generic Todo Event Category"
+msgstr "Завдання: Категорія подій"
+
+#. module: generic_todo
+#: model:ir.model,name:generic_todo.model_generic_todo_event_data
+msgid "Generic Todo Event Data"
+msgstr "Завдання: Дані події"
+
+#. module: generic_todo
+#: model:ir.actions.act_window,name:generic_todo.action_generic_todo_event_data
+msgid "Generic Todo Events Data"
+msgstr "Завдання: Дані подій"
+
+#. module: generic_todo
+#: model:ir.model,name:generic_todo.model_generic_todo_list_todo
+msgid "Generic Todo List Todo"
+msgstr "Завдання: Список завдань"
+
+#. module: generic_todo
+#: model:ir.model,name:generic_todo.model_generic_todo_mixin_implementation
+msgid "Generic Todo MixIn Implementation"
+msgstr "Завдання:Імплементація міксіну"
+
+#. module: generic_todo
+#: model:ir.model,name:generic_todo.model_generic_todo_mixin_object
+msgid "Generic Todo MixIn Object"
+msgstr "Завдання: Об'єкт міксіну"
+
+#. module: generic_todo
+#: model:ir.model,name:generic_todo.model_generic_todo_mixin_todo
+msgid "Generic Todo MixIn Todo"
+msgstr "Завдання: Міксін завдань"
+
+#. module: generic_todo
+#: model:ir.model,name:generic_todo.model_generic_todo_server_action
+msgid "Generic Todo Server Action"
+msgstr "Завдання: Дія на сервері"
+
+#. module: generic_todo
+#: model:generic.system.event.type,name:generic_todo.todo_state_changed_event_type_generic_todo
+msgid "Generic Todo State Changed"
+msgstr "Завдання: Стан змінено"
+
+#. module: generic_todo
+#: model:ir.model,name:generic_todo.model_generic_todo_template
+msgid "Generic Todo Template"
+msgstr "Завдання: Шаблон"
+
+#. module: generic_todo
+#: model:ir.model,name:generic_todo.model_generic_todo_template_line
+msgid "Generic Todo Template Line"
+msgstr "Строка шаблона завдань"
+
+#. module: generic_todo
+#: model:ir.ui.menu,name:generic_todo.menu_generic_todo_template_root
+msgid "Generic Todo Templates"
+msgstr "Завдання: Шаблони"
+
+#. module: generic_todo
+#: model:ir.model,name:generic_todo.model_generic_todo_simple
+msgid "Generic Todo Time"
+msgstr "Завдання: Час"
+
+#. module: generic_todo
+#: model:ir.model,name:generic_todo.model_generic_todo_type
+msgid "Generic Todo Type"
+msgstr "Завдання: Тип"
+
+#. module: generic_todo
+#: model:ir.ui.menu,name:generic_todo.menu_generic_todo_root
+msgid "Generic Todos"
+msgstr "Завдання"
+
+#. module: generic_todo
+#: model:ir.model.fields,help:generic_todo.field_generic_todo_template_line__sequence
+#: model:ir.model.fields,help:generic_todo.field_todo_wizard_add_template_line__sequence
+msgid "Gives the sequence order for Todo Template Line."
+msgstr "Задає порядок послідовності для рядків шаблонів завдань."
+
+#. module: generic_todo
+#: model:ir.model.fields,help:generic_todo.field_generic_todo__sequence
+#: model:ir.model.fields,help:generic_todo.field_generic_todo_check__sequence
+#: model:ir.model.fields,help:generic_todo.field_generic_todo_list_todo__sequence
+#: model:ir.model.fields,help:generic_todo.field_generic_todo_server_action__sequence
+#: model:ir.model.fields,help:generic_todo.field_generic_todo_simple__sequence
+msgid "Gives the sequence order for Todo."
+msgstr "Задає порядок послідовності для завдань на виконання."
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_type__is_mail_activity
+msgid "Has Mail Activity"
+msgstr "Має поштову активність"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_type__is_mail_blacklist
+msgid "Has Mail Blacklist"
+msgstr "Має чорний список пошти"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_type__is_mail_thread
+msgid "Has Mail Thread"
+msgstr "Має поштову скриньку"
+
+#. module: generic_todo
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_list_todo_view_form
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_simple_view_form
+msgid "Hours:minutes"
+msgstr "Години:хвилини"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo__id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_check__id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_event_data__id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_list_todo__id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_server_action__id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_simple__id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_template__id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_template_line__id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_type__id
+#: model:ir.model.fields,field_description:generic_todo.field_todo_wizard_add_template__id
+#: model:ir.model.fields,field_description:generic_todo.field_todo_wizard_add_template_line__id
+msgid "ID"
+msgstr "ID"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_type__modules
+msgid "In Apps"
+msgstr "У додатках"
+
+#. module: generic_todo
+#: model:ir.model.fields.selection,name:generic_todo.selection__generic_todo__state__in_progress
+msgid "In Progress"
+msgstr "В процесі виконання"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_type__info
+msgid "Information"
+msgstr "Інформація"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_type__inherited_model_ids
+msgid "Inherited models"
+msgstr "Наслідувані моделі"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_type__is_generic_enumeration
+msgid "Is Generic Enumeration"
+msgstr "Є перерахуванням"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_type__is_generic_resource
+msgid "Is Generic Resource"
+msgstr "Є ресурсом"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo__is_not_show_start
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_check__is_not_show_start
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_list_todo__is_not_show_start
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_server_action__is_not_show_start
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_simple__is_not_show_start
+msgid "Is Not Show Start"
+msgstr "Не показувати запуск"
+
+#. module: generic_todo
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_check_view_form
+msgid "Is ready"
+msgstr "Готовий"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_check__write_uid
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_event_data__write_uid
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_list_todo__write_uid
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_server_action__write_uid
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_simple__write_uid
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_template__write_uid
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_template_line__write_uid
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_type__write_uid
+#: model:ir.model.fields,field_description:generic_todo.field_todo_wizard_add_template__write_uid
+#: model:ir.model.fields,field_description:generic_todo.field_todo_wizard_add_template_line__write_uid
+msgid "Last Updated by"
+msgstr "Востаннє оновив"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_check__write_date
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_event_data__write_date
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_list_todo__write_date
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_server_action__write_date
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_simple__write_date
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_template__write_date
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_template_line__write_date
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_type__write_date
+#: model:ir.model.fields,field_description:generic_todo.field_todo_wizard_add_template__write_date
+#: model:ir.model.fields,field_description:generic_todo.field_todo_wizard_add_template_line__write_date
+msgid "Last Updated on"
+msgstr "Востаннє оновлено"
+
+#. module: generic_todo
+#: model:generic.todo.type,name:generic_todo.generic_todo_type_list_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo__list_todo_id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_check__list_todo_id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_list_todo__list_todo_id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_server_action__list_todo_id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_simple__list_todo_id
+msgid "List Todo"
+msgstr "Список завдань"
+
+#. module: generic_todo
+#: model:ir.model.fields,help:generic_todo.field_generic_todo_type__modules
+msgid "List of modules in which the object is defined or inherited"
+msgstr "Перелік модулів, в яких визначено або успадковано об'єкт"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_event_data__mail_activity_id
+msgid "Mail Activity"
+msgstr "Поштова активність"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_event_data__mail_activity_type_id
+msgid "Mail Activity Type"
+msgstr "Тип поштової активності"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_event_data__mail_message_id
+msgid "Mail Message"
+msgstr "Поштове повідомлення"
+
+#. module: generic_todo
+#: model:res.groups,comment:generic_todo.group_generic_todo_manager
+msgid "Manage Generic TODO`s"
+msgstr "Керувати Завданнями"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo__todo_implementation_model
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_check__todo_implementation_model
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_event_data__event_data_model_name
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_list_todo__todo_implementation_model
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_server_action__todo_implementation_model
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_simple__todo_implementation_model
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_template_line__todo_type_model_name
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_type__model
+#: model:ir.model.fields,field_description:generic_todo.field_todo_wizard_add_template_line__todo_type_model_name
+msgid "Model"
+msgstr "Модель"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo__name
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_check__name
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_list_todo__name
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_server_action__name
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_simple__name
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_template__name
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_template_line__name
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_type__name
+#: model:ir.model.fields,field_description:generic_todo.field_todo_wizard_add_template_line__name
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_template_line_view_form
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_template_view_form
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_type_view_from
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_view_form
+msgid "Name"
+msgstr "Назва"
+
+#. module: generic_todo
+#: model:ir.model.fields.selection,name:generic_todo.selection__generic_todo__state__new
+msgid "New"
+msgstr "Новий"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_event_data__new_state
+msgid "New State"
+msgstr "Новий стан"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_event_data__old_state
+msgid "Old State"
+msgstr "Старий стан"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_type__order
+msgid "Order"
+msgstr "Порядок"
+
+#. module: generic_todo
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_type_view_from
+msgid "Parameters"
+msgstr "Параметри"
+
+#. module: generic_todo
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_view_form
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_view_tree_editable
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_view_tree_general
+msgid "Pause"
+msgstr "Пауза"
+
+#. module: generic_todo
+#: model:ir.model.fields.selection,name:generic_todo.selection__generic_todo__state__paused
+msgid "Paused"
+msgstr "Пауза"
+
+#. module: generic_todo
+#: model:res.groups,comment:generic_todo.group_generic_todo_user
+msgid "Read and write to Generic TODO"
+msgstr "Читати та писати в завданнях"
+
+#. module: generic_todo
+#: model:res.groups,comment:generic_todo.group_generic_todo_user_implicit
+msgid "Read and write to Generic TODO (no access to menus)"
+msgstr "Читати та писати в завданнях (без доступу до меню)"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_type__rule_ids
+msgid "Record Rules"
+msgstr "Правила запису"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo__res_id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_check__res_id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_list_todo__res_id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_server_action__res_id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_simple__res_id
+#: model:ir.model.fields,field_description:generic_todo.field_todo_wizard_add_template__res_id
+msgid "Related Document"
+msgstr "Пов'язаний документ"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo__res_model
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_check__res_model
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_list_todo__res_model
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_server_action__res_model
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_simple__res_model
+#: model:ir.model.fields,field_description:generic_todo.field_todo_wizard_add_template__res_model
+msgid "Related Model"
+msgstr "Пов'язана модель"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo__user_id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_check__user_id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_list_todo__user_id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_server_action__user_id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_simple__user_id
+msgid "Responsible"
+msgstr "Відповідальний"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_todo_wizard_add_template__rewrite_lines
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_wizard_add_template_view_form
+msgid "Rewrite Lines"
+msgstr "Переписати рядки"
+
+#. module: generic_todo
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_wizard_add_template_view_form
+msgid "Rewrite widget lines"
+msgstr "Переписати рядки віджету"
+
+#. module: generic_todo
+#: model:ir.model.fields,help:generic_todo.field_todo_wizard_add_template__rewrite_lines
+msgid ""
+"Rewrite widget lines by lines of the selected template. By default, lines "
+"will be added sequentially from each selected template."
+msgstr ""
+"Переписати рядки віджету за рядками вибраного шаблону. За замовчуванням, "
+"рядки будуть додаватися послідовно з кожного вибраного шаблону."
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_server_action__run_info
+msgid "Run Info"
+msgstr "Інформація про процес виконання"
+
+#. module: generic_todo
+#: model:ir.model.fields,help:generic_todo.field_generic_todo_type__order
+msgid ""
+"SQL expression for ordering records in the model; e.g. \"x_sequence asc, id "
+"desc\""
+msgstr ""
+"SQL-вираз для впорядкування записів у моделі; наприклад, \"x_sequence asc, "
+"id desc\""
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo__sequence
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_check__sequence
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_list_todo__sequence
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_server_action__sequence
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_simple__sequence
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_template_line__sequence
+#: model:ir.model.fields,field_description:generic_todo.field_todo_wizard_add_template_line__sequence
+msgid "Sequence"
+msgstr "Послідовність"
+
+#. module: generic_todo
+#: model:generic.todo.type,name:generic_todo.generic_todo_type_server_action
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_server_action__action_id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_template_line__action_id
+#: model:ir.model.fields,field_description:generic_todo.field_todo_wizard_add_template_line__action_id
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_server_action_view_form
+msgid "Server Action"
+msgstr "Дії на сервері"
+
+#. module: generic_todo
+#: model:ir.actions.act_window,name:generic_todo.generic_todo_server_action_action
+#: model:ir.ui.menu,name:generic_todo.menu_server_action_todo_root
+msgid "Server Action Todos"
+msgstr "Завдання: Дія на сервірі"
+
+#. module: generic_todo
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_view_form
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_view_tree_editable
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_view_tree_general
+msgid "Start"
+msgstr "Запуск"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo__state
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_check__state
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_list_todo__state
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_server_action__state
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_simple__state
+msgid "State"
+msgstr "Стан"
+
+#. module: generic_todo
+#: model_terms:ir.ui.view,arch_db:generic_todo.view_generic_todo_event_data_form
+msgid "State Changed"
+msgstr "Стан змінено"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_event_data__mail_subject
+msgid "Subject"
+msgstr "Тема"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo__generic_event_count
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_check__generic_event_count
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_list_todo__generic_event_count
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_server_action__generic_event_count
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_simple__generic_event_count
+msgid "System Events"
+msgstr "Події системи"
+
+#. module: generic_todo
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_type_view_from
+msgid "System Info"
+msgstr "Системна інфо"
+
+#. module: generic_todo
+#: model:ir.actions.act_window,name:generic_todo.action_todo_wizard_add_template_line
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_template_view_form
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_wizard_add_template_view_form
+msgid "Template Lines"
+msgstr "Рядки шаблону"
+
+#. module: generic_todo
+#: model:ir.model.fields,help:generic_todo.field_generic_todo_type__inherited_model_ids
+msgid "The list of models that extends the current model."
+msgstr "Список моделей, які розширюють поточну модель."
+
+#. module: generic_todo
+#: model:generic.todo.type,name:generic_todo.generic_todo_type_simple
+msgid "Time"
+msgstr "Час"
+
+#. module: generic_todo
+#: model:ir.actions.act_window,name:generic_todo.generic_todo_simple_action
+#: model:ir.ui.menu,name:generic_todo.menu_simple_todo_root
+msgid "Time Todos"
+msgstr "Завдання: Час"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_todo_wizard_add_template_line__to_add
+msgid "To Add"
+msgstr "Додати"
+
+#. module: generic_todo
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_template_view_form
+msgid "To be able to add new lines, save the template first!"
+msgstr "Щоб мати можливість додавати нові рядки, спочатку збережіть шаблон!"
+
+#. module: generic_todo
+#: model:ir.ui.menu,name:generic_todo.menu_generic_todo_toplevel
+msgid "ToDos"
+msgstr "Завдання"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_type__todo_count
+msgid "Todo Count"
+msgstr "Кількість завдань"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo__todo_implementation_res_id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_check__todo_implementation_res_id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_list_todo__todo_implementation_res_id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_server_action__todo_implementation_res_id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_simple__todo_implementation_res_id
+msgid "Todo Implementation"
+msgstr "Імплементація завдань на виконання"
+
+#. module: generic_todo
+#: model:ir.model.constraint,message:generic_todo.constraint_generic_todo_unique_model
+msgid "Todo Implementation instance must be unique"
+msgstr "Інстанція для імплементації завдань має бути унікальною"
+
+#. module: generic_todo
+#: model:ir.model.constraint,message:generic_todo.constraint_generic_todo_check_unique_todo_id
+#: model:ir.model.constraint,message:generic_todo.constraint_generic_todo_file_sign_idgovua_unique_todo_id
+#: model:ir.model.constraint,message:generic_todo.constraint_generic_todo_list_todo_unique_todo_id
+#: model:ir.model.constraint,message:generic_todo.constraint_generic_todo_mixin_implementation_unique_todo_id
+#: model:ir.model.constraint,message:generic_todo.constraint_generic_todo_server_action_unique_todo_id
+#: model:ir.model.constraint,message:generic_todo.constraint_generic_todo_simple_unique_todo_id
+msgid "Todo Implementation must be unique"
+msgstr "Імплементація завдань має бути унікальною"
+
+#. module: generic_todo
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_view_form
+msgid "Todo Info"
+msgstr "Інфо про завдання"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_check__todo_is_ready
+msgid "Todo Is Ready"
+msgstr "Завдання готово"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_template__todo_lines_count
+msgid "Todo Lines Count"
+msgstr "Кількість рядків завдання"
+
+#. module: generic_todo
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_list_todo_view_form
+msgid "Todo List"
+msgstr "Список завдань"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_template_line__todo_list_template_id
+#: model:ir.model.fields,field_description:generic_todo.field_todo_wizard_add_template_line__todo_list_template_id
+msgid "Todo List Template"
+msgstr "Шаблон списку завдань"
+
+#. module: generic_todo
+#: model:ir.actions.act_window,name:generic_todo.generic_todo_list_todo_action
+#: model:ir.ui.menu,name:generic_todo.menu_list_todo_todo_root
+msgid "Todo List Todos"
+msgstr "Завдання: Список завдань"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo__todo_implementation_model_id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_check__todo_implementation_model_id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_list_todo__todo_implementation_model_id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_server_action__todo_implementation_model_id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_simple__todo_implementation_model_id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_template_line__todo_type_model_id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_type__model_id
+msgid "Todo Model"
+msgstr "Модель завдань на виконання"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_template_line__todo_template_id
+#: model:ir.model.fields,field_description:generic_todo.field_todo_wizard_add_template__todo_template_id
+msgid "Todo Template"
+msgstr "Шаблон завдання на виконання"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_template__todo_template_line_ids
+msgid "Todo Template Line"
+msgstr "Рядок шаблону завдань"
+
+#. module: generic_todo
+#: model:ir.actions.act_window,name:generic_todo.generic_todo_template_line_action
+msgid "Todo Template Lines"
+msgstr "Рядки шаблону завдань"
+
+#. module: generic_todo
+#: model:ir.actions.act_window,name:generic_todo.generic_todo_template_action
+#: model:ir.ui.menu,name:generic_todo.generic_todo_template_menu_item
+msgid "Todo Templates"
+msgstr "Шаблони завдань"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo__todo_type_id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_check__todo_type_id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_list_todo__todo_type_id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_server_action__todo_type_id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_simple__todo_type_id
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_template_line__todo_type_id
+#: model:ir.model.fields,field_description:generic_todo.field_todo_wizard_add_template_line__todo_type_id
+msgid "Todo Type"
+msgstr "Тип завдань на виконання"
+
+#. module: generic_todo
+#: model:ir.actions.act_window,name:generic_todo.generic_todo_type_action
+#: model:ir.ui.menu,name:generic_todo.generic_todo_type_menu_item
+#: model:ir.ui.menu,name:generic_todo.menu_todo_types_root
+msgid "Todo Types"
+msgstr "Типи завдань"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_todo_wizard_add_template_line__todo_wizard_add_template_id
+msgid "Todo Wizard Add Template"
+msgstr "Майстер завдань: Додати шаблон"
+
+#. module: generic_todo
+#: model:ir.model,name:generic_todo.model_todo_wizard_add_template_line
+#: model:ir.model.fields,field_description:generic_todo.field_todo_wizard_add_template__todo_wizard_add_template_line_ids
+msgid "Todo Wizard Add Template Line"
+msgstr "Майсер завдань: Додати строку шаблону"
+
+#. module: generic_todo
+#: model:ir.model,name:generic_todo.model_todo_wizard_add_template
+msgid "TodoWizardAddTemplate"
+msgstr "МайстерЗавдань:ДодатиШаблон"
+
+#. module: generic_todo
+#: model:ir.actions.act_window,name:generic_todo.generic_todo_action
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_list_todo__generic_todo_ids
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_mixin_object__generic_todo_ids
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_type__todo_ids
+#: model:ir.ui.menu,name:generic_todo.generic_todo_menu_item
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_type_view_from
+msgid "Todos"
+msgstr "Завдання на виконання"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_list_todo__total_time
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_list_todo_view_form
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_simple_view_form
+msgid "Total Time"
+msgstr "Загальний час"
+
+#. module: generic_todo
+#: model:ir.model.fields,help:generic_todo.field_generic_todo_type__count
+msgid "Total number of records in this model"
+msgstr "Загальна кількість записів у цій моделі"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_simple__total_time_after_process
+msgid "Total time"
+msgstr "Загальний час"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_type__transient
+msgid "Transient Model"
+msgstr "Перехідна модель"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_type__state
+msgid "Type"
+msgstr "Тип"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo__use_timesheet
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_check__use_timesheet
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_list_todo__use_timesheet
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_server_action__use_timesheet
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_simple__use_timesheet
+msgid "Use Timesheet"
+msgstr "Використайте табель робочого часу"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_event_data__user_id
+msgid "User"
+msgstr "Користувач"
+
+#. module: generic_todo
+#: model:ir.model.fields,help:generic_todo.field_generic_todo_event_data__user_id
+msgid "User that triggered this event."
+msgstr "Користувач, який спричинив цю подію."
+
+#. module: generic_todo
+#: model_terms:ir.ui.view,arch_db:generic_todo.generic_todo_view_tree_editable
+msgid "View todo object"
+msgstr "Переглянути об'єкт завдання"
+
+#. module: generic_todo
+#: model:ir.model.fields,field_description:generic_todo.field_generic_todo_type__view_ids
+msgid "Views"
+msgstr "Перегляди"
+
+#. module: generic_todo
+#. odoo-python
+#: code:addons/generic_todo/models/generic_todo_server_action.py:0
+#, python-format
+msgid "Warning"
+msgstr "Попередження"
+
+#. module: generic_todo
+#: model:ir.model.fields,help:generic_todo.field_generic_todo_type__is_generic_enumeration
+msgid "Whether this model is Generic Enumeration."
+msgstr "Чи є ця модель перерахуванням."
+
+#. module: generic_todo
+#: model:ir.model.fields,help:generic_todo.field_generic_todo_type__is_generic_resource
+msgid "Whether this model is Generic Resource."
+msgstr "Чи є ця модель ресурсом."

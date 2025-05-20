@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Demo categories for tests.-->
+
+    <record id="yodoo_demo_top_level_1"
+            model="yodoo.knowledge.category">
+        <field name="name">Top level category 1</field>
+        <field name="code">DEMOT1</field>
+    </record>
+
+    
+    <record id="yodoo_demo_subcategory_1"
+            model="yodoo.knowledge.category">
+        <field name="name">Subcategory 1</field>
+        <field name="code">DEMOT1S1S1</field>
+        <field name="parent_id"
+               ref="yodoo_demo_top_level_1"/>
+    </record>
+
+    <record id="yodoo_demo_subcategory_2"
+            model="yodoo.knowledge.category">
+        <field name="name">Subcategory 2</field>
+        <field name="code">DEMOT1S1S2</field>
+        <field name="parent_id"
+               ref="yodoo_demo_subcategory_1"/>
+    </record>
+
+    <record id="item_demo_top_1"
+            model="yodoo.knowledge.item">
+        <field name="name">Demo Item Top Level</field>
+        <field name="item_format">html</field>
+        <field name="item_type_id" ref="yodoo_item_type_art"/>
+        <field name="item_body_html">
+            <![CDATA[
+                <h1>Top level demo item text.</h1>
+            ]]>
+        </field>
+    </record>
+
+    <record id="item_demo_sub_2"
+            model="yodoo.knowledge.item">
+        <field name="name">Demo Item For Subcategory 2</field>
+        <field name="item_format">html</field>
+        <field name="item_type_id" ref="yodoo_item_type_art"/>
+        <field name="category_id"
+               ref="yodoo_demo_subcategory_2"/>
+        <field name="item_body_html">Subcategory2 item content</field>
+    </record>
+
+    <record id="item_demo_sub_2_with_pdf"
+            model="yodoo.knowledge.item">
+        <field name="name">Demo Item For Subcategory 2 With PDF</field>
+        <field name="item_format">pdf</field>
+        <field name="item_type_id" ref="yodoo_item_type_ts"/>
+        <field name="category_id"
+               ref="yodoo_demo_subcategory_2"/>
+        <field name="item_body_pdf" type="base64" file="yodoo_knowledge/demo/demo-pdf/sample-pdf-file.pdf"/>
+    </record>
+
+</odoo>

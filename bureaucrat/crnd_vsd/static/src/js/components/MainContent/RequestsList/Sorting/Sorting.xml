@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="crnd_vsd.Sorting" owl="1">
+        <div class="sorting_block" id="crnd_sorting_block">
+            <div t-attf-class="sorting_active {{ state.isOpen ? 'sorting_open' : '' }}" t-on-click="toogleSortingList">
+                <span t-if="props.activeObj.value">
+                    <t t-esc="props.activeObj.displayText"/>
+                </span>
+                <span t-else="">Sort by ...</span>
+
+                <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.5 5.09128L1.44422 0L0 1.45436L6.5 8L13 1.45436L11.5548 0L6.49898 5.09128H6.5Z" fill="#434C51"/>
+                </svg>
+            </div>
+
+            <div t-if="state.isOpen" class="sorting_list">
+                <t t-foreach="getSortingItems()" t-as="item" t-key="item_index">
+                    <div class="sorting_item" t-on-click="e => this.onClickSortingItem(item)">
+                        <t t-esc="item.displayText"/>
+                    </div>
+                </t>
+            </div>
+        </div>
+    </t>
+
+</templates>

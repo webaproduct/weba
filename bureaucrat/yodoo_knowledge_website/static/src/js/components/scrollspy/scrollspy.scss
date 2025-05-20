@@ -1,0 +1,25 @@
+#yodoo_knowledge_website_anchor_owl {
+    & .scrollspy_wrapper {
+        max-width: 200px;
+        position: fixed;
+        padding-top: 10px;
+        padding-right: 10px;
+    
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+    }
+    
+    & .scrollspy_link {
+        padding: 5px;
+        border-radius: 4px;
+        
+        transition: 0.3s ease;
+    }
+    & .scrollspy_link:hover {
+        background: #00000013;
+    }
+    & .scrollspy_link.active {
+        background: #bebebe4d !important;
+    }
+}

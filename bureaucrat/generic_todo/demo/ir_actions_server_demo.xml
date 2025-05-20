@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="server_action__add_request_response_text" model="ir.actions.server">
+        <field name="name">Add some text to description</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="generic_todo.model_generic_todo_server_action"/>
+        <field name="state">code</field>
+        <field name="code">
+            record.write({
+            'description': 'Add some text to description',
+            })
+        </field>
+    </record>
+
+    <record id="server_action__change_description_text" model="ir.actions.server">
+        <field name="name">Change description text</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="generic_todo.model_generic_todo_server_action"/>
+        <field name="state">code</field>
+        <field name="code">
+            record.write({
+            'description': 'Change text in current description',
+            })
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="view_yodoo_business_domain_search">
+        <field name="model">yodoo.business.domain</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="code"/>
+
+                <separator/>
+                <filter name="filter_archived"
+                        string="Archived"
+                        domain="[('active', '=', False)]"/>
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_yodoo_business_domain_tree">
+        <field name="model">yodoo.business.domain</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="code" />
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_yodoo_business_domain_form">
+        <field name="model">yodoo.business.domain</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+
+                    <field name="active" invisible="1"/>
+                    <widget name="web_ribbon" title="Archived"
+                            bg_color="bg-danger"
+                            invisible="active == True"/>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name"
+                                   placeholder="Name..."
+                                   class="oe_inline"/>
+                        </h1>
+                    </div>
+                    <notebook>
+                        <page string="Info" name="page_info">
+                            <group name="group_info_root">
+                                <field name="code"
+                                       placeholder="Code..."/>
+                            </group>
+                        </page>
+                        <page string="Description" name="page_description">
+                            <field name="description"
+                                   placeholder="Place category description here..."/>
+                        </page>
+                        <page string="Help" name="page_help">
+                            <separator colspan="4" string="Help"/>
+                            <field name="help_html"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_yodoo_business_domain_window">
+        <field name="name">Business Domain</field>
+        <field name="res_model">yodoo.business.domain</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_yodoo_business_domain_view"
+              parent="generic_rule.menu_generic_rule"
+              action="action_yodoo_business_domain_window"/>
+
+</odoo>

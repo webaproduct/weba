@@ -1,0 +1,1 @@
+- A separate mail template is now used for sending mail action buttons to assignee.

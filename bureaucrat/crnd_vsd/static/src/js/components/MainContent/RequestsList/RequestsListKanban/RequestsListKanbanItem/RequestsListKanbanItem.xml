@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="crnd_vsd.RequestsListKanbanItem" owl="1">
+        <div class="request_kanban_item" t-attf-style="border-color: {{ props.req.stage.bg_color }}" t-on-click="e => clickOnReqName(props.req.id)">
+            <div class="request_kanban_item_header">
+                <a href="#!" class="request_id">
+                    <t t-esc="props.req.name"/>
+                </a>
+                
+                <div class="request_kanban_item_footer_item">
+                    <div class="stage_color" t-attf-style="background: {{ props.req.stage.bg_color }}"></div>
+                    <t t-esc="props.req.stage.name"/>
+                </div>
+            </div>
+            <div class="request_kanban_item_content">
+                <!-- <div class="content_creator">
+                    <img t-attf-src="{{ props.req.created_by.image_url }}" class="user_photo"/>
+                    <t t-esc="props.req.created_by.name"/>
+                </div> -->
+                
+                <div class="content_preview">
+                    <t t-esc="props.req.title ? props.req.title?.substring(0, 150) : '-'" />
+                </div>
+            </div>
+            <div class="request_kanban_item_footer">
+                
+                <div class="request_kanban_item_category">
+                    <t t-esc="props.req.category.name || '-' " />
+                </div> 
+                <div class="request_kanban_item_footer_item req_time">
+                    <t t-esc="props.req.creation_date" />
+                </div>
+                <!-- <div class="request_kanban_item_footer_item">
+                    <t t-if="props.req.assigned_to.name">
+                        <img t-attf-src="{{ props.req.assigned_to.image_url }}" class="user_photo"/>
+                        <t t-esc="props.req.assigned_to.name" />
+                    </t>
+                    <t t-else="">
+                        
+                    </t>
+                </div> -->
+                <!-- <div class="request_kanban_item_footer_item">
+                    <div class="request_kanban_item_files">
+                        <img src="crnd_vsd/static/img/clip.svg" alt=""/>
+                        <t t-esc="props.req.message_attachment_count" />
+                    </div>
+                    <div class="request_kanban_item_messages">
+                        <img src="crnd_vsd/static/img/message.svg" alt=""/>
+                        <t t-esc="props.req.comments.length" />
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </t>
+
+</templates>

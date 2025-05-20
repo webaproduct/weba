@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="view_request_classifier_form">
+        <field name="model">request.classifier</field>
+        <field name="inherit_id" ref="generic_request.view_request_classifier_form"/>
+        <field name="arch" type="xml">
+            <div name="button_box" position="inside">
+                <button class="oe_stat_button" name="website_publish_button"
+                        type="object" icon="fa-globe">
+                    <field name="website_published" widget="website_publish_button"/>
+                </button>
+            </div>
+            <xpath expr="//notebook" position="inside">
+                <page string="Website Settings" name="web_settings">
+                    <group name="group_settings">
+                        <group name="group_settings_website" string="Website">
+                            <field name="website_ids" widget="many2many_tags" />
+                            <field name="website_request_text_help" string="Request Text Help" />
+                            <field name="website_request_title" string="Request Title" />
+                            <field name="website_custom_label_editor" string="Custom Label Editor" />
+                            <field name="website_custom_congratulation_note" string="Custom Congratulation Note" />
+                        </group>
+                    </group>
+                    <group name="visibility_settings" string="VISIBILITY RULES">
+                        <group name="create_settings_website" string="On Create Show">
+                            <field name="create_show_title" widget="boolean_toggle" string="Title" />
+                            <field name="create_show_text" widget="boolean_toggle" string="Text" />
+                            <field name="create_show_priority" widget="boolean_toggle" string="Priority" />
+                            <field name="create_show_files" widget="boolean_toggle" string="Files" />
+
+                        </group>
+                        <group name="read_settings_website" string="On Read Show">
+                            <field name="read_show_comments" widget="boolean_toggle" string="Comments" />
+                            <field name="read_show_created_by" widget="boolean_toggle" string="Created By" />
+                            <field name="read_show_responsible" widget="boolean_toggle" string="Responsible" />
+                            <field name="read_show_assignee" widget="boolean_toggle" string="Assignee" />
+                            <field name="read_show_updated_by" widget="boolean_toggle" string="Updated By " />
+                            <field name="read_show_closed_by" widget="boolean_toggle" string="Closed By" />
+                            <field name="read_show_priority" widget="boolean_toggle" string="Priority" />
+                            <field name="read_show_files" widget="boolean_toggle" string="Files" />
+                            <field name="read_show_subrequests" widget="boolean_toggle" string="Subrequests" />
+                            <field name="read_show_followers" widget="boolean_toggle" string="Followers" />
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_request_classifier_tree">
+        <field name="model">request.classifier</field>
+        <field name="inherit_id" ref="generic_request.view_request_classifier_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree/field[@name='kind_id']" position="after">
+                <field name="website_published" widget="website_button"/>
+                <field name="website_ids" widget="many2many_tags"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_request_classifier_search">
+        <field name="model">request.classifier</field>
+        <field name="inherit_id" ref="generic_request.view_request_classifier_search"/>
+        <field name="arch" type="xml">
+            <filter name="filter_archived" position="after">
+                <filter name="filter_website_published"
+                        string="Visible in Website"
+                        domain="[('website_published', '=', True)]"/>
+            </filter>
+        </field>
+    </record>
+</odoo>

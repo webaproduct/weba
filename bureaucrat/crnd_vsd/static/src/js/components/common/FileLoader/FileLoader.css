@@ -1,0 +1,11 @@
+.file_input_label {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.comment_file_item {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    
+}

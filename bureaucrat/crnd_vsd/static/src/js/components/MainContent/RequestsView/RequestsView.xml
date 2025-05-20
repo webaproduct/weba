@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="crnd_vsd.RequestsView" owl="1">
+        <MainComponentsContainer/>
+        
+        <div class="desktop req_header_info">
+            <a class="link_to_list" t-on-click="onClickHome" >
+                <img src="/crnd_vsd/static/img/arrow_left.svg" alt=""/>
+            </a>
+            
+
+            <div t-if="state.requestData?.history_length" class="req_pager">
+                <div class="req_pager_info">
+                    <t t-esc="state.requestData?.current_req_index"/>
+                    /
+                    <t t-esc="state.requestData?.history_length" />
+                </div>
+                <div class="record_pager navbar-light ">
+                    <a role="button" t-attf-class=" {{ state.requestData.prev_record_id ? '' : 'disabled' }}" t-attf-href="{{ getNavUrl(state.requestData.prev_record_id) || '#' }}" ><i class="oi oi-chevron-left" role="img" aria-label="Previous" title="Previous"></i></a>
+                    <!-- <div class="line"></div> -->
+                    <a role="button" t-attf-class="navbar-light {{ state.requestData.next_record_id ? '' : 'disabled' }}" t-attf-href="{{ getNavUrl(state.requestData.next_record_id) || '#' }}" ><i class="oi oi-chevron-right" role="img" aria-label="Next" title="Next"></i></a>
+                </div>
+            </div>
+
+            
+        </div>
+
+
+        <div 
+            class="wrapper"
+            t-attf-class="{{ state.isReqLoaded ? 'req_loaded' : '' }}"    
+        >
+            
+
+            <div class="req_left_side">
+                <div class="req_block">
+                    <div class="req_block_header req_block-padding navbar-light">
+                        <div class="req_name">
+                            <t t-if="state.requestData.parent_request">
+                                <div class="req_clickable" t-on-click="e => clickOnReqName(state.requestData.parent_request.id)">
+                                    <t t-esc="state.requestData.parent_request.name" />
+                                </div>
+                                /
+                            </t>
+                            <div>
+                                <t t-esc="state.requestData.name" />
+                            </div>
+                        </div>
+
+                        <div class="req_stage" style="margin-left: auto; display: flex; alig">
+                            <div class="req_status" t-attf-style="background: {{ state.requestData.stage.bg_color }}"></div>
+                            <t t-esc="state.requestData.stage.name" />
+                        </div>
+
+                        
+                        <!-- <a class="req_button">
+                            <img src="/crnd_vsd/static/img/chat.svg" alt=""/>
+                        </a>
+                        <a class="req_button">
+                            <img src="/crnd_vsd/static/img/chain.svg" alt=""/>
+                        </a> -->
+
+                        
+                    </div>
+
+                    <div class="req_data req_block-padding">
+                        <div t-if="isAllowed('subrequests') or state.requestData.routes.length" class="req_routes_block">
+                            <div t-if="isAllowed('subrequests')" class="req_route btn btn-secondary" t-on-click="onCreateSubReq">
+                                Create subrequest
+                            </div>
+
+
+
+                            <div t-if="state.requestData.routes.length" class="req_routes_list">
+                                <t t-foreach="state.requestData.routes" t-as="route" t-key="route.id">
+                                    <div t-attf-class="req_route btn btn-{{ route.button_style }}" t-on-click="e => this.changeStage(route.stage_to_id)">
+                                        <t t-esc="route.name"/>
+                                    </div>
+                                </t>
+                            </div>
+                        </div>
+
+
+
+                        <div class="req_content">
+                            <div class="req_content_title">
+                                <t t-if="state.isReqEdit">
+                                    <CRNDInputTextWidget 
+                                        _form_value="state.editRequestData.title" 
+                                        name="'title'" 
+                                        _updateInputValue="_updateInputValue"
+                                        required="false"
+                                    />
+                                </t>
+                                <t t-else="">
+                                    <div class="req_title">
+                                        <t t-esc="state.requestData.title" />
+                                    </div> 
+
+                                    <div t-if="state.requestData.can_edit" class="edit" t-on-click="e => this.toogleReqEdit(true)">
+                                        <img src="/crnd_vsd/static/img/edit.svg" alt=""/>
+                                    </div>
+                                </t>
+                            </div>
+
+                            <div class="req_text">
+                                <t t-if="state.isReqEdit">
+                                    <!-- <div class="edit" t-on-click="e => this.toogleReqEdit(false)">
+                                        <img src="/crnd_vsd/static/img/x.svg" alt=""/>
+                                    </div> -->
+                                    <CRNDInputTextareaWidget 
+                                        default_value="state.editRequestData.text" 
+                                        name="'text'" 
+                                        _updateInputValue="_updateInputValue"
+                                        required="false"
+                                    />
+                                    <div class="edit_req_buttons">
+                                        <button class="btn-primary" t-on-click="saveRequest">
+                                            Save
+                                        </button>
+                                        <button class="btn-secondary" t-on-click="e => this.toogleReqEdit(false)">
+                                            Close
+                                        </button>
+                                    </div>
+                                </t>
+                                <t t-else="">
+                                    <t t-out="getHtmlText(state.requestData.request_text)" />
+                                </t>
+                               
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                </div>
+
+                <div t-if="isAllowed('comments')" class="req_block">
+                    <CommentList 
+                        requestId="state.requestId"
+                        followers="state.requestData.followers"
+                        comments="state.requestData.comments"
+                        addComment="addComment"
+                        addFollower="addFollower"
+                        removeFollower="removeFollower"
+                    />
+                </div>
+
+            </div>
+
+
+            <div class="req_right_side">
+                <div class="req_block">
+                    <div 
+                        class="req_block_header collapsing_block_header req_block-padding navbar-light"
+                        data-bs-target="#collapseExampleInfoBlock"
+                        data-bs-toggle="collapse"
+                        aria-expanded="true"     
+                    >
+                        <div class="req_name">
+                            Information
+                        </div>
+
+                        <a t-if="state.requestData.internal_url" t-att-href="state.requestData.internal_url" class="req_link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 3V5H5V19H19V14H21V20C21 20.2652 20.8946 20.5196 20.7071 20.7071C20.5196 20.8946 20.2652 21 20 21H4C3.73478 21 3.48043 20.8946 3.29289 20.7071C3.10536 20.5196 3 20.2652 3 20V4C3 3.73478 3.10536 3.48043 3.29289 3.29289C3.48043 3.10536 3.73478 3 4 3H10ZM17.707 7.707L12 13.414L10.586 12L16.293 6.293L13 3H21V11L17.707 7.707Z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div 
+                        class="req_data req_block-padding collapse show"
+                        id="collapseExampleInfoBlock"
+                    >
+                        <div class="information_table">
+                            <div t-if="state.requestData.service and use_service" class="information_table_row">
+                                <div>
+                                    <div class="req_data_maintenance_icon">
+                                        <img class="" src="/crnd_vsd/static/img/service.svg" alt=""/>
+                                    </div>
+                                    Service
+                                </div>
+                                <div>
+                                    <t t-esc="state.requestData.service.name" />
+                                </div>
+                            </div>
+
+                            <div t-if="state.requestData.category" class="information_table_row">
+                                <div>
+                                    <div class="req_data_maintenance_icon">
+                                        <img class="" src="/crnd_vsd/static/img/category.svg" alt=""/>
+                                    </div>
+                                    Category
+                                </div>
+                                <div>
+                                    <t t-esc="state.requestData.category.name" />
+                                </div>
+                            </div>
+                            
+                            <div class="information_table_row" id="req_type">
+                                <div>
+                                    <div class="req_data_maintenance_icon">
+                                        <img class="" src="/crnd_vsd/static/img/type.svg" alt=""/>
+                                    </div>
+                                    Type
+                                </div>
+                                <div>
+                                    <t t-esc="state.requestData.type.name" />
+                                </div>
+                            </div>
+
+                            <div t-if="isAllowed('priority')" class="information_table_row">
+                                <div>
+                                    <div class="req_data_maintenance_icon">
+                                    
+                                    </div>
+                                    Priority
+                                </div>
+                                <div>
+                                    <div class="req_priority">
+                                        <t t-foreach="[1, 2, 3, 4, 5]" t-as="priority" t-key="priority_index">
+                                            <img t-if="getPriorityStatus(priority)" src="/crnd_vsd/static/img/star_fill.svg" alt=""/>
+                                            <img t-else="" src="/crnd_vsd/static/img/star.svg" alt=""/>
+                                        </t>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="information_table_row">
+                                <div>
+                                    <div class="req_data_maintenance_icon">
+                                    
+                                    </div>
+                                    Created at
+                                </div>
+                                <div>
+                                    <div>
+                                        <t t-esc="state.requestData.creation_date" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div t-if="isAllowed('created_by')" class="information_table_row">
+                                <div>
+                                    <div class="req_data_maintenance_icon">
+                                    
+                                    </div>
+                                    Author
+                                </div>
+                                <div>
+                                    <img t-attf-src="{{ state.requestData.created_by.image_url }}" alt="" class="user_photo"/>
+                                    <div>
+                                        <t t-esc="state.requestData.created_by.name" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div t-if="isAllowed('responsible')" class="information_table_row">
+                                <div>
+                                    <div class="req_data_maintenance_icon">
+                                    
+                                    </div>
+                                    Responsible
+                                </div>
+                                <div>
+                                    <t t-if="state.requestData.responsible.id">
+                                        <img t-attf-src="{{ state.requestData.responsible.image_url }}" alt="" class="user_photo"/>
+                                        <div>
+                                            <t t-esc="state.requestData.responsible.name" />
+                                        </div>
+                                    </t>
+                                    <t t-else="" >
+                                        -
+                                    </t>
+                                </div>
+                            </div>
+                            <div t-if="isAllowed('assignee')" class="information_table_row">
+                                <div>
+                                    <div class="req_data_maintenance_icon">
+                                    
+                                    </div>
+                                    Assignee
+                                </div>
+                                <div>
+                                    <t t-if="state.requestData.assigned_to.id">
+                                        <img t-attf-src="{{ state.requestData.assigned_to.image_url }}" alt="" class="user_photo"/>
+                                        <div>
+                                            <t t-esc="state.requestData.assigned_to.name" />
+                                        </div>
+                                    </t>
+                                    <t t-else="" >
+                                        -
+                                    </t>
+                                </div>
+                            </div>
+                            <div t-if="isAllowed('updated_by')" class="information_table_row">
+                                <div>
+                                    <div class="req_data_maintenance_icon">
+                                    
+                                    </div>
+                                    Last updated by
+                                </div>
+                                <div>
+                                    <t t-if="state.requestData.updated_by.id">
+                                        <img t-attf-src="{{ state.requestData.updated_by.image_url }}" alt="" class="user_photo"/>
+                                        <div>
+                                            <t t-esc="state.requestData.updated_by.name" />
+                                        </div>
+                                    </t>
+                                    <t t-else="" >
+                                        -
+                                    </t>
+                                </div>
+                            </div>
+                            <div t-if="isAllowed('closed_by')" class="information_table_row">
+                                <div>
+                                    <div class="req_data_maintenance_icon">
+                                    
+                                    </div>
+                                    Closed by
+                                </div>
+                                <div>
+                                    <t t-if="state.requestData.closed_by.id">
+                                        <img t-attf-src="{{ state.requestData.closed_by.image_url }}" alt="" class="user_photo"/>
+                                        <div>
+                                            <t t-esc="state.requestData.closed_by.name" />
+                                        </div>
+                                    </t>
+                                    <t t-else="" >
+                                        -
+                                    </t>
+                                </div>
+                            </div>
+                            <div t-if="isAllowed('files')" class="information_table_row" >
+                                <div>
+                                    <div class="req_data_maintenance_icon">
+                                        <img src="/crnd_vsd/static/img/clip.svg" alt="" class=""/>
+                                    </div>
+                                    Files
+                                </div>
+                                <div>
+                                    <t t-if="state.requestData.attachments.count">
+                                        <t t-esc="state.requestData.attachments.count" />
+                                    </t>
+                                    <t t-else="">
+                                        -
+                                    </t>
+                                </div>
+                            </div>
+                            <!-- <div class="information_table_row">
+                                <div>
+                                    Messages
+                                </div>
+                                <div>
+                                    <img src="/crnd_vsd/static/img/message.svg" alt=""/>
+                                    <t t-esc="state.requestData.comments.length" />
+                                </div>
+                            </div> -->
+                            <!-- <div class="information_table_row">
+                                <div>
+                                    Status
+                                </div>
+                                <div>
+                                    <t t-esc="state.requestData.stage.name" />
+                                    <div class="req_status" t-attf-style="background: {{ state.requestData.stage.bg_color }}"></div>
+                                </div>
+                            </div> -->
+                        </div>
+
+                        <div t-if="+state.requestData.attachments.count and isAllowed('files')" class="information_attachments">
+                            <t t-foreach="state.requestData.attachments.ids" t-as="attachment" t-key="attachment.id">
+                                <a t-att-href="attachment.url" class="req_additional_item doc" target="_blank">
+                                    <img src="/crnd_vsd/static/img/doc.svg" alt=""/>
+                                    <span>
+                                        <t t-esc="attachment.name"/>
+                                    </span>
+                                </a>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div t-if="state.requestData.subrequests.length and isAllowed('subrequests')" class="">
+                    <div 
+                        class="request_subblocks_title collapsing_block_header"
+                        data-bs-target="#collapseExampleSubrequests"
+                        data-bs-toggle="collapse"
+                        aria-expanded="true" 
+                    >
+                        Subrequests
+                    </div>
+
+                    <div class="subrequests_list collapse show" id="collapseExampleSubrequests">
+                        <t t-foreach="state.requestData.subrequests" t-as="subrequest" t-key="subrequest.id">
+                            <div class="req_block">
+                                <div class="req_block_header req_block-padding navbar-light">
+                                    <div class="req_name req_clickable" t-on-click="e => clickOnReqName(subrequest.id)">
+                                        <t t-esc="subrequest.name" />
+                                    </div>
+
+                                    <div class="req_stage" style="margin-left: auto; display: flex; alig">
+                                        <div class="req_status" t-attf-style="background: {{ subrequest.stage.bg_color }}"></div>
+                                        <t t-esc="subrequest.stage.name" />
+                                    </div>
+                                    <!-- <div class="req_status" t-attf-style="background: {{ subrequest.stage.bg_color }}"></div> -->
+
+                                    <!-- <div class="req_date">
+                                        <t t-esc="subrequest.creation_date" />
+                                    </div> -->
+                                </div>
+
+                                <div class="req_data req_block-padding">
+                                    <div class="req_classification_items">
+                                        <div t-if="subrequest.service and use_service" class="req_classification_item">
+                                            <img src="/crnd_vsd/static/img/service.svg" alt=""/>
+                                            <div class="text">
+                                                <div class="title">
+                                                    Service
+                                                </div>
+                                                <div class="desc">
+                                                    <t t-esc="subrequest.service.name" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div t-if="subrequest.category" class="req_classification_item">
+                                            <img src="/crnd_vsd/static/img/category.svg" alt=""/>
+                                            <div class="text">
+                                                <div class="title">
+                                                    Category
+                                                </div>
+                                                <div class="desc">
+                                                    <t t-esc="subrequest.category.name" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div t-if="subrequest.type" class="req_classification_item">
+                                            <img src="/crnd_vsd/static/img/type.svg" alt=""/>
+                                            <div class="text">
+                                                <div class="title">
+                                                    Type
+                                                </div>
+                                                <div class="desc">
+                                                    <t t-esc="subrequest.type.name" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="req_content">
+                                        <div class="req_text">
+                                            <t t-esc="subrequest.request_text_sample" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div
+                t-if="state.requestData?.history_length" 
+                class="mobile req_mobile_pager_info"
+            >
+                <t t-esc="state.requestData?.current_req_index"/>
+                /
+                <t t-esc="state.requestData?.history_length" />
+            </div>
+        </div>
+
+        <div class="mobile arrow_for_scroll left">
+            <img src="/crnd_vsd/static/img/arrow_left.svg" alt="" t-on-click="e => changeReqId(state.requestData.prev_record_id)"/>
+        </div>
+
+        <div class="mobile arrow_for_scroll right">
+            <img src="/crnd_vsd/static/img/arrow_left.svg" alt="" t-on-click="e => changeReqId(state.requestData.next_record_id)"/>
+        </div>
+    </t>
+</templates>

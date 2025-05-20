@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="generic_todo_list_todo_view_tree" model="ir.ui.view">
+        <field name="model">generic.todo.list.todo</field>
+        <field name="inherit_id" ref="generic_todo.generic_todo_view_tree_general"/>
+        <field name="mode">primary</field>
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='todo_type_id']" position="replace"/>
+        </field>
+    </record>
+
+    <record id="generic_todo_list_todo_view_form" model="ir.ui.view">
+        <field name="model">generic.todo.list.todo</field>
+        <field name="inherit_id" ref="generic_todo.generic_todo_view_form"/>
+        <field name="mode">primary</field>
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='todo_type_id']" position="replace"/>
+            <xpath expr="//group[@name='group_todo_config_implementation']" position="replace"/>
+            <xpath expr="//notebook/page[1]" position="before">
+                <page name="page_list_todo_todos" string="Todo List">
+                    <group name="group_list_todo_todos" colspan="4">
+                    </group>
+                    <field name="generic_todo_ids"/>
+                </page>
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page name="page_description" string="Description">
+                    <group name="group_todo_list_todo_description" colspan="4">
+                    </group>
+                    <field name="description" nolabel="1"/>
+                </page>
+                <page name="page_total_time" string="Total Time">
+                    <group name="group_todo_list_todo_total_time" colspan="4">
+                        <field name="total_time"
+                               widget="float_time"
+                               class="oe_inline w_auto mr4 ml4"
+                               help="Hours:minutes"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="generic_todo_list_todo_action" model="ir.actions.act_window">
+        <field name="name">Todo List Todos</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">generic.todo.list.todo</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_list_todo_todo_root"
+              name="Todo List Todos"
+              sequence="400"
+              parent="generic_todo.menu_todo_types_root"
+              action="generic_todo_list_todo_action"/>
+
+</odoo>

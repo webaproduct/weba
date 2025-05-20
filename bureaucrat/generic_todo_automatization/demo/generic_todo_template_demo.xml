@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="generic_todo_template_autostart" model="generic.todo.template">
+        <field name="name">Todo Template demo autostart</field>
+    </record>
+
+    <record id="generic_todo_template_autostart_line_demo_1" model="generic.todo.template.line">
+        <field name="name">Todo Autostart Template Line demo 1</field>
+        <field name="on_done_auto_start_next_todo" eval="True"/>
+        <field name="todo_template_id" ref="generic_todo_template_autostart"/>
+        <field name="todo_type_id" ref="generic_todo.generic_todo_type_simple"/>
+    </record>
+
+    <record id="generic_todo_template_autostart_line_demo_2" model="generic.todo.template.line">
+        <field name="name">Todo Autostart Template Line demo 2</field>
+        <field name="autostart_todo" eval="True"/>
+        <field name="todo_template_id" ref="generic_todo_template_autostart"/>
+        <field name="todo_type_id" ref="generic_todo.generic_todo_type_simple"/>
+    </record>
+
+    <record id="generic_todo_template_autostart_line_demo_3" model="generic.todo.template.line">
+        <field name="name">Todo Autostart Template Line demo 3</field>
+        <field name="on_done_auto_start_next_todo" eval="True"/>
+        <field name="todo_template_id" ref="generic_todo_template_autostart"/>
+        <field name="todo_type_id" ref="generic_todo.generic_todo_type_simple"/>
+    </record>
+
+    <record id="generic_todo_template_autostart_line_demo_4" model="generic.todo.template.line">
+        <field name="name">Todo Autostart Template Line demo 4</field>
+        <field name="on_done_auto_start_next_todo" eval="True"/>
+        <field name="todo_template_id" ref="generic_todo_template_autostart"/>
+        <field name="todo_type_id" ref="generic_todo.generic_todo_type_simple"/>
+    </record>
+
+</odoo>

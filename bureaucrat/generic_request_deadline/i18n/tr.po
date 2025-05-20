@@ -1,0 +1,214 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* generic_request_deadline
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-20 17:46+0000\n"
+"PO-Revision-Date: 2023-04-20 17:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: generic_request_deadline
+#: model_terms:ir.ui.view,arch_db:generic_request_deadline.view_request_request_deadline_form
+msgid "Action change deadline date"
+msgstr ""
+
+#. module: generic_request_deadline
+#: model_terms:ir.ui.view,arch_db:generic_request_deadline.request_wizard_change_deadline_form_view
+msgid "Apply"
+msgstr ""
+
+#. module: generic_request_deadline
+#: model_terms:ir.ui.view,arch_db:generic_request_deadline.request_wizard_change_deadline_form_view
+msgid "Cancel"
+msgstr ""
+
+#. module: generic_request_deadline
+#: model:ir.model.fields,field_description:generic_request_deadline.field_request_wizard_change_deadline__deadline_change_reason_id
+msgid "Change reason"
+msgstr ""
+
+#. module: generic_request_deadline
+#: model:ir.actions.act_window,name:generic_request_deadline.action_request_wizard_change_deadline
+msgid "Change request deadline"
+msgstr ""
+
+#. module: generic_request_deadline
+#: model:ir.model.fields,field_description:generic_request_deadline.field_request_deadline_change_reason__code
+msgid "Code"
+msgstr ""
+
+#. module: generic_request_deadline
+#: model:ir.model.fields,field_description:generic_request_deadline.field_request_event__deadline_change_comment
+#: model:ir.model.fields,field_description:generic_request_deadline.field_request_wizard_change_deadline__deadline_change_comment
+msgid "Comment"
+msgstr ""
+
+#. module: generic_request_deadline
+#: model:ir.model.fields,field_description:generic_request_deadline.field_request_deadline_change_reason__create_uid
+#: model:ir.model.fields,field_description:generic_request_deadline.field_request_wizard_change_deadline__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: generic_request_deadline
+#: model:ir.model.fields,field_description:generic_request_deadline.field_request_deadline_change_reason__create_date
+#: model:ir.model.fields,field_description:generic_request_deadline.field_request_wizard_change_deadline__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: generic_request_deadline
+#: model:ir.model.fields,field_description:generic_request_deadline.field_request_wizard_change_deadline__deadline_date
+#: model_terms:ir.ui.view,arch_db:generic_request_deadline.view_request_deadline_request_type_form
+msgid "Deadline"
+msgstr ""
+
+#. module: generic_request_deadline
+#: code:addons/generic_request_deadline/models/request_request.py:0
+#, python-format
+msgid "Deadline Change Events"
+msgstr ""
+
+#. module: generic_request_deadline
+#: model:ir.model.fields,field_description:generic_request_deadline.field_request_request__deadline_set
+msgid "Deadline Set"
+msgstr ""
+
+#. module: generic_request_deadline
+#: model:ir.model.fields,field_description:generic_request_deadline.field_request_request__deadline_last_change_comment
+msgid "Deadline change comment"
+msgstr ""
+
+#. module: generic_request_deadline
+#: model:ir.model.fields,field_description:generic_request_deadline.field_request_request__deadline_change_events_count
+msgid "Deadline change events"
+msgstr ""
+
+#. module: generic_request_deadline
+#: model:ir.model.fields,field_description:generic_request_deadline.field_request_request__deadline_last_change_reason_id
+msgid "Deadline change reason"
+msgstr ""
+
+#. module: generic_request_deadline
+#: model:ir.actions.act_window,name:generic_request_deadline.action_deadline_change_reasons_window
+#: model:ir.ui.menu,name:generic_request_deadline.menu_deadline_change_reason_view
+msgid "Deadline change reasons"
+msgstr ""
+
+#. module: generic_request_deadline
+#: model:ir.model.fields,field_description:generic_request_deadline.field_request_deadline_change_reason__display_name
+#: model:ir.model.fields,field_description:generic_request_deadline.field_request_wizard_change_deadline__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: generic_request_deadline
+#: model:ir.model.fields,field_description:generic_request_deadline.field_request_deadline_change_reason__id
+#: model:ir.model.fields,field_description:generic_request_deadline.field_request_wizard_change_deadline__id
+msgid "ID"
+msgstr ""
+
+#. module: generic_request_deadline
+#: model:ir.model.fields,field_description:generic_request_deadline.field_request_deadline_change_reason____last_update
+#: model:ir.model.fields,field_description:generic_request_deadline.field_request_wizard_change_deadline____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: generic_request_deadline
+#: model:ir.model.fields,field_description:generic_request_deadline.field_request_deadline_change_reason__write_uid
+#: model:ir.model.fields,field_description:generic_request_deadline.field_request_wizard_change_deadline__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: generic_request_deadline
+#: model:ir.model.fields,field_description:generic_request_deadline.field_request_deadline_change_reason__write_date
+#: model:ir.model.fields,field_description:generic_request_deadline.field_request_wizard_change_deadline__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: generic_request_deadline
+#: model:ir.model.fields,field_description:generic_request_deadline.field_request_deadline_change_reason__name
+#: model_terms:ir.ui.view,arch_db:generic_request_deadline.view_request_deadline_change_reason_form
+msgid "Name"
+msgstr ""
+
+#. module: generic_request_deadline
+#: model:request.deadline.change.reason,name:generic_request_deadline.deadline_change_reason_additional_info
+msgid "New information"
+msgstr ""
+
+#. module: generic_request_deadline
+#: model:ir.model.fields,field_description:generic_request_deadline.field_request_deadline_change_reason__reason
+#: model:ir.model.fields,field_description:generic_request_deadline.field_request_event__deadline_change_reason_id
+#: model_terms:ir.ui.view,arch_db:generic_request_deadline.view_request_deadline_change_reason_form
+msgid "Reason"
+msgstr ""
+
+#. module: generic_request_deadline
+#: model:ir.model,name:generic_request_deadline.model_request_request
+#: model:ir.model.fields,field_description:generic_request_deadline.field_request_wizard_change_deadline__request_id
+msgid "Request"
+msgstr ""
+
+#. module: generic_request_deadline
+#: model:ir.model,name:generic_request_deadline.model_request_event
+msgid "Request Event"
+msgstr ""
+
+#. module: generic_request_deadline
+#: model:ir.model,name:generic_request_deadline.model_request_type
+msgid "Request Type"
+msgstr ""
+
+#. module: generic_request_deadline
+#: model:ir.model,name:generic_request_deadline.model_request_wizard_change_deadline
+msgid "Request Wizard: Change Deadline"
+msgstr ""
+
+#. module: generic_request_deadline
+#: model:request.deadline.change.reason,name:generic_request_deadline.deadline_change_reason_resource
+msgid "Resource reallocation"
+msgstr ""
+
+#. module: generic_request_deadline
+#: model_terms:ir.ui.view,arch_db:generic_request_deadline.view_request_request_deadline_form
+msgid "Show deadline change events"
+msgstr ""
+
+#. module: generic_request_deadline
+#: model:request.deadline.change.reason,name:generic_request_deadline.deadline_change_reason_technical
+msgid "Technical difficulties"
+msgstr ""
+
+#. module: generic_request_deadline
+#: model:ir.model.fields,help:generic_request_deadline.field_request_request__deadline_last_change_comment
+msgid "The last changing deadline comment"
+msgstr ""
+
+#. module: generic_request_deadline
+#: model:ir.model.fields,help:generic_request_deadline.field_request_request__deadline_last_change_reason_id
+msgid "The last changing deadline reason"
+msgstr ""
+
+#. module: generic_request_deadline
+#: model:ir.model.fields,field_description:generic_request_deadline.field_request_request__strict_deadline
+#: model:ir.model.fields,field_description:generic_request_deadline.field_request_type__use_strict_deadline
+msgid "Use Strict Deadline"
+msgstr ""
+
+#. module: generic_request_deadline
+#: model:ir.model.fields,help:generic_request_deadline.field_request_request__strict_deadline
+#: model:ir.model.fields,help:generic_request_deadline.field_request_type__use_strict_deadline
+msgid "Use wizard to change deadline with reasons of changing"
+msgstr ""
+
+#. module: generic_request_deadline
+#: model:ir.model,name:generic_request_deadline.model_request_deadline_change_reason
+msgid "request.deadline.change.reason"
+msgstr ""

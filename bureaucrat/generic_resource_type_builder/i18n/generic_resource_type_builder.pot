@@ -1,0 +1,716 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* generic_resource_type_builder
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid "<code>datetime</code> (Python module)"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid "<code>dateutil</code> (Python module)"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid "<code>self</code> (the set of records to compute)"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid "<code>time</code> (Python module)"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid ""
+"<i class=\"fa fa-info-circle\" title=\"Info\"/>\n"
+"                        You can drag and drop fields in edit mode to change the sequence.\n"
+"                        <i class=\"fa fa-sort\" title=\"Sort\"/>\n"
+"                        <br/>\n"
+"                        <i class=\"fa fa-info-circle\" title=\"Info\"/>\n"
+"                        <b> Note: reload page after saving for the changes to take effect!</b>"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid "Access Rights"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid "Advanced Properties"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid "Base Properties"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.resource_wizard_create_type_form_view
+msgid "Cancel"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__compute
+msgid ""
+"Code to compute the value of the field.\n"
+"Iterate on the recordset 'self' and assign the field's value:\n"
+"\n"
+"    for record in self:\n"
+"        record['size'] = len(record.name)\n"
+"\n"
+"Modules time, datetime, dateutil are available."
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__column1
+msgid "Column 1"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__column2
+msgid "Column 2"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__column2
+msgid "Column referring to the record in the comodel table"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__column1
+msgid "Column referring to the record in the model table"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__complete_name
+msgid "Complete Name"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__compute
+msgid "Compute"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid ""
+"Computed fields are defined with the fields\n"
+"                                                <strong>Dependencies</strong> and <strong>Compute</strong>."
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__copied
+msgid "Copied"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.resource_wizard_create_type_form_view
+msgid "Create"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.actions.act_window,name:generic_resource_type_builder.action_resource_wizard_create_type
+msgid "Create Resource Type"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__create_uid
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_form_field_position__create_uid
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_tree_field_position__create_uid
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_wizard_create__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__create_date
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_form_field_position__create_date
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_tree_field_position__create_date
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_wizard_create__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__currency_field
+msgid "Currency field"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type__custom_field_ids
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_form_field_position__custom_field_id
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_tree_field_position__custom_field_id
+msgid "Custom Field"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__depends
+msgid "Dependencies"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__depends
+msgid ""
+"Dependencies of compute method; a list of comma-separated field names, like\n"
+"\n"
+"    name, partner_id.name"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__display_name
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_form_field_position__display_name
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_tree_field_position__display_name
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_wizard_create__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__domain
+msgid "Domain"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_wizard_create__enable_chatter
+msgid "Enable Chatter"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_wizard_create__enable_mail_activity
+msgid "Enable Mail Activity"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__tracking
+msgid "Enable Ordered Tracking"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__group_expand
+msgid "Expand Groups"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type__field_form_position_ids
+msgid "Field Form Position"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__help
+msgid "Field Help"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__field_description
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_form_field_position__custom_field_name
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_tree_field_position__custom_field_name
+msgid "Field Label"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__name
+msgid "Field Name"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type__field_tree_position_ids
+msgid "Field Tree Position"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__ttype
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_form_field_position__custom_field_ttype
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_tree_field_position__custom_field_ttype
+msgid "Field Type"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.constraint,message:generic_resource_type_builder.constraint_generic_resource_type_view_form_field_position_custom_field_id_uniq
+msgid "Field in Form View must be unique!"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.constraint,message:generic_resource_type_builder.constraint_generic_resource_type_view_tree_field_position_custom_field_id_uniq
+msgid "Field in Tree View must be unique!"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid "Fields"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid "Fields Description"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__relation_field
+msgid ""
+"For one2many fields, the field on the target model that implement the "
+"opposite many2one relationship"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__relation
+msgid "For relationship fields, the technical name of the target model"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__form_position_id
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__form_position_ids
+msgid "Form Position"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid "Form View"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model,name:generic_resource_type_builder.model_generic_resource_type
+msgid "Generic Resource Type"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__groups
+msgid "Groups"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid "How to define a computed field"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__id
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_form_field_position__id
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_tree_field_position__id
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_wizard_create__id
+msgid "ID"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__group_expand
+msgid ""
+"If checked, all the records of the target model will be included\n"
+"in a grouped result (e.g. 'Group By' filters, Kanban columns, etc.).\n"
+"Note that it can significantly reduce performance if the target model\n"
+"of the field contains a lot of records; usually used on models with\n"
+"few records (e.g. Stages, Job Positions, Event Types, etc.)."
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__tracking
+msgid ""
+"If set every modification done to this field is tracked. Value is used to "
+"order tracking values."
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__show_on_form
+msgid ""
+"If set to True, then system will generate default form position record for "
+"this field"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__show_on_tree
+msgid ""
+"If set to True, then system will generate tree position record for this "
+"field"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__modules
+msgid "In Apps"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__index
+msgid "Indexed"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__ir_model_custom_field_id
+msgid "Ir Model Custom Field"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__write_uid
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_form_field_position__write_uid
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_tree_field_position__write_uid
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_wizard_create__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__write_date
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_form_field_position__write_date
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_tree_field_position__write_date
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_wizard_create__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields.selection,name:generic_resource_type_builder.selection__generic_resource_type_view_form_field_position__place_on_form__left_slot
+msgid "Left slot"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__modules
+msgid "List of modules in which the field is defined"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid "Miscellaneous"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__model_id
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_wizard_create__model
+msgid "Model"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type__model_form_view_id
+msgid "Model Form View"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_wizard_create__model_group_ids
+msgid "Model Groups"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__model
+msgid "Model Name"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type__model_tree_view_id
+msgid "Model Tree View"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_wizard_create__name
+msgid "Name"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__currency_field
+msgid "Name of the Many2one field holding the res.currency"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__on_delete
+msgid "On Delete"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__on_delete
+msgid "On delete property for many2one fields"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid ""
+"Other features are accessible through <code>self</code>, like\n"
+"                                                <code>self.env</code>, etc."
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_form_field_position__place_on_form
+msgid "Place On Form"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid "Position on Form"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid "Properties"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__readonly
+msgid "Readonly"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__related
+msgid "Related Field"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__relation
+msgid "Related Model"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__related_field_id
+msgid "Related field"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__relation_field
+msgid "Relation Field"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__relation_table
+msgid "Relation Table"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__relation_field_id
+msgid "Relation field"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__required
+msgid "Required"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__resource_type_id
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_form_field_position__resource_type_id
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_tree_field_position__resource_type_id
+msgid "Resource Type"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model,name:generic_resource_type_builder.model_generic_resource_type_wizard_create
+msgid "Resource Wizard: Create Type"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields.selection,name:generic_resource_type_builder.selection__generic_resource_type_view_form_field_position__place_on_form__right_slot
+msgid "Right slot"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__sanitize
+msgid "Sanitize HTML"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__sanitize_attributes
+msgid "Sanitize HTML Attributes"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__sanitize_form
+msgid "Sanitize HTML Form"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__sanitize_style
+msgid "Sanitize HTML Style"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__sanitize_tags
+msgid "Sanitize HTML Tags"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__sanitize_overridable
+msgid "Sanitize HTML overridable"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__selectable
+msgid "Selectable"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__selection_ids
+msgid "Selection Options"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__selection
+msgid "Selection Options (Deprecated)"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_form_field_position__sequence
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_tree_field_position__sequence
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid "Sequence"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__show_on_form
+msgid "Show On Form"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__show_on_tree
+msgid "Show On Tree"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__size
+msgid "Size"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__store
+msgid "Stored"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__strip_classes
+msgid "Strip Class Attribute"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__strip_style
+msgid "Strip Style Attribute"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__tree_position_ids
+msgid "Technical field to keep reference to related tree_position_id"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__related
+msgid ""
+"The corresponding related field, if any. This must be a dot-separated list "
+"of field names."
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid ""
+"The field <strong>Compute</strong> is the Python code to\n"
+"                                                compute the value of the field on a set of records. The value of\n"
+"                                                the field must be assigned to each record with a dictionary-like\n"
+"                                                assignment."
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid ""
+"The field <strong>Dependencies</strong> lists the fields that\n"
+"                                                the current field depends on. It is a comma-separated list of\n"
+"                                                field names, like <code>name, size</code>. You can also refer to\n"
+"                                                fields accessible through other relational fields, for instance\n"
+"                                                <code>partner_id.company_id.name</code>."
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__model_id
+msgid "The model this field belongs to"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid "The only predefined variables are"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#. odoo-python
+#: code:addons/generic_resource_type_builder/wizard/generic_resource_type_wizard_create.py:0
+#, python-format
+msgid ""
+"The only users '%(group_system)s' group have permissions to create "
+"'%(resource_type)s'!"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__domain
+msgid ""
+"The optional domain to restrict possible values for relationship fields, "
+"specified as a Python expression defining a list of triplets. For example: "
+"[('color','=','red')]"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__model
+msgid "The technical name of the model this field belongs to"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__translate
+msgid "Translatable"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__tree_position_id
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__tree_position_ids
+msgid "Tree Position"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid "Tree View"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__state
+msgid "Type"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__relation_table
+msgid ""
+"Used for custom many2many fields to define a custom relation table name"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__copied
+msgid "Whether the value is copied when duplicating a record."
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__store
+msgid "Whether the value is stored in the database."
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__translate
+msgid ""
+"Whether values for this field can be translated (enables the translation "
+"mechanism for that field)"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid ""
+"for record in self:\n"
+"        record['size'] = len(record.name)"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model,name:generic_resource_type_builder.model_generic_resource_type_custom_field
+msgid "generic.resource.type.custom.field"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model,name:generic_resource_type_builder.model_generic_resource_type_view_form_field_position
+msgid "generic.resource.type.view.form.field.position"
+msgstr ""
+
+#. module: generic_resource_type_builder
+#: model:ir.model,name:generic_resource_type_builder.model_generic_resource_type_view_tree_field_position
+msgid "generic.resource.type.view.tree.field.position"
+msgstr ""

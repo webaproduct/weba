@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="crnd_vsd.CRNDInputIntegerWidget" owl="1">
+        <div 
+            class="form_inputs_item"
+            t-attf-class="{{ props?.required ? 'required' : '' }}"
+        >
+            <div t-if="props.title" class="form_inputs_item_title">
+                <t t-esc="props.title" />
+            </div>
+            
+            <input 
+                type="number" 
+                t-att-placeholder="props.placeholder"
+                t-model="state.number" 
+                t-on-input="updateInputValue"
+            />
+        </div>
+    </t>
+
+</templates>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Add tag categories to classifiers that use the Generic Question request type -->
+    <record id="crnd_vsd.classifier_request_type_generic_website_support" model="request.classifier">
+        <field name="tag_category_ids" eval="[(4, ref('generic_request.tag_category_severity')), (4, ref('generic_request.tag_category_priority')), (4, ref('generic_request.tag_category_platform'))]"/>
+    </record>
+    
+    <record id="crnd_vsd.classifier_request_type_generic_question_categ_gen_question_no_serv" model="request.classifier">
+        <field name="tag_category_ids" eval="[(4, ref('generic_request.tag_category_severity')), (4, ref('generic_request.tag_category_priority')), (4, ref('generic_request.tag_category_platform'))]"/>
+    </record>
+    
+    <record id="crnd_vsd.request_classifier_type_generic_nocateg_noserv" model="request.classifier">
+        <field name="tag_category_ids" eval="[(4, ref('generic_request.tag_category_severity')), (4, ref('generic_request.tag_category_priority')), (4, ref('generic_request.tag_category_platform'))]"/>
+    </record>
+</odoo>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="view_request_deadline_request_type_form">
+        <field name="model">request.type</field>
+        <field name="inherit_id" ref="generic_request.view_request_type_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='group_settings_deadline']" position="inside">
+                    <field name="use_strict_deadline" widget="boolean_toggle"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

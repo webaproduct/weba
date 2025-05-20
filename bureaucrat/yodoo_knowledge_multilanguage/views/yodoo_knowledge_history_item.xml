@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="yodoo_knowledge_item_history_view_tree" model="ir.ui.view">
+        <field name="model">yodoo.knowledge.item.history</field>
+        <field name="inherit_id" ref="yodoo_knowledge.yodoo_knowledge_item_history_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='commit_summary']" position="after">
+                <field name="language_id" />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="yodoo_knowledge_item_history_view_form" model="ir.ui.view">
+        <field name="model">yodoo.knowledge.item.history</field>
+        <field name="inherit_id" ref="yodoo_knowledge.yodoo_knowledge_item_history_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='item_id']" position="after">
+                <field name="language_id" widget="selection"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="yodoo_knowledge_item_history_view_searchpanel">
+        <field name="model">yodoo.knowledge.item.history</field>
+        <field name="inherit_id" ref="yodoo_knowledge.yodoo_knowledge_item_history_view_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="/search" position="inside">
+                <searchpanel>
+                    <field name="item_format" string="Item Format"/>
+                    <field name="language_id" string="Language"/>
+                </searchpanel>
+            </xpath>
+        </field>
+    </record>
+</odoo>

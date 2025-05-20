@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="crnd_vsd.CRNDInputTextareaWidget" owl="1">
+        <div 
+            class="form_inputs_item crnd_textarea_widget_wrapper"
+            t-attf-class="{{ props?.required ? 'required' : '' }}"
+        >
+            <div t-if="props.title" class="form_inputs_item_title">
+                <t t-esc="props.title" />
+            </div>
+
+            <textarea t-ref="crnd_textarea_wysiwyg" name="content" class="o_wysiwyg_loader">
+            </textarea>
+        </div>
+    </t>
+
+</templates>

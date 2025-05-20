@@ -1,0 +1,11 @@
+<odoo noupdate="0">
+
+    <record id="ir_sequence_number" model="ir.sequence">
+        <field name="name">Auto numbering field 'number' in account_move</field>
+        <field name="code">numbering.number.account.move</field>
+        <field name="padding">5</field>
+        <field name="number_increment">1</field>
+        <field name="number_next_actual">1</field>
+    </record>
+
+</odoo>

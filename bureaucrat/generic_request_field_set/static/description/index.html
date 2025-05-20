@@ -1,0 +1,138 @@
+<section style="max-width: 896px; margin: 0 auto; text-align: center;">
+    <h1 style="color:#875A7B;">Generic Request Field Set</h1>
+    <h3>ITSM | Helpdesk | Service Desk</h3>
+    <p>
+        <a href="https://www.odoo.com/documentation/user/15.0/legal/licenses/licenses.html#odoo-apps">
+            <img alt="License: OPL-1" src="https://img.shields.io/badge/license-OPL--1-blue.png" />
+        </a>
+        <a href="https://crnd.pro/">
+            <img alt="CR&amp;D" src="https://img.shields.io/badge/maintainer-CR&amp;D-purple.png" />
+        </a>
+    </p>
+</section>
+
+<section style="max-width: 896px; margin: 0 auto;">
+    <p>Generic Request Field Set allows users to associate custom field sets with requests, providing enhanced data collection capabilities tailored to specific request classifiers.</p>
+
+    <h3><i>Key Features:</i></h3>
+    <ul>
+        <li>Link custom field sets to request classifiers</li>
+        <li>Configure field sets through model inheritance</li>
+        <li>Access field sets directly from request forms</li>
+        <li>Keep request data structured and organized</li>
+    </ul>
+
+    <h3><i>Understanding Field Sets:</i></h3>
+    <p>Field sets allow you to associate additional structured data with your requests. Each field set represents a collection of custom fields that can be filled by users when creating or updating requests.</p>
+
+    <h3><i>Associating Field Sets with Request Classifiers:</i></h3>
+    <p>Field set types are defined in the Request Classifier module. They determine which models will be used to store additional data for specific request classifiers, allowing different types, service, category (classifiers) of requests to collect different sets of additional data.</p>
+    <img src="fieldset_concept.png" alt="Request Classifier Configuration" style="max-width: 100%">
+
+    <h3><i>User Experience:</i></h3>
+    <p>Users can access and fill field sets directly from the request form by clicking the 'Fields' button.</p>
+    <img src="buttons.png" alt="Field Set Form" style="max-width: 100%">
+    <img src="fieldset_form.png" alt="Field Set Form" style="max-width: 100%">
+
+    <h3><i>Example Field Set Included:</i></h3>
+    <p>The module includes an example Field Set Type called "Test Incident Field Set" (model: <code>test.incident.field.set.value</code>), which demonstrates how field sets can be created and used. This example field set contains the following fields:</p>
+    <ul>
+        <li><strong>char_1</strong> - Character field (text)</li>
+        <li><strong>integer_1</strong> - Integer field (whole numbers)</li>
+        <li><strong>float_1</strong> - Float field (decimal numbers)</li>
+        <li><strong>date_1</strong> - Date field</li>
+        <li><strong>datetime_1</strong> - Datetime field (date with time)</li>
+        <li><strong>many2one_1_id</strong> - Many2one relation to Partners (single selection)</li>
+        <li><strong>many2many_1_ids</strong> - Many2many relation to Partners (multiple selections)</li>
+    </ul>
+    <p>This example demonstrates the various field types that can be used in your own custom field sets.</p>
+
+    <h3><i>Creating Custom Field Sets:</i></h3>
+    <p>There are two ways to create custom field sets:</p>
+    <ol>
+        <li>
+            <strong>Programmatically through a custom module:</strong>
+            <ul>
+                <li>Create a new Python module with a model that inherits from <code>generic.request.field.set.mixin</code></li>
+                <li>Define your custom fields in the model</li>
+                <li>Create views for your model</li>
+                <li>Register your model as a field set type in data files</li>
+            </ul>
+            <p>Example of model definition:</p>
+            <pre>
+from odoo import models, fields
+
+class MyCustomFieldSet(models.Model):
+    _name = 'my.custom.field.set'
+    _description = 'My Custom Field Set'
+    _inherit = ['generic.request.field.set.mixin']
+    
+    my_char_field = fields.Char(string="Text Field")
+    my_boolean_field = fields.Boolean(string="Yes/No Field")
+    my_selection_field = fields.Selection([
+        ('option1', 'Option 1'),
+        ('option2', 'Option 2'),
+    ], string="Selection Field")
+            </pre>
+            
+            <p>Example of XML data file to register your model as a field set type:</p>
+            <pre>
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;odoo noupdate="1"&gt;
+    &lt;record id="field_set_type_my_custom" model="field.set.type"&gt;
+        &lt;field name="name"&gt;My Custom Field Set&lt;/field&gt;
+        &lt;field name="field_set_model_id" ref="model_my_custom_field_set"/&gt;
+    &lt;/record&gt;
+&lt;/odoo&gt;
+            </pre>
+            
+            <p>Then include this XML file in your module's __manifest__.py:</p>
+            <pre>
+'data': [
+    'data/my_custom_field_set_type.xml',
+],
+            </pre>
+        </li>
+        <li>
+            <strong>Through the user interface (recommended):</strong>
+            <p>For easier creation and management of field sets, you can use the <code>generic_request_field_set_builder</code> module, which provides a user-friendly interface for:</p>
+            <ul>
+                <li>Creating new field set models without programming</li>
+                <li>Adding custom fields with different types</li>
+                <li>Generating views automatically</li>
+                <li>Managing field set configurations directly from the UI</li>
+            </ul>
+            <p>This is the recommended approach for most users who don't want to write custom code.</p>
+        </li>
+    </ol>
+</section>
+
+<section style="max-width: 896px; margin: 0 auto; text-align: center;">
+    <h2 style="color:#875A7B;">Launch Your Own ITSM System in 60 Seconds</h2>
+    <p>
+        Create your own <a href="https://yodoo.systems/saas/templates">Bureaucrat ITSM</a> database.
+        <br>
+        <a href="https://yodoo.systems">
+            <img alt="yodoo.systems" src="https://img.shields.io/badge/powered%20by-yodoo.systems-00a09d.png"/>
+        </a>
+    </p>
+</section>
+
+<section style="max-width: 896px; margin: 0 auto; text-align: center;">
+    <h2 style="color: #138c33">Maintainer</h2>
+    <a href="https://crnd.pro/"><img alt="CR&amp;D" src="https://crnd.pro/web/image/3699/300x140/crnd.png"/></a>
+    <div>
+        <a class="btn btn-primary mb16" href="https://crnd.pro"><i class="fa fa-globe"></i> Website</a>
+        <a class="btn btn-primary mb16" href="mailto:info@crnd.pro"><i class="fa fa-envelope"></i> Contact Us</a>
+        <a class="btn btn-primary mb16" href="https://crnd.pro/requests"><i class="fa fa-bug"></i> Report Bug</a>
+        <a class="btn btn-primary mb16" href="https://crnd.pro/requests"><i class="fa fa-bullhorn"></i> Requests</a>
+    </div>
+    <div>
+        <a class="btn btn-primary mb16" href="https://crnd.pro/blog"><i class="fa fa-quote-right"></i> Blog</a>
+        <a class="btn btn-primary mb16" href="https://www.youtube.com/channel/UCRSGFeR0NgqflPmzpDjL2tw">
+            <i class="fa fa-youtube-play"></i> YouTube Channel
+        </a>
+    </div>
+    <p>This module is maintained by <a href="https://crnd.pro/">Center of Research &amp; Development</a>.</p>
+    <p>We offer Odoo support, implementation, customization, third-party development, integration, and consulting services.</p>
+</section>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+    <t t-name="crnd_vsd.FileLoader" owl="1">
+        <div class="file_loader_wrapper">
+            <t t-foreach="props.files" t-as="file" t-key="file_index">
+                <div class="comment_file_item">
+                    <img src="/crnd_vsd/static/img/x.svg" t-on-click="e => this.props.removeFile(file)"/>
+                    <t t-esc="file.name"/>
+                </div>
+            </t>
+        
+            <input type="file" id="file_input" hidden="true" multiple="true" t-ref="file_input" t-on-change="this.fileInputLoad"/>
+            <label for="file_input" class="file_input_label">
+                <div class="btn btn-primary" >
+                    <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.7925 7.2465C13.4503 7.04892 13.0077 7.17908 12.8003 7.53834L9.0509 14.0325C8.01555 15.8258 5.79188 16.4824 4.08071 15.4945C2.36955 14.5065 1.82634 12.2525 2.86169 10.4592L7.36169 2.66495C7.9822 1.5902 9.31618 1.19529 10.3429 1.78806C11.3696 2.38083 11.6946 3.73353 11.0741 4.80828L7.32289 11.3055C7.11547 11.6648 6.67005 11.7933 6.33071 11.5973C5.99138 11.4014 5.87994 10.9514 6.08737 10.5922L9.08795 5.39501C9.29537 5.03574 9.18394 4.58575 8.84461 4.38984C8.50237 4.19225 8.05985 4.32241 7.85243 4.68168L4.85184 9.87885C4.22958 10.9566 4.55633 12.3063 5.58303 12.8991C6.60973 13.4918 7.94195 13.1 8.56421 12.0222L12.3136 5.52801C13.3461 3.73305 12.8 1.47732 11.0917 0.491052C9.38344 -0.495218 7.15977 0.161383 6.12441 1.95466L1.62441 9.74889C0.174219 12.2607 0.940292 15.4147 3.33013 16.7945C5.71996 18.1743 8.83623 17.2577 10.2847 14.7489L14.0358 8.25167C14.2433 7.89241 14.1347 7.44409 13.7925 7.2465Z" fill="currentColor"/>
+                    </svg>
+                </div>
+                <t t-if="props.files.length">
+                    <t t-esc="props.files.length" /> files
+                </t>
+                <t t-else="">
+                    No files choosen
+                </t>
+            </label>
+        </div>
+    </t>
+
+</templates>

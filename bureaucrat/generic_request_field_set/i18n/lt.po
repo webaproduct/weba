@@ -1,0 +1,186 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* generic_request_field_set
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-19 16:34+0000\n"
+"PO-Revision-Date: 2024-03-19 16:34+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: generic_request_field_set
+#: model_terms:ir.ui.view,arch_db:generic_request_field_set.view_request_field_set_values
+msgid "<span class=\"o_stat_text\"> Fields</span>"
+msgstr ""
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_test_incident_field_set_value__char_1
+msgid "Char 1"
+msgstr ""
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_field_set_type__create_uid
+#: model:ir.model.fields,field_description:generic_request_field_set.field_test_incident_field_set_value__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_field_set_type__create_date
+#: model:ir.model.fields,field_description:generic_request_field_set.field_test_incident_field_set_value__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_test_incident_field_set_value__date_1
+msgid "Date 1"
+msgstr ""
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_test_incident_field_set_value__datetime_1
+msgid "Datetime 1"
+msgstr ""
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_field_set_type__display_name
+#: model:ir.model.fields,field_description:generic_request_field_set.field_test_incident_field_set_value__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_field_set_type__field_set_model_id
+#: model:ir.model.fields,field_description:generic_request_field_set.field_request_request__field_set_model_id
+msgid "Field Set Model"
+msgstr ""
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_request_classifier__field_set_type_id
+#: model:ir.model.fields,field_description:generic_request_field_set.field_request_request__field_set_type_id
+msgid "Field Set Type"
+msgstr ""
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_test_incident_field_set_value__request_id
+msgid "Fields set values for request"
+msgstr ""
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_test_incident_field_set_value__float_1
+msgid "Float 1"
+msgstr ""
+
+#. module: generic_request_field_set
+#. odoo-python
+#: code:addons/generic_request_field_set/models/request_request.py:0
+#, python-format
+msgid "Found more than one Field Set Value for this Request!"
+msgstr ""
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_field_set_type__id
+#: model:ir.model.fields,field_description:generic_request_field_set.field_test_incident_field_set_value__id
+msgid "ID"
+msgstr ""
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_test_incident_field_set_value__integer_1
+msgid "Integer 1"
+msgstr ""
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_field_set_type____last_update
+#: model:ir.model.fields,field_description:generic_request_field_set.field_test_incident_field_set_value____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_field_set_type__write_uid
+#: model:ir.model.fields,field_description:generic_request_field_set.field_test_incident_field_set_value__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_field_set_type__write_date
+#: model:ir.model.fields,field_description:generic_request_field_set.field_test_incident_field_set_value__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_test_incident_field_set_value__many2many_1_ids
+msgid "Many2Many 1"
+msgstr ""
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_test_incident_field_set_value__many2one_1_id
+msgid "Many2One 1"
+msgstr ""
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_field_set_type__field_set_model_name
+#: model:ir.model.fields,field_description:generic_request_field_set.field_request_request__field_set_model_name
+msgid "Model"
+msgstr ""
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_field_set_type__name
+msgid "Name"
+msgstr ""
+
+#. module: generic_request_field_set
+#. odoo-python
+#: code:addons/generic_request_field_set/models/request_request.py:0
+#, python-format
+msgid "No Classifier found!"
+msgstr ""
+
+#. module: generic_request_field_set
+#: model:ir.model,name:generic_request_field_set.model_request_request
+msgid "Request"
+msgstr ""
+
+#. module: generic_request_field_set
+#: model:ir.model,name:generic_request_field_set.model_request_classifier
+#: model:ir.model.fields,field_description:generic_request_field_set.field_request_request__request_classifier_id
+msgid "Request Classifier"
+msgstr ""
+
+#. module: generic_request_field_set
+#: model:ir.model,name:generic_request_field_set.model_field_set_type
+msgid "Requests: Field Set Type"
+msgstr ""
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_request_request__show_fields_set_button
+msgid "Show Fields Set Button"
+msgstr ""
+
+#. module: generic_request_field_set
+#: model:ir.model,name:generic_request_field_set.model_test_incident_field_set_value
+msgid "Test: Incident Field Set Value"
+msgstr ""
+
+#. module: generic_request_field_set
+#: model:ir.actions.act_window,name:generic_request_field_set.test_incident_field_set_value_act_window
+msgid "Test: Incident Field Set Values"
+msgstr ""
+
+#. module: generic_request_field_set
+#. odoo-python
+#: code:addons/generic_request_field_set/models/request_request.py:0
+#, python-format
+msgid ""
+"The Field Set Type setting is not specified in the Classifier for this "
+"Request!"
+msgstr ""
+
+#. module: generic_request_field_set
+#: model_terms:ir.actions.act_window,help:generic_request_field_set.test_incident_field_set_value_act_window
+msgid "There is no examples click here to add new one."
+msgstr ""

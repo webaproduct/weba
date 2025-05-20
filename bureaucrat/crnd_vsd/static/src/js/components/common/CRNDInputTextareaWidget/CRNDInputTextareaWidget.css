@@ -1,0 +1,29 @@
+.crnd_textarea_widget_wrapper .odoo-editor {
+    /* border: 1px solid #C5CAD1; */
+    border-radius: 4px;
+}
+.crnd_textarea_widget_wrapper .odoo-editor-editable {
+    border-radius: 4px 4px 0 0;
+    background: #fff;
+}
+.crnd_textarea_widget_wrapper .odoo-editor:has(.odoo-editor-editable:focus) {
+    outline: 2.5px solid #000;
+}
+
+
+
+/* Стили, если ширина блока >= 400px */
+@media (max-width: 767.98px) {
+    .crnd_textarea_widget_wrapper.required::after {
+        top: 14px;
+    }
+    .crnd_textarea_widget_wrapper #toolbar {
+        margin-bottom: 0;
+        border-bottom: 0;
+    }
+    .crnd_textarea_widget_wrapper #removeFormat,
+    .crnd_textarea_widget_wrapper #chatgpt,
+    .crnd_textarea_widget_wrapper button.btn[title="List"] {
+        display: none !important;
+    }
+}

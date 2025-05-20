@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+     <record id="automatization_generic_todo_template_line_view_tree_general" model="ir.ui.view">
+        <field name="model">generic.todo.template.line</field>
+        <field name="inherit_id" ref="generic_todo.generic_todo_template_line_view_tree_general"/>
+        <field name="priority" eval="20"/>
+        <field name="arch" type="xml">
+                <xpath expr="//field[@name='todo_type_id']" position="after">
+                    <field name="post_create_server_action"/>
+                    <field name="pre_start_server_action"/>
+                    <field name="on_cancel_server_action"/>
+                    <field name="on_done_server_action"/>
+                    <field name="on_done_auto_start_next_todo"/>
+                    <field name="autostart_todo"/>
+                </xpath>
+        </field>
+    </record>
+
+    <record id="automatization_generic_todo_template_line_view_tree_editable" model="ir.ui.view">
+        <field name="model">generic.todo.template.line</field>
+        <field name="inherit_id" ref="generic_todo.generic_todo_template_line_view_tree_editable"/>
+        <field name="priority" eval="20"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='todo_type_id']" position="after">
+                <field name="todo_type_model_id" column_invisible="1"/>
+                <field name="post_create_server_action"
+                       domain="[('model_id', '=', todo_type_model_name)]"
+                       context="{'default_model_id': todo_type_model_id, 'default_state': 'code'}"/>
+                <field name="pre_start_server_action"
+                       domain="[('model_id', '=', todo_type_model_name)]"
+                       context="{'default_model_id': todo_type_model_id, 'default_state': 'code'}"/>
+                <field name="on_cancel_server_action"
+                       domain="[('model_id', '=', todo_type_model_name)]"
+                       context="{'default_model_id': todo_type_model_id, 'default_state': 'code'}"/>
+                <field name="on_done_server_action"
+                       domain="[('model_id', '=', todo_type_model_name)]"
+                       context="{'default_model_id': todo_type_model_id, 'default_state': 'code'}"/>
+                <field name="on_done_auto_start_next_todo"/>
+                <field name="autostart_todo"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="automatization_generic_todo_template_line_view_form" model="ir.ui.view">
+        <field name="model">generic.todo.template.line</field>
+        <field name="inherit_id" ref="generic_todo.generic_todo_template_line_view_form"/>
+        <field name="priority" eval="20"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='todo_type_id']" position="after">
+                <field name="post_create_server_action"/>
+                <field name="pre_start_server_action"/>
+                <field name="on_cancel_server_action"/>
+                <field name="on_done_server_action"/>
+                <field name="on_done_auto_start_next_todo"/>
+                <field name="autostart_todo"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,260 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* generic_request_field_set
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-19 16:34+0000\n"
+"PO-Revision-Date: 2025-04-22 07:19+0000\n"
+"Last-Translator: Galina Prokopenko <am@crnd.pro>\n"
+"Language-Team: Ukrainian <http://weblate.crnd.pro/projects/"
+"bureaucrat-generics-17-0/generic_request_field_set/uk/>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.3.2\n"
+
+#. module: generic_request_field_set
+#: model_terms:ir.ui.view,arch_db:generic_request_field_set.view_request_field_set_values
+msgid "<span class=\"o_stat_text\"> Fields</span>"
+msgstr "<span class=\"o_stat_text\">Поля</span>"
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_test_incident_field_set_value__char_1
+msgid "Char 1"
+msgstr "Char 1"
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_field_set_type__create_uid
+#: model:ir.model.fields,field_description:generic_request_field_set.field_test_incident_field_set_value__create_uid
+msgid "Created by"
+msgstr "Створив"
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_field_set_type__create_date
+#: model:ir.model.fields,field_description:generic_request_field_set.field_test_incident_field_set_value__create_date
+msgid "Created on"
+msgstr "Створено"
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_test_incident_field_set_value__date_1
+msgid "Date 1"
+msgstr "Дата 1"
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_test_incident_field_set_value__datetime_1
+msgid "Datetime 1"
+msgstr "Дата та час 1"
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_field_set_type__display_name
+#: model:ir.model.fields,field_description:generic_request_field_set.field_test_incident_field_set_value__display_name
+msgid "Display Name"
+msgstr "Відобажати ім'я"
+
+#. module: generic_request_field_set
+#: model:field.set.type,name:generic_request_field_set.field_set_type_test_incident
+msgid "Example Field Set Type"
+msgstr "Приклад типу набор полів"
+
+#. module: generic_request_field_set
+#. odoo-python
+#: code:addons/generic_request_field_set/models/ir_model.py:0
+#, python-format
+msgid "Field 'Is Generic Field Set' cannot be changed to 'False'."
+msgstr "Поле «Є філдсетом» не може бути змінено на «False»."
+
+#. module: generic_request_field_set
+#: model_terms:ir.ui.view,arch_db:generic_request_field_set.view_request_classifier_form
+msgid "Field Set"
+msgstr "Набір полів"
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_field_set_type__field_set_count
+msgid "Field Set Count"
+msgstr "Кількість наборів полів"
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_field_set_type__field_set_model_id
+#: model:ir.model.fields,field_description:generic_request_field_set.field_request_request__field_set_model_id
+msgid "Field Set Model"
+msgstr "Модель філдсету"
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_request_classifier__field_set_type_id
+#: model:ir.model.fields,field_description:generic_request_field_set.field_request_request__field_set_type_id
+msgid "Field Set Type"
+msgstr "Тип філдсету"
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_generic_request_field_set_mixin__request_id
+#: model:ir.model.fields,field_description:generic_request_field_set.field_test_incident_field_set_value__request_id
+msgid "Fields set values for request"
+msgstr "Значення наборів полів в запиті"
+
+#. module: generic_request_field_set
+#: model:generic.system.event.type,name:generic_request_field_set.request_event_type_request_created
+msgid "Fieldset created"
+msgstr "Філдсет створено"
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_test_incident_field_set_value__float_1
+msgid "Float 1"
+msgstr "Float 1"
+
+#. module: generic_request_field_set
+#. odoo-python
+#: code:addons/generic_request_field_set/models/request_request.py:0
+#, python-format
+msgid "Found more than one Field Set Value for this Request!"
+msgstr "Знайдено більше одного значення філдсету для цього запиту!"
+
+#. module: generic_request_field_set
+#: model_terms:ir.ui.view,arch_db:generic_request_field_set.view_model_search
+msgid "Generic Request Field Set"
+msgstr "Філдсет запитів"
+
+#. module: generic_request_field_set
+#: model:ir.model,name:generic_request_field_set.model_generic_request_field_set_mixin
+msgid "Generic Request Field Set (Mixin)"
+msgstr "Філдсет запиту (міксін)"
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_field_set_type__id
+#: model:ir.model.fields,field_description:generic_request_field_set.field_test_incident_field_set_value__id
+msgid "ID"
+msgstr "ID"
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_test_incident_field_set_value__integer_1
+msgid "Integer 1"
+msgstr "Integer 1"
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_generic_assign_policy_model__is_generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_generic_resource_type__is_generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_generic_system_event_source__is_generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_generic_tag_model__is_generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_generic_todo_type__is_generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_ir_model__is_generic_request_field_set
+msgid "Is Generic Request Field Set"
+msgstr "Є філдсетом запиту"
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_field_set_type__write_uid
+#: model:ir.model.fields,field_description:generic_request_field_set.field_test_incident_field_set_value__write_uid
+msgid "Last Updated by"
+msgstr "Востаннє оновив"
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_field_set_type__write_date
+#: model:ir.model.fields,field_description:generic_request_field_set.field_test_incident_field_set_value__write_date
+msgid "Last Updated on"
+msgstr "Востаннє оновлено"
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_test_incident_field_set_value__many2many_1_ids
+msgid "Many2Many 1"
+msgstr "Many2Many 1"
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_test_incident_field_set_value__many2one_1_id
+msgid "Many2One 1"
+msgstr "Many2One 1"
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_field_set_type__field_set_model_name
+#: model:ir.model.fields,field_description:generic_request_field_set.field_request_request__field_set_model_name
+msgid "Model"
+msgstr "Модель"
+
+#. module: generic_request_field_set
+#: model:ir.model,name:generic_request_field_set.model_ir_model
+msgid "Models"
+msgstr "Моделі"
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_field_set_type__name
+msgid "Name"
+msgstr "Назва"
+
+#. module: generic_request_field_set
+#. odoo-python
+#: code:addons/generic_request_field_set/models/request_request.py:0
+#, python-format
+msgid "No Classifier found!"
+msgstr "Класифікатор не знайдено!"
+
+#. module: generic_request_field_set
+#. odoo-python
+#: code:addons/generic_request_field_set/models/ir_model.py:0
+#, python-format
+msgid "Only custom models can be modified."
+msgstr "Модифікувати можна лише кастомні моделі."
+
+#. module: generic_request_field_set
+#: model:ir.model,name:generic_request_field_set.model_request_request
+msgid "Request"
+msgstr "Запит"
+
+#. module: generic_request_field_set
+#: model:ir.model,name:generic_request_field_set.model_request_classifier
+#: model:ir.model.fields,field_description:generic_request_field_set.field_request_request__request_classifier_id
+msgid "Request Classifier"
+msgstr "Класифікатор запитів"
+
+#. module: generic_request_field_set
+#: model:ir.model,name:generic_request_field_set.model_field_set_type
+msgid "Requests: Field Set Type"
+msgstr "Запити: тип філдсету"
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_request_request__show_fields_set_button
+msgid "Show Fields Set Button"
+msgstr "Показувати кнопку філдсетів"
+
+#. module: generic_request_field_set
+#: model:ir.model,name:generic_request_field_set.model_test_incident_field_set_value
+msgid "Test: Incident Field Set Value"
+msgstr "Тест: проблема зі значенням філдсету"
+
+#. module: generic_request_field_set
+#: model:ir.actions.act_window,name:generic_request_field_set.test_incident_field_set_value_act_window
+msgid "Test: Incident Field Set Values"
+msgstr "Тест: проблема зі значеннями філдсетів"
+
+#. module: generic_request_field_set
+#. odoo-python
+#: code:addons/generic_request_field_set/models/request_request.py:0
+#, python-format
+msgid ""
+"The Field Set Type setting is not specified in the Classifier for this "
+"Request!"
+msgstr ""
+"У Класифікаторі для цього запиту не вказано значення параметра «Тип "
+"філдсету»!"
+
+#. module: generic_request_field_set
+#: model_terms:ir.actions.act_window,help:generic_request_field_set.test_incident_field_set_value_act_window
+msgid "There is no examples click here to add new one."
+msgstr "Немає прикладів, натисніть тут, щоб додати новий."
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,field_description:generic_request_field_set.field_field_set_type__field_set_model_state
+msgid "Type"
+msgstr "Тип"
+
+#. module: generic_request_field_set
+#: model:ir.model.fields,help:generic_request_field_set.field_generic_assign_policy_model__is_generic_request_field_set
+#: model:ir.model.fields,help:generic_request_field_set.field_generic_resource_type__is_generic_request_field_set
+#: model:ir.model.fields,help:generic_request_field_set.field_generic_system_event_source__is_generic_request_field_set
+#: model:ir.model.fields,help:generic_request_field_set.field_generic_tag_model__is_generic_request_field_set
+#: model:ir.model.fields,help:generic_request_field_set.field_generic_todo_type__is_generic_request_field_set
+#: model:ir.model.fields,help:generic_request_field_set.field_ir_model__is_generic_request_field_set
+msgid "Whether this model is Generic Field Set."
+msgstr "Чи є ця модель філдсетом."

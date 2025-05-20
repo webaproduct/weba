@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-inherit="crnd_vsd.RequestsView" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('req_right_side')]" position="inside">
+            <div t-if="state.requestData.field_set and state.requestData.field_set.length and isAllowed('field_set')" class="req_block field_set_block">
+                <div
+                    class="req_block_header collapsing_block_header req_block-padding navbar-light"
+                    data-bs-target="#collapseExampleFieldsSet"
+                    data-bs-toggle="collapse"
+                    aria-expanded="true"
+                >
+                    <div class="req_name">
+                        Fields
+                    </div>
+                </div>
+
+                <div class="req_data req_block-padding collapse show" id="collapseExampleFieldsSet">
+                    <div class="information_table">
+                        <t t-foreach="state.requestData.field_set" t-as="field" t-key="field.name">
+                            <div class="information_table_row">
+                                <div>
+                                    <t t-esc="field.display_name" />
+                                </div>
+                                <div>
+                                    <t t-if="field.values.length">
+                                        <t t-foreach="field.values" t-as="value" t-key="value_index">
+                                            <t t-esc="value" />
+                                            <br />
+                                        </t>
+                                    </t>
+                                    <t t-else="">
+                                        -
+                                    </t>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </t>
+</templates>

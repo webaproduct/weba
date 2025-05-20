@@ -1,0 +1,793 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* generic_resource_type_builder
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-02 12:38+0000\n"
+"PO-Revision-Date: 2025-04-18 14:05+0000\n"
+"Last-Translator: Galina Prokopenko <am@crnd.pro>\n"
+"Language-Team: Ukrainian <http://weblate.crnd.pro/projects/"
+"bureaucrat-generics-17-0/generic_resource_type_builder/uk/>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.3.2\n"
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid "<code>datetime</code> (Python module)"
+msgstr "<code>datetime</code> (Python module)"
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid "<code>dateutil</code> (Python module)"
+msgstr "<code>dateutil</code> (Python module)"
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid "<code>self</code> (the set of records to compute)"
+msgstr "<code>self</code> (the set of records to compute)"
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid "<code>time</code> (Python module)"
+msgstr "<code>time</code> (Python module)"
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid ""
+"<i class=\"fa fa-info-circle\" title=\"Info\"/>\n"
+"                        You can drag and drop fields in edit mode to change "
+"the sequence.\n"
+"                        <i class=\"fa fa-sort\" title=\"Sort\"/>\n"
+"                        <br/>\n"
+"                        <i class=\"fa fa-info-circle\" title=\"Info\"/>\n"
+"                        <b> Note: reload page after saving for the changes "
+"to take effect!</b>"
+msgstr ""
+"<i class=\"fa fa-info-circle\" title=\"Info\"/>\n"
+"                        Ви можете перетягувати поля в режимі редагування, "
+"щоб змінити послідовність.\n"
+"                        <i class=\"fa fa-sort\" title=\"Sort\"/>\n"
+"                        <br/>\n"
+"                        <i class=\"fa fa-info-circle\" title=\"Info\"/>\n"
+"                        <b> Примітка: перезавантажте сторінку після "
+"збереження, щоб зміни вступили в силу!</b>"
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid "Access Rights"
+msgstr "Права доступу"
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid "Advanced Properties"
+msgstr "Розширені властивості"
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid "Base Properties"
+msgstr "Стандартні властивості"
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.resource_wizard_create_type_form_view
+msgid "Cancel"
+msgstr "Скасувати"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__compute
+msgid ""
+"Code to compute the value of the field.\n"
+"Iterate on the recordset 'self' and assign the field's value:\n"
+"\n"
+"    for record in self:\n"
+"        record['size'] = len(record.name)\n"
+"\n"
+"Modules time, datetime, dateutil are available."
+msgstr ""
+"Код для обчислення значення поля.\n"
+"Виконати ітерацію над набором записів 'self' і обчислити значення поля:\n"
+"\n"
+"    for record in self:\n"
+"        record['size'] = len(record.name)\n"
+"\n"
+"Доступні модулі time, datetime, dateutil."
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__column1
+msgid "Column 1"
+msgstr "Стовпчик 1"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__column2
+msgid "Column 2"
+msgstr "Стовпчик 2"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__column2
+msgid "Column referring to the record in the comodel table"
+msgstr "Стовпець, що посилається на запис у таблиці комоделей"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__column1
+msgid "Column referring to the record in the model table"
+msgstr "Стовпець, що посилається на запис у таблиці моделі"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__complete_name
+msgid "Complete Name"
+msgstr "Заповніть назву"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__compute
+msgid "Compute"
+msgstr "Обчислити"
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid ""
+"Computed fields are defined with the fields\n"
+"                                                <strong>Dependencies</"
+"strong> and <strong>Compute</strong>."
+msgstr ""
+"Обчислювані поля визначаються за допомогою полів\n"
+"………………………………<strong>Залежності</strong> та <strong>Обчислення</strong>."
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__copied
+msgid "Copied"
+msgstr "Зкопійовано"
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.resource_wizard_create_type_form_view
+msgid "Create"
+msgstr "Створити"
+
+#. module: generic_resource_type_builder
+#: model:ir.actions.act_window,name:generic_resource_type_builder.action_resource_wizard_create_type
+msgid "Create Resource Type"
+msgstr "Створити тип ресурсу"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__create_uid
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_form_field_position__create_uid
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_tree_field_position__create_uid
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_wizard_create__create_uid
+msgid "Created by"
+msgstr "Створив"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__create_date
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_form_field_position__create_date
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_tree_field_position__create_date
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_wizard_create__create_date
+msgid "Created on"
+msgstr "Створено"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__currency_field
+msgid "Currency field"
+msgstr "Поле валюти"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type__custom_field_ids
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_form_field_position__custom_field_id
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_tree_field_position__custom_field_id
+msgid "Custom Field"
+msgstr "Кастомне поле"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__depends
+msgid "Dependencies"
+msgstr "Залежності"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__depends
+msgid ""
+"Dependencies of compute method; a list of comma-separated field names, like\n"
+"\n"
+"    name, partner_id.name"
+msgstr ""
+"Залежності методу обчислення; список імен полів, розділених комами, "
+"наприклад\n"
+"\n"
+"    name, partner_id.name"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__display_name
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_form_field_position__display_name
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_tree_field_position__display_name
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_wizard_create__display_name
+msgid "Display Name"
+msgstr "Відобажати ім'я"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__domain
+msgid "Domain"
+msgstr "Домен"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_wizard_create__enable_chatter
+msgid "Enable Chatter"
+msgstr "Увімкнути чат"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_wizard_create__enable_mail_activity
+msgid "Enable Mail Activity"
+msgstr "Увімкнути поштову активність"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__tracking
+msgid "Enable Ordered Tracking"
+msgstr "Включити відстеження замовлень"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__group_expand
+msgid "Expand Groups"
+msgstr "Розширити групи"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type__field_form_position_ids
+msgid "Field Form Position"
+msgstr "Позиція форми поля"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__help
+msgid "Field Help"
+msgstr "Справка за полем"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__field_description
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_form_field_position__custom_field_name
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_tree_field_position__custom_field_name
+msgid "Field Label"
+msgstr "Ярлик поля"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__name
+msgid "Field Name"
+msgstr "Назва поля"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type__field_tree_position_ids
+msgid "Field Tree Position"
+msgstr "Позиція в дереві полів"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__ttype
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_form_field_position__custom_field_ttype
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_tree_field_position__custom_field_ttype
+msgid "Field Type"
+msgstr "Тип поля"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.constraint,message:generic_resource_type_builder.constraint_generic_resource_type_view_form_field_position_custom_field_id_uniq
+msgid "Field in Form View must be unique!"
+msgstr "Поле у поданні форми має бути унікальним!"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.constraint,message:generic_resource_type_builder.constraint_generic_resource_type_view_tree_field_position_custom_field_id_uniq
+msgid "Field in Tree View must be unique!"
+msgstr "Поле в деревовидному вигляді має бути унікальним!"
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid "Fields"
+msgstr "Поля"
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid "Fields Description"
+msgstr "Описи полів"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__relation_field
+msgid ""
+"For one2many fields, the field on the target model that implement the "
+"opposite many2one relationship"
+msgstr ""
+"Для полів one2many, поле на цільовій моделі, яке реалізує протилежний "
+"зв'язок many2one"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__relation
+msgid "For relationship fields, the technical name of the target model"
+msgstr "Для полів зв'язку - технічна назва цільової моделі"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__form_position_id
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__form_position_ids
+msgid "Form Position"
+msgstr "Позиція форми"
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid "Form View"
+msgstr "Вид форма"
+
+#. module: generic_resource_type_builder
+#: model:ir.model,name:generic_resource_type_builder.model_generic_resource_type
+msgid "Generic Resource Type"
+msgstr "Тип ресурсу"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__groups
+msgid "Groups"
+msgstr "Групи"
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid "How to define a computed field"
+msgstr "Як визначити поле, що обчислюється"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__id
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_form_field_position__id
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_tree_field_position__id
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_wizard_create__id
+msgid "ID"
+msgstr "ID"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__group_expand
+msgid ""
+"If checked, all the records of the target model will be included\n"
+"in a grouped result (e.g. 'Group By' filters, Kanban columns, etc.).\n"
+"Note that it can significantly reduce performance if the target model\n"
+"of the field contains a lot of records; usually used on models with\n"
+"few records (e.g. Stages, Job Positions, Event Types, etc.)."
+msgstr ""
+"Якщо позначено, всі записи цільової моделі будуть включені\n"
+"до згрупованого результату (наприклад, фільтри «Групувати за», стовпці "
+"Kanban тощо).\n"
+"Зауважте, що це може значно знизити продуктивність, якщо цільова модель\n"
+"поля містить багато записів; зазвичай використовується на моделях з\n"
+"невеликою кількістю записів (наприклад, Етапи, Посади, Типи подій і т.д.)."
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__tracking
+msgid ""
+"If set every modification done to this field is tracked. Value is used to "
+"order tracking values."
+msgstr ""
+"Якщо встановлено, відстежується кожна модифікація, зроблена в цьому полі. "
+"Значення використовується для замовлення значень відстеження."
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__show_on_form
+msgid ""
+"If set to True, then system will generate default form position record for "
+"this field"
+msgstr ""
+"Якщо встановлено значення True, то для цього поля буде згенеровано запис "
+"позиції форми за замовчуванням"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__show_on_tree
+msgid ""
+"If set to True, then system will generate tree position record for this field"
+msgstr ""
+"Якщо встановлено значення True, то система згенерує запис позиції дерева для "
+"цього поля"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__modules
+msgid "In Apps"
+msgstr "У додатках"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__index
+msgid "Indexed"
+msgstr "Індексовано"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__ir_model_custom_field_id
+msgid "Ir Model Custom Field"
+msgstr "Ir Модель Кастомне поле"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__write_uid
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_form_field_position__write_uid
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_tree_field_position__write_uid
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_wizard_create__write_uid
+msgid "Last Updated by"
+msgstr "Востаннє оновив"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__write_date
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_form_field_position__write_date
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_tree_field_position__write_date
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_wizard_create__write_date
+msgid "Last Updated on"
+msgstr "Востаннє оновлено"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields.selection,name:generic_resource_type_builder.selection__generic_resource_type_view_form_field_position__place_on_form__left_slot
+msgid "Left slot"
+msgstr "Лівий слот"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__modules
+msgid "List of modules in which the field is defined"
+msgstr "Перелік модулів, в яких визначено поле"
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid "Miscellaneous"
+msgstr "Інше"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__model_id
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_wizard_create__model
+msgid "Model"
+msgstr "Модель"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type__model_form_view_id
+msgid "Model Form View"
+msgstr "Модель Вид форми"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_wizard_create__model_group_ids
+msgid "Model Groups"
+msgstr "Групи моделей"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__model
+msgid "Model Name"
+msgstr "Назва моделі"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type__model_tree_view_id
+msgid "Model Tree View"
+msgstr "Модель Вид дерева"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_wizard_create__name
+msgid "Name"
+msgstr "Назва"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__currency_field
+msgid "Name of the Many2one field holding the res.currency"
+msgstr "Назва поля Many2one, що містить res.currency"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__on_delete
+msgid "On Delete"
+msgstr "On Delete"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__on_delete
+msgid "On delete property for many2one fields"
+msgstr "On delete property for many2one fields"
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid ""
+"Other features are accessible through <code>self</code>, like\n"
+"                                                <code>self.env</code>, etc."
+msgstr ""
+"Інші функції доступні через<code>self</code>, як\n"
+"……………………………… <code>self.env</code>,  і т.д."
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_form_field_position__place_on_form
+msgid "Place On Form"
+msgstr "Місце на формі"
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid "Position on Form"
+msgstr "Позиція на формі"
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid "Properties"
+msgstr "Властивості"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__readonly
+msgid "Readonly"
+msgstr "Тільки перегляд"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__related
+msgid "Related Field"
+msgstr "Пов'язане поле"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__relation
+msgid "Related Model"
+msgstr "Пов'язана модель"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__related_field_id
+msgid "Related field"
+msgstr "Пов'язане поле"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__relation_field
+msgid "Relation Field"
+msgstr "Поле взаємозв'язку"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__relation_table
+msgid "Relation Table"
+msgstr "Таблиця вазємозв'язку"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__relation_field_id
+msgid "Relation field"
+msgstr "Поле взаємозв'язку"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__required
+msgid "Required"
+msgstr "Обов'язково"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__resource_type_id
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_form_field_position__resource_type_id
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_tree_field_position__resource_type_id
+msgid "Resource Type"
+msgstr "Тип ресурсу"
+
+#. module: generic_resource_type_builder
+#: model:ir.model,name:generic_resource_type_builder.model_generic_resource_type_wizard_create
+msgid "Resource Wizard: Create Type"
+msgstr "Майстер ресурсів: Створити Тип"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields.selection,name:generic_resource_type_builder.selection__generic_resource_type_view_form_field_position__place_on_form__right_slot
+msgid "Right slot"
+msgstr "Правий слот"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__sanitize
+msgid "Sanitize HTML"
+msgstr "Очищення HTML"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__sanitize_attributes
+msgid "Sanitize HTML Attributes"
+msgstr "Очищення HTML атрибутів"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__sanitize_form
+msgid "Sanitize HTML Form"
+msgstr "Очищення HTML форми"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__sanitize_style
+msgid "Sanitize HTML Style"
+msgstr "Очищення HTML стилів"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__sanitize_tags
+msgid "Sanitize HTML Tags"
+msgstr "Очищення HTML тегів"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__sanitize_overridable
+msgid "Sanitize HTML overridable"
+msgstr "Очищення перевизначення в HTML"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__selectable
+msgid "Selectable"
+msgstr "Можна вибирати"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__selection_ids
+msgid "Selection Options"
+msgstr "Параметри вибору"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__selection
+msgid "Selection Options (Deprecated)"
+msgstr "Параметри вибору (Застаріла)"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_form_field_position__sequence
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_view_tree_field_position__sequence
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid "Sequence"
+msgstr "Послідовність"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__show_on_form
+msgid "Show On Form"
+msgstr "Показувати на формі"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__show_on_tree
+msgid "Show On Tree"
+msgstr "Показувати на дереві"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__size
+msgid "Size"
+msgstr "Розмір"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__store
+msgid "Stored"
+msgstr "Збережено"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__strip_classes
+msgid "Strip Class Attribute"
+msgstr "Атрибут класу стрічки"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__strip_style
+msgid "Strip Style Attribute"
+msgstr "Атрибут стилю стрічки"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__tree_position_ids
+msgid "Technical field to keep reference to related tree_position_id"
+msgstr ""
+"Технічне поле для зберігання посилання на пов'язаний ідентифікатор "
+"tree_position_id"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__related
+msgid ""
+"The corresponding related field, if any. This must be a dot-separated list "
+"of field names."
+msgstr ""
+"Відповідне пов'язане поле, якщо таке є. Це має бути список імен полів, "
+"розділених крапками."
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid ""
+"The field <strong>Compute</strong> is the Python code to\n"
+"                                                compute the value of the "
+"field on a set of records. The value of\n"
+"                                                the field must be assigned "
+"to each record with a dictionary-like\n"
+"                                                assignment."
+msgstr ""
+"Поле <strong>Обчислити</strong> - це код Python для\n"
+"                                                обчислення значення поля на "
+"множині записів. Значення поля\n"
+"                                                має бути присвоєно кожному "
+"запису за допомогою словникового призначення."
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid ""
+"The field <strong>Dependencies</strong> lists the fields that\n"
+"                                                the current field depends "
+"on. It is a comma-separated list of\n"
+"                                                field names, like "
+"<code>name, size</code>. You can also refer to\n"
+"                                                fields accessible through "
+"other relational fields, for instance\n"
+"                                                <code>partner_id.company_id."
+"name</code>."
+msgstr ""
+"Поле <strong>Залежності</strong> перераховує поля, від яких\n"
+"………………………………залежить поточне поле. Це список імен полів,\n"
+"………………………………розділених комою, як <code>назва, розмір</code>. Ви також "
+"можете\n"
+"………………………………посилатися на поля, доступні через інші реляційні поля, "
+"наприклад,\n"
+"………………………………<code>partner_id.company_id.name</code>."
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__model_id
+msgid "The model this field belongs to"
+msgstr "Модель, до якої належить це поле"
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid "The only predefined variables are"
+msgstr "Єдиними наперед визначеними змінними є"
+
+#. module: generic_resource_type_builder
+#. odoo-python
+#: code:addons/generic_resource_type_builder/wizard/generic_resource_type_wizard_create.py:0
+#, python-format
+msgid ""
+"The only users '%(group_system)s' group have permissions to create "
+"'%(resource_type)s'!"
+msgstr ""
+"Тільки учасники групи '%(group_system)s' мають дозвіл створювати "
+"'%(resource_type)s'!"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__domain
+msgid ""
+"The optional domain to restrict possible values for relationship fields, "
+"specified as a Python expression defining a list of triplets. For example: "
+"[('color','=','red')]"
+msgstr ""
+"Необов'язковий домен для обмеження можливих значень для полів зв'язку, "
+"вказаний як вираз Python, що визначає список триплетів. Наприклад: "
+"[('color','=','red')]"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__model
+msgid "The technical name of the model this field belongs to"
+msgstr "Технічна назва моделі, до якої належить це поле"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__translate
+msgid "Translatable"
+msgstr "Перекладається"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__tree_position_id
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__tree_position_ids
+msgid "Tree Position"
+msgstr "Позиція у дереві"
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid "Tree View"
+msgstr "Вид дерева"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,field_description:generic_resource_type_builder.field_generic_resource_type_custom_field__state
+msgid "Type"
+msgstr "Тип"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__relation_table
+msgid "Used for custom many2many fields to define a custom relation table name"
+msgstr ""
+"Використовується для кастомних полів many2many для визначення назви "
+"кастомної таблиці реляції"
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__copied
+msgid "Whether the value is copied when duplicating a record."
+msgstr "Чи копіюється значення при дублюванні запису."
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__store
+msgid "Whether the value is stored in the database."
+msgstr "Чи зберігається значення в базі даних."
+
+#. module: generic_resource_type_builder
+#: model:ir.model.fields,help:generic_resource_type_builder.field_generic_resource_type_custom_field__translate
+msgid ""
+"Whether values for this field can be translated (enables the translation "
+"mechanism for that field)"
+msgstr ""
+"Чи можна перекладати значення для цього поля (вмикає механізм перекладу для "
+"цього поля)"
+
+#. module: generic_resource_type_builder
+#: model_terms:ir.ui.view,arch_db:generic_resource_type_builder.generic_resource_type_view_form
+msgid ""
+"for record in self:\n"
+"        record['size'] = len(record.name)"
+msgstr ""
+"for record in self:\n"
+"        record['size'] = len(record.name)"
+
+#. module: generic_resource_type_builder
+#: model:ir.model,name:generic_resource_type_builder.model_generic_resource_type_custom_field
+msgid "generic.resource.type.custom.field"
+msgstr "generic.resource.type.custom.field"
+
+#. module: generic_resource_type_builder
+#: model:ir.model,name:generic_resource_type_builder.model_generic_resource_type_view_form_field_position
+msgid "generic.resource.type.view.form.field.position"
+msgstr "generic.resource.type.view.form.field.position"
+
+#. module: generic_resource_type_builder
+#: model:ir.model,name:generic_resource_type_builder.model_generic_resource_type_view_tree_field_position
+msgid "generic.resource.type.view.tree.field.position"
+msgstr "generic.resource.type.view.tree.field.position"
